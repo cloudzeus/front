@@ -1,0 +1,771 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta author="Kozyris Gianniw">
+      <title>Breeze Car Rental Services</title>
+      <link href="images/favicon.png" rel="icon">
+      <!--Plugins css-->
+      <link rel="stylesheet" href="css/plugins.css">
+      <!--Date picker css-->
+      <link rel="stylesheet" href="css/daterangepicker.css">
+      <link rel="stylesheet" href="css/smart_wizard.css">
+      <link rel="stylesheet" href="css/smart_wizard_theme_dots.css">
+      <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+      <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.css" rel="stylesheet" type="text/css" />
+    
+      <!--this is the css for the form wizzard -->
+      <!--end the css for the form wizzard -->
+      <!--Custom Styles-->
+      
+      <script src="api/translation.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body data-spy="scroll" data-target=".navbar" data-offset="90">
+      <!--PreLoader-->
+      <div class="loader">
+         <div class="loader-inner">
+            <div class="loader-blocks">
+               <span class="block-1"></span>
+               <span class="block-2"></span>
+               <span class="block-3"></span>
+               <span class="block-4"></span>
+               <span class="block-5"></span>
+               <span class="block-6"></span>
+               <span class="block-7"></span>
+               <span class="block-8"></span>
+               <span class="block-9"></span>
+               <span class="block-10"></span>
+               <span class="block-11"></span>
+               <span class="block-12"></span>
+               <span class="block-13"></span>
+               <span class="block-14"></span>
+               <span class="block-15"></span>
+               <span class="block-16"></span>
+            </div>
+         </div>
+      </div>
+      <!--PreLoader Ends-->
+      <!-- header -->
+      <header class="site-header">
+         <nav class="navbar navbar-expand-lg fixed-top gradient_bg">
+            <div class="container">
+               <a class="navbar-brand" href="index.html"> <img src="images/logo_2.svg" alt="logo"> </a>
+               <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+                  data-target="#xenav">
+               <span> </span>
+               <span> </span>
+               <span> </span>
+               </button></a>
+               <div class="collapse navbar-collapse" id="xenav">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#aboutus">About us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#our-team">Our Fleet</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#our-feature">Our Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#portfolio-xe">Proposals</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#ourhome">Reservations</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#our-testimonial">Testimonials</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#our-blog">Blog</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#contactus">contact</a>
+                     </li>
+                     <li class="nav-items dropdown">
+                        <a class="nav-links dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Languages
+                        </a>
+                        <div id="changeLanguage" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <button id="Greek" class="dropdown-item" >Greek</button>
+                           <button id="English" class="dropdown-item" >English</button>
+                           <button id="German" class="dropdown-item" >German</button>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!--side menu open button-->
+            <a href="javascript:void(0)" class="d-none d-lg-inline-block sidemenu_btn" id="sidemenu_toggle">
+               <span></span> <span></span> <span></span>
+               <div class="ripple-container"></div>
+            </a>
+         </nav>
+         <!-- side menu -->
+         <div class="side-menu">
+            <div class="inner-wrapper">
+               <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
+               <nav class="side-nav">
+                  <ul class="navbar-nav w-100">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#aboutus">About us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-team">Our Fleet</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-feature">Our Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#portfolio-xe">Proposals</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#ourhome">Reservations</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-testimonial">Testimonials</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-blog">Blog</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#contactus">contact</a>
+                     </li>
+                  </ul>
+               </nav>
+               <ul class="social-icons-simple white top50 w-100">
+                  <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> </li>
+                  <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a> </li>
+                  <li><a href="javascript:void(0)"><i class="fa fa-yout"></i> </a> </li>
+               </ul>
+               <p class="whitecolor">&copy; 2019 Breeze Car Rental Company. | </p>
+            </div>
+         </div>
+         <a id="close_side_menu" href="javascript:void(0);"></a>
+         <!-- End side menu -->
+      </header>
+      <!-- header -->
+      <!--Booking form start -->
+      <section id="our-feature" class="padding single-feature  bg-white rounded">
+         <div class="container  bg-white rounded">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div id="smartwizard" class="sw-main sw-theme-dots ">
+                     <ul class="nav nav-tabs step-anchor  d-flex justify-content-between">
+                        <li class="nav-item active"><a href="#step-1" class="nav-link"><script>document.write(lib.translator("STEP"));</script> 01<br><small><script>document.write(lib.translator("USER_SELECTIONS"))</script></small></a>
+                        </li>
+                        <li class="nav-item"><a href="#step-2" class="nav-link"><script>document.write(lib.translator("STEP"));</script> 02<br><small><script>document.write(lib.translator("SEARCH_RESULTS"))</script></small></a></li>
+                        <li class="nav-item"><a href="#step-3" class="nav-link"><script>document.write(lib.translator("STEP"));</script> 03<br><small><script>document.write(lib.translator("DRIVERS_INFO"))</script></small></a></li>
+                        <li class="nav-item"><a href="#step-4" class="nav-link"><script>document.write(lib.translator("STEP"));</script> 04<br><small><script>document.write(lib.translator("PAYMENT"))</script></small></a></li>
+                        <li class="nav-item"><a href="#step-5" class="nav-link pr-md-5  mr-md-2"><script>document.write(lib.translator("STEP"));</script> 05<br><small><script>document.write(lib.translator("VOUCHER"))</script></small></a></li>
+                     </ul>
+                     <div class="btn-toolbar sw-toolbar justify-content-end ">
+                        <div id="step-1" class="tab-pane step-content">
+                           <form id="searchCar">
+                              <div class="row justify-content-center">
+                                 <div id="formError" style="display:none"><h3 id="formField" class="text-center text-muted"></h3></div>
+                                 <h3 class="py-4 display-4"><script>document.write(lib.translator("Please_fill_your_prefrences"))</script></h3>
+                                 <div class="col-sm-3 col-md-8">
+                                    <div class="form-row justify-content-center">
+                                       <div class="form-group col-md-4">
+                                          <label for="pickUpLocation"><script>document.write(lib.translator("Pick_Up_Location"))</script></label>
+                                          <div role="wrapper" class="input-group">
+                                             <select class="form-control" id="pickUpLocation" name="pickUpLocation">
+                                                <option><script>document.write(lib.translator("Please_select_your_Pick_Up_location"))</script></option>
+                                                <option value="ATH Athens Airport"><script>document.write(lib.translator("ATH_Athens_Airport"))</script></option>
+                                                <option value="Athens City Center"><script>document.write(lib.translator("Athens_City_Center"))</script></option>
+                                                <option value="Piraeus Port"><script>document.write(lib.translator("Piraeus_Port"))</script></option>
+                                                <option value="Agia Paraskevi HQ"><script>document.write(lib.translator("Agia_Paraskevi_HQ"))</script></option>
+                                             </select>
+                                             <i class="fa fa-map  pt-2" aria-hidden="true" style="color:#666"></i>
+                                          </div>
+                                       </div>
+                                       <div class="form-group col-md-3 pl-md-3 bmd-form-group is-filled">
+                                          <label for="startDate" class="pl-4"><script>document.write(lib.translator("Pick_Up_Date"))</script> </label>
+                                          <input id="startDate" name="startDate" value="Pick up date" />
+                                       </div>
+                                       <div class="form-group col-md-2 pl-md-3 bmd-form-group is-filled">
+                                          <label for="timepicker" class="pl-4"><script>document.write(lib.translator("pick_up_time"))</script></label>
+                                          <input id="timepicker" name="timepicker" value="pick up time" />
+                                       </div>
+                                    </div>
+                                    <div class="form-row justify-content-center">
+                                       <div class="form-group col-md-4">
+                                          <label for="DropOffLocation"><script>document.write(lib.translator("Drop_Off_Location"))</script></label>
+                                          <div role="wrapper" class="input-group">
+                                             <select class="form-control" id="DropOfLocation">
+                                                <option><script>document.write(lib.translator("Please_select_you_Drop_Off_Location"))</script></option>
+                                                <option><script>document.write(lib.translator("ATH_Athens_Airport"))</script></option>
+                                                <option><script>document.write(lib.translator("Athens_City_Center"))</script></option>
+                                                <option><script>document.write(lib.translator("Piraeus_Port"))</script></option>
+                                                <option><script>document.write(lib.translator("Agia_Paraskevi_HQ"))</script></option>
+                                             </select>
+                                             </select>
+                                             <i class="fa fa-map  pt-2" aria-hidden="true" style="color:#666"></i>
+                                          </div>
+                                       </div>
+                                       <div class="form-group col-md-3 pl-md-3 bmd-form-group is-filled">
+                                          <label for="endDate" class="pl-4"><script>document.write(lib.translator("Drop_off_date"))</script></label>
+                                          <input id="endDate" value="Drop off date" />
+                                       </div>
+                                       <div class="form-group col-md-2 pl-md-3 bmd-form-group is-filled">
+                                          <label for="timeDrop" class="pl-4"><script>document.write(lib.translator("Drop_off_time"))</script></label>
+                                          <input id="timeDrop" value="Drop off time" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div id="step-2" class="tab-pane step-content">
+                           <div class="container" style="margin-top:-20px;">
+                              <div class="row  mb-3">
+                                 <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
+                                    <p class="stepTwoHeaderPFirst headerp headerTop"><script>document.write(lib.translator("PICK_UP"))</script>:<span><i id="firstInfo"
+                                       class="fa fa-map headerInfoIcon" data-toggle="popover"
+                                       data-placement="top" title="Pick Up Details" data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
+                                    <p class="stepTwoHeaderPTwo headerp"><script>document.write(lib.translator("ATH_Athens_Airport"))</script>:</p>
+                                    <p class="stepTwoHeaderPThree headerp">Tuesday, Feb 05:12:00 PM</p>
+                                 </div>
+                                 <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
+                                    <p class="stepTwoHeaderPFirst headerp headerTop"><script>document.write(lib.translator("PICK_UP"))</script>:<span><i id="firstInfo"
+                                       class="fa fa-map headerInfoIcon" data-toggle="popover"
+                                       data-placement="top" title="Pick Up Details" data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
+                                    <p class="stepTwoHeaderPTwo headerp"><script>document.write(lib.translator("ATH_Athens_Airport"))</script>:</p>
+                                    <p class="stepTwoHeaderPThree headerp">Tuesday, Feb 05:12:00 PM</p>
+                                 </div>
+                                 <div class="col-md-4 col-sm-12 border-md-left border-md-down border-md-right d-md-none">
+                                 </div>
+                              </div>
+                                                                <div class="row border-bottom infoBarStepTwo">
+                                 <div class="col-md-12 border-bottom">
+                                     <div class="dropdown">
+                                         <span class="spanFilterLabel"><script>document.write(lib.translator("Showing"))</script>:</span>
+                                         <button class="filter-btn btn-Filter dropdown-toggle" type="button" id="dropdownMenuButton"
+                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                             All Car Categories
+                                         </button>
+                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                             <a class="dropdown-item" href="#">Action</a>
+                                             <a class="dropdown-item" href="#">Another action</a>
+                                             <a class="dropdown-item" href="#">Something else here</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 </div>
+                                 <!-- Start for every car result-->
+                                 
+                              <div class="row  border-bottom shadow rounded ">
+                                  <!-- Car Image-->                                  
+                                 <div class="col-sm-12 col-md-12 col-lg-4 pt-2 wow fadeInUp">
+                                    <img src="images/merchedes.png" class="img-fluid  bg-white rounded" alt="">
+                                 </div>
+                                 <!-- Car Image-->
+                                 <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
+                                     <!-- Car Make-->
+                                        <p class="mb-0 py-2"><span class="makeHeader">merchedes</span><small
+                                            class="pl-1"><script>document.write(lib.translator("Or_similar"))</script></small></p>
+                                    <div class="row">
+                                       <div class="col-6 pl-3">
+                                            <div class="text-center row">
+                                                    <div class="col-12 text-left pb-1"><img src="images/taxytites.svg"
+                                                       width="16px" alt=""><span class="propertiesSpanFonts">
+                                                         <script>document.write(lib.translator("Transition"))</script>:</span><span class="propertiesSpanFontsLabel">Manual</span>
+                                                    </div>
+                                                 </div>
+                                                 <div class="text-center row">
+                                                    <div class="col-12 text-left pb-1"><img src="images/carDoor.svg" width="16px"
+                                                       alt=""><span class="propertiesSpanFonts"> Car Dors:</span><span
+                                                       class="propertiesSpanFontsLabel">5</span></div>
+                                                 </div>
+                                                 <div class="text-center row">
+                                                    <div class="col-12 text-left  pb-1"><img src="images/clima.svg" width="16px"
+                                                       alt=""><span class="propertiesSpanFonts"> Clima:</span><span
+                                                       class="propertiesSpanFontsLabel">Air Condition</span></div>
+                                                 </div>
+                                                 <div class="text-center row">
+                                                    <div class="col-12 text-left pb-1"><img src="images/People.svg" width="16px"
+                                                       alt=""><span class="propertiesSpanFonts"> Passengers:</span><span
+                                                       class="propertiesSpanFontsLabel">5</span></div>
+                                                 </div>
+                                                 <div class="text-center row">
+                                                    <div class="col-12 text-left pb-1 mb-2"><img src="images/lagage.svg"
+                                                       width="16px" alt=""><span class="propertiesSpanFonts">
+                                                       Laggages:</span><span class="propertiesSpanFontsLabel">4</span>
+                                                    </div>
+                                                 </div>
+                                       </div>
+                                       <!-- Car Price and select button-->
+                                       
+                                       <div class="col-6">
+                                          <div class="row">
+                                              <div class="col-12 text-center pb-md-2"><h6 class="display-4 pricePerCar">32.99€</h6></div>                                              
+                                              <div class="col-12 text-center">
+                                                  <button type="button" class="btn btn-myFormPre sw-btn-prev">Get this Car</button>
+                                                </div>
+                                                <div class="col-12 text-center py-md-1 mb-4">
+                                                    <p class="mb-1"><span class="propertiesSpanFontsLabel">Economy</span></p>
+                                                </div>
+                                          </div>
+                                       </div>
+                                       <!-- Car Price and select button-->
+                                    </div>
+                                    
+                                 </div>
+                                 <!-- Car extras-->
+                                 
+                                 <div class="col-12 pt-2  extrasBackGround">
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-6 col-md-6 col-lg-3 ">
+                                                <span class="switchText">extra driver</span><span class="switchPrice">5.00€</span>
+                                                    <label class="switch">
+                                                            <input type="checkbox" class="default">
+                                                            <span class="slider round"></span>
+                                                          </label>
+                                            </div>
+                                            <div class="col-6 col-md-6 col-lg-3">
+                                                    <span class="switchText">Snow Chains</span><span class="switchPrice">5.00€</span>
+                                                    <label class="switch ">
+                                                            <input type="checkbox" class="default">
+                                                            <span class="slider round"></span>
+                                                          </label>
+                                            </div>
+                                            <div class="col-6 col-md-6 col-lg-3">
+                                                    <span class="switchText">Baby cot</span><span class="switchPrice">5.00€</span>
+                                                    <label class="switch ">
+                                                            <input type="checkbox" class="default">
+                                                            <span class="slider round"></span>
+                                                          </label>
+                                            </div>
+                                            <div class="col-6 col-md-6 col-lg-3">
+                                                    <span class="switchText">GPS</span><span class="switchPrice">5.00€</span>
+                                                    <label class="switch ">
+                                                            <input type="checkbox" class="default">
+                                                            <span class="slider round"></span>
+                                                          </label>
+                                            </div>
+                                            
+                                        </div>
+                                   </div>
+                                   <!-- Car extras-->
+                              </div>
+                                <!-- end for every car result-->
+
+                                
+                              
+                           </div>
+                        </div>
+                        <div id="step-3" class="tab-pane step-content">
+                           <div class="container" style="margin-top:-20px;">
+                              <div class="row mb-3">
+                                 <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
+                                    <p class="stepTwoHeaderPFirst headerp headerTop">Pick Up:<span><i id="firstInfo"
+                                       class="fa fa-map headerInfoIcon" data-toggle="popover"
+                                       data-placement="top" title="Pick Up Details" data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
+                                    <p class="stepTwoHeaderPTwo headerp">Athens International Airport ATH:</p>
+                                    <p class="stepTwoHeaderPThree headerp">Tuesday, Feb 05:12:00 PM</p>
+                                 </div>
+                                 <div class="col-md-6 col-sm-6 border-md-left border-md-down border-md-right">
+                                    <p class="stepTwoHeaderPFirst headerp headerTop">Drop Off: <span><i class="fa fa-map headerInfoIcon"></i></span></p>
+                                    <p class="stepTwoHeaderPTwo headerp">Athens International Airport ATH:</p>
+                                    <p class="stepTwoHeaderPThree headerp">Tuesday, Feb 05:12:00 PM</p>
+                                 </div>
+                                 <div class="col-md-12 col-sm-12  border-md-right border-md-down">
+                                     <div class="row">
+                                         <div class="col-12 col-md-4 border-right border-md-left ">
+                                                <p class="stepTwoHeaderPFirst headerp headerTop">Car selection: <span><i
+                                                    class="fa fa-car headerInfoIcon"></i></span></p>
+                                                 <p class="stepTwoHeaderPTwo headerp">Car Category: economy</p>
+                                                 <p class="stepTwoHeaderPThree headerp">CITROEN CX-2 <span>or similar</span></p>
+                                         </div>
+                                         <div class="col-12 col-md-3 border-lg-down  ">
+                                          <p class="stepTwoHeaderPFirst headerp headerTop">Tolal Price: <span><i
+                                             class="fa fa-money headerInfoIcon"></i></span></p>   
+                                             <p class="stepTwoHeaderPTwo headerp">All Prices include Taxes</p>                                       
+                                          <p class="stepTwoHeaderPThree headerp">63.00€</span></p>
+
+                                         </div>
+                                         <div class="col-12 col-md-5 border-md-left">
+                                          <p class="stepTwoHeaderPFirst headerp headerTop">Extras: <span><i
+                                             class="fa fa-cart-plus headerInfoIcon"></i></span></p>   
+                                             <p class="stepTwoHeaderPTwo headerp">Here are all the extras included</p>                                       
+                                           <div class="row">
+                                              <div class="col-12 form-check-inline pt-0" id="barOfExtras">
+                                             <div class="checkbox pr-1 pl-3">
+                                                <label>
+                                                  <input type="checkbox" checked> extra driver
+                                                </label>
+                                              </div>
+                                             <div class="checkbox pr-1">
+                                                <label>
+                                                  <input type="checkbox" checked> GPS
+                                                </label>
+                                              </div>
+                                             <div class="checkbox pr-1">
+                                                <label>
+                                                  <input type="checkbox"> Snow Chains
+                                                </label>
+                                              </div>
+                                             <div class="checkbox pr-1">
+                                                <label>
+                                                  <input type="checkbox" checked> Baby cot
+                                                </label>
+                                              </div>
+                                             </div>
+                                          </div>
+                                         </div>
+                                     </div>
+                                 </div>                             
+
+                              
+                           </div>
+                           <div class="row border">
+                              <div class="col-12">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                          <li class="nav-item">
+                                            <a class="nav-link active personal " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Personal Details</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link personal " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Returning Customer</a>
+                                          </li>
+
+                                        </ul>
+                                        <div class="tab-content" id="myTabContent">
+                                          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                             <div class="container">
+                                                   <form>
+                                                         <div class="form-row pt-4">
+                                                           <div class="col-12 col-md-6 col-lg-4 form-group">
+                                                               <label for="firstName">First Name</label>
+                                                             <input type="text" class="form-control" placeholder="First name" id="fistName">
+                                                           </div>
+                                                           <div class="col-12  col-md-6 col-lg-4 form-group">
+                                                               <label for="lastName">Last Name</label>
+                                                             <input type="text" class="form-control" placeholder="Last name" id="lastName">
+                                                           </div>
+                                                           <div class="col-12  col-md-6 col-lg-4 form-group">
+                                                               <label for="email">E-mail</label>
+                                                             <input type="text" class="form-control" placeholder="E-mail" id="email">
+                                                           </div>
+                                                         </div>
+                                                         <div class="form-row">
+                                                           <div class="col-12 col-md-6 col-lg-6 form-group">
+                                                               <label for="address">Address</label>
+                                                             <input type="text" class="form-control" placeholder="Address" id="address">
+                                                           </div>
+                                                           <div class="col-6  col-md-4 col-lg-4 form-group">
+                                                               <label for="city">City</label>
+                                                             <input type="text" class="form-control" placeholder="City" id="city">
+                                                           </div>
+                                                           <div class="col-6  col-md-2 col-lg-2 form-group">
+                                                               <label for="ZIP">ZIP</label>
+                                                             <input type="text" class="form-control" placeholder="ZIP" id="zip">
+                                                           </div>
+                                                         </div>
+                                                         <div class="form-row">
+                                                           <div class="col-12 col-md-6 col-lg-6 form-group">
+                                                               <label for="customerLicense">Drivers License Num.</label>
+                                                             <input type="text" class="form-control" placeholder="Drivers License Num." id="customerLicense">
+                                                           </div>
+                                                           <div class="col-8  col-md-4 col-lg-4 form-group">
+                                                               <label for="customerIdentityNumber">Customer Identity/passport</label>
+                                                             <input type="text" class="form-control" placeholder="Customer Identity/password" id="customerIdentityNumber">
+                                                           </div>
+                                                           <div class="col-4  col-md-2 col-lg-2 form-group">
+                                                               <label for="phoneNumber">Phone Number</label>
+                                                             <input type="text" class="form-control" placeholder="Phone Number" id="phoneNumber">
+                                                           </div>
+                                                         </div>
+                                                         <div class="form-row">
+                                                           <div class="col-12 form-group">
+                                                               <label for="termsConditions">Terms and conditions.</label>
+                                                               <textarea class="form-control"  id="termsConditions" rows="3">Reservations: All reservations are based on a vehicle category and not a certain car model. In case of no availability for a confirmed reservation, Breeze Rentals reserves the right to offer a vehicle of bigger category to the customer with no extra charge.
+Driver: Minimum age is 23 years of age.
+Drivers' License: The Driver is required to have and display a valid Drivers' License issued at least a year ago. Citizens of Non-EU countries are required to have a valid international Drivers' License along with their regular Drivers' License.
+Traffic Violations - Fines: Traffic violations and fines are bore by the Renter.
+Means of Payment: The Renter is required to present a valid Credit Card for the Rental Guarantee, even if the payment is made by the use of cash. The Rental is prepaid.
+Cancellations
+Cancellation of a booking must be made a minimum of seventy two (72) hours before the rental of the vehicle is due to commence, pursuant to a booking made on this booking engine. If you wish to cancel a booking, the only accepted method is through our Breeze rentals web page.
+In case of cancellations of bookings the following charges will be applied:
+In the event of a cancellation notice which is received by Breeze Rentals at least seventy two (72) hours before the rental of the vehicle is due to commence, pursuant to a booking made on this booking engine, all funds will be reimbursed.
+In the event of a cancellation notice which is received by Breeze rentals  less than seventy two (72) hours before the rental of the vehicle is due to commence, pursuant to a booking made on this booking engine, no funds paid will be reimbursed.
+
+                                                               </textarea>
+                                                           </div>
+                                                           <div class="col-12 form-group">
+                                                            <div class="checkbox">
+                                                               <label>
+                                                                 <input type="checkbox">I accept Terms and Conditions
+                                                               </label>
+                                                             </div>
+                                                           </div>
+                                                         <div class="form-row">
+                                                               
+                                                               <div class="col-12 form-check-inline pt-0">
+                                                                  <div class="radio">
+                                                                     <label>
+                                                                       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                                        <img class="img-fluid" src="images/PayPal.svg" alt="">pay with paypal
+                                                                     </label>
+                                                                   </div>
+                                                                   <div class="radio px-4">
+                                                                     <label>
+                                                                       <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                                       <img class="img-fluid" src="images/peiraeus.svg" alt="">Pay at Piraeus Bank
+                                                                     </label>
+                                                                   </div>
+                                                               </div>
+                 
+                                                                           
+                                                         </div>
+                                                   </form>
+                                             </div>
+                                                
+                                             
+                                          </div>
+                                        </div>
+                                          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                             fdkfldfdlfdlkfdlfdkf dlfdlf dlf dlf kdlkf dlk
+                                          </div>
+                                          
+                                        </div>
+
+                              </div>
+                           </div>
+                        </div>
+                        <div id="step-4" class="tab-pane step-content">
+                           <h3 class="border-bottom border-gray pb-2">Step 4 Content</h3>
+                        </div>
+                        <div id="step-5" class="tab-pane step-content">
+                           <h3 class="border-bottom border-gray pb-2">Step 5 Content</h3>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--booking form ends-->
+      <!--Site Footer Here-->
+      <footer id="site-footer" class="padding_half">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-sm-12 text-center">
+                  <ul class="social-icons bottom25 wow fadeInUp" data-wow-delay="300ms" style="visibility: hidden; animation-delay: 300ms; animation-name: none;">
+                     <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> </li>
+                     <li><a href="javascript:void(0)"><i class="fa fa-google-plus"></i> </a> </li>
+                     <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a> </li>
+                     <li><a href="javascript:void(0)"><i class="fa fa-envelope-o"></i> </a> </li>
+                  </ul>
+                  <ul class=" bottom25 wow fadeInUp list-inline">
+                     <li class="our-address list-inline-item">
+                        <a class="pickus  privacy" href="#." data-text="privacy policy" style="font-size:0.6rem; letter-spacing:2px;">
+                           <script>document.write(lib.translator("PRIVACY_POLICY"))</script>
+                        </a>
+                     </li>
+                     <li class="our-address list-inline-item">
+                        <a class="pickus  privacy" href="#." data-text="Terms and conditions" style="font-size:0.6rem; letter-spacing:2px;">
+                           <script>document.write(lib.translator("TERMS_AND_CONDITIONS"))</script>
+                        </a>
+                     </li>
+                  </ul>
+                  <p class="copyrights wow fadeInUp" data-wow-delay="400ms" style="visibility: hidden; animation-delay: 400ms; animation-name: none;">
+                     © 2019 Breeze Car rentals
+                  </p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--Footer ends-->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="js/jquery-3.1.1.min.js"></script>
+      <!--Bootstrap Core-->
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!--to view items on reach-->
+      <script src="js/jquery.appear.js"></script>
+      <!--Equal-Heights-->
+      <script src="js/jquery.matchHeight-min.js"></script>
+      <!--Owl Slider-->
+      <script src="js/owl.carousel.min.js"></script>
+      <!--number counters-->
+      <script src="js/jquery-countTo.js"></script>
+      <!--Parallax Background-->
+      <script src="js/parallaxie.js"></script>
+      <!--Cubefolio Gallery -->
+      <script src="js/jquery.cubeportfolio.min.js"></script>
+      <!--FancyBox popup-->
+      <script src="js/jquery.fancybox.min.js"></script>
+      <!-- Video Background-->
+      <script src="js/jquery.background-video.js"></script>
+      <!--TypeWriter
+         <script src="js/typewriter.js"></script>
+         -->
+      <!--Particles-->
+      <script src="js/particles.min.js"></script>
+      <!--WOw animations-->
+      <script src="js/wow.min.js"></script>
+      <!--Revolution SLider -->
+      <script src="js/revolution/jquery.themepunch.tools.min.js"></script>
+      <script src="js/revolution/jquery.themepunch.revolution.min.js"></script>
+      <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+      <!--    <script src="js/revolution/extensions/revolution.extension.actions.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.migration.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.video.min.js"></script> -->
+      <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+         crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.js"></script>
+      <!--Google Map API-->
+      <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.js" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"></script>
+      
+      <script src="js/jquery.smartWizard.js"></script>
+      <script>
+         $(document).ready(function () {
+             $('body').bootstrapMaterialDesign();
+         
+         
+         
+             $(function () {
+                 $('#firstInfo').popover({
+                     container: 'body'
+                 })
+             })
+         
+         
+         
+         
+             var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+             $('#startDate').datepicker({
+                 uiLibrary: 'bootstrap4',
+                 iconsLibrary: 'fontawesome',
+                 minDate: today,
+                 maxDate: function () {
+                     return $('#endDate').val();
+                 }
+             });
+             $('#endDate').datepicker({
+                 uiLibrary: 'bootstrap4',
+                 iconsLibrary: 'fontawesome',
+                 minDate: function () {
+                     return $('#startDate').val();
+                 }
+             });
+         
+             $('#timepicker').timepicker();
+             $('#timeDrop').timepicker();
+         
+         
+             console.log(today);
+         
+         
+         
+         
+         
+         });
+      </script>
+      <script src="js/functions.js"></script>
+   </body>
+</html>
+<script></script>
+<script type="text/javascript">
+   $(document).ready(function () {
+   
+   
+       var skata = "Pick up location";
+   
+
+   
+       // Step show event
+       $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
+           //console.log("You are on step "+stepNumber+" now");
+   
+           if (stepNumber === 0) {
+   
+               console.log(stepNumber);
+           }
+           if (stepPosition === 'first') {
+               $("#prev-btn").addClass('disabled');
+   
+           } else if (stepPosition === 'final') {
+               $("#next-btn").addClass('disabled');
+           } else {
+               $("#prev-btn").removeClass('disabled');
+               $("#next-btn").removeClass('disabled');
+           }
+   
+       });
+   
+       //test to store form values
+   
+   
+       // Toolbar extra buttons
+       var btnFinish = $('<button></button>').text('Finish')
+           .addClass('btn btn-info')
+           .on('click', function () {
+               alert('Finish Clicked');
+           });
+       var btnCancel = $('<button></button>').text('Cancel')
+           .addClass('btn btn-danger')
+           .on('click', function () {
+               $('#smartwizard').smartWizard("reset");
+           });
+   
+   
+       // Smart Wizard
+       $('#smartwizard').smartWizard({
+           selected: 0,
+           theme: 'default',
+           contentCache: true,
+           transitionEffect: 'fade',
+           showStepURLhash: true,
+           toolbarSettings: {
+               // toolbarPosition: 'end',
+               // toolbarButtonPosition: 'end',
+               //  toolbarExtraButtons: [btnFinish, btnCancel]
+           }
+       });
+   
+   
+       // External Button Events
+       $("#reset-btn").on("click", function () {
+           // Reset wizard
+           $('#smartwizard').smartWizard("reset");
+           return true;
+       });
+   
+       $("#prev-btn").on("click", function () {
+           // Navigate previous
+           $('#smartwizard').smartWizard("prev");
+           return true;
+       });
+   
+       $("#next-btn").on("click", function () {
+           // Navigate next
+           $('#smartwizard').smartWizard("next");
+           return true;
+       });
+   
+       $("#theme_selector").on("change", function () {
+           // Change theme
+           $('#smartwizard').smartWizard("theme", $(this).val());
+           return true;
+       });
+   
+       // Set selected theme on page refresh
+       $("#theme_selector").change();
+   });
+</script>
