@@ -256,8 +256,10 @@
             });
 
             // Next button event
-            $('.sw-btn-next', this.main).on("click", function (e) {
+            $('.sw-btn-next', this.main).on("click",  (e) => {
+                const si = this.current_index;
                 e.preventDefault();
+                if(si == 1 || si==2 ) return
                 mi._showNext();
             });
 
@@ -326,7 +328,14 @@
                 }
                 si = this.steps.length - 1;
             }
-            this._showStep(si);
+            try{
+
+                let payload = JSON.parse(localStorage.formData)
+                this.handleData(payload,si)
+            }catch{
+                console.log('failed to parse JSON')
+                this._showStep(si);
+            }
             return true;
         },
         _showStep: function (idx) {
@@ -490,6 +499,14 @@
                 } else {
                     $('.sw-btn-next', this.main).removeClass("disabled");
                 }
+                //disable next at step 2
+                if (1 == idx) {
+                    $('.sw-btn-next', this.main).addClass("disabled");
+                }
+                //disabel next at step 3
+                if (2 == idx) {
+                    $('.sw-btn-next', this.main).addClass("disabled");
+                }
             }
             return true;
         },
@@ -619,29 +636,431 @@
         },
         handleFormSumbit : function(si){
             if(si != 1) return this._showStep(si);
-            //Performing the api request
+            
+            const formError = document.querySelector('#formError')
+            formError.style.display = 'none';
+            this.displayLoader(true);
+            //collect form data
             this.collectData((isValid,data) => {
-                if(!sValid){
-
+                if(isValid){
+                    localStorage.formData = JSON.stringify(data)
+                    const payload = data
+                    this.handleData(payload,si)
                 }else{
+                    const formError = document.querySelector('#formError')
+                    const errorField = document.querySelector('#errorField')
+                    errorField.innerHTML = "Missing Required Fields"
+                    formError.style.display = 'block';
+                    this.displayLoader(false)
+
 
                 }
             });
-            return this._showStep(si);
+            
 
     
     
     
         },
+        handleData : function(payload,si){
+            if(si != 1) return this._showStep(si);
+            this.getPriceList(undefined,(success,priceList) => {
+                if(!success){payload
+                    const formError = document.querySelector('#formError')
+                    const errorField = document.querySelector('#errorField')
+                    errorField.innerHTML = "An error has occured, please try again"
+                    formError.style.display = 'block';
+                    return this.displayLoader(false)
+                }else{
+                    this.getCategories(payload).then( data => {
+                            this.processData(data.Availability,priceList,payload).then(categories => {
+                                
+                                this.templating(categories).then( () => {
+                                    const formError = document.querySelector('#formError')
+                                    formError.style.display = 'none';
+                                    this.displayLoader(false)    
+                                    return this._showStep(si);
+                                })
+                                .catch( ex => {
+                                    console.log(ex);
+                                    const formError = document.querySelector('#formError')
+                                    const errorField = document.querySelector('#errorField')
+                                    errorField.innerHTML = "an Error has occured, please try again"
+                                    formError.style.display = 'block';
+                                    return this.displayLoader(false)   
+                                })
+                            })
+                            .catch( ex => {
+                                console.log(ex);
+                                const formError = document.querySelector('#formError')
+                                const errorField = document.querySelector('#errorField')
+                                errorField.innerHTML = "an Error has occured, please try again"
+                                formError.style.display = 'block';
+                                return this.displayLoader(false)   
+                            })
+                        // this.displayLoader(false)
+                        // this._showStep(si);
+                    })
+                    .catch( ex => {
+                        console.log(ex);
+                        const formError = document.querySelector('#formError')
+                        const errorField = document.querySelector('#errorField')
+                        errorField.innerHTML = "an Error has occured, please try again"
+                        formError.style.display = 'block';
+                        return this.displayLoader(false)
+                    })
+                }
+            })
+        },
+        displayLoader : function(display){
+            const wizzard = document.querySelector('#smartwizard');
+            const loader = document.querySelector('#smartLoader');
+            if(display){
+                wizzard.style.display = 'none';
+                loader.style.display = 'block';
+            }else{
+                loader.style.display = 'none';
+                wizzard.style.display = 'block';
+            }
+
+
+        },
         collectData : function(callback){
             const inputs = $('#searchCar input').add($('#searchCar select')) 
-            const data
+            const data = {};
             for ( var i = 0; i<inputs.length ; i++){
                 const input = inputs[i];
-                if(input.tagName = 'INPUT'){}
-                data[input.name]
+                if(input.tagName == 'SELECT'){
+                    for(var a=0;a<input.childNodes.length; a++){
+                        const option = input.childNodes[a];
+                        if(option.selected){
+                            data[input.name] = option.value;
+                        }
+                    }
+                }else{
+                    
+                data[input.name] = input.value;
+                }
             }
-            callback(true,)
+           
+            this.validateData(data,(isValid)=>{
+                if(isValid){
+                    callback(true,data)
+                }else{
+                    
+                callback(false)
+                }
+            })
+
+        },
+        validateData : function(data,callback){
+            const cities = Object.keys(locationCharges);
+            if(cities.indexOf(data.pickUpLocation) == -1) return callback(false)
+            if(cities.indexOf(data.DropOffLocation) == -1) return callback(false)
+
+
+            if(formDefaults.indexOf(data.StartTime) != -1) return callback(false)
+            if(formDefaults.indexOf(data.EndTime) != -1) return callback(false)
+
+
+
+            if(new Date(data.EndDate) == 'Invalid Date') return callback(false)
+            if(new Date(data.StartDate) == 'Invalid Date') return callback(false)
+            if(data.EndTime.length < 0) return callback(false)
+            if(data.StartTime.length < 0) return callback(false)
+            return callback(true)
+        },
+        getPriceList :function(payload,callback){
+            this.clientRequest(endpoints.getPricelist,payload,'GET').then( prices => callback(true,prices))
+            .catch( ex => {
+                console.log(ex);
+                return callback(false);
+            })
+        },
+        getCategories : function(payload){
+            return new Promise((resolve,reject) => {
+                this.clientRequest(endpoints.getCategories,payload,'POST').then( categories => resolve(categories))
+                .catch( ex => {
+                    console.log(ex);
+                    return reject(false);
+                })
+            })
+
+        },
+        clientRequest : function(endpoint,data,method){
+            return new Promise((resolve,reject) => {
+                const options = {};
+                if(data) options.body = JSON.stringify(data);
+                options.headers = {};
+                options.headers['Content-Type'] = 'application/json';
+                options.method = method.toUpperCase();
+    
+                fetch(endpoint,options).then(res => res.json())
+                .then(data => resolve(data))
+                .catch( ex => {
+                    console.log('Api request Failed: ',ex);
+                    return reject(ex);
+                })
+            })
+        },
+        processData : function(data,pricelist,payload){
+            return new Promise((resolve,reject) => {
+                //choosing a pricelist
+                const { pickUpLocation,DropOffLocation,StartTime,EndTime } = payload;
+                const categories = []
+                for(var i = 0 ; i < pricelist.length; i++){
+                    
+                    const price = pricelist[i];
+                    if(price.CodeNumber =='WEB'){
+                    if( price.CodeNumber == 'WEB' && new Date(payload.StartDate).getTime() > new Date(price.StartDate).getTime() && new Date(price.EndDate).getTime() > new Date(payload.EndDate).getTime() ){
+                        const rentalPeriod = this.daysBetweenDates(payload.EndDate,payload.StartDate);
+                        //period between rental startDate and priclist endDate
+                        const endPeriod = this.daysBetweenDates(price.EndDate, payload.StartDate);
+                        //checks whether the users rental period overlaps the into a second priclist
+                        if(rentalPeriod > endPeriod){
+                            const leftPeriod = rentalPeriod - endPeriod;
+                            const price2 =pricelist[i+1];
+                            for(var a =0 ; a<price.Pricings.length; a++ ){
+                                let pricing = price.Pricings[a];
+                                let carCategoryId = pricing.CarCategoryId;
+                                for(var c = 0;c<data.length;c++){
+                                    const car = data[c];
+                                    if(car.CarCategoryId == carCategoryId){
+                                    car.extras = price.Extras
+
+                                        for(var key in pricing ){
+                                            var totalCharges = 0;
+                                            if(pricing.hasOwnProperty(key)){
+                                                if(key.indexOf('PriceDay') > -1){
+                                                    const keyArr = key.split('')
+                                                    if(parseInt(keyArr[keyArr.length-1])<=endPeriod){
+                                                        totalCharges += pricing[key]
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                    car.totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation]
+
+                                    car.totalCharges = totalCharges;
+
+
+                                }
+                            }
+                            for(var k =0 ; k<price2.Pricings.length; k++ ){
+                                pricing = price2.Pricings[k];
+                                carCategoryId = pricing.CarCategoryId;
+                                for(var h = 0;h < data.length;h++){
+                                    if(car.CarCategoryId == carCategoryId){
+                                        for(var key in pricing ){
+                                            var totalCharges = 0;
+                                            if(pricing.hasOwnProperty(key)){
+                                                if(key.indexOf('PriceDay') > -1){
+                                                    const keyArr = key.split('')
+                                                    if(parseInt(keyArr[keyArr.length-1])<=leftPeriod){
+                                                        totalCharges += pricing[key]
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                    car.totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation]  + this.timeCharge(StartTime,EndTime,pricing)
+
+                                    categories.push(car);
+
+
+                                }
+
+                            }
+                        }else{
+                            //making use of one pricelist
+                            
+                            for(var a =0; a<price.Pricings.length; a++ ){
+                                
+                                const pricing = price.Pricings[a];
+                                const carCategoryId = pricing.CarCategoryId;
+                                for(var p = 0; p<data.length;p++){
+                                    
+                                        
+                                    const car = data[p];
+                                    if(car.CarCategoryId == carCategoryId){
+                                    car.totalCharges = 0;
+                                    car.extras = price.Extras
+                                        for(var key in pricing ){
+                                            if(pricing.hasOwnProperty(key)){
+                                                if(key.indexOf('PriceDay') > -1){
+                                                    const keyArr = key.split('PriceDay')
+                                                    if(parseInt(keyArr[1])<=rentalPeriod){
+                                                        car.totalCharges += pricing[key]
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    car.totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation] + this.timeCharge(StartTime,EndTime,pricing)
+                                    categories.push(car);
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+                    
+                }
+                return resolve(categories);
+            })
+        },
+        timeCharge :function(startTime,endTime,price){
+            const {PriceDay1} = price
+            startTime = startTime.split(':');
+            endTime = endTime.split(':');
+            const endMins = (parseInt(endTime[0])*60)+ parseInt(endTime[1])
+            const startMins = (parseInt(startTime[0])*60)+ parseInt(startTime[1])
+            const hoursbtwn = Math.round((endMins-startMins)/60);
+            
+            if(hoursbtwn < 2) return 0
+            if(hoursbtwn < 4 ) return Math.round(0.25 * PriceDay1);
+            return Math.round(PriceDay1)
+        },
+        daysBetweenDates : function(date1,date2){
+            //one dat in milliseconds
+            const oneDay = 1000*60*60*24;
+            //convert inputs in milliseconds
+            const date1Ms = new Date(date1).getTime();
+            const date2Ms = new Date(date2).getTime();
+            //difference in millimeters
+            const difference  = date1Ms - date2Ms;
+            //convert back to days
+            return Math.round(difference/oneDay);
+        },
+        addExtras : function(){
+            //adding eventListeners to the get this car button
+            const getCarbtns = document.querySelectorAll(".get-car");
+            for(var i = 0; i< getCarbtns.length; i++){
+                let car = getCarbtns[i];
+                car.addEventListener('click',e=>{
+                    const selectedCar = {}
+                     const carCategoryId = e.target.children[0].value
+                     const carSelector = ".car-"+carCategoryId.toString()
+                     const carHtml = document.querySelector(carSelector)
+                     const category = document.querySelector(carSelector+ " .car-cate")
+                     const extras = document.querySelectorAll(carSelector+ " input[type ='checkbox']")
+                    console.log(extras)
+                     const carMake = document.querySelector(carSelector+" .makeHeader").innerHTML
+                     const totalCharge = document.querySelector(carSelector+" .total-charge").children[0].value
+                     selectedCar.make = carMake;
+                     selectedCar.category = category.value
+                     selectedCar.carCategoryId = carCategoryId;
+                     var { total, selectedExtras } = this.calculateExtras(extras);
+                     selectedCar.totalCharge = parseInt(totalCharge) + total;
+                     selectedCar.extras = {
+                         total,
+                         selectedExtras
+                     }
+                     selectedCar.pickupDetails = JSON.parse(localStorage.formData)
+                     localStorage.selectedCar = JSON.stringify(selectedCar);
+                    this._showNext()
+                })
+            } 
+        },
+        calculateExtras : function(extras){
+            const {StartDate,EndDate} = JSON.parse(localStorage.formData);
+            var daysBtwn = this.daysBetweenDates(EndDate,StartDate);
+            var extraCharges = 0;
+            var selectedExtras = []
+            for( var i = 0; i < extras.length; i++){
+               let {name, value,checked } = extras[i];
+               value = parseInt(value)
+               if(checked){
+                   selectedExtras.push(name)
+                   if(extraChargeRate.indexOf(name) == -1){
+                    extraCharges += value;
+                   }else{
+                    if(name == "label_4"){
+                        if(daysBtwn>6){
+                            value = value* 6
+                        }else{
+                            value = value * daysBtwn
+                            extraCharges += value
+                        }
+                    }else{
+                        if(daysBtwn>10){
+                            value = value* 10
+                        }else{
+                            value = value * daysBtwn
+                            extraCharges += value
+                        }
+                    }
+                   }
+               }
+            }
+            extraCharges = Math.round(extraCharges)
+            return {total :extraCharges,selectedExtras}
+        },
+        templating : function(categories){
+            return new Promise((resolve,reject) => {
+                // const resultsContainer = document.querySelector('#searchResults');
+                const chargeEntries = document.querySelectorAll(".total-charge");
+                for( var i = 0; i < chargeEntries.length; i++){
+                    let entry = chargeEntries[i]
+                    var cateId = parseInt(entry.id);
+                    for( var a = 0; a<categories.length; a++){
+                        let cate = categories[a]
+                        if(cate.CarCategoryId == cateId){
+                            
+                            entry.children[0].value = cate.totalCharges;
+                            entry.children[1].innerHTML = cate.totalCharges.toString() + "€"
+                        }
+                    }
+                    
+                }
+                this.addExtras()
+                // for(var i = 0 ; i < categories.length; i++){
+                //     const carData = categories[i]
+                //     const result = document.createElement('div');
+                //     result.classList += "row  border-bottom shadow rounded";
+                //     //let {car,extras } = templates;
+                //     console.log(carData)
+                //     var extraString = '';
+                //     // for( var v = 0; v< carData.extras.length; v++){
+                //     //     let extra = extras;
+                //     //     let extraData = carData.extras[v];
+                //     //     for (var key in extraData){
+                //     //         if(extraData.hasOwnProperty(key)){
+                //     //             extra = extra.replace('{'+key+'}',extraData[key])
+                //     //         }
+                //     //     }
+                //     //     extraString+=extra;
+                //     // }
+                //     for (var key in carData ){
+                //         if(carData.hasOwnProperty(key)){
+                //             //car = car.replace('{'+key+'}',carData[key]);
+                //             // car = car.replace('{extrasBlock}',extraString);
+                //         }
+
+                //     }
+                //     // car = new DOMParser().parseFromString(car, "text/html");
+                //     // console.log(car)
+                //     //$(result).html(car)
+                //     let theCar = carCard()
+                //     console.log(theCar)
+                //     resultsContainer.appendChild(theCar);
+                // }
+
+                //TEMPLATING ALTERNATIVE
+
+
+
+
+                lib.translateDecriptions()
+                $(".btnInfo").tooltip()
+                var skata = "Pick up location";
+    
+                resolve();
+            })
         }
     
     });
