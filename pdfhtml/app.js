@@ -28,7 +28,7 @@ generate = function()
   //document.body.appendChild(iframe);
 
   //iframe.src = pdf.output('datauristring');
-  const filename = "invoice-" + JSON.parse(localStorage.transactionDetails).id + '.pdf';
+  const filename = "voucher-" + JSON.parse(localStorage.transactionDetails).id + '.pdf';
   pdf.save(filename)
 };
 

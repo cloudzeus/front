@@ -843,7 +843,8 @@
                                                                 clientRequest(endpoints.newBooking,booking,"POST").then(data => {
                                                                    console.log(data)
                                                                    localStorage.newBooking = JSON.stringify(data);
-                                                                   window.location = "#step-4"
+                                                                   window.location = "/step1.html#step-4"
+                                                                   location.reload()
                                                                 })
                                                                 .catch( ex => console.log(ex))
 

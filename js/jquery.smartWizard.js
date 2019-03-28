@@ -943,7 +943,7 @@
             for(var i = 0; i< getCarbtns.length; i++){
                 let car = getCarbtns[i];
                 car.addEventListener('click',e=>{
-                    const selectedCar = {}
+                     const selectedCar = {}
                      const carCategoryId = e.target.children[0].value
                      const carSelector = ".car-"+carCategoryId.toString()
                      const carHtml = document.querySelector(carSelector)
@@ -965,9 +965,10 @@
                      }
                      selectedCar.pickupDetails = JSON.parse(localStorage.formData)
                      localStorage.selectedCar = JSON.stringify(selectedCar);
-                    this._showNext()
+                    window.location = "/step1.html#step-3"
+                    location.reload()
                 })
-            } 
+            }
         },
         calculateExtras : function(extras){
             const {StartDate,EndDate} = JSON.parse(localStorage.formData);
