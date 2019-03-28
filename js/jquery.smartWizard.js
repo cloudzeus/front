@@ -665,7 +665,8 @@
         handleData : function(payload,si){
             if(si != 1) return this._showStep(si);
             this.getPriceList(undefined,(success,priceList) => {
-                if(!success){payload
+                if(!success){
+
                     const formError = document.querySelector('#formError')
                     const errorField = document.querySelector('#errorField')
                     errorField.innerHTML = "An error has occured, please try again"
@@ -685,7 +686,7 @@
                                     console.log(ex);
                                     const formError = document.querySelector('#formError')
                                     const errorField = document.querySelector('#errorField')
-                                    errorField.innerHTML = "an Error has occured, please try again"
+                                    errorField.innerHTML = ex
                                     formError.style.display = 'block';
                                     return this.displayLoader(false)   
                                 })
@@ -792,7 +793,7 @@
                 const options = {};
                 if(data) options.body = JSON.stringify(data);
                 options.headers = {};
-                options.headers['Content-Type'] = 'application/json';
+                if(data) options.headers['Content-Type'] = 'application/json';
                 options.method = method.toUpperCase();
     
                 fetch(endpoint,options).then(res => res.json())
@@ -947,6 +948,7 @@
                      const carSelector = ".car-"+carCategoryId.toString()
                      const carHtml = document.querySelector(carSelector)
                      const category = document.querySelector(carSelector+ " .car-cate")
+                     const CarModelId = document.querySelector(carSelector+ " .car-model-id").value;
                      const extras = document.querySelectorAll(carSelector+ " input[type ='checkbox']")
                     console.log(extras)
                      const carMake = document.querySelector(carSelector+" .makeHeader").innerHTML
@@ -954,6 +956,7 @@
                      selectedCar.make = carMake;
                      selectedCar.category = category.value
                      selectedCar.carCategoryId = carCategoryId;
+                     selectedCar.CarModelId = CarModelId;
                      var { total, selectedExtras } = this.calculateExtras(extras);
                      selectedCar.totalCharge = parseInt(totalCharge) + total;
                      selectedCar.extras = {
@@ -969,6 +972,7 @@
         calculateExtras : function(extras){
             const {StartDate,EndDate} = JSON.parse(localStorage.formData);
             var daysBtwn = this.daysBetweenDates(EndDate,StartDate);
+            localStorage.rentalPeriod = JSON.stringify(daysBtwn)
             var extraCharges = 0;
             var selectedExtras = []
             for( var i = 0; i < extras.length; i++){
@@ -1002,6 +1006,7 @@
         },
         templating : function(categories){
             return new Promise((resolve,reject) => {
+                if(categories.length == 0 ) return reject("sorry! a car matching you requirements was not found")
                 // const resultsContainer = document.querySelector('#searchResults');
                 const chargeEntries = document.querySelectorAll(".total-charge");
                 for( var i = 0; i < chargeEntries.length; i++){

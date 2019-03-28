@@ -5,7 +5,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta author="Kozyris Giannis">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <title>Breeze Car Rental Services</title>
       <link href="images/favicon.png" rel="icon">
       <!--Plugins css-->
@@ -18,21 +18,22 @@
          integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
       <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="pdfhtml/app.css">
 
       <!--this is the css for the form wizzard -->
       <!--end the css for the form wizzard -->
       <!--Custom Styles-->
-      
+
 
       <link rel="stylesheet" href="css/style.css">
       <script src="https://www.paypal.com/sdk/js?client-id=AREXT6MxGWlNGTm8d-BObWS7HlGcKHxNOicbBI6nZfB8_rk5eYmFKQrkmRq7rk9vFD6Ir3C8T4E8HEEe"></script>
       <script src="api/paypal.js"></script>
-      
+
    </head>
    <body data-spy="scroll" data-target=".navbar" data-offset="90">
          <script src="api/languages.js"></script>
          <script src="api/util.js"></script>
-         
+
          <script src="api/templates.js"></script>
          <script src="api/extras.js"></script>
          <script src="api/endpoints.js"></script>
@@ -289,7 +290,10 @@
                               <!-- Car Image-->
                               <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
                                  <!-- Car Make-->
-                                 <p class="mb-0 py-2"><span class="makeHeader">VOLKSWAGEN</span><small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
+                                 <p class="mb-0 py-2">
+                                    <span class="makeHeader">VOLKSWAGEN</span>
+                                    <input type="hidden" name="CarModelId" class="car-model-id" value="149">
+                                    <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
                                  <div class="row">
                                     <div class="col-6 pl-3">
                                        <div class="text-center row">
@@ -349,21 +353,21 @@
                                  <div class="row justify-content-md-center">
                                     <div class="col-6 col-md-6 col-lg-3 ">
                                        <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">10.00€</span>
-                                       
+
                                           <a  class="description_3 btnInfo infoPrice align-middle infoLink" style="z-index:1000;"  href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car driver which will be charged daily but with maximum 5 days charge.">
                                              <i class="fas fa-info-circle"></i>
-                                             </a>                                       
+                                             </a>
                                        <label class="switch" >
                                           <input type="checkbox" name="label_3"class="default" value="10.00"  >
                                           <span class="slider round"></span>
-                                          
+
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">0.00€</span>                                                                              
+                                       <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">0.00€</span>
                                        <a  class="description_7 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Car snow chains for snow expeditions which will be charged daily but with maximum 7 days charge.">
                                           <i class="fas fa-info-circle"></i>
-                                          </a>      
+                                          </a>
                                        <label class="switch ">
                                           <input type="checkbox" name="label_7" class="default" value="0.00">
                                           <span class="slider round"></span>
@@ -373,7 +377,7 @@
                                        <span class="switchText"> <script>document.write(lib.translator("label_6"))</script> </span><span class="switchPrice">5.00€</span>
                                        <a  class="description_6 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Baby Seat for ages from 2 to 4 which will be charged daily but with maximum 7 days charge.">
                                           <i class="fas fa-info-circle"></i>
-                                          </a> 
+                                          </a>
                                        <label class="switch ">
                                           <input type="checkbox" name="label_6" value="5.00" class="default">
                                           <span class="slider round"></span>
@@ -383,7 +387,7 @@
                                        <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">350.00€</span>
                                        <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
-                                          </a> 
+                                          </a>
                                        <label class="switch ">
                                           <input type="checkbox" name="label_9" value="350.00" class="default">
                                           <span class="slider round"></span>
@@ -396,7 +400,7 @@
                                        <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">750.00€</span>
                                        <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
-                                          </a> 
+                                          </a>
                                        <label class="switch">
                                           <input type="checkbox" name="label_8" value="750.00" class="default">
                                           <span class="slider round"></span>
@@ -406,7 +410,7 @@
                                        <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">12.00€</span>
                                        <a  class="description_10 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
-                                          </a> 
+                                          </a>
                                        <label class="switch ">
                                           <input type="checkbox" name="label_10" value="12.00" class="default">
                                           <span class="slider round"></span>
@@ -416,15 +420,15 @@
                                        <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">4.00€</span>
                                        <a  class="description_4 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Portable GPS device  which will be charged daily with maximum 6 days of charge.">
                                              <i class="fas fa-info-circle"></i>
-                                             </a> 
+                                             </a>
                                        <label class="switch ">
-                                            
+
                                           <input type="checkbox" name="label_4" value="4.00" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       
+
                                     </div>
 
                                  </div>
@@ -440,7 +444,10 @@
                                  <!-- Car Image-->
                                  <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
                                     <!-- Car Make-->
-                                    <p class="mb-0 py-2"><span class="makeHeader">FIAT</span><small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
+                                    <p class="mb-0 py-2">
+                                       <span class="makeHeader">FIAT</span>
+                                       <input class="car-model-id" type="hidden" name="CarModelId" value="150">
+                                       <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
                                     <div class="row">
                                        <div class="col-6 pl-3">
                                           <div class="text-center row">
@@ -469,7 +476,7 @@
                                           </div>
                                        </div>
                                        <!-- Car Price and select button-->
-   
+
                                        <div class="col-6">
                                           <div class="row">
                                              <div class="col-12 text-center pb-md-2">
@@ -492,29 +499,29 @@
                                        </div>
                                        <!-- Car Price and select button-->
                                     </div>
-   
+
                                  </div>
                                  <!-- Car extras-->
-   
+
                                  <div class="col-12 pt-2  extrasBackGround">
                                     <div class="row justify-content-md-center">
                                        <div class="col-6 col-md-6 col-lg-3 ">
                                           <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">10.00€</span>
-                                          
+
                                              <a  class="description_3 btnInfo infoPrice align-middle infoLink" style="z-index:1000;"  href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car driver which will be charged daily but with maximum 5 days charge.">
                                                 <i class="fas fa-info-circle"></i>
-                                                </a>                                       
+                                                </a>
                                           <label class="switch" >
                                              <input type="checkbox" name="label_3"class="default" value="10.00"  >
                                              <span class="slider round"></span>
-                                             
+
                                           </label>
                                        </div>
                                        <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">0.00€</span>                                                                              
+                                          <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">0.00€</span>
                                           <a  class="description_7 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Car snow chains for snow expeditions which will be charged daily but with maximum 7 days charge.">
                                              <i class="fas fa-info-circle"></i>
-                                             </a>      
+                                             </a>
                                           <label class="switch ">
                                              <input type="checkbox" name="label_7" class="default" value="0.00">
                                              <span class="slider round"></span>
@@ -524,7 +531,7 @@
                                           <span class="switchText"> <script>document.write(lib.translator("label_6"))</script> </span><span class="switchPrice">5.00€</span>
                                           <a  class="description_6 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Baby Seat for ages from 2 to 4 which will be charged daily but with maximum 7 days charge.">
                                              <i class="fas fa-info-circle"></i>
-                                             </a> 
+                                             </a>
                                           <label class="switch ">
                                              <input type="checkbox" name="label_6" value="5.00" class="default">
                                              <span class="slider round"></span>
@@ -534,20 +541,20 @@
                                           <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">350.00€</span>
                                           <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
                                              <i class="fas fa-info-circle"></i>
-                                             </a> 
+                                             </a>
                                           <label class="switch ">
                                              <input type="checkbox" name="label_9" value="350.00" class="default">
                                              <span class="slider round"></span>
                                           </label>
                                        </div>
-   
+
                                     </div>
                                     <div class="row justify-content-md-center">
                                        <div class="col-6 col-md-6 col-lg-3 ">
                                           <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">750.00€</span>
                                           <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
                                              <i class="fas fa-info-circle"></i>
-                                             </a> 
+                                             </a>
                                           <label class="switch">
                                              <input type="checkbox" name="label_8" value="750.00" class="default">
                                              <span class="slider round"></span>
@@ -557,7 +564,7 @@
                                           <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">12.00€</span>
                                           <a  class="description_10 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.">
                                              <i class="fas fa-info-circle"></i>
-                                             </a> 
+                                             </a>
                                           <label class="switch ">
                                              <input type="checkbox" name="label_10" value="12.00" class="default">
                                              <span class="slider round"></span>
@@ -567,37 +574,37 @@
                                           <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">4.00€</span>
                                           <a  class="description_4 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Portable GPS device  which will be charged daily with maximum 6 days of charge.">
                                                 <i class="fas fa-info-circle"></i>
-                                                </a> 
+                                                </a>
                                           <label class="switch ">
-                                               
+
                                              <input type="checkbox" name="label_4" value="4.00" class="default">
                                              <span class="slider round"></span>
                                           </label>
                                        </div>
                                        <div class="col-6 col-md-6 col-lg-3">
-                                          
+
                                        </div>
-   
+
                                     </div>
-   
+
                                  </div>
                                  <!-- Car extras-->
                               </div>
                            <!-- end for every car result-->
-                              
+
                                 <!-- end for every car result-->
 
-                                
-                              
+
+
                            </div>
                         </div>
                         <!-- this is the drivers info tab-->
                      <div id="step-3" class="tab-pane step-content">
-                        <script>  
-                        
+                        <script>
+
                         const {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
                         const { StartDate,StartTime,EndTime,EndDate} = pickupDetails;
-                        
+
                         let startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
                         let endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
 
@@ -629,7 +636,7 @@
                                  <p class="stepTwoHeaderPThree headerp">
                                        <script>
                                              document.write(endDateString)
-                                       </script> 
+                                       </script>
                                  </p>
                               </div>
                               <div class="col-md-12 col-sm-12  border-md-right border-md-down">
@@ -654,7 +661,7 @@
                                                 for( var i = 0; i < extras.selectedExtras.length; i++){
                                                    const extraLabel = extras.selectedExtras[i];
                                                    document.write(lib.translator(extraLabel))
-                                                }   
+                                                }
                                              </script>
                                              </small>
                                           </div>
@@ -682,8 +689,8 @@
                            <div class="row border">
                               <div class="col-12">
                                  <script>
-                                    
-                                    
+
+
                                     let termsHtml = '<textarea class="form-control" id="termsConditions" rows="3">'
                                     termsHtml  += lib.translator("terms") + '</textarea>'
                                  </script>
@@ -692,61 +699,61 @@
                                        <div class="container">
                                           <form id="checkout">
                                                  <div id="checkoutError" style="display:none" class="ml-auto mr-auto text-center"  ><small id="checkoutErrorField" class="text-center text-danger">Missing required fields</small></div>
-                                             
+
                                              <div class="form-row pt-4">
                                                 <div class="col-12 col-md-6 col-lg-4 form-group">
                                                    <label for="firstName"><script>document.write(lib.translator("First_Name"))</script></label>
-                                                   <input type="text"  class="form-control" id="fistName" name="fistName">
+                                                   <input type="text"  class="form-control" id="fistName" name="CustomerFirstName">
                                                 </div>
                                                 <div class="col-12  col-md-6 col-lg-4 form-group">
                                                    <label for="lastName"><script>document.write(lib.translator("Last_Name"))</script></label>
-                                                   <input type="text" class="form-control" id="lastName" name="lastName">
+                                                   <input type="text" class="form-control" id="lastName" name="CustomerLastName">
                                                 </div>
                                                 <div class="col-12  col-md-6 col-lg-4 form-group">
                                                    <label for="email">E-mail</label>
-                                                   <input type="text" class="form-control" name="email" id="email">
+                                                   <input type="text" class="form-control" name="customeremail" id="email">
                                                 </div>
                                              </div>
                                              <div class="form-row">
                                                 <div class="col-12 col-md-6 col-lg-6 form-group">
                                                    <label for="address"><script>document.write(lib.translator("Address"))</script></label>
-                                                   <input type="text" class="form-control" id="address" name="address">
+                                                   <input type="text" class="form-control" id="address" name="CustomerAddress">
                                                 </div>
                                                 <div class="col-6  col-md-4 col-lg-4 form-group">
                                                    <label for="city"><script>document.write(lib.translator("City"))</script></label>
-                                                   <input type="text" class="form-control" id="city" name="city">
+                                                   <input type="text" class="form-control" id="city" name="CustomerCity">
                                                 </div>
                                                 <div class="col-6  col-md-2 col-lg-2 form-group">
                                                    <label for="ZIP"><script>document.write(lib.translator("ZIP"))</script></label>
-                                                   <input type="text" class="form-control" id="zip" name="zip">
+                                                   <input type="text" class="form-control" id="zip" name="CustomerZipCode">
                                                 </div>
                                              </div>
                                              <div class="form-row">
                                                 <div class="col-12 col-md-6 col-lg-6 form-group">
                                                    <label for="customerLicense"><script>document.write(lib.translator("Drivers_License_Num"))</script></label>
-                                                   <input type="text" class="form-control" 
-                                                      id="customerLicense" name="customerLicense">
+                                                   <input type="text" class="form-control"
+                                                      id="customerLicense" name="CustomerLicense">
                                                 </div>
                                                 <div class="col-8  col-md-4 col-lg-4 form-group">
                                                    <label for="customerIdentityNumber"><script>document.write(lib.translator("Customer_Identity_passport"))</script></label>
-                                                   <input type="text" class="form-control" 
-                                                      id="customerIdentityNumber" name="customerIdentityNumber">
+                                                   <input type="text" class="form-control"
+                                                      id="customerIdentityNumber" name="CustomerIdentityNumber">
                                                 </div>
                                                 <div class="col-4  col-md-2 col-lg-2 form-group">
                                                    <label for="phoneNumber"><script>document.write(lib.translator("Phone_Number"))</script></label>
                                                    <input type="text" class="form-control"
-                                                      id="phoneNumber" name="phoneNumber" >
+                                                      id="phoneNumber" name="CustomerPhoneNumber" >
                                                 </div>
                                              </div>
                                              <div class="form-row">
                                                 <div class="col-12 form-group">
                                                    <label for="termsConditions"><script>document.write(lib.translator("Terms_and_conditions"))</script></label>
-                                                 
+
                                                          <script>
                                                             document.write(termsHtml)
-                                                            
+
                                                          </script>
-                                                
+
                                                 </div>
                                                 <div class="col-12 form-group">
                                                    <div class="checkbox">
@@ -775,7 +782,7 @@
                                                             paypal.Buttons({
                                                             createOrder: function(data, actions) {
                                                                document.querySelector("#termsAgreeError").innerHTML = '';
-                                                               document.querySelector("#checkoutError").style.display = 'none';   
+                                                               document.querySelector("#checkoutError").style.display = 'none';
                                                                //Custom logic before sending payment
                                                                return validateCheckoutForm("checkout").then( userDetails => {
                                                                   return actions.order.create({
@@ -798,9 +805,47 @@
                                                                   localStorage.transactionDetails = JSON.stringify(details)
                                                                // Show a success message to your buyer
                                                                alert('Transaction completed by ' + details.payer.name.given_name);
-                                                               
-                                                               // @TODO Dispatch an transaction data to the server side
-                                                               SmartWizard.prototype._showStep(3)
+                                                               //Building the object needed to create a new booking
+                                                               const datesInfo  = JSON.parse(localStorage.formData);
+                                                               const chosenCar  = JSON.parse(localStorage.selectedCar);
+                                                               const userDetails  = JSON.parse(localStorage.userDetails);
+
+                                                               const DateStart = datesInfo.StartDate + " " + datesInfo.StartTime;
+                                                               const DateEnd = datesInfo.EndDate + " " + datesInfo.EndTime;
+                                                               const { CarModelId, carCategoryId,extras } = chosenCar;
+                                                               const TotalPrice = chosenCar.totalCharge;
+                                                               const DaysRental = parseInt(JSON.parse(localStorage.rentalPeriod))
+                                                               const ReservationDate = new Date(Date.now()).toLocaleString()
+                                                               const PlaceFrom = datesInfo.pickUpLocation;
+                                                               const PlaceTo = datesInfo.DropOffLocation;
+                                                               const  Notes = ""
+                                                               let {selectedExtras } = extras;
+                                                               for ( var i =0; i<selectedExtras.length; i ++ ){
+                                                                  const extra = selectedExtras[i];
+                                                                  Notes += lib.translator(extra) + ";"
+                                                               }
+                                                                const booking = {
+                                                                  FromBranchStoreId :6,
+                                                                  ToBranchStoreId : 6, //@TODO if the "To" word
+                                                                  CarCategoryId : parseInt(carCategoryId),
+                                                                  CarModelId : parseInt(CarModelId),
+                                                                  DateStart,
+                                                                  DateEnd,
+                                                                  DaysRental,
+                                                                  ReservationDate,
+                                                                  TotalPrice,
+                                                                  PlaceFrom,
+                                                                  PlaceTo,
+                                                                  Notes,
+                                                                  ...userDetails
+                                                                }
+                                                                console.log(booking)
+                                                                clientRequest(endpoints.newBooking,booking,"POST").then(data => {
+                                                                   console.log(data)
+                                                                   localStorage.newBooking = JSON.stringify(data);
+                                                                   window.location = "#step-4"
+                                                                })
+                                                                .catch( ex => console.log(ex))
 
                                                                });
                                                             }
@@ -833,10 +878,11 @@
                         </div>
                      </div>
                   </div>
-                  <div id="step-4" class="tab-pane step-content">
+                  <div id="step-4" class="tab-pane step-content html-2-pdfwrapper">
                      <script>
                         const userDetails = JSON.parse(localStorage.userDetails);
                         const transDetails = JSON.parse(localStorage.transactionDetails)
+                        const newBooking = JSON.parse(localStorage.newBooking)
                      </script>
                         <div>
                            <h3 class="reservationHeader text-center">Reservation Voucher</h3>
@@ -851,146 +897,167 @@
                                  </p>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Transaction Details: <span><i class="fa fa-money-check headerInfoIcon"></i></span></p>
-                                 <p class="stepTwoHeaderPThree headerp">PR993999JSL933</p>
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">Transaction Id: <span><i class="fa fa-money-check headerInfoIcon"></i></span></p>
+                                 <p class="stepTwoHeaderPThree headerp">
+                                       <script>document.write(transDetails.id)</script>
+
+                                 </p>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Reservation Number: <span><i class="fa fa-file-invoice headerInfoIcon"></i></span></p>
-   
-                                 <p class="stepTwoHeaderPThree headerp">BR03092993888</p>
+
+                                 <p class="stepTwoHeaderPThree headerp">
+                                       <script>
+                                           document.write(newBooking.BookingNumber)
+                                       </script>
+                                 </p>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Booking Date: <span><i class="fa fa-calendar-alt headerInfoIcon"></i></span></p>
-   
-                                 <p class="stepTwoHeaderPThree headerp mb-2">23 January 2019</p>
+
+                                 <p class="stepTwoHeaderPThree headerp mb-2">
+                                    <script>
+                                    document.write((new Date(transDetails.create_time)).toUTCString())
+                                    </script>
+                                 </p>
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-md-3 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Name:<span><i id="firstInfo" class="fa fa-user headerInfoIcon"
                                           data-toggle="popover" data-placement="top" title="Pick Up Details" data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
-                                 <p class="stepTwoHeaderPThree headerp">Giannis</p>
+                                 <p class="stepTwoHeaderPThree headerp">
+                                    <script>
+                                        document.write(userDetails.CustomerFirstName)
+                                     </script>
+                                 </p>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Last Name: <span><i class="fa fa-user headerInfoIcon"></i></span></p>
-                                 <p class="stepTwoHeaderPThree headerp">Kozyris</p>
+                                 <p class="stepTwoHeaderPThree headerp">
+                                       <script>document.write(userDetails.CustomerLastName) </script>
+
+                                 </p>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">E-mail: <span><i class="fa fa-at headerInfoIcon"></i></span></p>
-   
-                                 <p class="stepTwoHeaderPThree headerp">gkozyris@i4ria.com</p>
+
+                                 <small style="font-size:.7em;" class="stepTwoHeaderPThree headerp">
+                                       <script>document.write(userDetails.customeremail) </script>
+
+                                 </small>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Phone Number: <span><i class="fa fa-phone headerInfoIcon"></i></span></p>
-   
-                                 <p class="stepTwoHeaderPThree headerp mb-2">+30 210 234 3232</p>
+
+                                 <p class="stepTwoHeaderPThree headerp mb-2">
+                                       <script>document.write(userDetails.CustomerPhoneNumber) </script>
+
+                                 </p>
                               </div>
                            </div>
                            <div class="row">
                               <div class="col-md-4 col-sm-12 stepTwoHeader border-md-down border-md-left border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Address:<span><i id="firstInfo" class="fa fa-map-pin headerInfoIcon"></i></span></p>
-                                 <p class="stepTwoHeaderPThree headerp">Leonidou 25</p>
+                                 <p class="stepTwoHeaderPThree headerp">
+                                       <script>document.write(userDetails.CustomerAddress) </script>
+
+                                 </p>
                               </div>
                               <div class="col-md-4 col-sm-6 border-md-left border-md-down border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">City: <span><i class="fa fa-map-signs headerInfoIcon"></i></span></p>
-                                 <p class="stepTwoHeaderPThree headerp">Athens</p>
+                                 <p class="stepTwoHeaderPThree headerp">
+                                       <script>document.write(userDetails.CustomerCity) </script>
+
+                                 </p>
                               </div>
                               <div class="col-md-4 col-sm-6 border-md-left border-md-down border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Zip Code: <span><i class="fa fa-compass headerInfoIcon"></i></span></p>
-   
-                                 <p class="stepTwoHeaderPThree headerp">10436</p>
+
+                                 <p class="stepTwoHeaderPThree headerp">
+                                       <script>document.write(userDetails.CustomerZipCode) </script>
+
+                                 </p>
                               </div>
-   
+
                            </div>
                            <div class="row">
                               <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Drivers License:<span><i id="firstInfo"
                                           class="fa fa-id-badge headerInfoIcon"></i></span></p>
-                                 <p class="stepTwoHeaderPThree headerp">K3ks9288ds</p>
+                                 <p class="stepTwoHeaderPThree headerp">
+                                       <script>document.write(userDetails.CustomerLicense) </script>
+
+                                 </p>
                               </div>
                               <div class="col-md-6 col-sm-6 border-md-left border-md-down border-md-right">
                                  <p class="stepTwoHeaderPFirst headerp headerTop">Customer Identity/Passport number: <span><i
                                           class="fa fa-passport headerInfoIcon"></i></span></p>
-                                 <p class="stepTwoHeaderPThree headerp">PLDKS32KSJJD</p>
+                                 <p class="stepTwoHeaderPThree headerp">
+                                       <script>document.write(userDetails.CustomerIdentityNumber) </script>
+
+                                 </p>
                               </div>
-   
-   
+
+
                            </div>
-   
-   
+
+
                            <div class="row mb-3">
-                              <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Pick Up:<span><i id="firstInfo" class="fa fa-map headerInfoIcon"
-                                          data-toggle="popover" data-placement="top" title="Pick Up Details" data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
-                                 <p class="stepTwoHeaderPTwo headerp">Athens International Airport ATH:</p>
-                                 <p class="stepTwoHeaderPThree headerp">Tuesday, Feb 05:12:00 PM</p>
-                              </div>
-                              <div class="col-md-6 col-sm-6 border-md-left border-md-down border-md-right">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Drop Off: <span><i class="fa fa-map headerInfoIcon"></i></span></p>
-                                 <p class="stepTwoHeaderPTwo headerp">Athens International Airport ATH:</p>
-                                 <p class="stepTwoHeaderPThree headerp">Tuesday, Feb 05:12:00 PM</p>
-                              </div>
-                              <div class="col-md-12 col-sm-12  border-md-right border-md-down">
-                                 <div class="row">
-                                    <div class="col-12 col-md-4 border-right border-md-left ">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Car selection: <span><i class="fa fa-car headerInfoIcon"></i></span></p>
-                                       <p class="stepTwoHeaderPTwo headerp">Car Category: economy</p>
-                                       <p class="stepTwoHeaderPThree headerp">CITROEN CX-2 <span>or similar</span></p>
+                                 <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
+                                       <p class="stepTwoHeaderPFirst headerp headerTop"><script>document.write(lib.translator("PICK_UP"))</script> :<span><i id="firstInfo" class="fa fa-map headerInfoIcon"
+                                                data-toggle="popover" data-placement="top" title="Pick Up Details"
+                                                data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
+                                       <p class="stepTwoHeaderPTwo headerp"><script>
+                                       document.write(lib.translator(pickupDetails.pickUpLocation.split(" ").join("_")))
+                                       </script>:</p>
+                                       <p class="stepTwoHeaderPThree headerp">
+                                          <script>
+                                             document.write(startDateString)
+                                             </script>
+                                       </p>
                                     </div>
-                                    <div class="col-12 col-md-3 border-lg-down   border-md-right  border-md-left">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Tolal Price: <span><i class="fa fa-money-bill-alt headerInfoIcon"></i></span></p>
-                                       <p class="stepTwoHeaderPTwo headerp">All Prices include Taxes</p>
-                                       <p class="stepTwoHeaderPThree headerp">63.00€</p>
-   
+                                    <div class="col-md-6 col-sm-6 border-md-left border-md-down border-md-right">
+                                       <p class="stepTwoHeaderPFirst headerp headerTop"><script>document.write(lib.translator("DROP_OFF"))</script>: <span><i class="fa fa-map headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPTwo headerp"><script>
+                                             document.write(lib.translator(pickupDetails.DropOffLocation.split(" ").join("_")))
+                                             </script>:</p>
+                                       <p class="stepTwoHeaderPThree headerp">
+                                             <script>
+                                                   document.write(endDateString)
+                                             </script>
+                                       </p>
                                     </div>
-                                    <div class="col-12 col-md-5 border-md-left">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Extras: <span><i class="far fa-cart-plus headerInfoIcon"></i></span></p>
-                                       <p class="stepTwoHeaderPTwo headerp">Here are all the extras included</p>
-                                       <div class="row">
-                                          <div class="col-12 form-check-inline pt-0" id="barOfExtras">
-                                             <span class="bmd-form-group is-filled">
-                                                <div class="checkbox pr-1 pl-3">
-                                                   <label>
-                                                      <input type="checkbox" checked=""><span class="checkbox-decorator"><span
-                                                            class="check"></span></span> extra driver
-                                                   </label>
-                                                </div>
-                                             </span>
-                                             <span class="bmd-form-group is-filled">
-                                                <div class="checkbox pr-1">
-                                                   <label>
-                                                      <input type="checkbox" checked=""><span class="checkbox-decorator"><span
-                                                            class="check"></span></span> GPS
-                                                   </label>
-                                                </div>
-                                             </span>
-                                             <span class="bmd-form-group is-filled">
-                                                <div class="checkbox pr-1">
-                                                   <label>
-                                                      <input type="checkbox"><span class="checkbox-decorator"><span class="check"></span></span>
-                                                      Snow Chains
-                                                   </label>
-                                                </div>
-                                             </span>
-                                             <span class="bmd-form-group is-filled">
-                                                <div class="checkbox pr-1">
-                                                   <label>
-                                                      <input type="checkbox" checked=""><span class="checkbox-decorator"><span
-                                                            class="check"></span></span> Baby cot
-                                                   </label>
-                                                </div>
-                                             </span>
+                                    <div class="col-md-12 col-sm-12  border-md-right border-md-down">
+                                          <div class="row">
+                                             <div class="col-12 col-md-4 border-right border-md-left ">
+                                                <p class="stepTwoHeaderPFirst headerp headerTop"> <script>document.write(lib.translator("car_selection"))</script>: <span><i class="fa fa-car headerInfoIcon"></i></span></p>
+                                                <p class="stepTwoHeaderPTwo headerp"><script>document.write(lib.translator("car_category")+": ");document.write(lib.translator(category))</script></p>
+                                                <p class="stepTwoHeaderPThree headerp"><script>document.write(make);</script> <span><script>document.write(lib.translator("Or_similar"))</script></span></p>
+                                             </div>
+                                             <div class="col-12 col-md-3 border-lg-down  ">
+                                                <p class="stepTwoHeaderPFirst headerp headerTop"><script>document.write(lib.translator("total_price"))</script>: <span><i class="fa fa-money-bill-alt headerInfoIcon"></i></span></p>
+                                                <p class="stepTwoHeaderPTwo headerp"><script>document.write(lib.translator("all_prices"))</script></p>
+                                                <p class="stepTwoHeaderPThree headerp"><script>document.write(totalCharge)</script> €</span></p>
+
+                                             </div>
+                                             <div class="col-12 col-md-5 border-md-left">
+                                                <p class="stepTwoHeaderPFirst headerp headerTop"><script>document.write(lib.translator("Extras"))</script>: <span><i class="fa fa-cart-plus headerInfoIcon"></i></span></p>
+                                                <p class="stepTwoHeaderPTwo headerp"><script>document.write(lib.translator("all_extras"))</script></p>
+                                                   <div class="col-12 form-check-inline pt-0" id="barOfExtras">
+                                                      <small>
+                                                      <script>
+                                                         for( var i = 0; i < extras.selectedExtras.length; i++){
+                                                            const extraLabel = extras.selectedExtras[i];
+                                                            document.write(lib.translator(extraLabel))
+                                                         }
+                                                      </script>
+                                                      </small>
+                                                   </div>
+                                             </div>
                                           </div>
-                                       </div>
-   
-   
-                                    </div>
-   
-   
-   
-                                 </div>
-   
-   
+
+
                                  <div class="row">
                                     <div class=" col-6 col-md-6 col-sm-6 stepTwoHeader  border-md-left">
                                        <p class="stepTwoHeaderPFirst headerp headerTop">Print Voucher:<span><i id="firstInfo"
@@ -998,11 +1065,11 @@
                                        <p class="stepTwoHeaderPThree headerp pt-2"><button class="btn btn-myFormPre btn-sm">Print
                                              Voucher</button></p>
                                     </div>
-   
+
                                     <div class=" col-6 col-md-6 col-sm-6 border-md-left ">
                                        <p class="stepTwoHeaderPFirst headerp headerTop">Download Pdf: <span><i class="fas fa-file-pdf headerInfoIcon"></i></span></p>
-   
-                                       <p class="stepTwoHeaderPThree headerp mb-2 pt-2"><button class="btn btn-myFormPre btn-sm">Download
+
+                                       <p class="stepTwoHeaderPThree headerp mb-2 pt-2"><button onclick="generate()" class="btn btn-myFormPre btn-sm">Download
                                              pdf</button></p>
                                     </div>
                                  </div>
@@ -1010,7 +1077,11 @@
                                     <!-- Car Image-->
                                     <div class="col-12 col-md-4  pt-2 " style=" animation-name: none;">
                                        <p class="mb-0 py-2"><span class="makeHeader">Pick Up Location Details</span><br><small
-                                             class="pl-1">Breeze Car Rentals HQ</small></p>
+                                             class="pl-1">
+                                          <script>
+                                             // document.write()
+                                          </script>
+                                          </small></p>
                                        <div class="row">
                                           <div class="col-12">
                                              <p class="stepTwoHeaderPFirst headerp headerTop"></span><span>Address:</span>&nbsp;<span><i
@@ -1029,33 +1100,33 @@
                                              <p> <span class="stepTwoHeaderPTwo headerp">reservations@breezerentals.gr</span>
                                              </p>
                                           </div>
-   
+
                                        </div>
-   
-   
+
+
                                     </div>
                                     <!-- Car Image-->
                                     <div class="col-12 col-md-8 my-3">
                                        <!-- Car Make-->
-   
+
                                        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 15rem;">
                                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d619.228488604294!2d23.84001202045361!3d38.01608951077724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a19973de74b019%3A0x2ef00f46f2a0d08b!2zzpHOs86vzrHPgiDOpM-BzrnOrM60zr_PgiA3MiwgzpHOsy4gzqDOsc-BzrHPg866zrXPhc6uIDE1MyA0MywgzpXOu867zqzOtM6x!5e0!3m2!1sel!2sus!4v1551110558203"
                                              width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-   
+
                                        </div>
-   
+
                                        <!-- Car extras-->
                                     </div>
-   
+
                                     <!-- Car Image-->
                                     <div class="col-12 col-md-8 my-3">
                                        <!-- Car Make-->
-   
+
                                        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 15rem;">
                                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.7765239621635!2d23.94622155128059!3d37.93565091056017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1901ad9e75c61%3A0x38b215df0aeeb3aa!2zzpTOuc61zrjOvc6uz4IgzpHOtc-Bzr_Ou865zrzOrc69zrHPgiDOkc64zrfOvc-Ozr0!5e0!3m2!1sel!2sgr!4v1551158466299"
                                              width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                                        </div>
-   
+
                                        <!-- Car extras-->
                                     </div>
                                     <div class="col-12 col-md-4  pt-2 " style=" animation-name: none;">
@@ -1079,20 +1150,20 @@
                                              <p> <span class="stepTwoHeaderPTwo headerp">reservations@breezerentals.gr</span>
                                              </p>
                                           </div>
-   
+
                                        </div>
-   
-   
+
+
                                     </div>
-   
-   
-   
-   
+
+
+
+
                                  </div>
-   
-   
+
+
                               </div>
-   
+
                            </div>
                         </div>
                         <div id="step-5" class="tab-pane step-content">
@@ -1119,7 +1190,7 @@
                   <ul class=" bottom25 wow fadeInUp list-inline">
                      <li class="our-address list-inline-item">
                         <a class="pickus  privacy" href="#." data-text="privacy policy" style="font-size:0.6rem; letter-spacing:2px;">
-                           <script>document.write(lib.translator("PRIVACY_POLICY"))</script>
+                           <script>document.write(lib.translator("PRIVACY_POLICY"));</script>
                         </a>
                      </li>
                      <li class="our-address list-inline-item">
@@ -1137,6 +1208,8 @@
       </footer>
       <!--Footer ends-->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src='pdfhtml/dist/jspdf.min.js'></script>
+      <script src="pdfhtml/app.js" charset="utf-8"></script>
       <script src="js/jquery-3.1.1.min.js"></script>
       <!--Bootstrap Core-->
       <script src="js/popper.min.js"></script>
@@ -1185,24 +1258,24 @@
       <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.js" type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
          crossorigin="anonymous"></script>
-      
+
       <script src="js/jquery.smartWizard.js"></script>
       <script>
          $(document).ready(function () {
              $('body').bootstrapMaterialDesign();
-            
-           
-         
-         
+
+
+
+
              $(function () {
                  $('#firstInfo').popover({
                      container: 'body'
                  })
              })
-         
-         
-         
-         
+
+
+
+
              var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
          today.setHours(today.getHours()+24);
              $('#startDate').datepicker({
@@ -1220,53 +1293,53 @@
                      return $('#startDate').val();
                  }
              });
-            
+
              $('#timepicker').timepicker({ timeFormat: 'H:mm:ss p' });
          $('#timeDrop').timepicker({ timeFormat: 'H:mm:ss p' });
 
          console.log(today);
-         
-         
-         
-         
+
+
+
+
          });
       </script>
-      
+
       <script src="js/functions.js"></script>
    </body>
 </html>
 <script></script>
 <script type="text/javascript">
    $(document).ready(function () {
-   
-   
-       var skata = "Pick up location";
-   
 
-   
+
+       var skata = "Pick up location";
+
+
+
        // Step show event
        $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
            //console.log("You are on step "+stepNumber+" now");
-   
+
            if (stepNumber === 0) {
-   
+
                console.log(stepNumber);
            }
            if (stepPosition === 'first') {
                $("#prev-btn").addClass('disabled');
-   
+
            } else if (stepPosition === 'final') {
                $("#next-btn").addClass('disabled');
            } else {
                $("#prev-btn").removeClass('disabled');
                $("#next-btn").removeClass('disabled');
            }
-   
+
        });
-   
+
        //test to store form values
-   
-   
+
+
        // Toolbar extra buttons
        var btnFinish = $('<button></button>').text('Finish')
            .addClass('btn btn-info')
@@ -1278,8 +1351,8 @@
            .on('click', function () {
                $('#smartwizard').smartWizard("reset");
            });
-   
-   
+
+
        // Smart Wizard
        $('#smartwizard').smartWizard({
            selected: 0,
@@ -1293,33 +1366,33 @@
                //  toolbarExtraButtons: [btnFinish, btnCancel]
            }
        });
-   
-   
+
+
        // External Button Events
        $("#reset-btn").on("click", function () {
            // Reset wizard
            $('#smartwizard').smartWizard("reset");
            return true;
        });
-   
+
        $("#prev-btn").on("click", function () {
            // Navigate previous
            $('#smartwizard').smartWizard("prev");
            return true;
        });
-   
+
        $("#next-btn").on("click", function () {
            // Navigate next
            $('#smartwizard').smartWizard("next");
            return true;
        });
-   
+
        $("#theme_selector").on("change", function () {
            // Change theme
            $('#smartwizard').smartWizard("theme", $(this).val());
            return true;
        });
-   
+
        // Set selected theme on page refresh
        $("#theme_selector").change();
    });
