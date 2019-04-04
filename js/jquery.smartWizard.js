@@ -842,9 +842,9 @@
                                             }
                                         }
                                     }
-                                    car.totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation]
-
-                                    car.totalCharges = totalCharges;
+                                    totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation]
+                                    
+                                    car.totalCharges = Math.round(totalCharges);
 
 
                                 }
@@ -868,7 +868,7 @@
                                         }
                                     }
                                     car.totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation]  + this.timeCharge(StartTime,EndTime,pricing)
-
+                                    car.totalCharges = Math.round(car.totalCharges)
                                     categories.push(car);
 
 
@@ -901,6 +901,7 @@
                                             }
                                         }
                                     car.totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation] + this.timeCharge(StartTime,EndTime,pricing)
+                                    car.totalCharges = Math.round(car.totalCharges)
                                     categories.push(car);
                                     }
                                 }

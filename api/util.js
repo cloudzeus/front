@@ -14,3 +14,17 @@ function clientRequest(endpoint,data,method){
         })
     })
 }
+
+function displayLoader(display){
+    const wizzard = document.querySelector('#smartwizard');
+    const loader = document.querySelector('#smartLoader');
+    if(display){
+        wizzard.style.display = 'none';
+        loader.style.display = 'block';
+    }else{
+        loader.style.display = 'none';
+        wizzard.style.display = 'block';
+    }
+
+
+}

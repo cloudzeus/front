@@ -66,9 +66,11 @@ lib.init = () => {
 
 lib.changeLanguage = () => {
     const button = document.querySelector('#changeLanguage');
+    // console.log(button)
     if(button != null ){
         button.addEventListener('click',e => {
             const lang = e.target.id;
+            console.log(lang)
             switch(lang){
                 case "English":
                     localStorage.language = "English"
@@ -79,8 +81,11 @@ lib.changeLanguage = () => {
                 case "German":
                     localStorage.language = "German"
                     break
+                default:
+                localStorage.language = "English"
                 
             }
+            if(window.location != '/' || window.location != '') window.location = "/step1.html#step-1"
             location.reload()
         })
     }
@@ -91,10 +96,12 @@ lib.inputValueDisplay = () => {
     const timePicker = document.querySelector("#timepicker");
     const endDate = document.querySelector("#endDate");
     const timeDrop = document.querySelector("#timeDrop");
+ if(startDate && timeDrop && endDate && timePicker){
     startDate.value = lib.translator("Pick_Up_Date")
     timePicker.value = lib.translator("pick_up_time")
     endDate.value = lib.translator("Drop_off_date")
     timeDrop.value = lib.translator("Drop_off_time")
+}
 }
 
 lib.translateDecriptions = function(){
@@ -151,9 +158,38 @@ lib.translator =  function(word){
     }
 }
 
+function indexTranslator(){
+    var indexLanguage = localStorage.language ? localStorage.language : false;
+    if(!indexLanguage){
+        localStorage.language = "English";
+        indexLanguage = "English"
+    }
+    //get the index body node
+    const htmlBody = document.querySelector("#body");
+    
+    if(htmlBody){
+        switch(indexLanguage){
+            case "English":
+                htmlBody.innerHTML = englishBody;
+                break
+            case "Greek":
+                htmlBody.innerHTML = greekBody;
+                break
+            default : 
+                htmlBody.innerHTML = englishBody;
+                break
+                
+        }
+        lib.init()
+    }
+}
+
+
 
 
 
 window.onload = () => {
     lib.init();
+    indexTranslator()
+    
 }

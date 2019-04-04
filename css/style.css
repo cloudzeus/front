@@ -27,8 +27,76 @@
 21 footer
 22 preloader
 
+/*Mottos first page */
+.motos{
+   color: #fff;
+   font-family: 'Open Sans';
+}
+.motos h1{
+
+   font-weight: 300;
+   font-size:3.5rem;
+}
+.motos h4{
+
+   font-weight: 300;
+   font-size:1.7rem;
+   letter-spacing: 0.3rem;
+   line-height: 2rem;
+}
 
 
+/* Terms and conditions links start*/
+#faq div{
+   font-size: 0.7rem;
+   letter-spacing: 0.2rem;
+   text-align: center;
+   justify-content: center;
+   color: #666;
+}
+#faq h5{
+   font-size: 0.82rem;
+   color: #000;
+   text-align: center;
+   justify-content: center;
+   letter-spacing: 0.18rem;
+}
+#siteTerms, #privacyPolicy, #consent{
+   color: #333333;
+   
+
+}
+#siteTerms p, #privacyPolicy p, #consent p, #consent div{
+   
+   font-size: 0.7rem;
+   letter-spacing: 0.2rem;
+   padding-top: 1.2rem;
+
+}
+#consent a{
+   color: #82b806;
+   text-decoration: underline;
+   font-weight: bold;
+}
+#consent a:hover{
+   color: #333;
+   text-decoration: underline;
+}
+.consentLinks a{
+   color: #333333;
+   font-size: 0.65rem;
+   text-decoration: none;
+   letter-spacing: 0.2rem;
+}
+.consentLinks a:hover{
+   color: #82b806;
+   text-decoration: underline;
+}
+
+
+
+
+/* Terms and conditions links end*/
 /* Reservations client card body*/
 .headerGreenCustomer{
    font-size: 0.85rem;
