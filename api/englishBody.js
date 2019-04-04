@@ -137,39 +137,39 @@ const englishBody = `
         <!-- header -->          
 <!--Ful Screen Section Video with caption-->   
  
-<section class="full-screen parallax-video parallaxie center-block bg-video-container" id="ourhome" style="height: 100vh; width: 100%; background-image: url(video/bg_01.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center 0px; position: relative; overflow: hidden;"> 
-<div class="container" id="formStep1"> 
-    
-    <div class="row"> 
+<section class="full-screen parallax-video parallaxie center-block bg-video-container" id="ourhome" style="height: 100vh; width: 100%; background-image: url(&quot;video/thumb-slide.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; position: relative; overflow: hidden;"> 
+            <div class="container" id="formStep1"> 
                 
-        <div class="col-md-12 col-sm-10  p-3" style="z-index:1;"> 
-            <div class="row justify-content-md-center">
-                <div class="col-md-6"><img src="images/logo_2.svg"  alt="logo" class="shadow-large px-1 img-fluid" maxwidth:"60%" ></div>
-            </div>
-                 
-            <div class="text-center video-content motos"> 
-                    
-                <h1 class="p-1">  Make a reservation to feel like a breeze </h1>
-                    <h4>We provide you with full assistance during every step, with the one and only purpose of keeping you satisfied and making it an easier experience to go through.</h4> 
-                    <a href="/step1.html" class="button btnprimary py-4 my-4" role="button" aria-pressed="true">Make A Reservation Now!</a>
-            </div>                         
-            <div class="center-item text-center video-content"> 
+                <div class="row"> 
+                            
+                    <div class="col-md-12 col-sm-10  p-3" style="z-index:1;"> 
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-6"><img src="images/logo_2.svg" alt="logo" class="shadow-large px-1 img-fluid" maxwidth:"60%"=""></div>
+                        </div>
                              
-        </div>                     
-    </div>                 
-</div>          
-<div class="col-md-3 col-sm-1"></div>             
-</div>         
-
-<video class="my-background-video jquery-background-video" loop="" autoplay="" muted="" poster="video/thumb-slide.jpg" style="min-width: auto; min-height: auto; width: 1903px; height: auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition-duration: 500ms;"> 
-<source src="video/video-slide.mp4" type="video/mp4"> 
-<source src="video/video-slide.ogv" type="video/webm"> 
-<source src="video/video-slide.webm" type="video/ogg"> 
-</video>     
-<button class="jquery-background-video-pauseplay play" style="left: auto; right: 15px; top: 15px; bottom: auto;">
-<span>Play</span>
-</button>     
-</section> 
+                        <div class="text-center video-content motos"> 
+                                
+                            <h1 class="p-1">  Make a reservation to feel like a breeze </h1>
+                                <h4>We provide you with full assistance during every step, with the one and only purpose of keeping you satisfied and making it an easier experience to go through.</h4> 
+                                <a href="#" class="button btnprimary py-4 my-4" role="button" aria-pressed="true">Make A Reservation Now!</a>
+                        </div>                         
+                        <div class="center-item text-center video-content"> 
+                                         
+                    </div>                     
+                </div>                 
+            </div>          
+            <div class="col-md-3 col-sm-1"></div>             
+        </div>         
+         
+    <video class="my-background-video jquery-background-video is-playing is-visible" loop="" autoplay="" muted="" poster="video/thumb-slide.jpg" style="min-width: auto; min-height: auto; width: 1349px; height: auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition-duration: 500ms;"> 
+        <source src="video/video-slide.mp4" type="video/mp4"> 
+        <source src="video/video-slide.ogv" type="video/webm"> 
+        <source src="video/video-slide.webm" type="video/ogg"> 
+    </video>     
+    <button class="jquery-background-video-pauseplay play" style="left: auto; right: 15px; top: 15px; bottom: auto;">
+        <span>Play</span>
+    </button>     
+<button class="jquery-background-video-pauseplay pause" style="left: auto; right: 15px; top: 15px; bottom: auto;"><span>Pause</span></button></section>
 <!--half img section--> 
 <section class="half-section" id="aboutus"> 
 <div class="container-fluid"> 
@@ -287,19 +287,19 @@ const englishBody = `
 <!--Some Feature ends--> 
 <!--Gallery--> 
 <section id="portfolio-xe" class="bglight padding"> 
-<div class="container"> 
-<div class="row"> 
-    <div class="col-md-8 offset-md-2 col-sm-12 text-center"> 
-        <div class="heading-title wow fadeInUp" data-wow-delay="300ms"> 
-            <span>Our Proposals</span> 
-            <h2 class="darkcolor bottom10">Escape from Athens</h2> 
-            <p class="heading_space"> 
-                    Arranging car hire in quality, safety and comfort, Breeze Car rentals is one of the most trusted car rental services. We can find you the best rental prices whenever you want - wherever you go. Make sure you check back here from time to time to see our latest amazing offers for car hire, discount coupons and more. Follow our blogs to stay updated on these details and get the fresh news in a timely manner, thus exploring through the escape proposals regarding our locations to find the best beaches or attractions around Athens or a few minutes away escapes from the city center. Everything for a pleasant experience. Everything for your peace of mind!
-        </div>                 
-    </div>             
-</div>         
-<div id="flat-gallery" class="cbp cbp-caption-active cbp-caption-pushTop cbp-ready" style="height: 1536px;"><div class="cbp-wrapper-outer"><div class="cbp-wrapper col-md-12 offset-md-1 col-sm-12 text-center"> 
-            <div class="cbp-item itemshadow" style="width: 450px; left: 0px; top: 0px;"><div class="cbp-item-wrapper"> 
+    <div class="container"> 
+        <div class="row"> 
+            <div class="col-md-8 offset-md-2 col-sm-12 text-center"> 
+                <div class="heading-title wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;"> 
+                    <span>Our Proposals</span> 
+                    <h2 class="darkcolor bottom10">Escape from Athens</h2> 
+                    <p class="heading_space"> 
+                            Arranging car hire in quality, safety and comfort, Breeze Car rentals is one of the most trusted car rental services. We can find you the best rental prices whenever you want - wherever you go. Make sure you check back here from time to time to see our latest amazing offers for car hire, discount coupons and more. Follow our blogs to stay updated on these details and get the fresh news in a timely manner, thus exploring through the escape proposals regarding our locations to find the best beaches or attractions around Athens or a few minutes away escapes from the city center. Everything for a pleasant experience. Everything for your peace of mind!
+                </p></div>                 
+            </div>             
+        </div>         
+        <div id="flat-gallery" class="cbp cbp-caption-active cbp-caption-pushTop cbp-ready" style="height: 798px;"><div class="cbp-wrapper-outer"><div class="cbp-wrapper"> 
+            <div class="cbp-item itemshadow" style="width: 350px; left: 0px; top: 0px;"><div class="cbp-item-wrapper"> 
                 <img src="images/e1.jpg" alt=""> 
                 <div class="overlay center-block whitecolor"> 
                     <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/beaches-around-attica/" target="_blank"></a> 
@@ -307,7 +307,7 @@ const englishBody = `
                     <p class="p-2 text-center">Find all secret beaches arround attica. Where you can swim in 45 minutes or less.</p> 
                 </div>                 
             </div></div>             
-            <div class="cbp-item itemshadow" style="width: 450px; left: 480px; top: 0px;"><div class="cbp-item-wrapper"> 
+            <div class="cbp-item itemshadow" style="width: 350px; left: 380px; top: 0px;"><div class="cbp-item-wrapper"> 
                 <img src="images/e2.jpg" alt=""> 
                 <div class="overlay center-block whitecolor"> 
                     <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/greek-food/" target="_blank"></a> 
@@ -315,7 +315,7 @@ const englishBody = `
                     <p class="p-2 text-center">There are places only the locas know follow us to find out where you can taste the real Greek cousine</p> 
                 </div>                 
             </div></div>             
-            <div class="cbp-item itemshadow" style="width: 450px; left: 0px; top: 522px;"><div class="cbp-item-wrapper"> 
+            <div class="cbp-item itemshadow" style="width: 350px; left: 760px; top: 0px;"><div class="cbp-item-wrapper"> 
                 <img src="images/e3.jpg" alt=""> 
                 <div class="overlay center-block whitecolor"> 
                     <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/greek-country-side/" target="_blank"></a> 
@@ -323,7 +323,7 @@ const englishBody = `
                     <p class="p-2 text-center">Greece is not only beaches you can find lots of beautiful places you can drive and have an amazing experience</p> 
                 </div>                 
             </div></div>             
-            <div class="cbp-item itemshadow" style="width: 450px; left: 480px; top: 522px;"><div class="cbp-item-wrapper"> 
+            <div class="cbp-item itemshadow" style="width: 350px; left: 0px; top: 414px;"><div class="cbp-item-wrapper"> 
                 <img src="images/e4.jpg" alt=""> 
                 <div class="overlay center-block whitecolor"> 
                     <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
@@ -331,7 +331,7 @@ const englishBody = `
                     <p class="p-2 text-center">Follow us and let us propose you many daily excursions to Paros Island.</p> 
                 </div>                 
             </div></div>             
-            <div class="cbp-item itemshadow" style="width: 450px; left: 0px; top: 1044px;"><div class="cbp-item-wrapper"> 
+            <div class="cbp-item itemshadow" style="width: 350px; left: 380px; top: 414px;"><div class="cbp-item-wrapper"> 
                 <img src="images/e5.jpg" alt=""> 
                 <div class="overlay center-block whitecolor"> 
                     <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
@@ -339,7 +339,7 @@ const englishBody = `
                     <p class="p-2 text-center">There are many places in Athens that you should visit. Let us give you a hint</p> 
                 </div>                 
             </div></div>             
-            <div class="cbp-item itemshadow" style="width: 450px; left: 480px; top: 1044px;"><div class="cbp-item-wrapper"> 
+            <div class="cbp-item itemshadow" style="width: 350px; left: 760px; top: 414px;"><div class="cbp-item-wrapper"> 
                 <img src="images/e6.jpg" alt=""> 
                 <div class="overlay center-block whitecolor"> 
                     <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
@@ -348,8 +348,8 @@ const englishBody = `
                 </div>                 
             </div></div>             
         </div></div></div>         
-</div>     
-</section> 
+    </div>     
+</section>
 <!--Gallery ends --> 
 
 <!-- Testimonials --> 

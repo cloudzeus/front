@@ -64,7 +64,7 @@ const greekBody = `
                 <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle"data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                  Γλώσσα 
+                                  Γλώσσα - Ελληνικά
                                 </a>
                                 <div id="changeLanguage" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <button id="Greek" class="dropdown-item" >Greek</button>
@@ -136,21 +136,21 @@ const greekBody = `
 <!-- header -->         
 <!--Ful Screen Section Video with caption-->   
  
-<section class="full-screen parallax-video parallaxie center-block bg-video-container" id="ourhome" style="height: 100vh; width: 100%; background-image: url(video/bg_01.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center 0px; position: relative; overflow: hidden;"> 
+<section class="full-screen parallax-video parallaxie center-block bg-video-container" id="ourhome" style="height: 100vh; width: 100%; background-image: url(&quot;video/thumb-slide.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; position: relative; overflow: hidden;"> 
             <div class="container" id="formStep1"> 
                 
                 <div class="row"> 
                             
                     <div class="col-md-12 col-sm-10  p-3" style="z-index:1;"> 
                         <div class="row justify-content-md-center">
-                            <div class="col-md-6"><img src="images/logo_2.svg"  alt="logo" class="shadow-large px-1 img-fluid" maxwidth:"60%" ></div>
+                            <div class="col-md-6"><img src="images/logo_2.svg" alt="logo" class="shadow-large px-1 img-fluid" maxwidth:"60%"=""></div>
                         </div>
                              
                         <div class="text-center video-content motos"> 
                                 
                             <h2 class="p-1">Πάρε προσφορά για την επόμενη εκδρομή σου   </h2>
                                 <h5 class="p-2">Στην Breeze Car Rentals προσφέρουμε όλες εκείνες τις λύσεις που χρειάζεσθε από την αρχή μέχρι το τέλος της ενοικίασης. Είμαστε εδώ για να σας καθοδηγήσουμε στην καλύτερη επιλογή αυτοκινήτου για την επόμενη απόδραση σας.</h5> 
-                                <a href="/step1.html" class="button btnprimary py-4 my-4" role="button" aria-pressed="true">Κράτηση Αυτοκινήτου Τώρα!</a>
+                                <a href="#" class="button btnprimary py-4 my-4" role="button" aria-pressed="true">Κράτηση Αυτοκινήτου Τώρα!</a>
                         </div>                         
                         <div class="center-item text-center video-content"> 
                                          
@@ -160,7 +160,7 @@ const greekBody = `
             <div class="col-md-3 col-sm-1"></div>             
         </div>         
          
-    <video class="my-background-video jquery-background-video" loop="" autoplay="" muted="" poster="video/thumb-slide.jpg" style="min-width: auto; min-height: auto; width: 1903px; height: auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition-duration: 500ms;"> 
+    <video class="my-background-video jquery-background-video is-playing is-visible" loop="" autoplay="" muted="" poster="video/thumb-slide.jpg" style="min-width: auto; min-height: auto; width: 1349px; height: auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition-duration: 500ms;"> 
         <source src="video/video-slide.mp4" type="video/mp4"> 
         <source src="video/video-slide.ogv" type="video/webm"> 
         <source src="video/video-slide.webm" type="video/ogg"> 
@@ -168,7 +168,7 @@ const greekBody = `
     <button class="jquery-background-video-pauseplay play" style="left: auto; right: 15px; top: 15px; bottom: auto;">
         <span>Play</span>
     </button>     
-</section>
+<button class="jquery-background-video-pauseplay pause" style="left: auto; right: 15px; top: 15px; bottom: auto;"><span>Pause</span></button></section>
 <!--half img section--> 
 <section class="half-section" id="aboutus"> 
     <div class="container-fluid"> 
@@ -326,56 +326,56 @@ const greekBody = `
         </div>                 
     </div>             
 </div>         
-<div id="flat-gallery" class="cbp"> 
-    <div class="cbp-item itemshadow"> 
-        <img src="images/e1.jpg" alt=""> 
-        <div class="overlay center-block whitecolor"> 
-            <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/beaches-around-attica/"  target="_blank"></a> 
-            <h4 class="top30">Κρυφές Παραλίες γύρω από την Αττική</h4> 
-            <p class="p-2 text-center">Δείτε που μπορείτε να κολυμπήσετε γύρω από την Αθήνα 45 λεπτά από το κέντρο</p> 
-        </div>                 
-    </div>             
-    <div class="cbp-item itemshadow"> 
-        <img src="images/e2.jpg" alt=""> 
-        <div class="overlay center-block whitecolor"> 
-            <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/greek-food/"  target="_blank"></a> 
-            <h4 class="top30">Ελληνική Κουζίνα</h4> 
-            <p class="p-2 text-center">Υπάρχουν κρυφά σημεία για φαγητό που μόνο οι ντόποιοι γνωρίζουν εμείς τα βρήκαμε και στας παρουσιάζουμε</p> 
-        </div>                 
-    </div>             
-    <div class="cbp-item itemshadow"> 
-        <img src="images/e3.jpg" alt=""> 
-        <div class="overlay center-block whitecolor"> 
-            <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/greek-country-side/" target="_blank"></a> 
-            <h4 class="top30">Ελληνική Εξοχή</h4> 
-            <p class="p-2 text-center">Ελλάδα δεν είναι μόνο παραλίες και κρυστάλινα νερά αλλά και η υπέροχη Ελληνική φύση υπέροχα βουνά και τοπία σε μικρή απόσταση από την Αθήνα </p> 
-        </div>                 
-    </div>             
-    <div class="cbp-item itemshadow"> 
-        <img src="images/e4.jpg" alt=""> 
-        <div class="overlay center-block whitecolor"> 
-            <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
-            <h4 class="top30">Τι να δείτε στην Πάρο</h4> 
-            <p class="p-2 text-center">Εξερευνήστε το νησί της Πάρου και αναλύψτε όλες της ομορφιές του Νησιού</p> 
-        </div>                 
-    </div>             
-    <div class="cbp-item itemshadow"> 
-        <img src="images/e5.jpg" alt=""> 
-        <div class="overlay center-block whitecolor"> 
-            <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
-            <h4 class="top30">Τι να δείτε στην Αθήνα</h4> 
-            <p class="p-2 text-center">Υπάρχουν πολλά μέρη στην Αθήνα που αξίζει να επισκευθείτε πέρα από το κέντρο και τα γνωστά αξιοθέατα.</p> 
-        </div>                 
-    </div>             
-    <div class="cbp-item itemshadow"> 
-        <img src="images/e6.jpg" alt=""> 
-        <div class="overlay center-block whitecolor"> 
-            <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
-            <h4 class="top30">Κρυφά Διαμάντια</h4> 
-            <p class="p-2 text-center">Αφήστε μας να σας αποκαλύψουμε τα κρυφά διαμάντια στο νησί της Πάρου</p> 
-        </div>                 
-    </div>             
-</div>         
+<div id="flat-gallery" class="cbp cbp-caption-active cbp-caption-pushTop cbp-ready" style="height: 798px;"><div class="cbp-wrapper-outer"><div class="cbp-wrapper"> 
+            <div class="cbp-item itemshadow" style="width: 350px; left: 0px; top: 0px;"><div class="cbp-item-wrapper"> 
+                <img src="images/e1.jpg" alt=""> 
+                <div class="overlay center-block whitecolor"> 
+                    <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/beaches-around-attica/" target="_blank"></a> 
+                    <h4 class="top30">Κρυφές Παραλίες γύρω από την Αττική</h4> 
+                    <p class="p-2 text-center">Δείτε που μπορείτε να κολυμπήσετε γύρω από την Αθήνα 45 λεπτά από το κέντρο</p> 
+                </div>                 
+            </div></div>             
+            <div class="cbp-item itemshadow" style="width: 350px; left: 380px; top: 0px;"><div class="cbp-item-wrapper"> 
+                <img src="images/e2.jpg" alt=""> 
+                <div class="overlay center-block whitecolor"> 
+                    <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/greek-food/" target="_blank"></a> 
+                    <h4 class="top30">Ελληνική Κουζίνα</h4> 
+                    <p class="p-2 text-center">Υπάρχουν κρυφά σημεία για φαγητό που μόνο οι ντόποιοι γνωρίζουν εμείς τα βρήκαμε και στας παρουσιάζουμε</p> 
+                </div>                 
+            </div></div>             
+            <div class="cbp-item itemshadow" style="width: 350px; left: 760px; top: 0px;"><div class="cbp-item-wrapper"> 
+                <img src="images/e3.jpg" alt=""> 
+                <div class="overlay center-block whitecolor"> 
+                    <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/category/greek-country-side/" target="_blank"></a> 
+                    <h4 class="top30">Ελληνική Εξοχή</h4> 
+                    <p class="p-2 text-center">Ελλάδα δεν είναι μόνο παραλίες και κρυστάλινα νερά αλλά και η υπέροχη Ελληνική φύση υπέροχα βουνά και τοπία σε μικρή απόσταση από την Αθήνα </p> 
+                </div>                 
+            </div></div>             
+            <div class="cbp-item itemshadow" style="width: 350px; left: 0px; top: 414px;"><div class="cbp-item-wrapper"> 
+                <img src="images/e4.jpg" alt=""> 
+                <div class="overlay center-block whitecolor"> 
+                    <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
+                    <h4 class="top30">Τι να δείτε στην Πάρο</h4> 
+                    <p class="p-2 text-center">Εξερευνήστε το νησί της Πάρου και αναλύψτε όλες της ομορφιές του Νησιού</p> 
+                </div>                 
+            </div></div>             
+            <div class="cbp-item itemshadow" style="width: 350px; left: 380px; top: 414px;"><div class="cbp-item-wrapper"> 
+                <img src="images/e5.jpg" alt=""> 
+                <div class="overlay center-block whitecolor"> 
+                    <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
+                    <h4 class="top30">Τι να δείτε στην Αθήνα</h4> 
+                    <p class="p-2 text-center">Υπάρχουν πολλά μέρη στην Αθήνα που αξίζει να επισκευθείτε πέρα από το κέντρο και τα γνωστά αξιοθέατα.</p> 
+                </div>                 
+            </div></div>             
+            <div class="cbp-item itemshadow" style="width: 350px; left: 760px; top: 414px;"><div class="cbp-item-wrapper"> 
+                <img src="images/e6.jpg" alt=""> 
+                <div class="overlay center-block whitecolor"> 
+                    <a class="plus" data-fancybox="gallery" href="https://blog.breezerentals.gr/" target="_blank"></a> 
+                    <h4 class="top30">Κρυφά Διαμάντια</h4> 
+                    <p class="p-2 text-center">Αφήστε μας να σας αποκαλύψουμε τα κρυφά διαμάντια στο νησί της Πάρου</p> 
+                </div>                 
+            </div></div>             
+        </div></div></div>         
 </div>     
 </section> 
 <!--Gallery ends --> 
@@ -437,64 +437,142 @@ const greekBody = `
 </div>         
 <div class="row"> 
     <div class="col-md-12 col-sm-12"> 
-        <div id="testimonial-slider" class="owl-carousel"> 
-            <div class="item"> 
-                <div class="testimonial-wrapp"> 
-                    <span class="quoted"><i class="fa fa-quote-right"></i></span> 
-                    <div class="testimonial-text"> 
-                        <p class="bottom40"> 
-                                Μου άρεσέ η ευελιξία  που είχα στα σημεία παράδοσης και παραλαβής ενώ η ώρα αναμονής ήταν ελάχιστη. Γενικά όλα καλά με την πρώτη μου εμπειρία που είχα με την Breeze Car Rental. Επαγγελματισμός και συνέπεια. 
+    <div id="testimonial-slider" class="owl-carousel owl-loaded owl-drag"> 
+                                         
+                                         
+                                         
+                                         
+    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1140px, 0px, 0px); transition: all 0s ease 0s; width: 3800px;"><div class="owl-item cloned" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40">Good partner, with cheap rates, clear web site and an efficient reservation prcess</p> 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-2.jpg">
+                </div>                             
+                <h4 class="darkcolor">Sam Gordon</h4> 
+                <small class="defaultcolor">Facebook</small> 
+            </div>                         
+        </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40"> 
+                            Πολύ καλή σχέση τιμής και υπηρεσίας ενώ το αυτοκίνητο ήταν μια πραγματική έκπληξη .
 </p> 
-                    </div>                             
-                    <div class="testimonial-photo">
-                        <img alt="" src="images/testimonial-1.jpg">
-                    </div>                             
-                    <h4 class="darkcolor">Kalvin Santers</h4> 
-                    <small class="defaultcolor">Tripadvisor</small> 
-                </div>                         
-            </div>                     
-            <div class="item"> 
-                <div class="testimonial-wrapp"> 
-                    <span class="quoted"><i class="fa fa-quote-right"></i></span> 
-                    <div class="testimonial-text"> 
-                        <p class="bottom40">Good partner, with cheap rates, clear web site and an efficient reservation prcess</p> 
-                    </div>                             
-                    <div class="testimonial-photo">
-                        <img alt="" src="images/testimonial-2.jpg">
-                    </div>                             
-                    <h4 class="darkcolor">Sam Gordon</h4> 
-                    <small class="defaultcolor">Facebook</small> 
-                </div>                         
-            </div>                     
-            <div class="item"> 
-                <div class="testimonial-wrapp"> 
-                    <span class="quoted"><i class="fa fa-quote-right"></i></span> 
-                    <div class="testimonial-text"> 
-                        <p class="bottom40"> 
-                                Πολύ καλή σχέση τιμής και υπηρεσίας ενώ το αυτοκίνητο ήταν μια πραγματική έκπληξη .
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-3.jpg">
+                </div>                             
+                <h4 class="darkcolor">Costas Papaikonomou</h4> 
+                <small class="defaultcolor">Website</small> 
+            </div>                         
+        </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40">Χρειάστηκα ένα αυτοκίνητο για ένα επαγγελματικό ταξίδι και ένας φίλος μου πρότεινε αυτό το γραφείο. Έμεινα εντυπωσιασμένος από τον τρόπο λειτουργίας αλλά και με το σύνολο των υπηρεσιών τους</p> 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-1.jpg">
+                </div>                             
+                <h4 class="darkcolor">David Zucker</h4> 
+                <small class="defaultcolor">Businessman</small> 
+            </div>                         
+        </div></div><div class="owl-item active" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40"> 
+                            Μου άρεσέ η ευελιξία  που είχα στα σημεία παράδοσης και παραλαβής ενώ η ώρα αναμονής ήταν ελάχιστη. Γενικά όλα καλά με την πρώτη μου εμπειρία που είχα με την Breeze Car Rental. Επαγγελματισμός και συνέπεια. 
 </p> 
-                    </div>                             
-                    <div class="testimonial-photo">
-                        <img alt="" src="images/testimonial-3.jpg">
-                    </div>                             
-                    <h4 class="darkcolor">Costas Papaikonomou</h4> 
-                    <small class="defaultcolor">Website</small> 
-                </div>                         
-            </div>                     
-            <div class="item"> 
-                <div class="testimonial-wrapp"> 
-                    <span class="quoted"><i class="fa fa-quote-right"></i></span> 
-                    <div class="testimonial-text"> 
-                        <p class="bottom40">Χρειάστηκα ένα αυτοκίνητο για ένα επαγγελματικό ταξίδι και ένας φίλος μου πρότεινε αυτό το γραφείο. Έμεινα εντυπωσιασμένος από τον τρόπο λειτουργίας αλλά και με το σύνολο των υπηρεσιών τους</p> 
-                    </div>                             
-                    <div class="testimonial-photo">
-                        <img alt="" src="images/testimonial-1.jpg">
-                    </div>                             
-                    <h4 class="darkcolor">David Zucker</h4> 
-                    <small class="defaultcolor">Businessman</small> 
-                </div>                         
-            </div>                     
-        </div>                 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-1.jpg">
+                </div>                             
+                <h4 class="darkcolor">Kalvin Santers</h4> 
+                <small class="defaultcolor">Tripadvisor</small> 
+            </div>                         
+        </div></div><div class="owl-item active" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40">Good partner, with cheap rates, clear web site and an efficient reservation prcess</p> 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-2.jpg">
+                </div>                             
+                <h4 class="darkcolor">Sam Gordon</h4> 
+                <small class="defaultcolor">Facebook</small> 
+            </div>                         
+        </div></div><div class="owl-item active" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40"> 
+                            Πολύ καλή σχέση τιμής και υπηρεσίας ενώ το αυτοκίνητο ήταν μια πραγματική έκπληξη .
+</p> 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-3.jpg">
+                </div>                             
+                <h4 class="darkcolor">Costas Papaikonomou</h4> 
+                <small class="defaultcolor">Website</small> 
+            </div>                         
+        </div></div><div class="owl-item" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40">Χρειάστηκα ένα αυτοκίνητο για ένα επαγγελματικό ταξίδι και ένας φίλος μου πρότεινε αυτό το γραφείο. Έμεινα εντυπωσιασμένος από τον τρόπο λειτουργίας αλλά και με το σύνολο των υπηρεσιών τους</p> 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-1.jpg">
+                </div>                             
+                <h4 class="darkcolor">David Zucker</h4> 
+                <small class="defaultcolor">Businessman</small> 
+            </div>                         
+        </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40"> 
+                            Μου άρεσέ η ευελιξία  που είχα στα σημεία παράδοσης και παραλαβής ενώ η ώρα αναμονής ήταν ελάχιστη. Γενικά όλα καλά με την πρώτη μου εμπειρία που είχα με την Breeze Car Rental. Επαγγελματισμός και συνέπεια. 
+</p> 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-1.jpg">
+                </div>                             
+                <h4 class="darkcolor">Kalvin Santers</h4> 
+                <small class="defaultcolor">Tripadvisor</small> 
+            </div>                         
+        </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40">Good partner, with cheap rates, clear web site and an efficient reservation prcess</p> 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-2.jpg">
+                </div>                             
+                <h4 class="darkcolor">Sam Gordon</h4> 
+                <small class="defaultcolor">Facebook</small> 
+            </div>                         
+        </div></div><div class="owl-item cloned" style="width: 350px; margin-right: 30px;"><div class="item"> 
+            <div class="testimonial-wrapp"> 
+                <span class="quoted"><i class="fa fa-quote-right"></i></span> 
+                <div class="testimonial-text"> 
+                    <p class="bottom40"> 
+                            Πολύ καλή σχέση τιμής και υπηρεσίας ενώ το αυτοκίνητο ήταν μια πραγματική έκπληξη .
+</p> 
+                </div>                             
+                <div class="testimonial-photo">
+                    <img alt="" src="images/testimonial-3.jpg">
+                </div>                             
+                <h4 class="darkcolor">Costas Papaikonomou</h4> 
+                <small class="defaultcolor">Website</small> 
+            </div>                         
+        </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div></div>              
     </div>             
 </div>         
 </div>     
