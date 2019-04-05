@@ -150,7 +150,7 @@ const greekBody = `
                                 
                             <h2 class="p-1">Πάρε προσφορά για την επόμενη εκδρομή σου   </h2>
                                 <h5 class="p-2">Στην Breeze Car Rentals προσφέρουμε όλες εκείνες τις λύσεις που χρειάζεσθε από την αρχή μέχρι το τέλος της ενοικίασης. Είμαστε εδώ για να σας καθοδηγήσουμε στην καλύτερη επιλογή αυτοκινήτου για την επόμενη απόδραση σας.</h5> 
-                                <a href="#" class="button btnprimary py-4 my-4" role="button" aria-pressed="true">Κράτηση Αυτοκινήτου Τώρα!</a>
+                                <a href="/step1.html" class="button btnprimary py-4 my-4" role="button" aria-pressed="true">Κράτηση Αυτοκινήτου Τώρα!</a>
                         </div>                         
                         <div class="center-item text-center video-content"> 
                                          

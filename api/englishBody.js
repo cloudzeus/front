@@ -151,7 +151,7 @@ const englishBody = `
                                 
                             <h1 class="p-1">  Make a reservation to feel like a breeze </h1>
                                 <h4>We provide you with full assistance during every step, with the one and only purpose of keeping you satisfied and making it an easier experience to go through.</h4> 
-                                <a href="#" class="button btnprimary py-4 my-4" role="button" aria-pressed="true">Make A Reservation Now!</a>
+                                <a href="/step1.html" class="button btnprimary py-4 my-4" role="button" aria-pressed="true">Make A Reservation Now!</a>
                         </div>                         
                         <div class="center-item text-center video-content"> 
                                          
