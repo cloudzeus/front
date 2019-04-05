@@ -136,7 +136,7 @@ const greekBody = `
 <!-- header -->         
 <!--Ful Screen Section Video with caption-->   
  
-<section class="full-screen parallax-video parallaxie center-block bg-video-container" id="ourhome" style="height: 100vh; width: 100%; background-image: url(&quot;video/thumb-slide.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; position: relative; overflow: hidden;"> 
+<section class="full-screen parallax-video parallaxie center-block bg-video-container" id="ourhome" style="height: 100vh; min-width: 1330px; background-image: url(&quot;video/thumb-slide.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; position: relative; overflow: hidden;"> 
             <div class="container" id="formStep1"> 
                 
                 <div class="row"> 
