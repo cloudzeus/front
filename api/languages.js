@@ -11,7 +11,7 @@ const languages = {
     categories : ["categories","Κατηγορίες"],
     priceLists :["pricelists","Τιμοκατάλογοι",],
     name : ["name","Όνομα"],
-    email : ["email","Email"],
+    email : ["email"," ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ"],
     address : ["address","Διεύθυνση"],
     zip : ["zip","T.K."],
     phone : ["phone","Τηλέφωνο"],
@@ -206,14 +206,14 @@ const languages = {
     Repeat_Password:["Repeat Password","Επανάληψη Κωδικού"],
     Register:["Register","Εγγραφή"],
     VAN:['VAN','από'], 
-    car_selection : ["CAR SELECTION"],
-    car_category : ["Car Category"] ,
-    total_price : ["Total Price"],
-    all_prices : ["All Prices include Taxes"],
-    all_extras: ["Here are all the extras included"],
-    notAvailable : ["Not Available"],
-    Family : ["Family"],
-    Mini :["Mini"],
+    car_selection : ["CAR SELECTION","ΕΠΙΛΟΓΗ ΑΥΤΟΚΙΝΗΤΟΥ"],
+    car_category : ["Car Category","Κατηγορία Αυτ/του"] ,
+    total_price : ["Total Price", "Σύνολο"],
+    all_prices : ["All Prices include Taxes","Στις τιμές περιλαμβάνονταο όλοι οι Φόροι" ],
+    all_extras: ["Here are all the extras included","Λίστα έξτρα παροχών" ],
+    notAvailable : ["Not Available", "Δεν είναι διαθέσημο"],
+    Family : ["Family","Οικογενειακή"],
+    Mini :["Mini", "Μίνι"],
     
     
     label_2 : ['Pick up charge 10€ ','Χρέωση Παραλαβής 10€ '],
@@ -248,15 +248,15 @@ const languages = {
             <div class="col-md-12 col-sm-12 text-center"> 
                 <ul class="social-icons bottom25 wow fadeInUp" data-wow-delay="300ms" style="visibility: hidden; animation-delay: 300ms; animation-name: none;"> 
                     <li>
-                        <a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> 
+                        <a href="javascript:void(0)"><i class="fab fa-facebook"></i> </a> 
                     </li>                     
                 
                     <li>
-                        <a href="javascript:void(0)"><i class="fa fa-google-plus"></i> </a> 
+                        <a href="javascript:void(0)"><i class="fab fa-google-plus"></i> </a> 
                     </li>                     
                      
                     <li>
-                        <a href="https://www.instagram.com/breezecars/" target="_blank"><i class="fa fa-instagram"></i> </a> 
+                        <a href="https://www.instagram.com/breezecars/" target="_blank"><i class="fab fa-instagram"></i> </a> 
                     </li>                     
                     <li>
                         <a href="mailto:info@breezerentals.gr"  target="_blank"><i class="fa fa-at"></i> </a> 
@@ -659,15 +659,15 @@ const languages = {
             <div class="col-md-12 col-sm-12 text-center"> 
                 <ul class="social-icons bottom25 wow fadeInUp" data-wow-delay="300ms" style="visibility: hidden; animation-delay: 300ms; animation-name: none;"> 
                     <li>
-                        <a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> 
+                        <a href="javascript:void(0)"><i class="fab fa-facebook"></i> </a> 
                     </li>                     
                 
                     <li>
-                        <a href="javascript:void(0)"><i class="fa fa-google-plus"></i> </a> 
+                        <a href="javascript:void(0)"><i class="fab fa-google-plus"></i> </a> 
                     </li>                     
                      
                     <li>
-                        <a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a> 
+                        <a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> 
                     </li>                     
                     <li>
                         <a href="javascript:void(0)"><i class="fa fa-at"></i> </a> 

@@ -1019,7 +1019,7 @@
                         if(cate.CarCategoryId == cateId){
                             
                             entry.children[0].value = cate.totalCharges;
-                            entry.children[1].innerHTML = cate.totalCharges.toString() + "€"
+                            entry.children[1].innerHTML = cate.totalCharges.toString() + " €"
                         }
                     }
                     
