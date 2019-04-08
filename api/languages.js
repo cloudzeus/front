@@ -214,6 +214,13 @@ const languages = {
     notAvailable : ["Not Available", "Δεν είναι διαθέσημο"],
     Family : ["Family","Οικογενειακή"],
     Mini :["Mini", "Μίνι"],
+    pickupLocationError :["Pick up location is mandatory please fill the pick up location!"],
+    dropOffLocationError :["Drop off location is mandatory please fill the drop off location!"],
+    startTimeError :["Pick up time is mandatory please fill the pick up time!"],
+    endTimeError :["Drop off time is mandatory please fill the drop off time!"],
+    checkItOut :["Check it out"],
+    errorOccured : ["An error has occured"],
+    tryAgain : ["Please try again!"],
     
     
     label_2 : ['Pick up charge 10€ ','Χρέωση Παραλαβής 10€ '],

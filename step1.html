@@ -244,14 +244,14 @@
                               </div>
                            </form>
                         </div>
-                        <div id="step-2" class="tab-pane step-content">
+                        <div id="step-2" class="tab-pane step-content" data-toggle="snackbar" data-content="Pick up location sis mandatory please fill the pick up location! <a href='#' class='btn btn-danger'>Check it out</a>" data-html-allowed="true" data-timeout="30">
                               <script>
 
-                                    const {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
-                                    const { StartDate,StartTime,EndTime,EndDate} = pickupDetails;
+                                    var {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
+                                    var { StartDate,StartTime,EndTime,EndDate} = pickupDetails;
             
-                                    let startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
-                                    let endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
+                                    var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
+                                    var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
             
                                     var startDateString = new Date(StartDate+" "+StartTime).toUTCString()
                                     var  endDateString = new Date(EndDate+" "+EndTime).toUTCString()
@@ -934,11 +934,11 @@
                      <div id="step-3" class="tab-pane step-content">
                         <script>
 
-                        const {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
-                        const { StartDate,StartTime,EndTime,EndDate} = pickupDetails;
+                        var {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
+                        var { StartDate,StartTime,EndTime,EndDate} = pickupDetails;
 
-                        let startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
-                        let endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
+                        var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
+                        var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
 
                         var startDateString = new Date(StartDate+" "+StartTime).toUTCString()
                         var  endDateString = new Date(EndDate+" "+EndTime).toUTCString()
@@ -1558,6 +1558,8 @@
          <script src="js/revolution/extensions/revolution.extension.parallax.min.js"></script>
          <script src="js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
          <script src="js/revolution/extensions/revolution.extension.video.min.js"></script> -->
+         <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+   
       <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
          crossorigin="anonymous"></script>
       <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -1705,3 +1707,4 @@
        $("#theme_selector").change();
    });
 </script>
+<div id="snackbar-container"><div id="snackbar1554762711878" class="snackbar" data-timeout="30" data-html-allowed="true"><span class="snackbar-content"></span></div></div>

@@ -647,10 +647,13 @@
                     const payload = data
                     this.handleData(payload,si)
                 }else{
-                    const formError = document.querySelector('#formError')
-                    const errorField = document.querySelector('#errorField')
-                    errorField.innerHTML = "Missing Required Fields"
-                    formError.style.display = 'block';
+                    const errorContainer = document.querySelector(".snackbar");
+                    errorContainer.childNodes[0].innerHTML = lib.translator(data) + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
+                    errorContainer.classList += " snackbar-opened";
+                    // const formError = document.querySelector('#formError')
+                    // const errorField = document.querySelector('#errorField')
+                    // errorField.innerHTML = "Missing Required Fields"
+                    // formError.style.display = 'block';
                     this.displayLoader(false)
 
 
@@ -667,10 +670,9 @@
             this.getPriceList(undefined,(success,priceList) => {
                 if(!success){
 
-                    const formError = document.querySelector('#formError')
-                    const errorField = document.querySelector('#errorField')
-                    errorField.innerHTML = "An error has occured, please try again"
-                    formError.style.display = 'block';
+                    const errorContainer = document.querySelector(".snackbar");
+                    errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
+                    errorContainer.classList += " snackbar-opened";
                     return this.displayLoader(false)
                 }else{
                     this.getCategories(payload).then( data => {
@@ -693,10 +695,9 @@
                             })
                             .catch( ex => {
                                 console.log(ex);
-                                const formError = document.querySelector('#formError')
-                                const errorField = document.querySelector('#errorField')
-                                errorField.innerHTML = "an Error has occured, please try again"
-                                formError.style.display = 'block';
+                                const errorContainer = document.querySelector(".snackbar");
+                                errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
+                                errorContainer.classList += " snackbar-opened";
                                 return this.displayLoader(false)   
                             })
                         // this.displayLoader(false)
@@ -704,10 +705,9 @@
                     })
                     .catch( ex => {
                         console.log(ex);
-                        const formError = document.querySelector('#formError')
-                        const errorField = document.querySelector('#errorField')
-                        errorField.innerHTML = "an Error has occured, please try again"
-                        formError.style.display = 'block';
+                        const errorContainer = document.querySelector(".snackbar");
+                        errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
+                        errorContainer.classList += " snackbar-opened";
                         return this.displayLoader(false)
                     })
                 }
@@ -744,31 +744,31 @@
                 }
             }
            
-            this.validateData(data,(isValid)=>{
+            this.validateData(data,(isValid,error)=>{
                 if(isValid){
                     callback(true,data)
                 }else{
                     
-                callback(false)
+                callback(false,error)
                 }
             })
 
         },
         validateData : function(data,callback){
             const cities = Object.keys(locationCharges);
-            if(cities.indexOf(data.pickUpLocation) == -1) return callback(false)
-            if(cities.indexOf(data.DropOffLocation) == -1) return callback(false)
+            if(cities.indexOf(data.pickUpLocation) == -1) return callback(false,"pickupLocationError")
+            if(cities.indexOf(data.DropOffLocation) == -1) return callback(false,"dropOffLocationError")
 
 
-            if(formDefaults.indexOf(data.StartTime) != -1) return callback(false)
-            if(formDefaults.indexOf(data.EndTime) != -1) return callback(false)
+            if(formDefaults.indexOf(data.StartTime) != -1) return callback(false,"startTimeError")
+            if(formDefaults.indexOf(data.EndTime) != -1) return callback(false,"endTimeError")
 
 
 
-            if(new Date(data.EndDate) == 'Invalid Date') return callback(false)
-            if(new Date(data.StartDate) == 'Invalid Date') return callback(false)
-            if(data.EndTime.length < 0) return callback(false)
-            if(data.StartTime.length < 0) return callback(false)
+            if(new Date(data.EndDate) == 'Invalid Date') return callback(false,"invalidDateError")
+            if(new Date(data.StartDate) == 'Invalid Date') return callback(false,"invalidDateError")
+            if(data.EndTime.length < 0) return callback(false,"endTimeError")
+            if(data.StartTime.length < 0) return callback(false,"startTimeError")
             return callback(true)
         },
         getPriceList :function(payload,callback){
