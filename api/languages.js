@@ -214,14 +214,13 @@ const languages = {
     notAvailable : ["Not Available", "Δεν είναι διαθέσημο"],
     Family : ["Family","Οικογενειακή"],
     Mini :["Mini", "Μίνι"],
-    pickupLocationError :["Pick up location is mandatory please fill the pick up location!"],
-    dropOffLocationError :["Drop off location is mandatory please fill the drop off location!"],
-    startTimeError :["Pick up time is mandatory please fill the pick up time!"],
-    endTimeError :["Drop off time is mandatory please fill the drop off time!"],
-    checkItOut :["Check it out"],
-    errorOccured : ["An error has occured"],
-    tryAgain : ["Please try again!"],
-    
+    pickupLocationError :["Pick up location is mandatory please fill the pick up location!","Η τοποθεσία παραλαβής είναι υποχρεωτική παρακαλώ συμπληρώστε την."],
+    dropOffLocationError :["Drop off location is mandatory please fill the drop off location!","Η τοποθεσία παράδοσης είναι υποχρεωτική παρακαλώ συμπληρώστε την."],
+    startTimeError :["Pick up time is mandatory please fill the pick up time!","Η ώρα παραλαβής είναι υποχρεωτική παρακαλώ συμπληρώστε την."],
+    endTimeError :["Drop off time is mandatory please fill the drop off time!","Η ώα παράδοσης είναι υποχρεωτική παρακαλώ συμπληρώστε την."],
+    checkItOut :["Check it out","¨έλεγχος"],
+    errorOccured : ["An error has occured","Δημιουργήθηκε ένα πρόβλημα με την αναζήτηση"],
+    tryAgain : ["Please try again!", "Παρακαλώ δοκιμάστε ξανά"],
     
     label_2 : ['Pick up charge 10€ ','Χρέωση Παραλαβής 10€ '],
     label_3 : ['Extra Driver ','Έχτρα οδηγός '],
@@ -690,10 +689,10 @@ const languages = {
     <div class="container">
         <div class="row">
                 <div class="col-md-12 col-sm-12 text-center consentLinks"> 
-                    <a href="#" data-toggle="modal" data-target="#siteTerms" data-text="Πολιτική Απορρήτου">Terms Of Use</a>&nbsp;&nbsp;
-                    <a href="#" data-toggle="modal" data-target="#faq" data-text="Πολιτική Απορρήτου">F.A.Q</a>&nbsp;&nbsp;
-                    <a href="#" data-toggle="modal" data-target="#consent" data-text="Πολιτική Απορρήτου">Cookies Policy</a>&nbsp;&nbsp;
-                    <a href="#" data-toggle="modal" data-target="#privacyPolicy" data-text="Πολιτική Απορρήτου">GDPR = Personal Data Policy</a>&nbsp;&nbsp;
+                    <a href="#" data-toggle="modal" data-target="#siteTerms" data-text="Πολιτική Απορρήτου">Πολιτική Απορρήτου</a>&nbsp;&nbsp;
+                    <a href="#" data-toggle="modal" data-target="#faq" data-text="Πολιτική Απορρήτου">Πολιτική Απορρήτου</a>&nbsp;&nbsp;
+                    <a href="#" data-toggle="modal" data-target="#consent" data-text="Πολιτική Απορρήτου">Πολιτική Απορρήτου</a>&nbsp;&nbsp;
+                    <a href="#" data-toggle="modal" data-target="#privacyPolicy" data-text="Πολιτική Απορρήτου">Πολιτική Απορρήτου</a>&nbsp;&nbsp;
                 </div>
         </div>
     </div>   
