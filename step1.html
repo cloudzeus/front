@@ -1155,7 +1155,7 @@
                                                                }).catch( (errorMsg) =>{
                                                                   if(!errorMsg){
                                                                      const errorContainer = document.querySelector(".snackbar");
-                                                                     errorContainer.childNodes[0].innerHTML = lib.translator("termsAggreedError") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("chectItOut") +`</a>`;
+                                                                     errorContainer.childNodes[0].innerHTML = lib.translator("termsAggreedError") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
                                                                      errorContainer.classList += " snackbar-opened";
                                                                      this.displayLoader(false)
                                                                      return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
@@ -1163,7 +1163,7 @@
                                                                   } 
                                                                   console.log(errorMsg)
                                                                      const errorContainer = document.querySelector(".snackbar");
-                                                                     errorContainer.childNodes[0].innerHTML = lib.translator(errorMsg) +lib.translator("errorMsgExtenstion") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("chectItOut") +`</a>`;
+                                                                     errorContainer.childNodes[0].innerHTML = lib.translator(errorMsg) +lib.translator("errorMsgExtenstion") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
                                                                      errorContainer.classList += " snackbar-opened";
                                                                      this.displayLoader(false)
                                                                      return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
