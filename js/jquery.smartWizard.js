@@ -23,8 +23,8 @@
         useURLhash: true, // Enable selection of the step based on url hash
         showStepURLhash: true, // Show url hash based on step
         lang: { // Language variables for button
-            next: 'Next',
-            previous: 'Previous'
+            next: lib.translator('NEXT'),
+            previous: lib.translator('PREVIOUS')
         },
         toolbarSettings: {
             toolbarPosition: 'bottom', // none, top, bottom, both
@@ -647,7 +647,7 @@
                     const payload = data
                     this.handleData(payload,si)
                 }else{
-                    const errorContainer = document.querySelector(".snackbar");
+                    const errorContainer = document.querySelector("#snackbar1554762711878");
                     errorContainer.childNodes[0].innerHTML = lib.translator(data) + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
                     errorContainer.classList += " snackbar-opened";
                     // const formError = document.querySelector('#formError')
@@ -655,6 +655,7 @@
                     // errorField.innerHTML = "Missing Required Fields"
                     // formError.style.display = 'block';
                     this.displayLoader(false)
+                    setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
 
 
                 }
@@ -670,10 +671,12 @@
             this.getPriceList(undefined,(success,priceList) => {
                 if(!success){
 
-                    const errorContainer = document.querySelector(".snackbar");
+                    const errorContainer = document.querySelector("#snackbar15547627118");
                     errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
                     errorContainer.classList += " snackbar-opened";
-                    return this.displayLoader(false)
+                     this.displayLoader(false)
+                    return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
+
                 }else{
                     this.getCategories(payload).then( data => {
                             this.processData(data.Availability,priceList,payload).then(categories => {
@@ -686,31 +689,37 @@
                                 })
                                 .catch( ex => {
                                     console.log(ex);
-                                    const formError = document.querySelector('#formError')
-                                    const errorField = document.querySelector('#errorField')
-                                    errorField.innerHTML = ex
-                                    formError.style.display = 'block';
-                                    return this.displayLoader(false)   
+                                    const errorContainer = document.querySelector("#snackbar1554762711878");
+                                    errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
+                                    errorContainer.classList += " snackbar-opened";
+                                    this.displayLoader(false)
+                                    return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
+                
                                 })
                             })
                             .catch( ex => {
                                 console.log(ex);
-                                const errorContainer = document.querySelector(".snackbar");
+                                const errorContainer = document.querySelector("#snackbar1554762711878");
                                 errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
                                 errorContainer.classList += " snackbar-opened";
-                                return this.displayLoader(false)   
+                                this.displayLoader(false)   
+                                return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
+
                             })
                         // this.displayLoader(false)
                         // this._showStep(si);
                     })
                     .catch( ex => {
                         console.log(ex);
-                        const errorContainer = document.querySelector(".snackbar");
+                        const errorContainer = document.querySelector("#snackbar1554762711878");
                         errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
                         errorContainer.classList += " snackbar-opened";
-                        return this.displayLoader(false)
+                        this.displayLoader(false)
+                        return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
+
                     })
                 }
+                
             })
         },
         displayLoader : function(display){
@@ -844,7 +853,7 @@
                                     }
                                     totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation]
                                     
-                                    car.totalCharges = Math.round(totalCharges);
+                                    car.totalCharges = Number(Math.round(totalCharges+'e2')+'e-2').toFixed(2);
 
 
                                 }
@@ -868,7 +877,7 @@
                                         }
                                     }
                                     car.totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation]  + this.timeCharge(StartTime,EndTime,pricing)
-                                    car.totalCharges = Math.round(car.totalCharges)
+                                    car.totalCharges = Number(Math.round(car.totalCharges +'e2')+'e-2').toFixed(2)
                                     categories.push(car);
 
 
@@ -901,7 +910,7 @@
                                             }
                                         }
                                     car.totalCharges += locationCharges[pickUpLocation] + locationCharges[DropOffLocation] + this.timeCharge(StartTime,EndTime,pricing)
-                                    car.totalCharges = Math.round(car.totalCharges)
+                                    car.totalCharges = Number(Math.round(car.totalCharges + 'e2') + 'e-2').toFixed(2)
                                     categories.push(car);
                                     }
                                 }
@@ -959,7 +968,8 @@
                      selectedCar.carCategoryId = carCategoryId;
                      selectedCar.CarModelId = CarModelId;
                      var { total, selectedExtras } = this.calculateExtras(extras);
-                     selectedCar.totalCharge = parseInt(totalCharge) + total;
+                     const finalTotal = parseFloat(totalCharge) + parseFloat(total);
+                     selectedCar.totalCharge = finalTotal.toFixed(2)
                      selectedCar.extras = {
                          total,
                          selectedExtras
@@ -1003,7 +1013,7 @@
                    }
                }
             }
-            extraCharges = Math.round(extraCharges)
+            extraCharges = Number(Math.round(extraCharges+'e2')+'e-2').toFixed(2)
             return {total :extraCharges,selectedExtras}
         },
         templating : function(categories){

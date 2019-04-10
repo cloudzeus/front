@@ -14,7 +14,7 @@ function validateCheckoutForm(formId){
         for(var i = 0; i<inputs.length; i++){
             const input  = inputs[i];
             if(input.type != 'checkbox' && input.type != "radio") {
-                if(!input.value) return reject(true)
+                if(!input.value) return reject(input.id)
                 userDetails[input.name] = input.value;
             }
         }

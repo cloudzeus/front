@@ -3,6 +3,12 @@
 //translations data
 
 const languages = {
+    phoneNumber : ["Phone Number"],
+    customerIdentityNumber : ["Customer Identity Number"],
+    customerLicense : ["Customer License"],
+    lastName : ["Last Name"],
+    firstName : ["First Name"],
+    errorMsgExtenstion :[" is a mandatory field, Please fill it up!"],
     users : ["users","χρήστες"],
     user : ["user","χρήστης"],
     groups : ["groups","Ομάδες"],
@@ -221,6 +227,14 @@ const languages = {
     checkItOut :["Check it out","¨έλεγχος"],
     errorOccured : ["An error has occured","Δημιουργήθηκε ένα πρόβλημα με την αναζήτηση"],
     tryAgain : ["Please try again!", "Παρακαλώ δοκιμάστε ξανά"],
+    aboutUs: ["About us","Ποιοί Είμαστε"],
+    ourFleet : ["Our Fleet","Ο Στόλος"],
+    ourServices : ["Our Services","Υπηρεσίες"],
+    proposals : ["Proposals","Αποδράσεις"],
+    testimonials : ["Testimonials","Είπαν Για Εμάς"],
+    blog : ["Blog","Blog"],
+    contact : ["Contact","Επικοινωνία"],
+    languages : ["Languages - English","Γλώσσα - Ελληνικά"],
     
     label_2 : ['Pick up charge 10€ ','Χρέωση Παραλαβής 10€ '],
     label_3 : ['Extra Driver ','Έχτρα οδηγός '],
@@ -228,8 +242,8 @@ const languages = {
     label_5 : ['Pick up charge 15€ ','Χρέωση Παραλαβής 15€ '],
     label_6 : ['Baby Seat ','Παιδικό κάθισμα '],
     label_7 : ['Snow chains ','Αλυσίδες χιονιού'],
-    label_8 : ['Advanced Insurance 750€ ','Ασφάλεια με απαλλαγή 750€ '],
-    label_9 : ['Extra Insurance 350€ ','Ασφάλεια με απαλλαγή 350€ '],
+    label_8 : ['Advanced Insurance  ','Ασφάλεια με απαλλαγή'],
+    label_9 : ['Extra Insurance  ','Ασφάλεια με απαλλαγή  '],
     label_10 : ['Theft or loss coverage ','Ασφάλεια Απώλεια Κλοπή '],
     label_12 : ['Drop off charge 10€ ','Χρέωση Παράδοσης 10€ '],
     label_13 : ['Drop off charge 15€ ','Χρέωση Παράδοσης 15€ '],
