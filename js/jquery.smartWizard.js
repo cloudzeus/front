@@ -644,6 +644,7 @@
             this.collectData((isValid,data) => {
                 if(isValid){
                     localStorage.formData = JSON.stringify(data)
+                    this.dateTimeDisplayer()
                     const payload = data
                     this.handleData(payload,si)
                 }else{
@@ -680,7 +681,6 @@
                 }else{
                     this.getCategories(payload).then( data => {
                             this.processData(data.Availability,priceList,payload).then(categories => {
-                                
                                 this.templating(categories).then( () => {
                                     const formError = document.querySelector('#formError')
                                     formError.style.display = 'none';
@@ -1015,6 +1015,28 @@
             }
             extraCharges = Number(Math.round(extraCharges+'e2')+'e-2').toFixed(2)
             return {total :extraCharges,selectedExtras}
+        },
+        dateTimeDisplayer : function(){
+            console.log(JSON.parse(localStorage.formData))
+            var { StartDate,StartTime,EndTime,EndDate,pickUpLocation,DropOffLocation} = JSON.parse(localStorage.formData);
+        
+            var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
+            var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
+        
+            var startDateString = new Date(StartDate+" "+StartTime).toUTCString()
+            var  endDateString = new Date(EndDate+" "+EndTime).toUTCString()
+        
+            //the nodes
+            var pickupHeader = document.querySelector(".pickupHeader")
+            var pickupDate = document.querySelector(".pickupDate")
+            var dropOffDate = document.querySelector(".dropOffDate")
+            var dropOffHeader = document.querySelector(".dropOffHeader")
+        
+            pickupHeader.innerHTML = lib.translator(pickUpLocation.split(" ").join("_"))+ ":"
+            dropOffHeader.innerHTML = lib.translator(DropOffLocation.split(" ").join("_"))+ ":"
+        
+            pickupDate.innerHTML = startDateString
+            dropOffDate.innerHTML = endDateString
         },
         templating : function(categories){
             return new Promise((resolve,reject) => {

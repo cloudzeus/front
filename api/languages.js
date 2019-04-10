@@ -703,10 +703,10 @@ const languages = {
     <div class="container">
         <div class="row">
                 <div class="col-md-12 col-sm-12 text-center consentLinks"> 
-                    <a href="#" data-toggle="modal" data-target="#siteTerms" data-text="Πολιτική Απορρήτου">Πολιτική Απορρήτου</a>&nbsp;&nbsp;
-                    <a href="#" data-toggle="modal" data-target="#faq" data-text="Πολιτική Απορρήτου">Πολιτική Απορρήτου</a>&nbsp;&nbsp;
-                    <a href="#" data-toggle="modal" data-target="#consent" data-text="Πολιτική Απορρήτου">Πολιτική Απορρήτου</a>&nbsp;&nbsp;
-                    <a href="#" data-toggle="modal" data-target="#privacyPolicy" data-text="Πολιτική Απορρήτου">Πολιτική Απορρήτου</a>&nbsp;&nbsp;
+                    <a href="#" data-toggle="modal" data-target="#siteTerms" data-text="Πολιτική Απορρήτου">Όροι Χρήσης </a>&nbsp;&nbsp;
+                    <a href="#" data-toggle="modal" data-target="#faq" data-text="Πολιτική Απορρήτου">Συχνές Ερωτήσεις</a>&nbsp;&nbsp;
+                    <a href="#" data-toggle="modal" data-target="#consent" data-text="Πολιτική Απορρήτου"> Πολιτική Προσθέτων</a>&nbsp;&nbsp;
+                    <a href="#" data-toggle="modal" data-target="#privacyPolicy" data-text="Πολιτική Απορρήτου">ΓΚΠΔ - Προσωπικών δεδομένω</a>&nbsp;&nbsp;
                 </div>
         </div>
     </div>   

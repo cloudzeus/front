@@ -28,3 +28,26 @@ function displayLoader(display){
 
 
 }
+
+function dateTimeDisplayer(){
+    console.log(JSON.parse(localStorage.formData))
+    var { StartDate,StartTime,EndTime,EndDate,pickUpLocation,DropOffLocation} = JSON.parse(localStorage.formData);
+
+    var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
+    var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
+
+    var startDateString = new Date(StartDate+" "+StartTime).toUTCString()
+    var  endDateString = new Date(EndDate+" "+EndTime).toUTCString()
+
+    //the nodes
+    var pickupHeader = document.querySelector(".pickupHeader")
+    var pickupDate = document.querySelector(".pickupDate")
+    var dropOffDate = document.querySelector("..dropOffDate")
+    var dropOffHeader = document.querySelector("..dropOffHeader")
+
+    pickupHeader.innerHTML = lib.translator(pickUpLocation.split(" ").join("_"))+ ":"
+    dropOffHeader.innerHTML = lib.translator(DropOffLocation.split(" ").join("_"))+ ":"
+
+    pickupDate.innerHTML = startDateString
+    dropOffDate.innerHTML = endDateString
+}
