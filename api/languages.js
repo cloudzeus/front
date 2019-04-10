@@ -235,7 +235,7 @@ const languages = {
     blog : ["Blog","Blog"],
     contact : ["Contact","Επικοινωνία"],
     languages : ["Languages - English","Γλώσσα - Ελληνικά"],
-    
+    carNotFound : ["sorry! a car matching you requirements was not found"],
     label_2 : ['Pick up charge 10€ ','Χρέωση Παραλαβής 10€ '],
     label_3 : ['Extra Driver ','Έχτρα οδηγός '],
     label_4 : ['GPS ','GPS '],

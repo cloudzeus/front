@@ -332,6 +332,7 @@
 
                 let payload = JSON.parse(localStorage.formData)
                 this.handleData(payload,si)
+                this.dateTimeDisplayer()
             }catch{
                 console.log('failed to parse JSON')
                 this._showStep(si);
@@ -690,7 +691,7 @@
                                 .catch( ex => {
                                     console.log(ex);
                                     const errorContainer = document.querySelector("#snackbar1554762711878");
-                                    errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
+                                    errorContainer.childNodes[0].innerHTML = lib.translator(ex) + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
                                     errorContainer.classList += " snackbar-opened";
                                     this.displayLoader(false)
                                     return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
@@ -1040,7 +1041,7 @@
         },
         templating : function(categories){
             return new Promise((resolve,reject) => {
-                if(categories.length == 0 ) return reject("sorry! a car matching you requirements was not found")
+                if(categories.length == 0 ) return reject("carNotFound")
                 // const resultsContainer = document.querySelector('#searchResults');
                 const chargeEntries = document.querySelectorAll(".total-charge");
                 for( var i = 0; i < chargeEntries.length; i++){
