@@ -26,20 +26,18 @@
 
 
       <link rel="stylesheet" href="css/style.css">
-      
+      <script src="https://www.paypal.com/sdk/js?client-id=AREXT6MxGWlNGTm8d-BObWS7HlGcKHxNOicbBI6nZfB8_rk5eYmFKQrkmRq7rk9vFD6Ir3C8T4E8HEEe"></script>
+      <script src="api/paypal.js"></script>
+
    </head>
    <body data-spy="scroll" data-target=".navbar" data-offset="90">
          <script src="api/languages.js"></script>
          <script src="api/util.js"></script>
+
          <script src="api/templates.js"></script>
          <script src="api/extras.js"></script>
          <script src="api/endpoints.js"></script>
          <script src="api/translation.js"></script>
-         
-         <script src="api/paypalPayment.js"></script>
-         <script src="api/pay.js"></script>
-
-
       <!--PreLoader-->
       <div class="loader">
          <div class="loader-inner">
@@ -259,7 +257,6 @@
                                                    <option value="ATH Athens Airport"><script>document.write(lib.translator("ATH_Athens_Airport"))</script></option>
                                                    <option value="Athens City Center"><script>document.write(lib.translator("Athens_City_Center"))</script></option>
                                                    <option value="Piraeus Port"><script>document.write(lib.translator("Piraeus_Port"))</script></option>
-                                                   <option value="Rafina Port"><script>document.write(lib.translator("Rafina_Port"))</script></option>
                                                    <option value="Agia Paraskevi HQ"><script>document.write(lib.translator("Agia_Paraskevi_HQ"))</script></option>
                                                 </select>
                                              </select>
@@ -1129,13 +1126,17 @@
                                                 </div>
                                                 <div class="form-row">
 
-                                                   <div class="col-12 form-check-inline">
+                                                   <div class="col-12 form-check-inline pt-0">
                                                       <div class="radio mt-4">
-                                                         <label id="payWithPaypal">
-                                                            <img  class="img-fluid" src="images/PayPal.svg" alt="">pay
+                                                         <!-- <label>
+                                                            <input type="radio" name="optionsRadios" id="optionsRadios1"
+                                                               value="option1" checked>
+                                                            <img class="img-fluid" src="images/PayPal.svg" alt="">pay
                                                             with paypal
-                                                         </label>
-                                                         <!-- <script>
+                                                         </label> -->
+                                                         <div id="paypal-button-container"></div>
+
+                                                         <script>
                                                             // document.querySelector('#paypal-button-container').addEventListener('click',(e) =>{
                                                                
                                                             // })
@@ -1227,9 +1228,9 @@
                                                                });
                                                             }
                                                          }).render('#paypal-button-container');
-                                                         </script> -->
+                                                         </script>
                                                       </div>
-                                                      <div class="radio pb-4 ml-3">
+                                                      <div class="radio pb-4 pt-0 ml-3">
                                                          <label>
                                                             <input type="radio" name="optionsRadios" id="optionsRadios2"
                                                                value="option2">
@@ -1610,7 +1611,7 @@
          crossorigin="anonymous"></script>
 
       <script src="js/jquery.smartWizard.js"></script>
-       <script>
+      <script>
          $(document).ready(function () {
              $('body').bootstrapMaterialDesign();
 
@@ -1624,154 +1625,32 @@
              })
 
 
-             var curLang = localStorage.language;
-             var calLanguage ="";
-             if(curLang==="Greek"){
-                console.log("Η γλωσσα τώρα είναι ελληνικά");
-                calLanguage = "el-gr";
-                
-             }else if(curLang==="English"){
-                console.log("Η γλωσσα τώρα είναι Aglika");
-                calLanguage = "en-us";
-             }
-             console.log(calLanguage);
+
+
              var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-         today.setHours(today.getHours()+48);
-    
-            
+         today.setHours(today.getHours()+24);
              $('#startDate').datepicker({
-                 locale: calLanguage,
                  uiLibrary: 'bootstrap4',
                  iconsLibrary: 'fontawesome',
                  minDate: today,
                  maxDate: function () {
-                     return null //$('#endDate').val();
-                 },
-                 change: function (e) {
-                    var tempDate = $('#startDate').val();                 
-                    var $tempDropDate = $('#endDate');
-                    $tempDropDate.val(tempDate);
-                    
-                    
-
-                  
-                }
+                     return $('#endDate').val();
+                 }
              });
-            
              $('#endDate').datepicker({
-                 locale: calLanguage,
                  uiLibrary: 'bootstrap4',
                  iconsLibrary: 'fontawesome',
                  minDate: function () {
                      return $('#startDate').val();
                  }
              });
-             $('#timepicker').timepicker({
-                 timeFormat: 'H:mm:ss p',
-                 locale: calLanguage,
-				 change : function(e){
-					var startTime = $('#timepicker').val();                 
-                    var $tempDropTime = $('#timeDrop');
-                    $tempDropTime.val(startTime);
-				 }
-                });
-            $('#timeDrop').timepicker({ 
-               timeFormat: 'H:mm:ss p',
-               locale: calLanguage });
+
+             $('#timepicker').timepicker({ timeFormat: 'H:mm:ss p' });
+         $('#timeDrop').timepicker({ timeFormat: 'H:mm:ss p' });
 
          console.log(today);
 
-         //execute the autocomplete for the drop off location
-         autoDropOff()
-         
 
-
-         function paypalPayment(){
-    console.log('hello')
-    const payBtn = document.querySelector("#payWithPaypal");
-    if(!payBtn) return console.log('paypal button not selected');
-    payBtn.addEventListener('click', e => {
-        //@TODO display spinner
-        displayLoader(true)
-            var {selectedCar, formData } = localStorage;
-            if(!(selectedCar || formData)) return console.log("missing information")
-            formData = JSON.parse(formData);
-            selectedCar = JSON.parse(selectedCar)
-        //validate form input
-        validateCheckoutForm("checkout").then( userDetails => {
-         
-            const DateStart = formData.StartDate + " " + formData.StartTime;
-            const DateEnd = formData.EndDate + " " + formData.EndTime;
-            const { CarModelId, carCategoryId, extras } = selectedCar;
-            const TotalPrice = selectedCar.totalCharge;
-            const DaysRental = parseInt(JSON.parse(localStorage.rentalPeriod))
-            const ReservationDate = new Date(Date.now()).toLocaleString()
-            const PlaceFrom = formData.pickUpLocation;
-            const PlaceTo = formData.DropOffLocation;
-            const  Notes = ""
-            console.log(selectedCar)
-            let {selectedExtras } = extras;
-            for ( var i =0; i<selectedExtras.length; i ++ ){
-                const extra = selectedExtras[i];
-                Notes += lib.translator(extra) + ";"
-            }
-            var booking = {
-                FromBranchStoreId :6,
-                ToBranchStoreId : 6, //@TODO if the "To" word
-                CarCategoryId : parseInt(carCategoryId),
-                CarModelId : parseInt(CarModelId),
-                DateStart,
-                DateEnd,
-                DaysRental,
-                ReservationDate,
-                TotalPrice,
-                PlaceFrom,
-                PlaceTo,
-                Notes,
-                ...userDetails
-            }
-            clientRequest(endpoints.makePayment,booking,'POST').then(  data => {
-                window.location = data.link
-            })
-            .catch( ex => {
-                console.log(ex)
-                const errorContainer = document.querySelector(".snackbar");
-                errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
-                errorContainer.classList += " snackbar-opened";
-                this.displayLoader(false)
-                return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
-
-            })
-        })
-        .catch( (errorMsg) =>{
-            if(!errorMsg){
-               const errorContainer = document.querySelector(".snackbar");
-               errorContainer.childNodes[0].innerHTML = lib.translator("termsAggreedError") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
-               errorContainer.classList += " snackbar-opened";
-               this.displayLoader(false)
-               return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
-
-            } 
-            console.log(errorMsg)
-               const errorContainer = document.querySelector(".snackbar");
-               errorContainer.childNodes[0].innerHTML = lib.translator(errorMsg) +lib.translator("errorMsgExtenstion") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
-               errorContainer.classList += " snackbar-opened";
-               this.displayLoader(false)
-               return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
-
-            
-         })
-    }) 
-}
-
-
-
-
-
-
-
-
-         paypalPayment()
 
 
          });
