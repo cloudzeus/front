@@ -22,3 +22,5 @@ function validateCheckoutForm(formId){
         return resolve(userDetails);
     })
 }
+
+  
