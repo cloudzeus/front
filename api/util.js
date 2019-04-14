@@ -51,19 +51,3 @@ function dateTimeDisplayer(){
     pickupDate.innerHTML = startDateString
     dropOffDate.innerHTML = endDateString
 }
-
-
-
-//autocomplete dropoff location
-
-function autoDropOff(){
-    const pickUplocationInput = document.querySelector("#pickUpLocation");
-    const dropOfLocationInput = document.querySelector("#DropOfLocation");
-    pickUplocationInput.addEventListener('change', e=> {
-        dropOfLocationInput.selectedIndex = pickUplocationInput.selectedIndex;
-
-    })
-
-}
-
-
