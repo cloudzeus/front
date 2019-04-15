@@ -23,4 +23,7 @@ function validateCheckoutForm(formId){
     })
 }
 
-  
+
+
+
+

@@ -16,7 +16,7 @@
       <link rel="stylesheet" href="css/smart_wizard_theme_dots.css">
       <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
          integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-      <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.css" rel="stylesheet" type="text/css" />
+    <link href="js/calendar/css/gijgo.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="pdfhtml/app.css">
 
@@ -26,20 +26,18 @@
 
 
       <link rel="stylesheet" href="css/style.css">
-      
+      <script src="https://www.paypal.com/sdk/js?client-id=AREXT6MxGWlNGTm8d-BObWS7HlGcKHxNOicbBI6nZfB8_rk5eYmFKQrkmRq7rk9vFD6Ir3C8T4E8HEEe"></script>
+      <script src="api/paypalPayment.js"></script>
+
    </head>
    <body data-spy="scroll" data-target=".navbar" data-offset="90">
          <script src="api/languages.js"></script>
          <script src="api/util.js"></script>
+
          <script src="api/templates.js"></script>
          <script src="api/extras.js"></script>
          <script src="api/endpoints.js"></script>
          <script src="api/translation.js"></script>
-         
-         <script src="api/paypalPayment.js"></script>
-         <script src="api/pay.js"></script>
-
-
       <!--PreLoader-->
       <div class="loader">
          <div class="loader-inner">
@@ -83,7 +81,7 @@
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link makeMeWhite" href="#our-team">
+                        <a class="nav-link makeMeWhite" href="https://breezerentals.gr/index.html#our-team">
                            <script>document.write(lib.translator("ourFleet"))</script>
                         </a>
                      </li>
@@ -232,11 +230,11 @@
                                           <div role="wrapper" class="input-group">
                                              <select class="form-control" id="pickUpLocation" name="pickUpLocation">
                                                 <option><script>document.write(lib.translator("Please_select_your_Pick_Up_location"))</script></option>
-                                                <option value="ATH Athens Airport"><script>document.write(lib.translator("ATH_Athens_Airport"))</script></option>
-                                                <option value="Athens City Center"><script>document.write(lib.translator("Athens_City_Center"))</script></option>
-                                                <option value="Piraeus Port"><script>document.write(lib.translator("Piraeus_Port"))</script></option>
-                                                <option value="Rafina Port"><script>document.write(lib.translator("Rafina_Port"))</script></option>
-                                                <option value="Agia Paraskevi HQ"><script>document.write(lib.translator("Agia_Paraskevi_HQ"))</script></option>
+                                                <option value="ATH Athens Airport">&nbsp;<script>document.write(lib.translator("ATH_Athens_Airport"))</script>&nbsp;</option>
+                                                <option value="Athens City Center">&nbsp;<script>document.write(lib.translator("Athens_City_Center"))</script>&nbsp;</option>
+                                                <option value="Piraeus Port">&nbsp;<script>document.write(lib.translator("Piraeus_Port"))</script>&nbsp;</option>
+                                                <option value="Rafina Port">&nbsp;<script>document.write(lib.translator("Rafina_Port"))</script>&nbsp;</option>
+                                                <option value="Agia Paraskevi HQ">&nbsp;<script>document.write(lib.translator("Agia_Paraskevi_HQ"))</script>&nbsp;</option>
                                              </select>
                                              <i class="fa fa-map  pt-2" aria-hidden="true" style="color:#666"></i>
                                           </div>
@@ -256,11 +254,10 @@
                                           <div role="wrapper" class="input-group">
                                              <select name="DropOffLocation" class="form-control" id="DropOfLocation">
                                                    <option><script>document.write(lib.translator("Please_select_your_Pick_Up_location"))</script></option>
-                                                   <option value="ATH Athens Airport"><script>document.write(lib.translator("ATH_Athens_Airport"))</script></option>
-                                                   <option value="Athens City Center"><script>document.write(lib.translator("Athens_City_Center"))</script></option>
-                                                   <option value="Piraeus Port"><script>document.write(lib.translator("Piraeus_Port"))</script></option>
-                                                   <option value="Rafina Port"><script>document.write(lib.translator("Rafina_Port"))</script></option>
-                                                   <option value="Agia Paraskevi HQ"><script>document.write(lib.translator("Agia_Paraskevi_HQ"))</script></option>
+                                                   <option value="ATH Athens Airport">&nbsp;<script>document.write(lib.translator("ATH_Athens_Airport"))</script>&nbsp;</option>
+                                                   <option value="Athens City Center">&nbsp;<script>document.write(lib.translator("Athens_City_Center"))</script>&nbsp;</option>
+                                                   <option value="Piraeus Port">&nbsp;<script>document.write(lib.translator("Piraeus_Port"))</script>&nbsp;</option>
+                                                   <option value="Agia Paraskevi HQ">&nbsp;<script>document.write(lib.translator("Agia_Paraskevi_HQ"))</script>&nbsp;</option>
                                                 </select>
                                              </select>
                                              <i class="fa fa-map  pt-2" aria-hidden="true" style="color:#666"></i>
@@ -289,6 +286,7 @@
                                     var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
             
                                     var startDateString = new Date(StartDate+" "+StartTime).toUTCString()
+                                    
                                     var  endDateString = new Date(EndDate+" "+EndTime).toUTCString()
             
             
@@ -341,7 +339,7 @@
                               <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
                                  <!-- Car Make-->
                                  <p class="mb-0 py-2">
-                                    <span class="makeHeader">VOLKSWAGEN</span>
+                                    <span class="makeHeader">VW POLO</span>
                                     <input type="hidden" name="CarModelId" class="car-model-id" value="149">
                                     <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
                                  <div class="row">
@@ -807,7 +805,7 @@
                               <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
                                  <!-- Car Make-->
                                  <p class="mb-0 py-2">
-                                    <span class="makeHeader">VW up</span>
+                                    <span class="makeHeader">VW UP</span>
                                     <input type="hidden" name="CarModelId" class="car-model-id" value="">
                                     <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
                                  <div class="row">
@@ -985,7 +983,8 @@
                                  </script>:</p>
                                  <p class="stepTwoHeaderPThree headerp">
                                     <script>
-                                       document.write(startDateString)
+                                       document.write(startDateString);
+                                       console.log(startDateString);
                                        </script>
                                  </p>
                               </div>
@@ -1127,121 +1126,124 @@
                                                       <p id="termsAgreeError" class="text-danger"></p>
                                                    </div>
                                                 </div>
-                                                <div class="form-row">
+                                                
 
-                                                   <div class="col-12 form-check-inline">
-                                                      <div class="radio mt-4">
-                                                         <label id="payWithPaypal">
-                                                            <img  class="img-fluid" src="images/PayPal.svg" alt="">pay
-                                                            with paypal
-                                                         </label>
-                                                         <!-- <script>
-                                                            // document.querySelector('#paypal-button-container').addEventListener('click',(e) =>{
-                                                               
-                                                            // })
-                                                            paypal.Buttons({
-                                                            createOrder: function(data, actions) {
-                                                               //Custom logic before sending payment
-                                                               return validateCheckoutForm("checkout").then( userDetails => {
-                                                                  return actions.order.create({
-                                                               purchase_units: [{
-                                                                  amount: {
-                                                                     value: JSON.parse(localStorage.selectedCar).totalCharge,
-                                                                     userDetails
-                                                                  }
-                                                               }]
-                                                               });
-                                                               }).catch( (errorMsg) =>{
-                                                                  if(!errorMsg){
-                                                                     const errorContainer = document.querySelector(".snackbar");
-                                                                     errorContainer.childNodes[0].innerHTML = lib.translator("termsAggreedError") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
-                                                                     errorContainer.classList += " snackbar-opened";
-                                                                     this.displayLoader(false)
-                                                                     return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
+<div class="form-row">
 
-                                                                  } 
-                                                                  console.log(errorMsg)
-                                                                     const errorContainer = document.querySelector(".snackbar");
-                                                                     errorContainer.childNodes[0].innerHTML = lib.translator(errorMsg) +lib.translator("errorMsgExtenstion") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
-                                                                     errorContainer.classList += " snackbar-opened";
-                                                                     this.displayLoader(false)
-                                                                     return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
-
-                                                                  
-                                                               })
-
-                                                            },
-                                                            onApprove: function(data, actions) {
-                                                               // Capture the funds from the transaction
-                                                               return actions.order.capture().then(function(details) {
-                                                                  localStorage.transactionDetails = JSON.stringify(details)
-                                                               // Show a success message to your buyer
-                                                               alert('Transaction completed by ' + details.payer.name.given_name);
-                                                               //Building the object needed to create a new booking
-                                                               const datesInfo  = JSON.parse(localStorage.formData);
-                                                               const chosenCar  = JSON.parse(localStorage.selectedCar);
-                                                               const userDetails  = JSON.parse(localStorage.userDetails);
-
-                                                               const DateStart = datesInfo.StartDate + " " + datesInfo.StartTime;
-                                                               const DateEnd = datesInfo.EndDate + " " + datesInfo.EndTime;
-                                                               const { CarModelId, carCategoryId,extras } = chosenCar;
-                                                               const TotalPrice = chosenCar.totalCharge;
-                                                               const DaysRental = parseInt(JSON.parse(localStorage.rentalPeriod))
-                                                               const ReservationDate = new Date(Date.now()).toLocaleString()
-                                                               const PlaceFrom = datesInfo.pickUpLocation;
-                                                               const PlaceTo = datesInfo.DropOffLocation;
-                                                               const  Notes = ""
-                                                               let {selectedExtras } = extras;
-                                                               for ( var i =0; i<selectedExtras.length; i ++ ){
-                                                                  const extra = selectedExtras[i];
-                                                                  Notes += lib.translator(extra) + ";"
-                                                               }
-                                                                var booking = {
-                                                                  FromBranchStoreId :6,
-                                                                  ToBranchStoreId : 6, //@TODO if the "To" word
-                                                                  CarCategoryId : parseInt(carCategoryId),
-                                                                  CarModelId : parseInt(CarModelId),
-                                                                  DateStart,
-                                                                  DateEnd,
-                                                                  DaysRental,
-                                                                  ReservationDate,
-                                                                  TotalPrice,
-                                                                  PlaceFrom,
-                                                                  PlaceTo,
-                                                                  Notes,
-                                                                  ...userDetails
-                                                                }
-                                                                displayLoader(true);
-                                                                clientRequest(endpoints.newBooking,booking,"POST").then(data => {
-                                                                   const newBooking = JSON.stringify(data);
-                                                                   localStorage.newBooking = newBooking
-                                                                   booking = {...booking,newBooking}
-                                                                   clientRequest(endpoints.newReservation,booking,"POST").then( () =>{
-                                                                     window.location = "/step1.html#step-4"
-                                                                     location.reload()
-                                                                   })
-                                                                   .catch( ex => console.log(ex))                                                                  
-                                                                  })
-                                                                .catch( ex => console.log(ex))
-
-                                                               });
-                                                            }
-                                                         }).render('#paypal-button-container');
-                                                         </script> -->
-                                                      </div>
-                                                      <div class="radio pb-4 ml-3">
-                                                         <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2"
-                                                               value="option2">
-                                                            <img class="img-fluid" src="images/peiraeus.svg" alt="">Pay
-                                                            at Piraeus Bank
-                                                         </label>
-                                                      </div>
-                                                   </div>
-
-
-                                                </div>
-                                          </form>
+   <div class="col-12 form-check-inline">
+      <div class="radio mt-4">
+         <label id="payWithPaypal">
+            <img  class="img-fluid" src="images/PayPal.svg" alt="">pay
+            with paypal
+         </label>
+         <!-- <script>
+            // document.querySelector('#paypal-button-container').addEventListener('click',(e) =>{
+               
+            // })
+            paypal.Buttons({
+            createOrder: function(data, actions) {
+               //Custom logic before sending payment
+               return validateCheckoutForm("checkout").then( userDetails => {
+                  return actions.order.create({
+               purchase_units: [{
+                  amount: {
+                     value: JSON.parse(localStorage.selectedCar).totalCharge,
+                     userDetails
+                  }
+               }]
+               });
+               }).catch( (errorMsg) =>{
+                  if(!errorMsg){
+                     const errorContainer = document.querySelector(".snackbar");
+                     errorContainer.childNodes[0].innerHTML = lib.translator("termsAggreedError") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
+                     errorContainer.classList += " snackbar-opened";
+                     this.displayLoader(false)
+                     return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
+   
+                  } 
+                  console.log(errorMsg)
+                     const errorContainer = document.querySelector(".snackbar");
+                     errorContainer.childNodes[0].innerHTML = lib.translator(errorMsg) +lib.translator("errorMsgExtenstion") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("checkItOut") +`</a>`;
+                     errorContainer.classList += " snackbar-opened";
+                     this.displayLoader(false)
+                     return setTimeout(()=>errorContainer.classList.remove('snackbar-opened'),3000)
+   
+                  
+               })
+   
+            },
+            onApprove: function(data, actions) {
+               // Capture the funds from the transaction
+               return actions.order.capture().then(function(details) {
+                  localStorage.transactionDetails = JSON.stringify(details)
+               // Show a success message to your buyer
+               alert('Transaction completed by ' + details.payer.name.given_name);
+               //Building the object needed to create a new booking
+               const datesInfo  = JSON.parse(localStorage.formData);
+               const chosenCar  = JSON.parse(localStorage.selectedCar);
+               const userDetails  = JSON.parse(localStorage.userDetails);
+   
+               const DateStart = datesInfo.StartDate + " " + datesInfo.StartTime;
+               const DateEnd = datesInfo.EndDate + " " + datesInfo.EndTime;
+               const { CarModelId, carCategoryId,extras } = chosenCar;
+               const TotalPrice = chosenCar.totalCharge;
+               const DaysRental = parseInt(JSON.parse(localStorage.rentalPeriod))
+               const ReservationDate = new Date(Date.now()).toLocaleString()
+               const PlaceFrom = datesInfo.pickUpLocation;
+               const PlaceTo = datesInfo.DropOffLocation;
+               const  Notes = ""
+               let {selectedExtras } = extras;
+               for ( var i =0; i<selectedExtras.length; i ++ ){
+                  const extra = selectedExtras[i];
+                  Notes += lib.translator(extra) + ";"
+               }
+                var booking = {
+                  FromBranchStoreId :6,
+                  ToBranchStoreId : 6, //@TODO if the "To" word
+                  CarCategoryId : parseInt(carCategoryId),
+                  CarModelId : parseInt(CarModelId),
+                  DateStart,
+                  DateEnd,
+                  DaysRental,
+                  ReservationDate,
+                  TotalPrice,
+                  PlaceFrom,
+                  PlaceTo,
+                  Notes,
+                  ...userDetails
+                }
+                displayLoader(true);
+                clientRequest(endpoints.newBooking,booking,"POST").then(data => {
+                   const newBooking = JSON.stringify(data);
+                   localStorage.newBooking = newBooking
+                   booking = {...booking,newBooking}
+                   clientRequest(endpoints.newReservation,booking,"POST").then( () =>{
+                     window.location = "/step1.html#step-4"
+                     location.reload()
+                   })
+                   .catch( ex => console.log(ex))                                                                  
+                  })
+                .catch( ex => console.log(ex))
+   
+               });
+            }
+         }).render('#paypal-button-container');
+         </script> -->
+      </div>
+      <div class="radio pb-4 ml-3">
+         <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2"
+               value="option2">
+            <img class="img-fluid" src="images/peiraeus.svg" alt="">Pay
+            at Piraeus Bank
+         </label>
+      </div>
+   </div>
+   
+   
+   </div>
+   </form>
+   
                                        </div>
 
 
@@ -1558,10 +1560,13 @@
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src='pdfhtml/dist/jspdf.min.js'></script>
       <script src="pdfhtml/app.js" charset="utf-8"></script>
+      
       <script src="js/jquery-3.1.1.min.js"></script>
+
       <!--Bootstrap Core-->
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/calendar/js/gijgo.js" type="text/javascript"></script>
       <!--to view items on reach-->
       <script src="js/jquery.appear.js"></script>
       <!--Equal-Heights-->
@@ -1603,14 +1608,15 @@
       <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
          crossorigin="anonymous"></script>
       <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.js"></script>
       <!--Google Map API-->
-      <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.js" type="text/javascript"></script>
+      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
          crossorigin="anonymous"></script>
 
       <script src="js/jquery.smartWizard.js"></script>
-       <script>
+      <script>
          $(document).ready(function () {
              $('body').bootstrapMaterialDesign();
 
@@ -1678,12 +1684,13 @@
             $('#timeDrop').timepicker({ 
                timeFormat: 'H:mm:ss p',
                locale: calLanguage });
+         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };      
+         console.log(today.toLocaleDateString('el-gr', options));
+         today.toLocaleDateString('el-gr');
 
-         console.log(today);
 
-         //execute the autocomplete for the drop off location
-         autoDropOff()
-         
+         autoDropOff();
+
 
 
          function paypalPayment(){
@@ -1774,7 +1781,10 @@
          paypalPayment()
 
 
+
+
          });
+         
       </script>
 
       <script src="js/functions.js"></script>
