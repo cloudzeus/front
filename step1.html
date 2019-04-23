@@ -38,6 +38,7 @@
          <script src="api/extras.js"></script>
          <script src="api/endpoints.js"></script>
          <script src="api/translation.js"></script>
+         <script src="api/dates.js"></script>
       <!--PreLoader-->
       <div class="loader">
          <div class="loader-inner">
@@ -284,10 +285,10 @@
             
                                     var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
                                     var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
-            
-                                    var startDateString = new Date(StartDate+" "+StartTime).toUTCString()
                                     
-                                    var  endDateString = new Date(EndDate+" "+EndTime).toUTCString()
+                                    var startDateString = new Date(StartDate+" "+StartTime).toLocaleDateString(locales,dateOptions)
+                                    
+                                    var  endDateString = new Date(EndDate+" "+EndTime).toLocaleDateString(locales,dateOptions)
             
             
                                     </script>
@@ -967,8 +968,8 @@
                         var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
                         var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
 
-                        var startDateString = new Date(StartDate+" "+StartTime).toUTCString()
-                        var  endDateString = new Date(EndDate+" "+EndTime).toUTCString()
+                        var startDateString = new Date(StartDate+" "+StartTime).toLocaleDateString(locales,dateOptions)
+                        var  endDateString = new Date(EndDate+" "+EndTime).toLocaleDateString(locales,dateOptions)
 
 
                         </script>
@@ -1262,6 +1263,14 @@
                         const userDetails = JSON.parse(localStorage.userDetails);
                         const transDetails = JSON.parse(localStorage.transactionDetails)
                         const newBooking = JSON.parse(localStorage.newBooking)
+                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }; 
+                        var locales = [];
+                        if(localStorage.language == 'Greek'){
+                           locales.push('el-gr');
+                        }else{
+                           locales.push('en-US');
+                        }
+                        locales.push('en-US');
                      </script>
                         <div>
                            <h3 class="reservationHeader text-center">Reservation Voucher</h3>
@@ -1296,7 +1305,7 @@
 
                                  <p class="stepTwoHeaderPThree headerp mb-2">
                                     <script>
-                                    document.write((new Date(transDetails.create_time)).toUTCString())
+                                    document.write((new Date(transDetails.create_time)).toLocaleDateString(locales,dateOptions))
                                     </script>
                                  </p>
                               </div>
@@ -1644,6 +1653,13 @@
              var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
          today.setHours(today.getHours()+48);
     
+
+
+         function addDays(date, days) {
+            var result = new Date(date);
+            result.setDate(result.getDate() + days);
+            return result.toLocaleDateString();
+         }
             
              $('#startDate').datepicker({
                  locale: calLanguage,
@@ -1654,7 +1670,7 @@
                      return null //$('#endDate').val();
                  },
                  change: function (e) {
-                    var tempDate = $('#startDate').val();                 
+                    var tempDate = addDays($('#startDate').val(),1);                 
                     var $tempDropDate = $('#endDate');
                     $tempDropDate.val(tempDate);
                     
