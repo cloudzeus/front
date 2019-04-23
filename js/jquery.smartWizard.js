@@ -961,7 +961,6 @@
                      const category = document.querySelector(carSelector+ " .car-cate")
                      const CarModelId = document.querySelector(carSelector+ " .car-model-id").value;
                      const extras = document.querySelectorAll(carSelector+ " input[type ='checkbox']")
-                    console.log(extras)
                      const carMake = document.querySelector(carSelector+" .makeHeader").innerHTML
                      const totalCharge = document.querySelector(carSelector+" .total-charge").children[0].value
                      selectedCar.make = carMake;
@@ -988,33 +987,34 @@
             localStorage.rentalPeriod = JSON.stringify(daysBtwn)
             var extraCharges = 0;
             var selectedExtras = []
-            for( var i = 0; i < extras.length; i++){
-               let {name, value,checked } = extras[i];
-               value = parseInt(value)
+            for( let i = 0; i < extras.length; i++){
+               var {name, value,checked } = extras[i];
+               value = parseFloat(value)
                if(checked){
                    selectedExtras.push(name)
-                   if(extraChargeRate.indexOf(name) == -1){
+                   if(extraChargeRate.indexOf(name) === -1){
                     extraCharges += value;
                    }else{
-                    if(name == "label_4"){
-                        if(daysBtwn>6){
-                            value = value* 6
+                        if(name == "label_4"){
+                            console.log(name)
+                            if(daysBtwn>6){
+                                value = value* 6
+                            }else{
+                                value = value * daysBtwn
+                                extraCharges += value
+                            }
                         }else{
-                            value = value * daysBtwn
-                            extraCharges += value
+                            if(daysBtwn>10){
+                                value = value* 10
+                            }else{
+                                value = value * daysBtwn
+                                extraCharges += value
+                            }
                         }
-                    }else{
-                        if(daysBtwn>10){
-                            value = value* 10
-                        }else{
-                            value = value * daysBtwn
-                            extraCharges += value
-                        }
-                    }
                    }
                }
             }
-            extraCharges = Number(Math.round(extraCharges+'e2')+'e-2').toFixed(2)
+            localStorage.extraCharges = extraCharges
             return {total :extraCharges,selectedExtras}
         },
         dateTimeDisplayer : function(){
@@ -1023,9 +1023,16 @@
         
             var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
             var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
-        
-            var startDateString = new Date(StartDate+" "+StartTime).toUTCString()
-            var  endDateString = new Date(EndDate+" "+EndTime).toUTCString()
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',hour:'numeric',minute:'numeric',second:'numeric' }; 
+            var locales = [];
+            if(localStorage.language == 'Greek'){
+                locales.push('el-gr');
+            }else{
+                locales.push('en-US');
+            }
+            locales.push('en-US');
+            var startDateString = new Date(StartDate+" "+StartTime).toLocaleDateString(locales,options)
+            var  endDateString = new Date(EndDate+" "+EndTime).toLocaleDateString(locales,options)
         
             //the nodes
             var pickupHeader = document.querySelector(".pickupHeader")
