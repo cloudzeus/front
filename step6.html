@@ -39,12 +39,6 @@
          <script src="api/endpoints.js"></script>
          <script src="api/translation.js"></script>
          <script src="api/dates.js"></script>
-         <script src="api/menuRedirection.js"></script>
-         <script src="js/functionsBooking.js"></script>
-         <script>
-            completeBooking();
-         
-         </script>
       <!--PreLoader-->
       <div class="loader">
          <div class="loader-inner">
@@ -81,55 +75,59 @@
                <span> </span>
                </button></a>
                <div class="collapse navbar-collapse" id="xenav">
-                     <ul class="navbar-nav ml-auto">
-                           <li class="nav-item">
-                              <a class="nav-link makeMeWhite" href="index.html#aboutus" id="aboutusURL">
-                                 <script>document.write(lib.translator("aboutUs"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link makeMeWhite" href="https://breezerentals.gr/index.html#our-team" id="our-teamURL">
-                                 <script>document.write(lib.translator("ourFleet"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link makeMeWhite" href="#our-feature" id="our-featureURL">
-                                 <script>document.write(lib.translator("ourServices"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link makeMeWhite" href="#portfolio-xe" id="portfolio-xeURL">
-                                  <script>document.write(lib.translator("proposals"))</script>
-                              </a>
-                           </li>
-      
-                           <li class="nav-item">
-                              <a class="nav-link makeMeWhite" href="#our-testimonial" id="our-testimonialURL">
-                                 <script>document.write(lib.translator("testimonials"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link makeMeWhite" href="https://blog.breezerentals.gr" target="_blank">
-                                 <script>document.write(lib.translator("blog"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link makeMeWhite" href="#contactus" id="contactusURL">
-                                 <script>document.write(lib.translator("contact"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-items dropdown">
-                              <a class="nav-links dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <script>document.write(lib.translator("languages"))</script>
-                              </a>
-                              <div id="changeLanguage" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                 <button id="Greek" class="dropdown-item" >Greek</button>
-                                 <button id="English" class="dropdown-item" >English</button>
-                                 <button id="German" class="dropdown-item" >German</button>
-                              </div>
-                           </li>
-                        </ul>
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="index.html#aboutus" target="_blank">
+                           <script>document.write(lib.translator("aboutUs"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="https://breezerentals.gr/index.html#our-team" target="_blank">
+                           <script>document.write(lib.translator("ourFleet"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="https://breezerentals.gr/index.html#our-feature"target="_blank">
+                           <script>document.write(lib.translator("ourServices"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="https://breezerentals.gr/index.html#portfolio-xe"target="_blank">
+                            <script>document.write(lib.translator("proposals"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="/step1.html">
+                           <script>document.write(lib.translator("reservations"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="https://breezerentals.gr/index.html#our-testimonial">
+                           <script>document.write(lib.translator("testimonials"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="https://blog.breezerentals.gr/">
+                           <script>document.write(lib.translator("blog"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="https://breezerentals.gr/index.html#contactus">
+                           <script>document.write(lib.translator("contact"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-items dropdown">
+                        <a class="nav-links dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <script>document.write(lib.translator("languages"))</script>
+                        </a>
+                        <div id="changeLanguage" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <button id="Greek" class="dropdown-item" >Greek</button>
+                           <button id="English" class="dropdown-item" >English</button>
+                           <button id="German" class="dropdown-item" >German</button>
+                        </div>
+                     </li>
+                  </ul>
                </div>
             </div>
             <!--side menu open button-->
@@ -143,44 +141,48 @@
             <div class="inner-wrapper">
                <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
                <nav class="side-nav">
-                     <ul class="navbar-nav w-100">
-                           <li class="nav-item active">
-                              <a class="nav-link"  href="index.html#aboutus" id="aboutusURLS">
-                                 <script>document.write(lib.translator("aboutUs"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#our-team" id="our-teamURLS">
-                                 <script>document.write(lib.translator("ourFleet"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#our-feature" id="our-featureURLS">
-                                 <script>document.write(lib.translator("ourServices"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#portfolio-xe" id="portfolio-xeURLS">
-                                 <script>document.write(lib.translator("proposals"))</script>
-                              </a>
-                           </li>
-      
-                           <li class="nav-item">
-                              <a class="nav-link" href="#our-testimonial" id="our-testimonialURLS">
-                                 <script>document.write(lib.translator("testimonials"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="https://blog.breezerentals.gr" target="_blank">
-                                 <script>document.write(lib.translator("blog"))</script>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#contactus" id="contactusURLS">
-                                 <script>document.write(lib.translator("contact"))</script>
-                              </a>
-                           </li>
-                        </ul>
+                  <ul class="navbar-nav w-100">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="https://breezerentals.gr/index.html#aboutus">
+                           <script>document.write(lib.translator("aboutUs"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="https://breezerentals.gr/index.html#our-team">
+                           <script>document.write(lib.translator("ourFleet"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-feature">
+                           <script>document.write(lib.translator("ourServices"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#portfolio-xe">
+                           <script>document.write(lib.translator("proposals"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/step1.html">
+                           <script>document.write(lib.translator("reservations"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-testimonial">
+                           <script>document.write(lib.translator("testimonials"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-blog">
+                           <script>document.write(lib.translator("blog"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#contactus">
+                           <script>document.write(lib.translator("contact"))</script>
+                        </a>
+                     </li>
+                  </ul>
                </nav>
                <ul class="social-icons-simple white top50 w-100">
                   <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> </li>
@@ -431,12 +433,12 @@
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">12.00€</span>
-                                       <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 14€ deductible for comprehensive and collision which will be charged daily.">
+                                       <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">350.00€</span>
+                                       <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch ">
-                                          <input type="checkbox" name="label_9" value="12.00" class="default">
+                                          <input type="checkbox" name="label_9" value="350.00" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -444,12 +446,12 @@
                                  </div>
                                  <div class="row justify-content-md-center">
                                     <div class="col-6 col-md-6 col-lg-3 ">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">14.00€</span>
-                                       <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 12€ deductible for comprehensive and collision which will be charged daily.">
+                                       <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">750.00€</span>
+                                       <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch">
-                                          <input type="checkbox" name="label_8" value="14.00" class="default">
+                                          <input type="checkbox" name="label_8" value="750.00" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -586,12 +588,12 @@
                                           </label>
                                        </div>
                                        <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">12.00€</span>
-                                          <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 14€ deductible for comprehensive and collision which will be charged daily.">
+                                          <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">350.00€</span>
+                                          <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
                                              <i class="fas fa-info-circle"></i>
                                              </a>
                                           <label class="switch ">
-                                             <input type="checkbox" name="label_9" value="12.00" class="default">
+                                             <input type="checkbox" name="label_9" value="350.00" class="default">
                                              <span class="slider round"></span>
                                           </label>
                                        </div>
@@ -599,12 +601,12 @@
                                     </div>
                                     <div class="row justify-content-md-center">
                                        <div class="col-6 col-md-6 col-lg-3 ">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">14.00€</span>
-                                          <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 12€ deductible for comprehensive and collision which will be charged daily.">
+                                          <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">750.00€</span>
+                                          <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
                                              <i class="fas fa-info-circle"></i>
                                              </a>
                                           <label class="switch">
-                                             <input type="checkbox" name="label_8" value="14.00" class="default">
+                                             <input type="checkbox" name="label_8" value="750.00" class="default">
                                              <span class="slider round"></span>
                                           </label>
                                        </div>
@@ -742,12 +744,12 @@
                                           </label>
                                        </div>
                                        <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">12.00€</span>
-                                          <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 14€ deductible for comprehensive and collision which will be charged daily.">
+                                          <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">350.00€</span>
+                                          <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
                                              <i class="fas fa-info-circle"></i>
                                              </a>
                                           <label class="switch ">
-                                             <input type="checkbox" name="label_9" value="12.00" class="default">
+                                             <input type="checkbox" name="label_9" value="350.00" class="default">
                                              <span class="slider round"></span>
                                           </label>
                                        </div>
@@ -755,12 +757,12 @@
                                     </div>
                                     <div class="row justify-content-md-center">
                                        <div class="col-6 col-md-6 col-lg-3 ">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">14.00€</span>
-                                          <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 12€ deductible for comprehensive and collision which will be charged daily.">
+                                          <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">750.00€</span>
+                                          <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
                                              <i class="fas fa-info-circle"></i>
                                              </a>
                                           <label class="switch">
-                                             <input type="checkbox" name="label_8" value="14.00" class="default">
+                                             <input type="checkbox" name="label_8" value="750.00" class="default">
                                              <span class="slider round"></span>
                                           </label>
                                        </div>
@@ -896,12 +898,12 @@
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">12.00€</span>
-                                       <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 14€ deductible for comprehensive and collision which will be charged daily.">
+                                       <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">350.00€</span>
+                                       <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch ">
-                                          <input type="checkbox" name="label_9" value="12.00" class="default">
+                                          <input type="checkbox" name="label_9" value="350.00" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -909,12 +911,12 @@
                                  </div>
                                  <div class="row justify-content-md-center">
                                     <div class="col-6 col-md-6 col-lg-3 ">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">14.00€</span>
-                                       <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 12€ deductible for comprehensive and collision which will be charged daily.">
+                                       <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">750.00€</span>
+                                       <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch">
-                                          <input type="checkbox" name="label_8" value="14.00" class="default">
+                                          <input type="checkbox" name="label_8" value="750.00" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -1130,8 +1132,8 @@
 <div class="form-row">
 
    <div class="col-12 form-check-inline">
-      <div class="radio">
-         <label class="pl-0" id="payWithPaypal">
+      <div class="radio mt-4">
+         <label id="payWithPaypal">
             <img  class="img-fluid" src="images/PayPal.svg" alt="">pay
             with paypal
          </label>
@@ -1230,7 +1232,9 @@
          </script> -->
       </div>
       <div class="radio pb-4 ml-3">
-         <label class="mt-4">
+         <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2"
+               value="option2">
             <img class="img-fluid" src="images/peiraeus.svg" alt="">Pay
             at Piraeus Bank
          </label>
@@ -1257,6 +1261,8 @@
                   <div id="step-4" class="tab-pane step-content html-2-pdfwrapper">
                      <script>
                         const userDetails = JSON.parse(localStorage.userDetails);
+                        const transDetails = JSON.parse(localStorage.transactionDetails)
+                        const newBooking = JSON.parse(localStorage.newBooking)
                         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }; 
                         var locales = [];
                         if(localStorage.language == 'Greek'){
@@ -1419,11 +1425,6 @@
                                                 font-size: 0.9rem;
                                              }                                             
                                              </style>
-                                             <script>
-                                                var {extras, daysCharge,totalCharge } = JSON.parse(localStorage.selectedCar);
-                                                var period = parseInt(localStorage.rentalPeriod);
-                                                var { aveDailyCharge, deposit, selectedExtraObjs, total } = extras;
-                                             </script>
 
                                              <h5 class="ratesHeader text-right"><script>document.write(lib.translator("ReservationRatesAnalysis"))</script></h5>
                                           </div>
@@ -1433,26 +1434,20 @@
                                                   <p class="stepTwoHeaderPFirst headerp headerTop border-bottom text-right" >
                                                       <script>document.write(lib.translator("DayByDayRates"))</script>
                                                    </p>
-                                                   <script>
-                                                         for(let i = 1; i <= period ; i++){
-                                                            let snippet  = `<p class="stepTwoHeaderPTwo headerp text-right">` + lib.translator("DayRateslabel") + " " + i+`: <span class="rateByDay">` + aveDailyCharge + `€</span></p>`;
-                                                            document.write(snippet);
-                                                         }
-                                                      </script>
-                                                  <p class="stepTwoHeaderPTwo headerp text-right pt-2 rateHeaderSubTotal"><script>document.write(lib.translator("DayByDaySubTotal"));</script>: <span class="rateByDay"> <script>document.write(daysCharge + " €");</script> </span></p>
-                                                  <p class="stepTwoHeaderPFirst headerp headerTop border-bottom text-right" ><script>document.write(lib.translator("extrasRates"))</script></p>
-                                                  <script>
-                                                      for(let a = 0; a < selectedExtraObjs.length ; a++){
-                                                         let obj = selectedExtraObjs[a];
-                                                         let snippet  = `<p class="stepTwoHeaderPTwo headerp text-right">` + lib.translator(obj.name) + `: <span class="rateByDay">` + obj.value.toFixed(2) + `€</span></p>`;
-                                                         document.write(snippet);
-                                                      }
-                                                   </script>
-                                                  <p class="stepTwoHeaderPTwo headerp text-right pt-2 rateHeaderSubTotal"><script>document.write(lib.translator("DayByDaySubTotal"));</script>: <span class="rateByDay"> <script>document.write(total.toFixed(2) + "€") </script>   </span></p>
-                                                  <p class="stepTwoHeaderPFirst headerp headerTop border-bottom text-right" ><script>document.write(lib.translator("reservationsTotals"))</script>:</p>
-                                                  <p class="stepTwoHeaderPTwo headerp text-right pt-2 rateHeaderSubTotal"><script>document.write(lib.translator("grandTotals")); </script>: <span class="rateByDay"> <script>document.write(totalCharge +"€") </script> </span></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right">
+                                                      <script>document.write(lib.translator("DayRateslabel"))</script> 1: <span class="rateByDay">13,00€</span></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right"><script>document.write(lib.translator("DayRateslabel"))</script> 2: <span class="rateByDay">13,00€</span></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right"><script>document.write(lib.translator("DayRateslabel"))</script> 3: <span class="rateByDay">13,00€</span></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right"><script>document.write(lib.translator("DayRateslabel"))</script> 4: <span class="rateByDay">13,00€</span></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right pt-2 rateHeaderSubTotal"><script>document.write(lib.translator("DayByDaySubTotal"))</script>: <span class="rateByDay">52,00€</span></p>
+                                                  <p class="stepTwoHeaderPFirst headerp headerTop border-bottom text-right" ><script>document.write(extrasRates)</script></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right">Snow Chanes: <span class="rateByDay">13,00€</span></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right">Extra Driver: <span class="rateByDay">13,00€</span></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right pt-2 rateHeaderSubTotal"><script>document.write(lib.translator("DayByDaySubTotal"))</script>: <span class="rateByDay">26,00€</span></p>
+                                                  <p class="stepTwoHeaderPFirst headerp headerTop border-bottom text-right" ><script>document.write(lb.translator("reservationsTotals"))</script>:</p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right pt-2 rateHeaderSubTotal"><script>document.write(lib.translator("grandTotalsl"))</script>: <span class="rateByDay">78,00€</span></p>
                                                   <p class="stepTwoHeaderPFirst headerp headerTop border-bottom text-right" ><script>document.write(lib.translator("paymentDeposit"))</script></p>
-                                                  <p class="stepTwoHeaderPTwo headerp text-right pt-2 rateHeaderSubTotal"><script>document.write(lib.translator("depositTotal"));</script>: <span class="rateByDay"><script>document.write((parseFloat(total)+parseFloat(deposit)).toFixed(2)) </script>€</span></p>
+                                                  <p class="stepTwoHeaderPTwo headerp text-right pt-2 rateHeaderSubTotal"><script>document.write(lib.translator("depositTotal"))</script>: <span class="rateByDay">52,00€</span></p>
                                                   
                                                 </div>
                                             
@@ -1469,10 +1464,9 @@
                            
 
                            <script>
-                              var { payment, BookingNumber, ReservationDate } = JSON.parse(localStorage.completeBookingDetails);
-                              console.log(payment)
-                               userDetails = JSON.parse(localStorage.userDetails);
-                              var { extras } = JSON.parse(localStorage.selectedCar)
+                              const userDetails = JSON.parse(localStorage.userDetails);
+                              const transDetails = JSON.parse(localStorage.transactionDetails)
+                              const newBooking = JSON.parse(localStorage.newBooking)
                               var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }; 
                               var locales = [];
                               if(localStorage.language == 'Greek'){
@@ -1496,8 +1490,8 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
                                        <p class="stepTwoHeaderPFirst headerp headerTop">Transaction Id: <span><i class="fa fa-money-check headerInfoIcon"></i></span></p>
-                                       <p class="stepTwoHeaderPThree headerp" style="font-size:.8em;font-weight:bold">
-                                             <script>document.write(payment.id)</script>
+                                       <p class="stepTwoHeaderPThree headerp">
+                                             <script>document.write(transDetails.id)</script>
       
                                        </p>
                                     </div>
@@ -1506,7 +1500,7 @@
       
                                        <p class="stepTwoHeaderPThree headerp">
                                              <script>
-                                                 document.write(BookingNumber)
+                                                 document.write(newBooking.BookingNumber)
                                              </script>
                                        </p>
                                     </div>
@@ -1515,7 +1509,7 @@
       
                                        <p class="stepTwoHeaderPThree headerp mb-2">
                                           <script>
-                                          document.write((new Date(ReservationDate)).toLocaleDateString(locales,dateOptions))
+                                          document.write((new Date(transDetails.create_time)).toLocaleDateString(locales,dateOptions))
                                           </script>
                                        </p>
                                     </div>
@@ -1540,7 +1534,7 @@
                                     <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right">
                                        <p class="stepTwoHeaderPFirst headerp headerTop">E-mail: <span><i class="fa fa-at headerInfoIcon"></i></span></p>
       
-                                       <small style="font-size:.7em;font-weight:bold" class="stepTwoHeaderPThree headerp">
+                                       <small style="font-size:.7em;" class="stepTwoHeaderPThree headerp">
                                              <script>document.write(userDetails.customeremail) </script>
       
                                        </small>
@@ -1719,6 +1713,7 @@
                                           <!-- Car Image-->
                                           <div class="col-12 col-md-8 my-3">
                                              <!-- Car Make-->
+      
                                              <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 15rem;">
                                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.7765239621635!2d23.94622155128059!3d37.93565091056017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1901ad9e75c61%3A0x38b215df0aeeb3aa!2zzpTOuc61zrjOvc6uz4IgzpHOtc-Bzr_Ou865zrzOrc69zrHPgiDOkc64zrfOvc-Ozr0!5e0!3m2!1sel!2sgr!4v1551158466299"
                                                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -1785,32 +1780,32 @@
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/calendar/js/gijgo.js" type="text/javascript"></script>
-      <!--to view items on reach-->
-      <script src="js/jquery.appear.js"></script>
-      <!--Equal-Heights-->
-      <script src="js/jquery.matchHeight-min.js"></script>
-      <!--Owl Slider-->
-      <script src="js/owl.carousel.min.js"></script>
-      <!--number counters-->
-      <script src="js/jquery-countTo.js"></script>
-      <!--Parallax Background-->
-      <script src="js/parallaxie.js"></script>
-      <!--Cubefolio Gallery -->
-      <script src="js/jquery.cubeportfolio.min.js"></script>
-      <!--FancyBox popup-->
-      <script src="js/jquery.fancybox.min.js"></script>
-      <!-- Video Background-->
-      <script src="js/jquery.background-video.js"></script>
+      <!--to view items on reach
+      <script src="js/jquery.appear.js"></script>-->
+      <!--Equal-Heights
+      <script src="js/jquery.matchHeight-min.js"></script>-->
+      <!--Owl Slider
+      <script src="js/owl.carousel.min.js"></script>-->
+      <!--number counters
+      <script src="js/jquery-countTo.js"></script>-->
+      <!--Parallax Background
+      <script src="js/parallaxie.js"></script>-->
+      <!--Cubefolio Gallery 
+      <script src="js/jquery.cubeportfolio.min.js"></script>-->
+      <!--FancyBox popup
+      <script src="js/jquery.fancybox.min.js"></script>-->
+      <!-- Video Background
+      <script src="js/jquery.background-video.js"></script>-->
       <!--TypeWriter
          <script src="js/typewriter.js"></script>
          -->
-      <!--Particles-->
-      <script src="js/particles.min.js"></script>
-      <!--WOw animations-->
-      <script src="js/wow.min.js"></script>
-      <!--Revolution SLider -->
+      <!--Particles
+      <script src="js/particles.min.js"></script>-->
+      <!--WOw animations
+      <script src="js/wow.min.js"></script>-->
+      <!--Revolution SLider
       <script src="js/revolution/jquery.themepunch.tools.min.js"></script>
-      <script src="js/revolution/jquery.themepunch.revolution.min.js"></script>
+      <script src="js/revolution/jquery.themepunch.revolution.min.js"></script> -->
       <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
       <!--    <script src="js/revolution/extensions/revolution.extension.actions.min.js"></script>
          <script src="js/revolution/extensions/revolution.extension.carousel.min.js"></script>
@@ -1934,22 +1929,20 @@
          
             const DateStart = formData.StartDate + " " + formData.StartTime;
             const DateEnd = formData.EndDate + " " + formData.EndTime;
-            const { CarModelId, carCategoryId, extras, totalCharge } = selectedCar;
-            const TotalPrice =  (parseFloat(extras.deposit) + parseFloat(extras.total)).toFixed(2);     //selectedCar.totalCharge; //@TODO charge deposit rather
+            const { CarModelId, carCategoryId, extras } = selectedCar;
+            const TotalPrice = selectedCar.totalCharge;
             const DaysRental = parseInt(JSON.parse(localStorage.rentalPeriod))
             const ReservationDate = new Date(Date.now()).toLocaleString()
             const PlaceFrom = formData.pickUpLocation;
             const PlaceTo = formData.DropOffLocation;
-            var  Notes = "";
-            var token  = makeId();
-            localStorage.bookingToken = token;
+            const  Notes = ""
+            console.log(selectedCar)
             let {selectedExtras } = extras;
             for ( var i =0; i<selectedExtras.length; i ++ ){
                 const extra = selectedExtras[i];
                 Notes += lib.translator(extra) + ";"
             }
             var booking = {
-                token,
                 FromBranchStoreId :6,
                 ToBranchStoreId : 6, //@TODO if the "To" word
                 CarCategoryId : parseInt(carCategoryId),
@@ -1969,7 +1962,7 @@
             })
             .catch( ex => {
                 console.log(ex)
-                var errorContainer = document.querySelector(".snackbar");
+                const errorContainer = document.querySelector(".snackbar");
                 errorContainer.childNodes[0].innerHTML = lib.translator("errorOccured") + ` <a href='#' class='btn btn-danger'>`+ lib.translator("tryAgain") +`</a>`;
                 errorContainer.classList += " snackbar-opened";
                 this.displayLoader(false)
