@@ -101,8 +101,8 @@ const languages = {
   Transition:["Transition","Ταχύτητες"],
   Manual:["Manual","Με συμπλέκτη"],
   Car_Dors:["Car Dors","Πόρτες"],
-  Clima:["Clima","Κλιματισμός"],
-  Air_Condition:["Air Condition","Αέρας κατάσταση"],
+  Clima:["Air Condition","Κλιματισμός"],
+  Air_Condition:["Yes","Ναι"],
   All_Car_Categories : ["All Car Categories","Όλες οι κατηγορίες"],
   Passengers:["Passengers","Επιβάτες"],
   Laggages:["Laggages","Αποσκευές"],
@@ -112,7 +112,7 @@ const languages = {
   Snow_Chains:["Snow Chains","Αλυσίδες χιονιού"],
   Baby_cot:["Baby cot","Παιδικό κάθισμα"],
   Tolal_Price:["Tolal Price","Σύνολο Χρέωσης"],
-  All_Prices_include_Taxes:["All Prices include Taxes","Όλες οι τιμές περιλαμβάνουν όλους τους φόρους"],
+  All_Prices_include_Taxes:["All Prices include Taxes","Όι τιμές περιλαμβάνουν όλους τους φόρους"],
   Extras:["Extras","Πρόσθετα"],
   Here_are_all_the_extras_included:["Here are all the extras included","Λίστα προσθέτων"],
   Personal_details:["Personal details","Στοιχεία Οδηγού"],
@@ -242,11 +242,20 @@ const languages = {
   label_5 : ['Pick up charge 15€ ','Χρέωση Παραλαβής 15€ '],
   label_6 : ['Baby Seat ','Παιδικό κάθισμα '],
   label_7 : ['Snow chains ','Αλυσίδες χιονιού'],
-  label_8 : ['Advanced Insurance  ','Ασφάλεια με απαλλαγή'],
-  label_9 : ['Extra Insurance  ','Ασφάλεια με απαλλαγή  '],
-  label_10 : ['Theft or loss coverage ','Ασφάλεια Απώλεια Κλοπή '],
-  label_12 : ['Drop off charge 10€ ','Χρέωση Παράδοσης 10€ '],
-  label_13 : ['Drop off charge 15€ ','Χρέωση Παράδοσης 15€ '],
+  label_8 : ['Advanced Insurance  ','Ασφάλεια ADV '],
+  label_9 : ['Extra Insurance  ','Ασφάλεια EXTR '],
+  ReservationRatesAnalysis:["Reservation Rates Analysis","Αναλυση Χρεώσεων"],
+     DayByDayRates:["DAY BY DAY RATES","ΧΡΕΩΣΗ ΑΝΑ ΗΜΕΡΑ"],
+     DayRateslabel:["Day","Ημέρα"],
+     DayByDaySubTotal:["Sub Total","Μερικό Σύνολο"],
+     extrasRates:["EXTRAS RATES","ΕΞΤΡΑ ΧΡΕΩΣΕΙΣ"],
+     reservationsTotals:["RESERVATION TOTALS","ΣΥΝΟΛΟ ΚΡΑΤΗΣΗΣ"],
+     grandTotals:["Grand Total","Γενικό Σύνολο"],
+     paymentDeposit:["PAYMENT DEPOSIT","ΠΡΟΚΑΤΑΒΟΛΗ"],
+     depositTotal:["Deposit Total","Σύνολο Προκαταβολής"],
+  label_10 : ['Theft  coverage ','Ασφάλεια Κλοπής '],
+  label_12 : ['Drop off charge 10€ ','Χρέωση Παράδοσης 10€'],
+  label_13 : ['Drop off charge 15€ ','Χρέωση Παράδοσης 15€'],
   description_2 : ["10€ charges for  Pick up locations of ATH - International Airport, Rafina Port, Piraeus Port.","Χρέωση 10€ για παραλαβή από το Αεροδρόμιο, Το Λιμάνι της Ραφίνας και το Λιμάνι του Πειραιά"],
   description_3 : ["Extra car driver which will be charged daily but with maximum charge of 7 days","Έξτρα οδηγός για όλη την διάρκεια της ενοικίασης με μέγιστη χρέωση 7 ημερών."],
   description_4 : ["Portable GPS device which will be charged by daily with maximum charge of 7 days","Φορτή συσκευή Πλοήγησης με χρέωση ανά ημέρα μέγιστη χρέωση 7 ημέρες."],
@@ -1033,7 +1042,7 @@ const languages = {
     </div>
 
      <!--Footer ends-->`]
-
+     
 
 
 }

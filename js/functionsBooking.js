@@ -121,17 +121,8 @@ $("#submit_btn").click(function() {
     }
    
     
-   /* ------- Smooth scroll ------- */
-   if(window.location.pathname != '/step1.html'){
-   $("a.pagescroll, .nav-link").on("click",  function(event){
-      event.preventDefault();
-      if(event.target.id != "changeLang"){
-         $("html,body").animate({
-            scrollTop: $(this.hash).offset().top
-         }, 1000);
-      }
-   }); 
-}
+
+
    
    /*------ MENU Fixed ------*/
    if ($("nav.navbar").hasClass("static-nav")) {

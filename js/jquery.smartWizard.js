@@ -967,12 +967,17 @@
                      selectedCar.category = category.value
                      selectedCar.carCategoryId = carCategoryId;
                      selectedCar.CarModelId = CarModelId;
-                     var { total, selectedExtras } = this.calculateExtras(extras);
+                     var { total, selectedExtras, deposit, aveDailyCharge, selectedExtraObjs } = this.calculateExtras(extras,totalCharge);
                      const finalTotal = parseFloat(totalCharge) + parseFloat(total);
                      selectedCar.totalCharge = finalTotal.toFixed(2)
+                     selectedCar.daysCharge = totalCharge;
                      selectedCar.extras = {
+
                          total,
-                         selectedExtras
+                         selectedExtras,
+                         deposit,
+                         aveDailyCharge,
+                         selectedExtraObjs
                      }
                      selectedCar.pickupDetails = JSON.parse(localStorage.formData)
                      localStorage.selectedCar = JSON.stringify(selectedCar);
@@ -981,12 +986,22 @@
                 })
             }
         },
-        calculateExtras : function(extras){
+        calculateExtras : function(extras, totalCharge){
             const {StartDate,EndDate} = JSON.parse(localStorage.formData);
             var daysBtwn = this.daysBetweenDates(EndDate,StartDate);
-            localStorage.rentalPeriod = JSON.stringify(daysBtwn)
+            localStorage.rentalPeriod = JSON.stringify(daysBtwn);
+            var aveDailyCharge = (totalCharge/daysBtwn).toFixed(2);
+            var deposit = 0;
+            if(daysBtwn<=3){
+                deposit = (aveDailyCharge * daysBtwn).toFixed(2)
+            }else{
+                deposit =( aveDailyCharge * 3).toFixed(2)
+            }
+
+
             var extraCharges = 0;
-            var selectedExtras = []
+            var selectedExtras = [];
+            var selectedExtraObjs = [];
             for( let i = 0; i < extras.length; i++){
                var {name, value,checked } = extras[i];
                value = parseFloat(value)
@@ -996,26 +1011,28 @@
                     extraCharges += value;
                    }else{
                         if(name == "label_4"){
-                            console.log(name)
                             if(daysBtwn>6){
                                 value = value* 6
                             }else{
                                 value = value * daysBtwn
-                                extraCharges += value
                             }
                         }else{
                             if(daysBtwn>10){
                                 value = value* 10
                             }else{
                                 value = value * daysBtwn
-                                extraCharges += value
+
                             }
                         }
+                        selectedExtraObjs.push({name,value})
+
+                        extraCharges += value
+
                    }
                }
             }
             localStorage.extraCharges = extraCharges
-            return {total :extraCharges,selectedExtras}
+            return {total :extraCharges,selectedExtras,deposit,aveDailyCharge,selectedExtraObjs}
         },
         dateTimeDisplayer : function(){
             console.log(JSON.parse(localStorage.formData))
