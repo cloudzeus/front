@@ -124,8 +124,9 @@ $("#submit_btn").click(function() {
    /* ------- Smooth scroll ------- */
    if(window.location.pathname != '/step1.html'){
    $("a.pagescroll, .nav-link").on("click",  function(event){
-      event.preventDefault();
-      if(event.target.id != "changeLang"){
+      console.log(event.target)
+      if(!event.target.classList.contains('outLink')){
+         event.preventDefault();
          $("html,body").animate({
             scrollTop: $(this.hash).offset().top
          }, 1000);
