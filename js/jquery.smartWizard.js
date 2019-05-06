@@ -1042,15 +1042,24 @@
             var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
             var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',hour:'numeric',minute:'numeric',second:'numeric' }; 
             var locales = [];
-            if(localStorage.language == 'Greek'){
+            var currentLang = localStorage.language
+            if(currentLang == 'Greek'){
                 locales.push('el-gr');
-            }else{
+            }else if(currentLang == 'English'){
                 locales.push('en-US');
+            
+            }else if(currentLang == 'German'){
+                locales.push('de-de');
             }
+            var _startDate = new Date(StartDate+" "+StartTime)
+            var _endDate = new Date(EndDate+" "+EndTime)
+            
+
             locales.push('en-US');
-            var startDateString = new Date(StartDate+" "+StartTime).toLocaleDateString(locales,options)
-            var  endDateString = new Date(EndDate+" "+EndTime).toLocaleDateString(locales,options)
-        
+            var dateTimeFormat1 = new Intl.DateTimeFormat('de', options);
+            var startDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) :  _startDate.toLocaleDateString(locales,options)
+            var  endDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) : _endDate.toLocaleDateString(locales,options)
+
             //the nodes
             var pickupHeader = document.querySelector(".pickupHeader")
             var pickupDate = document.querySelector(".pickupDate")

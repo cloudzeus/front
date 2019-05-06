@@ -55,6 +55,9 @@
                 <script>
                     if(localStorage.language == 'Greek'){
                         window.location = '/GR.html'
+                    }else if(localStorage.language == 'German'){
+                        window.location = '/GE.html'
+
                     }
 
                window.addEventListener("load", function(){
@@ -82,10 +85,9 @@ window.cookieconsent.initialise({
                 <!--GDPR COOKIE CODE END-->  
     </head>     
     <body data-spy="scroll" data-target=".navbar" data-offset="90"> 
-            <script src="api/englishBody.js"></script>
-            <script src="api/greekBody.js"></script>
             <script src="api/indexTranslator.js"></script>
             <script src="api/languages.js"></script>
+            <script src="api/endpoints.js"></script>
          
             <script src="api/translation.js"></script>
          
@@ -152,7 +154,12 @@ window.cookieconsent.initialise({
                             <li class="nav-item"> 
                                 <a class="nav-link mainMenuNew" href="#contactus">Contact</a> 
                             </li>         
-                               
+                            <li class="nav-item d-block d-sm-none"> 
+                                <a class="nav-link mainMenuNew" href="#register"  data-toggle="modal" data-target="#register">Register</a> 
+                            </li>         
+                            <li class="nav-item d-block d-sm-none"> 
+                                <a class="nav-link mainMenuNew" href="#logIn"  data-toggle="modal" data-target="#logIn">Log In</a> 
+                            </li>     
                         </ul>     
                         <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
@@ -169,10 +176,25 @@ window.cookieconsent.initialise({
                     </div>                     
                 </div>                 
                 <!--side menu open button-->                 
-                <a href="javascript:void(0)" class="d-none d-lg-inline-block sidemenu_btn" id="sidemenu_toggle">  <span></span> <span></span> <span></span>  </a> 
+                <!-- <a href="javascript:void(0)" class="d-none d-lg-inline-block sidemenu_btn" id="sidemenu_toggle">  <span></span> <span></span> <span></span>  </a>  -->
+                <style>
+                    .registerLink {
+                        color: #ffffff;
+                        font-family: 'Open Sans';
+                        font-size: 0.75rem;
+                        padding-left: 0.5rem
+                    }
+                    .registerLink:hover{
+                        color:#a5ce44;
+                        
+                    }
+                    </style>
+                <a href="#logIn" class="d-none d-sm-block" data-toggle="modal" data-target="#logIn"> <i class="fas fa-user"></i><span class="registerLink">Log In</span></a>&nbsp;
+                <a href="#register" class="d-none d-sm-block" data-toggle="modal" data-target="#register"><span class="registerLink">Register</span></a>
+
             </nav>             
             <!-- side menu -->             
-            <div class="side-menu"> 
+            <!-- <div class="side-menu"> 
                 <div class="inner-wrapper"> 
                     <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span> 
                     <nav class="side-nav"> 
@@ -202,7 +224,12 @@ window.cookieconsent.initialise({
                             <li class="nav-item"> 
                                 <a class="nav-link" href="#contactus">Contact</a> 
                             </li>  
-                                                       
+                            <li class="nav-item d-block d-sm-none"> 
+                                <a class="nav-link mainMenuNew" href="#register"  data-toggle="modal" data-target="#register">Register</a> 
+                            </li>         
+                            <li class="nav-item d-block d-sm-none"> 
+                                <a class="nav-link mainMenuNew" href="#logIn"  data-toggle="modal" data-target="#logIn">Log In</a> 
+                            </li>                          
                         </ul>                         
                     </nav>                     
                     <ul class="social-icons-simple white top50 w-100"> 
@@ -223,7 +250,7 @@ window.cookieconsent.initialise({
                 </div>                 
             </div>             
             <a id="close_side_menu" href="javascript:void(0);"></a> 
-            <!-- End side menu -->             
+            End side menu              -->
         </header>         
         <!-- header -->         
         <!--Ful Screen Section Video with caption-->   
@@ -599,7 +626,7 @@ window.cookieconsent.initialise({
                         </div>                         
                         <div class="col-md-6 col-sm-6"> 
                             <div class="form-group bottom35"> 
-                                <input class="form-control" type="email" placeholder="Email:" required id="email" name="email"> 
+                                <input class="form-control" type="email" placeholder="Email:" required id="Email" name="email"> 
                             </div>                             
                         </div>                         
                         <div class="col-md-6 col-sm-6"> 
@@ -662,6 +689,102 @@ window.cookieconsent.initialise({
         </div>
     </div>   
 </footer> 
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="logIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center gradient_bg">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <form id="loginForm" method="post">
+            <div class="formError"></div>
+        <div class="md-form mb-5">      
+          <label data-error="wrong" data-success="right" for="defaultForm-email"  class="bmd-label-static">Your email</label>
+          <input type="email" name="email" id="defaultForm-email" class="form-control validate">
+        </div>
+
+        <div class="md-form mb-2">
+          
+          <label data-error="wrong" data-success="right" for="defaultForm-pass"  class="bmd-label-static">Your password</label>
+          <input type="password" name="password" id="defaultForm-pass" class="form-control validate">
+
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-myForm" type="submit" >Login</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    
+<!--End  Modal Login  -->
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center gradient_bg">
+        <h4 class="modal-title w-100 font-weight-bold">Register</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+      <form id="signupForm" action="signUp" method="post">
+
+        <div class="md-form mb-2">
+          <input type="text" id="name" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="name">Name</label>
+        </div>
+
+        <div class="md-form mb-2">
+          <input type="text" id="lastName" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="lastName">Last Name</label>
+        </div>
+        <div class="md-form mb-2">
+          <input type="email" id="email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="email">Your email</label>
+        </div> 
+
+        <div class="md-form mb-2">
+          <input type="password" id="password" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="password">Your password</label>
+        </div>
+        <div class="md-form mb-2">
+          <input type="password" id="repeatPassword" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="repeatPassword">Repeat Password</label>
+        </div>
+
+      </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-myForm">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--End  Modal register-->
+
+
+
+
 
  <!-- The Modal -->
  <div class="modal fade" id="consent">
@@ -1085,6 +1208,7 @@ window.cookieconsent.initialise({
 <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 --> 
 <script src="js/jquery.validate.min.js" type="text/javascript"></script> 
 
+<script src="api/authClient.js"></script>
 <script>
       $(document).ready(function () {
          $('body').bootstrapMaterialDesign();
@@ -1131,3 +1255,7 @@ $(document).ready(function(){
 
   gtag('config', 'UA-137431198-1');
 </script>
+
+<div id="snackbar-container">
+        <div id="snackbar1554762711878" class="snackbar" data-timeout="30" data-html-allowed="true"><span class="snackbar-content"></span></div>
+     </div>

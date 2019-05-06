@@ -158,38 +158,10 @@ lib.translator =  function(word){
     }
 }
 
-function indexTranslator(){
-    var indexLanguage = localStorage.language ? localStorage.language : false;
-    if(!indexLanguage){
-        localStorage.language = "English";
-        indexLanguage = "English"
-    }
-    //get the index body node
-    const htmlBody = document.querySelector("#body");
-    
-    if(htmlBody){
-        switch(indexLanguage){
-            case "English":
-                htmlBody.innerHTML = englishBody;
-                break
-            case "Greek":
-                htmlBody.innerHTML = greekBody;
-                break
-            default : 
-                htmlBody.innerHTML = englishBody;
-                break
-                
-        }
-        lib.init()
-    }
-}
-
-
 
 
 
 window.onload = () => {
     lib.init();
-    indexTranslator()
     
 }

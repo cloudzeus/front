@@ -278,16 +278,19 @@
                         <div id="step-2" class="tab-pane step-content" data-toggle="snackbar" data-content="Pick up location sis mandatory please fill the pick up location! <a href='#' class='btn btn-danger'>Check it out</a>" data-html-allowed="true" data-timeout="30">
                               <script>
 
-                                    var {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
-                                    var { StartDate,StartTime,EndTime,EndDate,pickUpLocation,DropOffLocation} = JSON.parse(localStorage.formData);
-            
-                                    var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
-                                    var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
-                                    
-                                    var startDateString = new Date(StartDate+" "+StartTime).toLocaleDateString(locales,dateOptions)
-                                    
-                                    var  endDateString = new Date(EndDate+" "+EndTime).toLocaleDateString(locales,dateOptions)
-            
+                        var {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
+                        var { StartDate,StartTime,EndTime,EndDate} = pickupDetails;
+
+                        var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
+                        var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
+                        var currentLang = localStorage.language
+                        var _startDate = new Date(StartDate+" "+StartTime)
+                        var _endDate = new Date(EndDate+" "+EndTime)
+                        var dateTimeFormat1 = new Intl.DateTimeFormat('de', dateOptions);
+                        var startDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) :  _startDate.toLocaleDateString(locales,dateOptions)
+                        var  endDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) : _endDate.toLocaleDateString(locales,dateOptions)
+
+
             
                                     </script>
                            <div id="searchResults" class="container" style="margin-top:-20px;">
@@ -965,9 +968,12 @@
 
                         var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
                         var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
-
-                        var startDateString = new Date(StartDate+" "+StartTime).toLocaleDateString(locales,dateOptions)
-                        var  endDateString = new Date(EndDate+" "+EndTime).toLocaleDateString(locales,dateOptions)
+                        var currentLang = localStorage.language
+                        var _startDate = new Date(StartDate+" "+StartTime)
+                        var _endDate = new Date(EndDate+" "+EndTime)
+                        var dateTimeFormat1 = new Intl.DateTimeFormat('de', dateOptions);
+                        var startDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) :  _startDate.toLocaleDateString(locales,dateOptions)
+                        var  endDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) : _endDate.toLocaleDateString(locales,dateOptions)
 
 
                         </script>
@@ -1256,18 +1262,24 @@
                   </div>
                   <div id="step-4" class="tab-pane step-content html-2-pdfwrapper">
                      <script>
-                        const userDetails = JSON.parse(localStorage.userDetails);
+                        var userDetails = JSON.parse(localStorage.userDetails);
                         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }; 
+                        var currentLocale = localStorage.language
                         var locales = [];
-                        if(localStorage.language == 'Greek'){
+                        if(currentLocale == 'Greek'){
                            locales.push('el-gr');
-                        }else{
+                        }else if(currentLocale == 'English'){
                            locales.push('en-US');
+                        }else if(currentLocale == 'German'){
+                           locales.push('de-de');
                         }
                         locales.push('en-US');
+                        console.log(locales)
                      </script>
                         <div>
-                           <h3 class="reservationHeader text-center">Reservation Details</h3>
+                           <h3 class="reservationHeader text-center">
+                              <script>document.write(lib.translator('Reservation_Details'))</script>
+                           </h3>
                         </div>
                         <div class="container">
                            
@@ -1473,12 +1485,15 @@
                               console.log(payment)
                                userDetails = JSON.parse(localStorage.userDetails);
                               var { extras } = JSON.parse(localStorage.selectedCar)
-                              var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }; 
+                              var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                              var currentLocale = localStorage.language
                               var locales = [];
-                              if(localStorage.language == 'Greek'){
+                              if(currentLocale == 'Greek'){
                                  locales.push('el-gr');
-                              }else{
+                              }else if(currentLocale == 'English'){
                                  locales.push('en-US');
+                              }else if(currentLocale == 'German'){
+                                 locales.push('de-de');
                               }
                               locales.push('en-US');
                            </script>
@@ -1857,6 +1872,8 @@
              }else if(curLang==="English"){
                 console.log("Η γλωσσα τώρα είναι Aglika");
                 calLanguage = "en-us";
+             }else if(curLang==="German"){
+                calLanguage = "de-de";
              }
              console.log(calLanguage);
              var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
@@ -1935,11 +1952,14 @@
             const DateStart = formData.StartDate + " " + formData.StartTime;
             const DateEnd = formData.EndDate + " " + formData.EndTime;
             const { CarModelId, carCategoryId, extras, totalCharge } = selectedCar;
-            const TotalPrice =  (parseFloat(extras.deposit) + parseFloat(extras.total)).toFixed(2);     //selectedCar.totalCharge; //@TODO charge deposit rather
+            const Deposit =  (parseFloat(extras.deposit) + parseFloat(extras.total)).toFixed(2);     //selectedCar.totalCharge; //@TODO charge deposit rather
             const DaysRental = parseInt(JSON.parse(localStorage.rentalPeriod))
             const ReservationDate = new Date(Date.now()).toLocaleString()
             const PlaceFrom = formData.pickUpLocation;
             const PlaceTo = formData.DropOffLocation;
+            const AveDailyCharge = extras.aveDailyCharge
+            const ExtraCharges = extras.total;
+            const Balance = (parseFloat(totalCharge) + parseFloat(Deposit)).toFixed(2);
             var  Notes = "";
             var token  = makeId();
             localStorage.bookingToken = token;
@@ -1958,10 +1978,14 @@
                 DateEnd,
                 DaysRental,
                 ReservationDate,
-                TotalPrice,
+                Deposit,
                 PlaceFrom,
                 PlaceTo,
                 Notes,
+                AveDailyCharge,
+                ExtraCharges,
+                Balance,
+                TotalCharge : totalCharge,
                 ...userDetails
             }
             clientRequest(endpoints.makePayment,booking,'POST').then(  data => {

@@ -1,0 +1,721 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta author="Kozyris Giannis">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Breeze Car Rental Services</title>
+      <link href="favicon.ico" rel="icon">
+      <!--Plugins css-->
+      <link rel="stylesheet" href="css/plugins.css">
+      <!--Date picker css-->
+      <link rel="stylesheet" href="css/daterangepicker.css">
+      <link rel="stylesheet" href="css/smart_wizard.css">
+      <link rel="stylesheet" href="css/smart_wizard_theme_dots.css">
+      <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+            
+    <link href="js/calendar/css/gijgo.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="pdfhtml/app.css">
+
+      <!--this is the css for the form wizzard -->
+      <!--end the css for the form wizzard -->
+      <!--Custom Styles-->
+
+
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://www.paypal.com/sdk/js?client-id=AREXT6MxGWlNGTm8d-BObWS7HlGcKHxNOicbBI6nZfB8_rk5eYmFKQrkmRq7rk9vFD6Ir3C8T4E8HEEe"></script>
+      <script src="api/paypalPayment.js"></script>
+
+   </head>
+   <body data-spy="scroll" data-target=".navbar" data-offset="90">
+         <script src="api/languages.js"></script>
+         <script src="api/util.js"></script>
+
+         <script src="api/templates.js"></script>
+         <script src="api/extras.js"></script>
+         <script src="api/endpoints.js"></script>
+         <script src="api/translation.js"></script>
+         <script src="api/dates.js"></script>
+      <!--PreLoader-->
+      <div class="loader">
+         <div class="loader-inner">
+            <div class="loader-blocks">
+               <span class="block-1"></span>
+               <span class="block-2"></span>
+               <span class="block-3"></span>
+               <span class="block-4"></span>
+               <span class="block-5"></span>
+               <span class="block-6"></span>
+               <span class="block-7"></span>
+               <span class="block-8"></span>
+               <span class="block-9"></span>
+               <span class="block-10"></span>
+               <span class="block-11"></span>
+               <span class="block-12"></span>
+               <span class="block-13"></span>
+               <span class="block-14"></span>
+               <span class="block-15"></span>
+               <span class="block-16"></span>
+            </div>
+         </div>
+      </div>
+      <!--PreLoader Ends-->
+      <!-- header -->
+      <header class="site-header">
+         <nav class="navbar navbar-expand-lg fixed-top gradient_bg">
+            <div class="container">
+               <a class="navbar-brand" href="index.html"> <img src="images/logo_2.svg" alt="logo"> </a>
+               <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+                  data-target="#xenav">
+               <span> </span>
+               <span> </span>
+               <span> </span>
+               </button></a>
+               <div class="collapse navbar-collapse" id="xenav">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="index.html#aboutus" id="aboutusURL">
+                           <script>document.write(lib.translator("aboutUs"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="https://breezerentals.gr/index.html#our-team" id="our-teamURL">
+                           <script>document.write(lib.translator("ourFleet"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#our-feature" id="our-featureURL">
+                           <script>document.write(lib.translator("ourServices"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#portfolio-xe" id="portfolio-xeURL">
+                            <script>document.write(lib.translator("proposals"))</script>
+                        </a>
+                     </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#our-testimonial" id="our-testimonialURL">
+                           <script>document.write(lib.translator("testimonials"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="https://blog.breezerentals.gr" target="_blank">
+                           <script>document.write(lib.translator("blog"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link makeMeWhite" href="#contactus" id="contactusURL">
+                           <script>document.write(lib.translator("contact"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-items dropdown">
+                        <a class="nav-links dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <script>document.write(lib.translator("languages"))</script>
+                        </a>
+                        <div id="changeLanguage" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <button id="Greek" class="dropdown-item" >Greek</button>
+                           <button id="English" class="dropdown-item" >English</button>
+                           <button id="German" class="dropdown-item" >German</button>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!--side menu open button-->
+            <a href="javascript:void(0)" class="d-none d-lg-inline-block sidemenu_btn" id="sidemenu_toggle">
+               <span></span> <span></span> <span></span>
+               <div class="ripple-container"></div>
+            </a>
+         </nav>
+         <!-- side menu -->
+         <div class="side-menu">
+            <div class="inner-wrapper">
+               <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
+               <nav class="side-nav">
+                  <ul class="navbar-nav w-100">
+                     <li class="nav-item active">
+                        <a class="nav-link"  href="index.html#aboutus" id="aboutusURLS">
+                           <script>document.write(lib.translator("aboutUs"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-team" id="our-teamURLS">
+                           <script>document.write(lib.translator("ourFleet"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-feature" id="our-featureURLS">
+                           <script>document.write(lib.translator("ourServices"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#portfolio-xe" id="portfolio-xeURLS">
+                           <script>document.write(lib.translator("proposals"))</script>
+                        </a>
+                     </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="#our-testimonial" id="our-testimonialURLS">
+                           <script>document.write(lib.translator("testimonials"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="https://blog.breezerentals.gr" target="_blank">
+                           <script>document.write(lib.translator("blog"))</script>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#contactus" id="contactusURLS">
+                           <script>document.write(lib.translator("contact"))</script>
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+               <ul class="social-icons-simple white top50 w-100">
+                  <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> </li>
+                  <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i> </a> </li>
+                  <li><a href="javascript:void(0)"><i class="fa fa-yout"></i> </a> </li>
+               </ul>
+               <p class="whitecolor">&copy; 2019 Breeze Car Rental Company. | </p>
+            </div>
+         </div>
+         <a id="close_side_menu" href="javascript:void(0);"></a>
+         <!-- End side menu -->
+      </header>
+      <!-- header -->
+      <!--Tabs start here -->
+      <section  style="padding-top: 10rem;" class="">
+        
+            <style>
+            .returningCustomerHeader{
+               letter-spacing: 0.23rem;
+               font-weight: 300;
+               font-family: "Roboto";
+            }
+            
+            </style>
+       
+         <div class="row  justify-content-md-center text-center">
+             <div class="col-12 col-md-8 col-sm-10 col-lg-8 py-4 border">
+                         <h4 class="pb-4 returningCustomerHeader">Returning Customer Section</h4>
+                         <ul class="nav nav-tabs" role="tablist">
+                              <li class="nav-item"><a class="nav-link active" href="#userProfile" aria-controls="userProfile" role="tab" data-toggle="tab">Personal Details</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#bookingsList" aria-controls="Booking List" role="tab" data-toggle="tab">Bookings List</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#bootstrap-work" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+                          </ul>
+                          
+                          <div class="card pmd-card">
+                              <div class="card-body">
+                                  <!-- Tab panes -->
+                                  <div class="tab-content">
+                                      <div role="tablist" aria-labelledby="home-tab" class="tab-pane fade show active" id="userProfile">
+                                         
+                                       <!-- User Profile Edit Forms Personal Data  -->
+                                       <form id="userDetails">
+                                             <div id="checkoutError" style="display:none" class="ml-auto mr-auto text-center"><small id="checkoutErrorField" class="text-center text-danger">Missing required fields</small></div>
+              
+                                         <div class="form-row pt-4">
+                                            <div class="col-12 col-md-6 col-lg-6 form-group bmd-form-group is-filled">
+                                               <input type="text" class="form-control" id="firstName" name="CustomerFirstName" placeholder="Customer Name">
+                                               <label for="firstName" class="bmd-label-static"><script>document.write(lib.translator("First_Name"))</script></label>
+                                               
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-6 form-group bmd-form-group is-filled">
+                                               <input type="text" class="form-control" id="lastName" name="CustomerLastName" placeholder="Customer Last Name from the database">
+                                               <label for="lastName" class="bmd-label-static"><script>document.write(lib.translator("Last_Name"))</script></label>
+                                               
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-6 form-group bmd-form-group">
+                                                  <input type="email" class="form-control" name="customeremail" id="email" placeholder="gkozyris@i4ria.com">
+                                               <label for="email" class="bmd-label-static"><script>document.write(lib.translator("email"))</script></label>
+                                               
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-6 form-group bmd-form-group">
+                                                  <input type="text" class="form-control" id="phoneNumber" name="CustomerPhoneNumber" placeholder="(+30) 6940 960 701">
+                                                  <label for="phoneNumber" class="bmd-label-static"><script>document.write(lib.translator("Phone_Number"))</script></label>
+                                                  
+                                               </div>
+                                         </div>
+                                         <div class="form-row">
+                                            <div class="col-12 col-md-6 col-lg-6 form-group bmd-form-group">
+                                                <input type="text" class="form-control" id="address" name="CustomerAddress" placeholder="Leonidou 24 Metaxourgio">
+                                               <label for="address" class="bmd-label-static"><script>document.write(lib.translator("Address"))</script></label>
+                                               
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-6 form-group bmd-form-group">
+                                                <input type="text" class="form-control" id="city" name="CustomerCity" placeholder="Athens - Attica">
+                                               <label for="city" class="bmd-label-static"><script>document.write(lib.translator("City"))</script></label>
+                                               
+                                            </div>
+                                            <div class="col-6 col-md-6 col-lg-6 form-group bmd-form-group">
+                                                <input type="text" class="form-control" id="zip" name="CustomerZipCode" placeholder="104 36">
+                                               <label for="ZIP" class="bmd-label-static"><script>document.write(lib.translator("ZIP"))</script></label>
+                                               
+                                            </div>
+                                            <div class="col-6 col-md-6 col-lg-6 form-group bmd-form-group">
+                                                <input type="text" class="form-control" id="country" name="CustomerCountry" placeholder="Greece">
+                                               <label for="country" class="bmd-label-static"><script>document.write(lib.translator("country"))</script></label>                                               
+                                            </div>
+                                         </div>
+                                         <div class="form-row">
+                                            <div class="col-12 col-md-6 col-lg-6 form-group bmd-form-group">
+                                                <input type="text" class="form-control" id="customerLicense" name="CustomerLicense" placeholder="GGS8277437">
+                                               <label for="customerLicense" class="bmd-label-static"><script>document.write(lib.translator("Drivers_License_Num"))</script></label>
+                                               
+                                            </div>
+                                            <div class="col-8 col-md-4 col-lg-4 form-group bmd-form-group">
+                                                <input type="text" class="form-control" id="customerIdentityNumber" name="CustomerIdentityNumber" placeholder="N432142">
+                                               <label for="customerIdentityNumber" class="bmd-label-static"><script>document.write(lib.translator("Customer_Identity_passport"))</script></label>
+                                              
+                                            </div>
+              
+                                         </div>
+                                         <div class="form-row">
+                                            <div class="col-12 col-md-6 col-lg-6 form-group bmd-form-group">
+                                                <input type="Password" class="form-control" id="customerPassword" name="ustomerPassword" placeholder="********">
+                                               <label for="customerPassword" class="bmd-label-static"><script>document.write(lib.translator("Customer_password"))</script></label>
+                                               
+                                            </div>
+                                            <div class="col-8 col-md-4 col-lg-4 form-group bmd-form-group">
+                                                <input type="password" class="form-control" id="customerPasswordRepeat" name="customerPasswordRepeat" placeholder="*******">
+                                               <label for="customerPasswordRepeat" class="bmd-label-static"><script>document.write(lib.translator("Customer_Repeat_passport"))</script></label>
+                                              
+                                            </div>
+              
+                                         </div>
+                                        </form>
+              
+
+
+                                       <!-- End of  User Profile Edit Forms Personal Data  -->
+                                       A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.
+                                    </div>
+                                      <div role="tablist" aria-labelledby="home-tab" class="tab-pane fade" id="bookingsList">
+                                         <!-- start of booking list content --> 
+                                         <!-- Table with Expand/Collapse -->
+                                         <style>
+                                         
+                                                         .table tr {
+                                                            cursor: pointer;
+                                                         }
+                                                         .table{
+                                                            background-color: #fff !important;
+                                                         }
+                                                         .hedding h1{
+                                                            color:#fff;
+                                                            font-size:25px;
+                                                         }
+                                                         .main-section{
+                                                            margin-top: 120px;
+                                                         }
+                                                         .hiddenRow {
+                                                            padding: 0 4px !important;
+                                                            
+                                                            font-size: 13px;
+                                                         }
+                                                         .table td{
+                                                            color: #22192b;
+                                                         }
+                                                         .GreenThFonts{
+                                                            color: #a5ce44;
+                                                         }
+                                                         #tableBookings th{
+                                                            font-weight: bold;
+                                                            letter-spacing: 0.2rem;
+                                                            font-size: 0.8rem;
+                                                            font-family: "Roboto";
+                                                         color: #a5ce44;
+                                                         background: #22192b;
+                                                         background: -moz-linear-gradient(top, #22192b 0%, #333333 100%);
+                                                         background: -webkit-linear-gradient(top, #22192b 0%,#333333 100%);
+                                                         background: linear-gradient(to bottom, #22192b 0%,#333333 100%);
+                                                         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22192b', endColorstr='#333333',GradientType=0 );
+                                                         }
+                                                         .hidenRowDetails{
+                                                            color: #22192b;
+                                                            
+                                                           
+                                                                        }
+                                                          .hidenRowDetails h5{
+                                                             font-size: 0.9rem;
+                                                             color:black;
+                                                             font-weight: 400;
+                                                             letter-spacing: 0.2rem;
+                                                             padding-bottom: 0.6rem;
+                                                             
+                                                          }
+                                                          .hidenRowDetails p{
+                                                             font-size: 0.8rem;
+                                                             color:#a5ce44;
+                                                             font-weight: 400;
+                                                             letter-spacing: 0.16rem;                                                             
+                                                             line-height: 0.9rem;
+                                                             
+                                                          }
+                                                          .hiddenSpan{
+                                                             color: black;
+                                                             font-weight: bold;
+                                                          }
+                                                          #bookingModify .modal-header, #bookingCancelation .modal-header{
+                                                            font-weight: bold;
+                                                            letter-spacing: 0.2rem;
+                                                            font-size: 0.8rem;
+                                                            font-family: "Roboto";
+                                                         color: #a5ce44;
+                                                         background: #22192b;
+                                                         background: -moz-linear-gradient(top, #22192b 0%, #333333 100%);
+                                                         background: -webkit-linear-gradient(top, #22192b 0%,#333333 100%);
+                                                         background: linear-gradient(to bottom, #22192b 0%,#333333 100%);
+                                                         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22192b', endColorstr='#333333',GradientType=0 );
+                                                          }
+                                                         #bookingModify .modal-title, #bookingCancelation .modal-title{
+                                                             text-align: center;
+                                                            font-weight: bold;
+                                                            letter-spacing: 0.2rem;
+                                                            font-size: 0.8rem;
+                                                            font-family: "Roboto";
+                                                            color: #a5ce44;
+                                                          }
+                                                         #bookingModify .modal-body, #bookingCancelation .modal-body{
+                                                             text-align: justify;
+                                                            font-weight: 300;
+                                                            letter-spacing: 0.2rem;
+                                                            font-size: 0.65rem;
+                                                            font-family: "Roboto";
+                                                            color: black;
+                                                          }
+                                                          #bookingModify .modal-body h5, #bookingCancelation .modal-body h5{
+                                                             text-align: justify;
+                                                            font-weight: bold;
+                                                            letter-spacing: 0.2rem;
+                                                            font-size: 0.80rem;
+                                                            font-family: "Roboto";
+                                                            color: black;
+                                                            line-height: 1.3rem;
+                                                          }
+                                                         #bookingModify .modal-body h5 span, #bookingCancelation .modal-body h5 span{
+                                                      
+                                                            color: #a5ce44;
+                                                          }
+                                                         #modificationRequestTxt{
+                                                            padding-top: 1rem;
+                                                            border: 1px solid rgb(224, 224, 224);
+                                                            
+                                                         }
+                                                         
+
+                                         
+                                         </style>
+                                         <div class="row">
+                                             <div class="col-lg-12 hedding pb-2">
+                                                <h1> Table Row Toggel </h1>
+                                             </div>
+                                             <div class="col-lg-12">
+                                                <table class="table table-bordered table-hover" style="border-collapse:collapse;" id="tableBookings">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="GreenThFonts">
+                                                               Transaction Id
+                                                            </th>
+                                                            <th class="GreenThFonts">Reservation Number</th>
+                                                            <th class="GreenThFonts">Booking Date</th>
+                                                            <th class="GreenThFonts">Booking totals</th>
+                                                            <th class="GreenThFonts">Deposit</th>
+                                                            <th class="GreenThFonts">Balance</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="bookingList">
+                                                      <script>
+                                                      //app.customerBookings()   
+                                                      </script>
+                                                      
+                                                    </tbody>
+                                                </table>
+                                             </div>
+                                          </div>
+                                          <script>
+                                          
+                                          $('.accordion-toggle').click(function(){
+	$('.hiddenRow').hide();
+	$(this).next('tr').find('.hiddenRow').show();
+});
+                                          </script>
+                                          <!--cancel booking modal -->
+                                          
+                                          <div class="modal fade" id="bookingCancelation" tabindex="-1" role="dialog" aria-labelledby="bookingCancelationLabel" aria-hidden="false">
+                                                <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                   <div class="modal-header">
+                                                      <h5 class="modal-title text-center" id="bookingCancelationLabel">Booking Cancelation Request </h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                      <h5>Booking Number:<span>GGD553277</span></h5>
+                                                      <h5>Booking Date:<span>23-01-2019</span></h5>
+                                                      <h5>Booking Amount:<span>130.00€</span></h5>
+                                                      <p class="pt-4">
+                                                            You have chosen to cancel the above reservation. It is possible that you will be charged with cancellation fees depending on the days remaining until your car is picked up. All bookings made from 3 or more days have zero charge and you are refunded the full amount. For other cases, please refer to the booking terms from our website.</p>
+                                                   </div>
+                                                   <div class="modal-footer">
+                                                      <button type="button" class="btn btn-myFormPre align-middle" data-dismiss="modal">Cancel</button>&nbsp;&nbsp;
+                                                      <button type="button" class="btn btn-myFormPre align-middle">Send</button>
+                                                   </div>
+                                                </div>
+                                                </div>
+                                             </div>
+
+                                          <!--modify booking modal -->
+                                                                                    
+                                          <div class="modal fade" id="bookingModify" tabindex="-1" role="dialog" aria-labelledby="bookingModifyLabel" aria-hidden="false">
+                                                <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                   <div class="modal-header">
+                                                      <h5 class="modal-title text-center" id="bookingModifyLabel">Booking Modification Request </h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                   </div>
+                                                   <div class="modal-body">
+                                                      <h5>Booking Number:<span>GGD553277</span></h5>
+                                                      <h5>Booking Date:<span>23-01-2019</span></h5>
+                                                      <h5>Booking Amount:<span>130.00€</span></h5>
+                                                      <p class="pt-4">
+                                                            You have chosen to modify the details of the above reservation. Please fill in the details you wish to modify and we will contact you as soon as possible. Serving these requests is based on availability and period of detention. Any modifications may adjust the rental fee. In any case, an employee of our office will contact you to serve you.</p>
+                                                            <form>                                                                                                                                  
+                                                                  <div class="form-group">
+                                                                    <label for="modificationRequestTxt">Modification Request</label>
+                                                                    <textarea class="form-control pt-2" id="modificationRequestTxt" rows="3"></textarea>
+                                                                  </div>
+                                                                </form>
+                                                         </div>
+                                                   <div class="modal-footer">
+                                                      <button type="button" class="btn btn-myFormPre align-middle" data-dismiss="modal">Cancel</button>&nbsp;&nbsp;
+                                                      <button type="button" class="btn btn-myFormPre align-middle">Send</button>
+                                                   </div>
+                                                </div>
+                                                </div>
+                                             </div>
+                                          <!--print booking modal -->
+
+                                         <!-- end of booking list content --> 
+                                       
+                                       Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
+                                      <div role="tablist" aria-labelledby="home-tab" class="tab-pane fade" id="bootstrap-work">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the tabs left or right.</div>
+                                  </div>
+                              </div>
+                          </div>
+             </div>
+             
+         
+     </div>
+         
+      </section>
+      
+     <!--Site Footer Here--> 
+      <script>document.write(lib.translator("bookingFooter"))</script>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src='pdfhtml/dist/jspdf.min.js'></script>
+      <script src="pdfhtml/app.js" charset="utf-8"></script>
+      
+      <script src="js/jquery-3.1.1.min.js"></script>
+
+      <!--Bootstrap Core-->
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/calendar/js/gijgo.js" type="text/javascript"></script>
+      <!--to view items on reach-->
+      <script src="js/jquery.appear.js"></script>
+      <!--Equal-Heights-->
+      <script src="js/jquery.matchHeight-min.js"></script>
+      <!--Owl Slider-->
+      <script src="js/owl.carousel.min.js"></script>
+      <!--number counters-->
+      <script src="js/jquery-countTo.js"></script>
+      <!--Parallax Background-->
+      <script src="js/parallaxie.js"></script>
+      <!--Cubefolio Gallery -->
+      <script src="js/jquery.cubeportfolio.min.js"></script>
+      <!--FancyBox popup-->
+      <script src="js/jquery.fancybox.min.js"></script>
+      <!-- Video Background-->
+      <script src="js/jquery.background-video.js"></script>
+      <!--TypeWriter
+         <script src="js/typewriter.js"></script>
+         -->
+      <!--Particles-->
+      <script src="js/particles.min.js"></script>
+      <!--WOw animations-->
+      <script src="js/wow.min.js"></script>
+      <!--Revolution SLider -->
+      <script src="js/revolution/jquery.themepunch.tools.min.js"></script>
+      <script src="js/revolution/jquery.themepunch.revolution.min.js"></script>
+      <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+      <!--    <script src="js/revolution/extensions/revolution.extension.actions.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.migration.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+         <script src="js/revolution/extensions/revolution.extension.video.min.js"></script> -->
+         <!-- <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script> -->
+   
+      <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+         crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.js"></script>
+      <!--Google Map API-->
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"></script>
+        
+      <script src="js/jquery.smartWizard.js"></script>
+      <script src="api/customer.js"></script>
+      
+      <script>
+         $(document).ready(function () {
+            
+
+             $('body').bootstrapMaterialDesign();
+
+
+
+
+             $(function () {
+                 $('#firstInfo').popover({
+                     container: 'body'
+                 })
+             })
+
+
+             var curLang = localStorage.language;
+             var calLanguage ="";
+             if(curLang==="Greek"){
+                console.log("Η γλωσσα τώρα είναι ελληνικά");
+                calLanguage = "el-gr";
+                
+             }else if(curLang==="English"){
+                console.log("Η γλωσσα τώρα είναι Aglika");
+                calLanguage = "en-us";
+             }
+             console.log(calLanguage);
+            
+
+         });
+         
+      </script>
+
+
+
+
+      <script src="api/menuRedirection.js"></script>
+      <script src="js/functionsBooking.js"></script>
+      <script src="api/customer.js"></script>
+   </body>
+</html>
+<script></script>
+<script type="text/javascript">
+   $(document).ready(function () {
+
+
+       var skata = "Pick up location";
+
+
+
+       // Step show event
+       $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
+           //console.log("You are on step "+stepNumber+" now");
+
+           if (stepNumber === 0) {
+
+               console.log(stepNumber);
+           }
+           if (stepPosition === 'first') {
+               $("#prev-btn").addClass('disabled');
+
+           } else if (stepPosition === 'final') {
+               $("#next-btn").addClass('disabled');
+           } else {
+               $("#prev-btn").removeClass('disabled');
+               $("#next-btn").removeClass('disabled');
+           }
+
+       });
+
+       //test to store form values
+
+
+       // Toolbar extra buttons
+       var btnFinish = $('<button></button>').text('Finish')
+           .addClass('btn btn-info')
+           .on('click', function () {
+               alert('Finish Clicked');
+           });
+       var btnCancel = $('<button></button>').text('Cancel')
+           .addClass('btn btn-danger')
+           .on('click', function () {
+               $('#smartwizard').smartWizard("reset");
+           });
+
+
+       // Smart Wizard
+       $('#smartwizard').smartWizard({
+           selected: 0,
+           theme: 'default',
+           contentCache: true,
+           transitionEffect: 'fade',
+           showStepURLhash: true,
+           toolbarSettings: {
+               // toolbarPosition: 'end',
+               // toolbarButtonPosition: 'end',
+               //  toolbarExtraButtons: [btnFinish, btnCancel]
+           }
+       });
+
+
+       // External Button Events
+       $("#reset-btn").on("click", function () {
+           // Reset wizard
+           $('#smartwizard').smartWizard("reset");
+           return true;
+       });
+
+       $("#prev-btn").on("click", function () {
+           // Navigate previous
+           $('#smartwizard').smartWizard("prev");
+           return true;
+       });
+
+       $("#next-btn").on("click", function () {
+           // Navigate next
+           $('#smartwizard').smartWizard("next");
+           return true;
+       });
+
+       $("#theme_selector").on("change", function () {
+           // Change theme
+           $('#smartwizard').smartWizard("theme", $(this).val());
+           return true;
+       });
+
+       // Set selected theme on page refresh
+       $("#theme_selector").change();
+   });
+
+ 
+         
+
+</script>
+<div id="snackbar-container">
+   <div id="snackbar1554762711878" class="snackbar" data-timeout="30" data-html-allowed="true"><span class="snackbar-content"></span></div>
+</div>

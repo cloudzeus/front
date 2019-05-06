@@ -3,73 +3,129 @@
 //translations data
 
 const languages = {
-  phoneNumber : ["Phone Number","Τηλέφωνο","Tel Nummer"],
-  customerIdentityNumber : ["Customer Identity Number","Αριθμός Ταυτότητας","Ausweis Nummer"],
-  customerLicense : ["Driving License","Αριθμός Διπλώματος","Führerschein"],
-  lastName : ["Last Name","Επίθετο","Name"],
-  firstName : ["First Name","Όνομα","Vorname"],
-  errorMsgExtenstion :[" is a mandatory field, Please fill it up!","Υποχρεωτικό πεδίο παρακαλώ συμπληρώστε το.","Feld ist Obligatorisch"],
-  users : ["users","χρήστες","Benutzer"],
-  user : ["user","χρήστης","Benutzer"],
-  groups : ["groups","Ομάδες","Gruppen"],
-  cars : ["cars","Autos"],
-  category : ["category","Κατηγορία","Kategorie"],
-  categories : ["categories","Κατηγορίες","Kategorien"],
-  priceLists :["pricelists","Τιμοκατάλογοι","Preislisten"],
-  name : ["name","Όνομα","Name"],
-  email : ["email"," ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ","Email"],
-  address : ["address","Διεύθυνση","Adresse"],
-  zip : ["zip","T.K.","PLZ"],
-  phone : ["phone","Τηλέφωνο","Telefon"],
-  prices : ["prices","Τιμές","Preise"],
-  pricelist : ["pricelist","Τιμοκατάλογος","Preisliste"],
-  signin : ["signin","Είσοδος","Einloggen"],
-  signout : ["signout","Αποσύνδεση","Ausloggen"],
-  group : ["group","Ομάδa","Gruppe"],
-  car : ["car","Αυτοκίνητο","Auto"],
-  cars : ["cars","Αυτοκίνητα","Autos"],
-  access : ["access","Πρόσβαση","Zugang"],
-  rentals : ["rentals","Ενοικιάσεις","Vermietungen"],
-  booking : ["booking","Ολοκληρωμένη Κράτηση","Reservierung"],
-  bookings : ["bookings","Ολοκληρωμένες Κρατήσεις","Reservierungen"],
-  reservations : ["reservations","Κρατήσεις","Reservierungen"],
-  password : ["password","Κωδικός πρόσβασης","Passwort"],
-  city : ["city", "Πόλη","Stadt"],
-  tel : ["tel","Τηλέφωνο","Tel"],
-  surname : ["surname","Επίθετο","Name"],
-  vatNumber :["vatNumber","ΑΦΜ","Steuer Identifikationsnummer"],
-  new :["new","νέος","neu"],
-  updatedNow : ["updated now","τροποποίηση","Aktualisieren"],
-  dashboard : ["dashboard","πίνακας Ελέγχου","Kontrollzentrum"],
-  inactive : ["inactive","ανενεργός","inactiv"],
-  active : ["active","ενεργός","activ"],
-  edit : ["edit","επεξεργασία","bearbeiten"],
-  profile : ["profile","Προφίλ","Profil"],
-  first : ["first","πρώτο","erste"],
-  home : ["home","Αρχική","home"],
-  postalCode : ["postal code", "Ταχυδρομικός Κώδικας","PLZ"],
-  create : ["create","δημιουργία","Erstellung"],
-  read : ["read","ανάγνωση","lesen"],
-  update : ["update","τροποποίηση","aktualisieren"],
-  delete : ["delete","διαγράφη","löschen"],
-  save : ["save","αποθηκεύση","speichern"],
-  by : ["from","από","von"],
-  members : ["members","μέλη","mitglieder"],
-  loading : ["loading","φόρτωση","laden"],
-  add : ["add","προσθήκη","hinzufügen"],
-  remove : ["remove","διαγραφή","löschen"],
-  createUser : ["create user","δημιουργία χρήστη","Benutzer erstellen"],
-  createGroup : ["create group","δημιουργία Ομάδας","Gruppe erstellen"],
-  make : ["Make","φτιαχνω, κανω","machen"],
-  STEP:["STEP","ΒΗΜΑ","Schritt"],
-  USER_SELECTIONS:["USER SELECTIONS","ΕΠΙΛΟΓΕΣ ΧΡΗΣΤΗ ","BENUTZERAUSWAHL"],
-  SEARCH_RESULTS:["SEARCH RESULTS","ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΑ/ΣΗΣ","SUCHE ERGEBNISSE"],
-  DRIVERS_INFO:["DRIVERS INFO","ΣΤΟΙΧΕΙΑ ΟΔΗΓΟΥ","FAHRER DETAILS"],
-  PAYMENT:["PAYMENT","ΠΛΗΡΩΜΗ","Zahlung"],
-  VOUCHER:["VOUCHER","ΑΠΟΔΕΙΚΤΙΚΟ ΚΡΑΤΗΣΗΣ","Coupon"],
-  Please_fill_your_prefrences:["Please fill in your preferences","Παρακαλώ συπληρώστε τις προτιμήσεις σας","Ergänzen Sie Ihre Präferenzen"],
-  PRIVACY_POLICY : ["PRIVACY POLICY","ΠΟΛΙΤΙΚΗ ΙΔΙΩΤΙΚΟΤΗΤΑΣ","DATENSCHUTZBEDINGUNGEN"],
-  TERMS_AND_CONDITIONS:["TERMS AND CONDITIONS", "ΟΡΟΙ ΚΑΙ ΠΡΟΥΠΟΘΕΣΕΙΣ","AGB"],
+  phoneNumber : ["Phone Number","Τηλέφωνο"],
+  customerIdentityNumber : ["Customer Identity Number","Αριθμός Ταυτότητας"],
+  customerLicense : ["Customer License","Αριθμός Διπλώματος"],
+  lastName : ["Last Name","Επίθετο"],
+  firstName : ["First Name","Όνομα"],
+  errorMsgExtenstion :[" is a mandatory field, Please fill it up!","Υποχρεωτικό πεδίο παρακαλώ συμπληρώστε το."],
+  users : ["users","χρήστες"],
+  user : ["user","χρήστης"],
+  groups : ["groups","Ομάδες"],
+  cars : ["cars"],
+  category : ["category","Κατηγορία"],
+  categories : ["categories","Κατηγορίες"],
+  priceLists :["pricelists","Τιμοκατάλογοι",],
+  name : ["name","Όνομα"],
+  email : ["email"," ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ"],
+  address : ["address","Διεύθυνση"],
+  zip : ["zip","T.K."],
+  phone : ["phone","Τηλέφωνο"],
+  prices : ["prices","Τιμές"],
+  pricelist : ["pricelist","Τιμοκατάλογος"],
+  signin : ["signin","Είσοδος"],
+  signout : ["signout","Αποσύνδεση"],
+  group : ["group","Ομάδa"],
+  car : ["car","Αυτοκίνητο"],
+  cars : ["cars","Αυτοκίνητα"],
+  access : ["access","Πρόσβαση"],
+  rentals : ["rentals","Ενοικιάσεις"],
+  booking : ["booking","Ολοκληρωμένη Κράτηση"],
+  bookings : ["bookings","Ολοκληρωμένες Κρατήσεις"],
+  reservations : ["reservations","Κρατήσεις"],
+  password : ["password","Κωδικός πρόσβασης"],
+  city : ["city", "Πόλη"],
+  tel : ["tel","Τηλέφωνο"],
+  surname : ["surname","Επίθετο"],
+  vatNumber :["vatNumber","ΑΦΜ"],
+  new :["new","νέος"],
+  updatedNow : ["updated now","τροποποίηση"],
+  dashboard : ["dashboard","πίνακας Ελέγχου"],
+  inactive : ["inactive","ανενεργός"],
+  active : ["active","ενεργός"],
+  edit : ["edit","επεξεργασία"],
+  profile : ["profile","Προφίλ"],
+  first : ["first","πρώτο"],
+  home : ["home","Αρχική"],
+  postalCode : ["postal code", "Ταχυδρομικός Κώδικας"],
+  create : ["create","δημιουργία"],
+  read : ["read","ανάγνωση"],
+  update : ["update","τροποποίηση"],
+  delete : ["delete","διαγράφη"],
+  save : ["save","αποθηκεύση"],
+  by : ["by","από"],
+  members : ["members","μέλη"],
+  loading : ["loading","φόρτωση"],
+  add : ["add","προσθήκη"],
+  remove : ["remove","διαγραφή"],
+  createUser : ["create user","δημιουργία χρήστη"],
+  createGroup : ["create group","δημιουργία Ομάδας"],
+  make : ["Make","φτιαχνω, κανω"],
+  STEP:["STEP","ΒΗΜΑ"],
+  USER_SELECTIONS:["USER SELECTIONS","ΕΠΙΛΟΓΕΣ ΧΡΗΣΤΗ "],
+  SEARCH_RESULTS:["SEARCH RESULTS","ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΑ/ΣΗΣ"],
+  DRIVERS_INFO:["DRIVERS INFO","ΣΤΟΙΧΕΙΑ ΟΔΗΓΟΥ"],
+  PAYMENT:["PAYMENT","ΠΛΗΡΩΜΗ"],
+  VOUCHER:["VOUCHER","ΑΠΟΔΕΙΚΤΙΚΟ ΚΡΑΤΗΣΗΣ"],
+  Please_fill_your_prefrences:["Please fill your preferences","Παρακαλώ συπληρώστε τις προτιμήσεις σας"],
+  PRIVACY_POLICY : ["PRIVACY POLICY","ΟΡΟΙ ΚΑΙ ΠΡΟΥΠΟΘΕΣΕΙΣ"],
+  TERMS_AND_CONDITIONS:["TERMS AND CONDITIONS", "ΠΟΛΙΤΙΚΗ ΙΔΙΩΤΙΚΟΤΗΑΣ"],
+  Pick_Up_Location :["Pick Up Location","Σημείο Παραλαβής"],   
+  Please_select_your_Pick_Up_location :["Please select your Pick Up location", "Eπιλέξτε το σημείο παραλαβής"],   
+  Pick_Up_Date:["Pick Up Date","Ημ/νία Παραλαβής"],
+  pick_up_time:["Pick Up time","Ώρα"],
+  Drop_Off_Location  :["Drop Off Location","Σημείο παράδοσης"],
+  Please_select_you_Drop_Off_Location :["Please select you Drop Off Location","Eπιλέξτε το σημείο παράδοσης"], 
+  Drop_off_date:["Drop off date","Ημ/νια Παράδοσης"],
+  Drop_off_time:["Drop off time","'Ωρα"],
+  NEXT:["NEXT","ΕΠΟΜΕΝΟ"],
+  PREVIOUS:["PREVIOUS","ΠΡΟΗΓΟΥΜΕΝΟ"],
+  PICK_UP:["PICK UP","ΠΑΡΑΛΑΒΗ"],
+  DROP_OFF:["DROP OFF","ΠΑΡΑΔΟΣΗ"],
+  Please_select_your_Pick_Up_Location:["Please select your Pick Up Location","Παρακαλώ επιλέξτε το σημείο παραλαβής"],
+  ATH_Athens_Airport:["ATH Athens Airport", "Διεθνής Αερολιμένας Ελευθέριος Βενιζέλος ΑΤΗ"],
+  Athens_City_Center:["Athens City Center","Κέντρο Αθήνας"],
+  Piraeus_Port:["Piraeus Port","Λιμάνι του Πειραιά"],
+  Rafina_Port:["Rafina Port","Λιμάνι Ραφίνας"],
+  Agia_Paraskevi_HQ:["Agia Paraskevi HQ", "Κεντρικά γραφεία Αγ. Παρασκευή"],
+  Pick_Up_Date:["Pick Up Date","Ημ/νια Παραλαβής"],
+  Pick_Up_time:["Pick Up time", "Ώρα Παραλαβής"],
+  Drop_Off_Location:["Drop Off Location","Σημείο Παράδοσης"],
+  Please_select_your_Drop_Off_Location:["Please select your Drop Off Location","Παρακαλώ επιλέξτε το σημείο Παράδοσης"],
+  Drop_off_Date:["Drop off Date","Ημ/νια Παράδοσης"],
+  Drop_off_Time:["Drop off Time","Ώρα Παραλαβής"],
+  Showing:["Showing","Εμφάνιση"],
+  Economy_only:["Economy only","Οικονομική Κατηγορία"],
+  Vans_Only:["Vans Only","Φορτηγάκια"],
+  Or_similar:["Or similar","Ή παρόμοιο"],
+  Transition:["Transition","Ταχύτητες"],
+  Manual:["Manual","Με συμπλέκτη"],
+  Car_Dors:["Car Dors","Πόρτες"],
+  Clima:["Air Condition","Κλιματισμός"],
+  Air_Condition:["Yes","Ναι"],
+  All_Car_Categories : ["All Car Categories","Όλες οι κατηγορίες"],
+  Passengers:["Passengers","Επιβάτες"],
+  Laggages:["Laggages","Αποσκευές"],
+  GET_THIS_CAR:["Get this Car","Επιλογή"],
+  Economy:["Economy","Οικονομική"],
+  extra_driver:["extra driver","Επιπλέον Οδηγός"],
+  Snow_Chains:["Snow Chains","Αλυσίδες χιονιού"],
+  Baby_cot:["Baby cot","Παιδικό κάθισμα"],
+  Tolal_Price:["Tolal Price","Σύνολο Χρέωσης"],
+  All_Prices_include_Taxes:["All Prices include Taxes","Όι τιμές περιλαμβάνουν όλους τους φόρους"],
+  Extras:["Extras","Πρόσθετα"],
+  Here_are_all_the_extras_included:["Here are all the extras included","Λίστα προσθέτων"],
+  Personal_details:["Personal details","Στοιχεία Οδηγού"],
+  Returning_Customers:["Returning Customers","Παλαιός Πελάτης"],
+  First_Name:["First Name","Όνομα"],
+  Last_Name:["Last Name","Επίθετο"],
+  Address:["Address","Διεύ/νση"],
+  City:["City","Πόλη"],
+  ZIP:["ZIP","Τ.Κ."],
+  Drivers_License_Num:["Drivers License Num","Αριθμός Διπλώματος"],
+  Customer_Identity_passport:["Customer Identity/passport","Αριθμός Ταυτότητας ή Διαβατηρίου"],
+  Phone_Number:["Phone Number","Τηλέφωνο"],
+  Terms_and_conditions:["Terms and conditions","Όροι και προυποθέσεις"],
   terms : [`Reservations: All reservations are based on a vehicle category and not a certain car model. In case of no availability for a confirmed reservation, Breeze Rentals reserves the right to offer a vehicle of bigger category to the customer with no extra charge.
   Driver: Minimum age is 23 years of age.
   Drivers' License: The Driver is required to have and display a valid Drivers' License issued at least a year ago. Citizens of Non-EU countries are required to have a valid international Drivers' License along with their regular Drivers' License.
@@ -123,241 +179,94 @@ const languages = {
   Εσωτερικό αυτοκινήτου Σε περίπτωση που το όχημα επιστραφεί με λεκέδες που απαιτούν ειδικό καθαρισμό, (π.χ. τρίχωμα, άμμος κ.α. στα
       καθίσματα ή στο πάτωμα, στο πορτ-μπαγκάζ κλπ), ο ενοικιαστής επιβαρύνεται με το ποσό των 80,00€ 
   `],
+  I_accept_Terms_and_Conditions:["I accept Terms and Conditions","Αποδέχομαι τους Όρους χρήσης"],
+  termsAggreedError : ["please agree to the terms and conditions to proceed.","Παρακαλώ αποδεχθείτε τους όρους χρήσης για να προχωρήσετε στην κράτηση."],
+  pay_with_paypal:["pay with paypal","Πληρωμή με Paypal"],
+  Pay_at_Piraeus_Bank:["Pay at Piraeus Bank","Πληρωμή μέσω της Τράπεζας Πειραιώς"],
+  Reservation_Voucher:["Reservation Voucher","Απόδεικτικό Κράτησης"],
+  Payment_Type:["Payment Type","Τρόπος Πληρωμής"],
+  Transaction_Details:["Transaction Details","Στοιχεία Συναλλαγής"],
+  Reservation_Number:["Reservation Number","Αριθμός Κράτησης"],
+  Booking_Date:["Booking Date","Ημερομηνία Κράτησης"],
+  Last_Name:["Last Name","Επίθετο"],
+  Name:["Name","Όνομα"],
+  Phone_Number:["Phone Number","Τηλέφωνο"],
+  Address:["Address","Διεύ/νση"],
+  City:["City","Πόλη"],
+  Zip_Code:["Zip Code","Τ.Κ."],
+  Drivers_License:["Drivers License","Δίπλωμα Οδήγησης"],
+  Customer_Identity_Passport_number:["Customer Identity/Passport number","Δελτίο Ταυτότητας/Διαβατήριο"],
+  Print_Voucher:["Print Voucher","Εκτύπωση Απόδεικτικού Κράτησης"],
+  Download_Pdf:["Download Pdf","Αποθήκευση PDF Κράτησης"],
+  Pick_Up_Location_Details:["Pick Up Location Details","Στοιχεία τοποθεσίας Παραλαβής"],
+  Phone_number_24_7:["24/7 Phone number","24/7 Τηλέφωνο"],
+  Drop_of_location_Details:["Drop of location Details","Στοιχεία τοποθεσίας Παράδοσης"],
+  User_Log_In:["User Log In","Είσοδος Χρηστών"],
+  Returning_Customer_Log_in:["Returning Customer Log in","Είδοδος παλαιών Πελατών"],
+  User_E_mail:["User E-mail","Ε-mail Χρήστη"],
+  User_Password:["User Password","Κωδικός Εισόδου"],
+  Cancel:["Cancel","Απόριψη"],
+  Submit:["Submit","Επιβεβαίωση"],
+  User_Registration:["User Registration","Εγγραφή Χρήστη"],
+  Customer_Registration:["Customer Registration","Εγγραφή Πελάτη"],
+  Repeat_Password:["Repeat Password","Επανάληψη Κωδικού"],
+  Register:["Register","Εγγραφή"],
+  VAN:['VAN','Φορτηγάκι'], 
+  car_selection : ["CAR SELECTION","ΕΠΙΛΟΓΗ ΑΥΤΟΚΙΝΗΤΟΥ"],
+  car_category : ["Car Category","Κατηγορία Αυτ/του"] ,
+  total_price : ["Total Price", "Σύνολο"],
+  all_prices : ["All Prices include Taxes","Στις τιμές περιλαμβάνονταο όλοι οι Φόροι" ],
+  all_extras: ["Here are all the extras included","Λίστα έξτρα παροχών" ],
+  notAvailable : ["Not Available", "Δεν είναι διαθέσημο"],
+  Family : ["Family","Οικογενειακή"],
+  Mini :["Mini", "Μίνι"],
+  pickupLocationError :["Pick up location is mandatory please fill the pick up location!","Η τοποθεσία παραλαβής είναι υποχρεωτική παρακαλώ συμπληρώστε την."],
+  dropOffLocationError :["Drop off location is mandatory please fill the drop off location!","Η τοποθεσία παράδοσης είναι υποχρεωτική παρακαλώ συμπληρώστε την."],
+  startTimeError :["Pick up time is mandatory please fill the pick up time!","Η ώρα παραλαβής είναι υποχρεωτική παρακαλώ συμπληρώστε την."],
+  endTimeError :["Drop off time is mandatory please fill the drop off time!","Η ώα παράδοσης είναι υποχρεωτική παρακαλώ συμπληρώστε την."],
+  checkItOut :["Check it out","¨έλεγχος"],
+  errorOccured : ["An error has occured","Δημιουργήθηκε ένα πρόβλημα με την αναζήτηση"],
+  tryAgain : ["Please try again!", "Παρακαλώ δοκιμάστε ξανά"],
+  aboutUs: ["About us","Ποιοί Είμαστε"],
+  ourFleet : ["Our Fleet","Ο Στόλος"],
+  ourServices : ["Our Services","Υπηρεσίες"],
+  proposals : ["Proposals","Αποδράσεις"],
+  testimonials : ["Testimonials","Είπαν Για Εμάς"],
+  blog : ["Blog","Blog"],
+  contact : ["Contact","Επικοινωνία"],
+  languages : ["Languages - English","Γλώσσα - Ελληνικά"],
   
-  Pick_Up_Location :["Pick Up Location","Σημείο Παραλαβής","Abholungsort"],   
-  Please_select_your_Pick_Up_location :["Please select your Pick Up location", "Eπιλέξτε το σημείο παραλαβής","Wählen Sie ihr Abholungsort"],   
-  Pick_Up_Date:["Pick Up Date","Ημ/νία Παραλαβής","Abholungsdatum"],
-  pick_up_time:["Pick Up time","Ώρα","Abholungszeit"],
-  Drop_Off_Location  :["Drop Off Location","Σημείο παράδοσης","Rückgabeort"],
-  Please_select_you_Drop_Off_Location :["Please select you Drop Off Location","Eπιλέξτε το σημείο παράδοσης","Rückgabeort auswählen"], 
-  Drop_off_date:["Drop off date","Ημ/νια Παράδοσης","Rückgabedatum"],
-  Drop_off_time:["Drop off time","'Ωρα","Rückgabezeit"],
-  NEXT:["NEXT","ΕΠΟΜΕΝΟ","NAECHSTE"],
-  PREVIOUS:["PREVIOUS","ΠΡΟΗΓΟΥΜΕΝΟ","VORHERIG"],
-  PICK_UP:["PICK UP","ΠΑΡΑΛΑΒΗ","ABHOLUNG"],
-  DROP_OFF:["DROP OFF","ΠΑΡΑΔΟΣΗ","RUECKGABE"],
-  Please_select_your_Pick_Up_Location:["Please select your Pick Up Location","Παρακαλώ επιλέξτε το σημείο παραλαβής","Abholungsort auswählen"],
-  ATH_Athens_Airport:["ATH Athens Airport", "Διεθνής Αερολιμένας Ελευθέριος Βενιζέλος ΑΤΗ","ATH Athen Flughafen"],
-  Athens_City_Center:["Athens City Center","Κέντρο Αθήνας","Athen Zentrum "],
-  Piraeus_Port:["Piraeus Port","Λιμάνι του Πειραιά","Piraeus Hafen"],
-  Rafina_Port:["Rafina Port","Λιμάνι Ραφίνας","Rafina Hafen"],
-  Agia_Paraskevi_HQ:["Agia Paraskevi HQ", "Κεντρικά γραφεία Αγ. Παρασκευή","Agia Paraskevi Zentrale"],
-  Pick_Up_Date:["Pick Up Date","Ημ/νια Παραλαβής","Abholungsdatum"],
-  Pick_Up_time:["Pick Up time", "Ώρα Παραλαβής","Abholungszeit"],
-  Drop_Off_Location:["Drop Off Location","Σημείο Παράδοσης","Rückgabeort"],
-  Please_select_your_Drop_Off_Location:["Please select your Drop Off Location","Παρακαλώ επιλέξτε το σημείο Παράδοσης","Bitte wählen Sie den Rückgabeort"],
-  Drop_off_Date:["Drop off Date","Ημ/νια Παράδοσης","Rückgabedatum"],
-  Drop_off_Time:["Drop off Time","Ώρα Παραλαβής","Rückgabezeit"],
-  Showing:["Showing","Εμφάνιση","Anzeigen"],
-  Economy_only:["Economy only","Οικονομική Κατηγορία","Economy"],
-  Vans_Only:["Vans Only","Φορτηγάκια","Minibus"],
-  Or_similar:["Or similar","Ή παρόμοιο","Oder Aehnliches"],
-  Transition:["Gears","Ταχύτητες","Gangschaltung"],
-  Manual:["Manual","Με συμπλέκτη","Mit Kupplung"],
-  Car_Dors:["Car Dors","Πόρτες","Türen"],
-  Clima:["Air Condition","Κλιματισμός","Klima"],
-  Air_Condition:["Yes","Ναι","Ja"],
-  All_Car_Categories : ["All Car Categories","Όλες οι κατηγορίες","Alle Kategorien"],
-  Passengers:["Passengers","Επιβάτες","Passagieren"],
-  Laggages:["Laggages","Αποσκευές","Gepäck"],
-  GET_THIS_CAR:["Get this Car","Επιλογή","Auswählen"],
-  Economy:["Economy","Οικονομική","Economy"],
-  extra_driver:["extra driver","Επιπλέον Οδηγός","Zusätzlicher Fahrer"],
-  Snow_Chains:["Snow Chains","Αλυσίδες χιονιού","Schneeketten"],
-  Baby_cot:["Baby cot","Παιδικό κάθισμα","Kindersitz"],
-  Tolal_Price:["Total Price","Σύνολο Χρέωσης","Betrag"],
-  All_Prices_include_Taxes:["All Prices include Taxes","Όι τιμές περιλαμβάνουν όλους τους φόρους","Preise sind Steuern inklusive"],
-  Extras:["Extras","Πρόσθετα","Extras"],
-  Here_are_all_the_extras_included:["Here are all the extras included","Λίστα προσθέτων","Alle extras sind inbegriffen"],
-  Personal_details:["Personal details","Στοιχεία Οδηγού","Persönliche Details"],
-  Returning_Customers:["Returning Customers","Παλαιός Πελάτης","Wiederkehrender Kunde"],
-  First_Name:["First Name","Όνομα","Vorname"],
-  Last_Name:["Last Name","Επίθετο","Name"],
-  Address:["Address","Διεύ/νση","Adresse"],
-  City:["City","Πόλη","Stadt"],
-  ZIP:["ZIP","Τ.Κ.","PLZ"],
-  Drivers_License_Num:["Drivers License Num","Αριθμός Διπλώματος","Führerschein Nummer"],
-  Customer_Identity_passport:["Customer Identity/passport","Αριθμός Ταυτότητας ή Διαβατηρίου","Reisepass Nummer"],
-  Phone_Number:["Phone Number","Τηλέφωνο","Telefon Nummer"],
-  Terms_and_conditions:["Terms and conditions","Όροι και προυποθέσεις","AGB"],
-  terms : [`Reservations: All reservations are based on a vehicle category and not a certain car model. In case of no availability for a confirmed reservation, Breeze Rentals reserves the right to offer a vehicle of bigger category to the customer with no extra charge.
-  Driver: Minimum age is 23 years of age.
-  Drivers License: The Driver is required to have and display a valid Drivers License issued at least a year ago. Citizens of Non-EU countries are required to have a valid international Drivers ' License along with their regular Drivers\' License.
-  Traffic Violations - Fines: Traffic violations and fines are bore by the Customer.
-  Means of Payment: The Renter is required to present a valid Credit Card for the Rental Guarantee, even if the payment is made by the use of cash. The Rental is prepaid.
-  Cancellations
-  Cancellation of a booking must be made a minimum of seventy two (72) hours before the rental of the vehicle is due to commence, pursuant to a booking made on this booking engine. If you wish to cancel a booking, the only accepted method is through our Breeze rentals web page.
-  In case of cancellations of bookings the following charges will be applied:
-  In the event of a cancellation notice which is received by Breeze Rentals at least seventy two (72) hours before the rental of the vehicle is due to commence, pursuant to a booking made on this booking engine, all funds will be reimbursed.
-  In the event of a cancellation notice which is received by Breeze rentals  less than seventy two (72) hours before the rental of the vehicle is due to commence, pursuant to a booking made on this booking engine, no funds paid will be reimbursed.`,
-                                                                 
-  
- `Οδηγός: Ελάχιστο όριο ηλικίας τα 23 έτη.
-  Άδεια οδήγησης: Απαιτείται η προσκόμιση ισχύοντος διπλώματος που έχει εκδοθεί τουλάχιστον 1 χρόνο πριν. Πολίτες χωρών εκτός ΕΕ απαιτείται να έχουν διεθνές δίπλωμα μαζί με την προσκόμιση του κανονικού διπλώματος
-  
-  Κλήσεις – Πρόστιμα: Οι κλήσεις και τα πρόστιμα από διοικητικές παραβάσεις επιβαρύνουν τον ενοικιαστή.
-   
-  Τρόπος πληρωμής: Ο ενοικιαστής απαιτείται να προσκομίσει πιστωτική κάρτα για εγγύηση της ενοικίασης ακόμα και αν η πληρωμή γίνει με μετρητά. Η ενοικίαση προπληρώνεται.
-   
-  Παραδόσεις – Παραλαβές εκτός ωρών λειτουργίας: Επιβάρυνση 40€+ΦΠΑ(08.30-20.00) 
-  Παραδόσεις – Παραλαβές 
-  Παραλαβή – Παράδοση στα γραφεία της εταιρίας ατελώς 
-  Παραλαβή από λιμάνι Πειραιά, Λιμάνι Ραφήνας, Αεροδρόμιο Ελευθέριος Βενιζέλος έξτρα χρέωση 10€. 
-  Παράδοση από λιμάνι Πειραιά, Λιμάνι Ραφήνας, Αεροδρόμιο Ελευθέριος Βενιζέλος έξτρα χρέωση 10€. 
-  Παραλαβή μέχρι και 15 χιλιόμετρα από τα γραφεία μας έξτρα χρέωση 15€ 
-  Παράδοση μέχρι και 15 χιλιόμετρα από τα γραφεία μας έξτρα χρέωση 15€ 
-  Απεριόριστα Χιλιόμετρα για ενοικιάσεις πάνω από 4 ημέρες 
-  Επιπλέον οδηγός: Ο πρώτος επιπλέον οδηγός χρέωση ανά ημέρα με μέγιστη χρέωση 10 ημερών.  
-  Παιδικό κάθισμα: Η χρέωση για παιδικό κάθισμα είναι ανά ημέρα με μέγιστη χρέωση 10 ημερών 
-  Αλυσίδες χιονιού: Η χρέωση για αλυσίδες χιονιού είναι ανά ημέρα με μέγιστη χρέωση 10 ημερών 
-  Φορητό GPS: H χρέωση για το φορητό GPS είναι ανά ημέρα με μέγιστη χρέωση 6 ημερών  
-  Καύσιμα: Ο μισθωτής οφείλει να επιστρέψει το αυτοκίνητο με την ίδια ποσότητα καυσίμου που το παρέλαβε. Σε περίπτωση παραλαβής του αυτοκινήτου με λιγότερη βενζίνη από την βενζίνη εκκίνησης ο πελάτης επιβαρύνεται τη διαφορά καυσίμου. Καμία επιστροφή δεν δίνεται αν το αυτοκίνητο επιστραφεί με περισσότερα καύσιμα απ'ότι παρελήφθη. 
-  Ατύχημα: Σε περίπτωση ατυχήματος ο μισθωτής οφείλει να ενημερώσει την εταιρεία καθώς και την αστυνομία και να προσκομίσει στην επιστροφή το δελτίο καταγραφής της αστυνομίας. Σε περίπτωση ατυχήματος υπαιτιότητας του πελάτη μας, επιβαρύνεται με 15€ για έξοδα διαχείρισης φακέλου ατυχήματος.  
-  Ασφάλειες: 
-  Τα οχήματα είναι ασφαλισμένα έναντι τρίτων για υλικές ζημιές τρίτων ( εξαιρουμένων α) του οδηγού και επιβατών αυτών β) του οχήματος της (Breeze Car Rental ) 
-  S.C.D.W-Μερικη απαλλαγη ευθυνης ζημιων 
-      - Άνω των 350€ εφόσον αποδεχτεί τους όρους του συμβολαίου και καταβαλει το ποσο των 6€ επιπλέον του C.D.W ημερησίως για τις κατηγορίες Α,Β 
-      - Άνω των 750€ εφόσον αποδεχτεί τους όρους του συμβολαίου και καταβάλει το ποσό των 10€ επιπλέον του C.D.W ημερησίως για τις κατηγορίες A,B.  
-  ΚΛΟΠΗ ΠΥΡΟΣ: Ο ενοικιαστής απαλλάσσεται πλήρως της ευθύνης για οποιανδήποτε ζημιά του αυτοκινήτου σε περίπτωση φωτιάς ή κλοπής εφόσον αποδεχτεί και υπογράψει τους σχετικούς όρους του συμβολαίου της εταιρείας και καταβάλει το ποσό των: 
-  • 8€, για κάθε ημέρα ενοικίασης για τις κατηγορίες A,B,C,D,D1,D2,E,L 
-  • 10€, για κάθε ημέρα ενοικίασης για τις κατηγορίες G,G7,J 
-  Κύρια προϋπόθεση για τα ως άνω η μη απόδειξη αμέλειας ( αυτοκίνητο ξεκλείδωτο κλπ). 
-  ΟΔΗΓΗΣΗ ΕΚΤΟΣ ΣΥΝΟΡΩΝ: Δεν επιτρέπεται.   
-  ΜΕΤΑΦΟΡΑ ΜΕ ΠΛΟΙΟ: Μόνο με προηγούμενη έγγραφη έγκριση της εταιρείας και υπό προϋποθέσεις. 
-  ΟΔΙΚΗ ΒΟΗΘΕΙΑ: Τα αυτοκίνητα της Breeze Car Rental καλύπτονται 24ωρες από οδική βοήθεια. Στοιχεία επικοινωνίας θα σας δωθούν από το σταθμό 
-  ΑΚΥΡΩΣΗ Σε περίπτωση ακύρωσης έως 7 ημέρες πριν την προγραμματισμένη ημερα και ώρα παραλαβής του αυτοκινήτου επιστρέφεται πλήρως η προκαταβολή. Σε περίπτωση ακύρωσης σε λιγότερο από 7ημερες  κρατείται όλο το ποσό της προκαταβολής. 
-  Σε περιπτωση που ο μισθωτης εχει προπληρωση την εξοφληση της κρατησης και ακυρωσει 7 ημερες πριν την προγγραματισμενη ημερα και ωρα παραλαβης επιστρεφεται πληρως η προκαταβολη.Σε περιπτωση που ακυρωσει σε λιγοτερο απο 7 ημερες απο την προγγραματισμενη ημερα και ωρα παραλαβης η εταιρεια Breeze Car Rental  παρακρατει το 30% του συνολικου τιμηματος και επιστρεφει το 70%.  
-  ΑΝΑΙΤΙΑ ΜΗ ΕΜΦΑΝΙΣΗ Σε περίπτωση που ο ενοικιαστής δεν παραλάβει το αυτοκίνητο τη συμφωνηθείσα ημέρα και ώρα χωρίς προηγούμενη έγγραφη ή τηλεφωνική ειδοποίηση, η BREEZE CAR RENTAL θα ακυρώνει την κράτηση μετά την πάροδο 3 ωρών και διατηρεί το δικαίωμα να χρεώσει τον ενοικιαστή με μία ημέρα ενοικίασης της ίδιας κατηγορίας αυτοκινήτου που αφορά η κράτηση
-  Επισης μπορει να  χρησιμοποιηση το συγκεκριμενο αυτοκινητο για αλλη κρατηση.  
-  Εσωτερικό αυτοκινήτου Σε περίπτωση που το όχημα επιστραφεί με λεκέδες που απαιτούν ειδικό καθαρισμό, (π.χ. τρίχωμα, άμμος κ.α. στα
-      καθίσματα ή στο πάτωμα, στο πορτ-μπαγκάζ κλπ), ο ενοικιαστής επιβαρύνεται με το ποσό των 80,00€ 
-  ,"Reservierungen: Alle Reservierungen basieren sich auf einer Fahrzeugkategorie und nicht auf einem bestimmten Fahrzeugmodell. Sollte eine bestätigte Reservierung nicht verfügbar sein, behält sich Breeze Rentals das Recht vor, dem Kunden ein Fahrzeug mit einer größeren Kategorie ohne Aufpreis anzubieten.
-  Fahrer: Das Mindestalter beträgt 23 Jahre.
-  Führerschein: Der Fahrer muss vor mindestens einem Jahr einen gültigen Führerschein besitzen und anzeigen lassen. Bürger aus Nicht-EU-Ländern benötigen einen gültigen internationalen Führerschein zusammen mit ihrem regulären Führerschein.
-  Verkehrsverstöße - Bußgelder: Verkehrsverletzungen und Bußgelder werden vom Mieter getragen.
-  Zahlungsmittel: Der Mieter muss eine gültige Kreditkarte für die Mietgarantie vorlegen, auch wenn die Zahlung in bar erfolgt. Die Miete ist vorausbezahlt.
-  Stornierungen
-  
-  Die Stornierung einer Buchung muss mindestens zweiundsiebzig (72) Stunden vor Beginn der Anmietung des Fahrzeugs vorgenommen werden, entsprechend einer Buchung, die über diese Buchungsmaschine vorgenommen wird. Wenn Sie eine Buchung stornieren möchten, ist die einzige akzeptierte Methode die Breeze Rentals-Webseite.
-  Bei Stornierungen von Buchungen fallen folgende Gebühren an:
-  Im Falle einer Stornierungsmitteilung, die Breeze Rentals mindestens zweiundsiebzig (72) Stunden vor Beginn des Mietbeginns des Fahrzeugs eingeht, werden bei einer Buchung über diese Buchungsmaschine alle Beträge zurückerstattet.
-  Im Falle einer Stornierungsmitteilung, die Breeze Rentals weniger als zweiundsiebzig (72) Stunden vor Beginn der Anmietung des Fahrzeugs erhält, werden aufgrund einer Buchung über diese Buchungsmaschine keine bezahlten Beträge zurückerstattet.
-  
-  Fahrer: Mindestalter 23 Jahre.
-  Führerschein: Ein mindestens 1 Jahr vorher ausgestelltes gültiges Diplom ist erforderlich. Staatsangehörige von Nicht-EU-Ländern müssen ein internationales Diplom zusammen mit der Vorlage eines regulären Diploms vorweisen können
-   Strafen und Bußgelder für Ordnungswidrigkeiten werden dem Kunden berechnet.
-  Zahlungsmethode: Der Mieter muss eine Kreditkarte bereitstellen, um die Vermietung zu garantieren, auch wenn die Zahlung in bar erfolgt. Der Betrag ist vorausbezahlt.
-  
-  Abholung Rückgabe - Außerhalb der Öffnungszeiten: € 40 + MwSt. (08.30-20.00)
-   Abholung Rückgabe
-    in den Büros des Unternehmens kostenlos
-  Abholung vom Hafen Piräus, Hafen Rafina, Flughafen Eleftherios Venizelos gegen Aufpreis von 10 €.
-    Rückgabe Hafen Piräus, Rafina Hafen, Eleftherios Venizelos Flughafen Aufpreis von 10 €.
-    Bis zu 15 km von unseren Büros entfernt erhalten Sie einen Aufpreis von 15 €
-   Rückgabe bis zu 15 km von unseren Büros gegen Aufpreis von 15 €
-    Unbegrenzte Kilometer für Mieten über 4 Tage
-  Extra Odhgos: Der erste zusätzliche Fahrer pro Tag mit einer maximalen Gebühr von 10 Tagen.
-    Kindersitz: Die Gebühr für einen Kindersitz beträgt pro Tag, die maximale Gebühr beträgt 10 Tage
-    Schneeketten: Die Gebühr für Schneeketten beträgt pro Tag, die maximale Gebühr beträgt 10 Tage
-    Tragbares GPS: Die Gebühr für tragbares GPS wird pro Tag mit einer maximalen Gebühr von 6 Tagen berechnet
-    Kraftstoffe: Der Kunde muss das Fahrzeug mit der gleichen Menge Kraftstoff zurückgeben, die er erhalten hat. Bei einem Auto mit weniger Benzin als dem Startgas bezahlt der Kunde die Kraftstoffdifferenz. Es wird keine Rückerstattung gewährt, wenn das Fahrzeug mit mehr Kraftstoff als vorher zurückgegeben wird.
-  
-  IM AUSLAND FAHREN: Nicht erlaubt.
-  TRANSPORT MIT SCHIFF: Nur mit vorheriger schriftlicher Genehmigung des Unternehmens und vorbehaltlich der Bedingungen.
-  ROAD HELP: Mietwagen von Breeze Car sind 24 Stunden vor der Pannenhilfe geschützt. Die Kontaktdaten werden Ihnen vom Bahnhof zur Verfügung gestellt
-  STORNIERUNG Bei Stornierungen bis zu 7 Tagen vor dem geplanten Tag und Abholzeitpunkt wird die Anzahlung in voller Höhe erstattet. Bei einer Stornierung von weniger als 7 Tagen wird der Gesamtbetrag der Anzahlung einbehalten.
-  Wenn der Kunde das Fahrzeug nicht ohne vorherige schriftliche oder telefonische Benachrichtigung zum vereinbarten Zeitpunkt abholt, wird BREEZE CAR RENTAL die Reservierung nach 3 Stunden stornieren und behält sich das Recht vor, dem Kunden eine Tagesmiete derselben Fahrzeugkategorie zu berechnen im Zusammenhang mit der Inhaftierung
-  Breeze Car Rental  kann dieses Auto auch für eine andere Buchung verwenden.
-   Im Fahrzeuginneren Wenn das Fahrzeug mit Flecken zurückgegeben wird, die einer besonderen Reinigung bedürfen (z. B. Fell, Sand usw.)Sitzplätze oder auf dem Boden, im Kofferraum usw.), wird dem Mieter ein Betrag von € 80,00 berechnet`],
-   I_accept_Terms_and_Conditions:["I accept Terms and Conditions","Αποδέχομαι τους Όρους χρήσης","Ich akzeptiere die AGB"],
-  termsAggreedError : ["please agree to the terms and conditions to proceed.","Παρακαλώ αποδεχθείτε τους όρους χρήσης για να προχωρήσετε στην κράτηση.","Ich erkläre mich mit den AGB einverstanden "],
-  pay_with_paypal:["pay with paypal","Πληρωμή με Paypal","Mit Paypal zahlen"],
-  Pay_at_Piraeus_Bank:["Pay at Piraeus Bank","Πληρωμή μέσω της Τράπεζας Πειραιώς","Zahlung bei der Piraeus Bank"],
-  Reservation_Voucher:["Reservation Voucher","Απόδεικτικό Κράτησης","Resrvierung Voucher"],
-  Payment_Type:["Payment Type","Τρόπος Πληρωμής","Zahlungsart"],
-  Transaction_Details:["Transaction Details","Στοιχεία Συναλλαγής","Transaktion Details"],
-  Reservation_Number:["Reservation Number","Αριθμός Κράτησης","Reservierung Nummer"],
-  Booking_Date:["Booking Date","Ημερομηνία Κράτησης","Reservierung Datum"],
-  Last_Name:["Last Name","Επίθετο","Name"],
-  Name:["Name","Όνομα","Vorname"],
-  Phone_Number:["Phone Number","Τηλέφωνο","Telefon"],
-  Address:["Address","Διεύ/νση","Adresse"],
-  City:["City","Πόλη","Stadt"],
-  Zip_Code:["Zip Code","Τ.Κ.","PLZ"],
-  Drivers_License:["Drivers License","Δίπλωμα Οδήγησης","Führerscheinnummer"],
-  Customer_Identity_Passport_number:["Customer Identity/Passport number","Δελτίο Ταυτότητας/Διαβατήριο","Reisepassnummer"],
-  Print_Voucher:["Print Voucher","Εκτύπωση Απόδεικτικού Κράτησης","Bestätigungsnummer Drücken"],
-  Download_Pdf:["Download Pdf","Αποθήκευση PDF Κράτησης","Reserierung PDF Herunterladen"],
-  Pick_Up_Location_Details:["Pick Up Location Details","Στοιχεία τοποθεσίας Παραλαβής","Abholugsort Details"],
-  Phone_number_24_7:["24/7 Phone number","24/7 Τηλέφωνο","24/7 Telefonnummer"],
-  Drop_of_location_Details:["Drop of location Details","Στοιχεία τοποθεσίας Παράδοσης","Rückgabeort Details"],
-  User_Log_In:["User Log In","Είσοδος Χρηστών","Einloggen"],
-  Returning_Customer_Log_in:["Returning Customer Log in","Είδοδος παλαιών Πελατών","Rückkehrende Kunden Einloggen"],
-  User_E_mail:["User E-mail","Ε-mail Χρήστη","Benutzer Email"],
-  User_Password:["User Password","Κωδικός Εισόδου","Passwort"],
-  Cancel:["Cancel","Απόριψη","Abbrechen"],
-  Submit:["Submit","Επιβεβαίωση","Einreichen"],
-  User_Registration:["User Registration","Εγγραφή Χρήστη","Benutzer Registrierung"],
-  Customer_Registration:["Customer Registration","Εγγραφή Πελάτη","Kunde Registrierung"],
-  Repeat_Password:["Repeat Password","Επανάληψη Κωδικού","Password Wiederholung"],
-  Register:["Register","Εγγραφή","Registrierung"],
-  VAN:['VAN','Φορτηγάκι',"Minibus"], 
-  car_selection : ["CAR SELECTION","ΕΠΙΛΟΓΗ ΑΥΤΟΚΙΝΗΤΟΥ","AUTO AUSWAHL"],
-  car_category : ["Car Category","Κατηγορία Αυτ/του","Auto Kategorie"] ,
-  total_price : ["Total Price", "Σύνολο","Betrag"],
-  all_prices : ["All Prices include Taxes","Στις τιμές περιλαμβάνονταο όλοι οι Φόροι","Preise sind alle Steuern inklusiv" ],
-  all_extras: ["Here are all the extras included","Λίστα έξτρα παροχών","Alle extras" ],
-  notAvailable : ["Not Available", "Δεν είναι διαθέσημο","Nicht verfügbar"],
-  Family : ["Family","Οικογενειακή","Familie"],
-  Mini :["Mini", "Μίνι","Mini"],
-  pickupLocationError :["Pick up location is mandatory please fill the pick up location!","Η τοποθεσία παραλαβής είναι υποχρεωτική παρακαλώ συμπληρώστε την","Abholungsort ist ein Pflichtfeld.Bitte geben Sie den Abholungsort ein"],
-  dropOffLocationError :["Drop off location is mandatory please fill the drop off location!","Η τοποθεσία παράδοσης είναι υποχρεωτική παρακαλώ συμπληρώστε την.","Der Rückgabeort ist ein Pflichtfeld. Bitte geben Sie den Rückgabeort ein"],
-  startTimeError :["Pick up time is mandatory please fill the pick up time!","Η ώρα παραλαβής είναι υποχρεωτική παρακαλώ συμπληρώστε την","Die Abholungsuhrzeit is ein Pflichtfeld.Bitte wählen sie eine Zeit aus "],
-  endTimeError :["Drop off time is mandatory please fill the drop off time!","Η ώpα παράδοσης είναι υποχρεωτική παρακαλώ συμπληρώστε την.","Die Rückgabezeit ist ein Pflichtfeld.Bitte wählen Sie die Zeit aus"],
-  checkItOut :["Check it out","¨έλεγχος","Kontrolle"],
-  errorOccured : ["An error has occured","Δημιουργήθηκε ένα πρόβλημα με την αναζήτηση","Ein Fehler ist aufgetreten"],
-  tryAgain : ["Please try again!", "Παρακαλώ δοκιμάστε ξανά","Bitte versuchen Sie es erneut"],
-  aboutUs: ["About us","Ποιοί Είμαστε","über uns"],
-  ourFleet : ["Our Fleet","Ο Στόλος","Unsere Flotte"],
-  ourServices : ["Our Services","Υπηρεσίες","Leistungen"],
-  proposals : ["Proposals","Αποδράσεις","Ausflüge"],
-  testimonials : ["Testimonials","Είπαν Για Εμάς","Bewertungen"],
-  blog : ["Blog","Blog","Blog"],
-  contact : ["Contact","Επικοινωνία","Kontakt"],
-  languages : ["Languages - English","Γλώσσα - Ελληνικά","Sprachen - German"],
-  Reservation_Details : ["Reservation Details"],
-  
-  label_2 : ['Pick up charge 10€ ','Χρέωση Παραλαβής 10€ ','Abholungskosten 10€ '],
-  label_3 : ['Extra Driver ','Έπιπλεον οδηγός ','Zusätzlicher Fahrer '],
-  label_4 : ['GPS ','GPS ','GPS '],
-  label_5 : ['Pick up charge 15€ ','Χρέωση Παραλαβής 15€ ','Abholungskosten 10€ '],
-  label_6 : ['Baby Seat ','Παιδικό κάθισμα ','Kindersitz '],
-  label_7 : ['Snow chains ','Αλυσίδες χιονιού ','Schneeketten '],
-  label_8 : ['Advanced Insurance  ','Ασφάλεια ADV ','Versicherung '],
-  label_9 : ['Extra Insurance  ','Ασφάλεια EXTRa ','Extra Versicherung '],
-  ReservationRatesAnalysis:["Reservation Rates Analysis","Αναλυση Χρεώσεων",'Buchung Analyse'],
-     DayByDayRates:["DAY BY DAY RATES","ΧΡΕΩΣΗ ΑΝΑ ΗΜΕΡΑ","Preise pro Tag"],
-     DayRateslabel:["Day","Ημέρα","Tag"],
-     DayByDaySubTotal:["Sub Total","Μερικό Σύνολο","Zwischensumme"],
-     extrasRates:["EXTRAS RATES","ΕΞΤΡΑ ΧΡΕΩΣΕΙΣ","Extra Kosten"],
-     reservationsTotals:["RESERVATION TOTALS","ΣΥΝΟΛΟ ΚΡΑΤΗΣΗΣ","Buchungssumme"],
-     grandTotals:["Grand Total","Γενικό Σύνολο","Gesamtsumme"],
-     paymentDeposit:["PAYMENT DEPOSIT","ΠΡΟΚΑΤΑΒΟΛΗ","Anzahlung"],
-     depositTotal:["Deposit Total","Σύνολο Προκαταβολής","Anzahlung Total"],
-  label_10 : ['Theft  coverage ','Ασφάλεια Κλοπής ','Diebstahlversicherung '],
-  label_12 : ['Drop off charge 10€ ','Χρέωση Παράδοσης 10€','Rückgabekosten 10€ '],
-  label_13 : ['Drop off charge 15€ ','Χρέωση Παράδοσης 15€','Rückgabekosten 15€ '],
-  description_2 : ["10€ charges for  Pick up locations of ATH - International Airport, Rafina Port, Piraeus Port.","Χρέωση 10€ για παραλαβή από το Αεροδρόμιο, Το Λιμάνι της Ραφίνας και το Λιμάνι του Πειραιά","Standortzuschlag 10€ für Abholung von ATH Flughafen, Rafina und Piraeus Hafen"],
-  description_3 : ["Extra car driver which will be charged daily but with maximum charge of 7 days","Έξτρα οδηγός για όλη την διάρκεια της ενοικίασης με μέγιστη χρέωση 7 ημερών.","Verwaltungsgebühr für Zusatzfahrer für die Gesamtemietung wird für 7 Tage verrechnet"],
-  description_4 : ["Portable GPS device which will be charged by daily with maximum charge of 7 days","Φορτή συσκευή Πλοήγησης με χρέωση ανά ημέρα μέγιστη χρέωση 7 ημέρες.","Tragbares GPS Gerät wird pro Tag für ein maximum von 7 Tage verrechnet"],
-  description_5 : ["15€ charges for  Pick up  locations over 15Km. Away from our central agency location. ","Χρέωση 15€ για σημείο παραλαβής σε ακτίνα 15 χιλιομέτρων από τα κεντρικά μας γραφεία.","Standortzuschlag 15€ für Abholung 15km von der Zentrale"],
-  description_6 : ['Baby Seat for ages from 2 to 4 which will be charged daily but with maximum 7 days charge.','Παιδικό κάθισμα η χρέωση είναι ανά ημέρα με μέγιστη χρέωση 7 ημερών','Kindersitz wird pro Tag für ein maximum von 7 Tage verrechnet'],
-  description_7 : ["Car snow chains for snow expeditions which will be charged by daily with maximum charge of 7 days","Αλυσίδες χιονιού για κάθε τύπο αυτοκινήτου με χρέωση ανά ημέρα μέγιστη χρέωση 7 ημέρες.","Schneeketten für alle Fahrzeuge werden pro Tag für ein maximum von 7 Tage verrechnet"],
-  description_8 : ['Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily','Ολοκληρωμένη Ασφάλεια αυτοκινήτου  με απαλλαγή 750€. Η χρέωση είναι ανά ημέρα ενοικίασης','Vollkaskoversicherung mit einem Selbstbehalt von € 750, die täglich verrechnet wird'],
-  description_9 : ['Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.','Ολοκληρωμένη Ασφάλεια αυτοκινήτου  με απαλλαγή 350€. Η χρέωση είναι ανά ημέρα ενοικίασης','Vollkaskoversicherung mit einem Selbstbehalt von € 350, die täglich verrechnet wird'],
-  description_10 : ['Extra car insurance that reimburses you in the case of car theft or loss of any of the Car equipment which will be charged daily.','Έπιπλεον Ασφάλεια αυτοκιήτου για  ολική Απώλεια ή μερική Κλοπή εξοπλισμού. Η χρέωσης είναι ανά ημέρα ενοικίασης','Extra Autoversicherung für Totalschaden oder Teilausrüstungsdiebstahl, wird pro Tag verrechent'],
-  description_12 : ["10€ charges for  drop off locations for ATH - International Airport, Rafina Port, Piraeus Port.","Χρέωση 10€ για παραδοση από το Αεροδρόμιο, Το Λιμάνι της Ραφίνας και το Λιμάνι του Πειραιά","Standortzuschlag 10€ für Abholung von ATH Flughafen, Rafina und Piraeus Hafen"],
-  description_13 : ["15€ charges for drop off locations over 15Km radius around our central agency location. ","Χρέωση 15€ για σημείο παραδοσης και για ακτίνα 15 χιλιομέτρων από τα κεντρικά μας γραφεία.","Standortzuschlag 15€ für Rückgabe 15km von der Zentrale"],
+  label_2 : ['Pick up charge 10€ ','Χρέωση Παραλαβής 10€ '],
+  label_3 : ['Extra Driver ','Έχτρα οδηγός '],
+  label_4 : ['GPS ','GPS '],
+  label_5 : ['Pick up charge 15€ ','Χρέωση Παραλαβής 15€ '],
+  label_6 : ['Baby Seat ','Παιδικό κάθισμα '],
+  label_7 : ['Snow chains ','Αλυσίδες χιονιού'],
+  label_8 : ['Advanced Insurance  ','Ασφάλεια ADV '],
+  label_9 : ['Extra Insurance  ','Ασφάλεια EXTR '],
+  ReservationRatesAnalysis:["Reservation Rates Analysis","Αναλυση Χρεώσεων"],
+     DayByDayRates:["DAY BY DAY RATES","ΧΡΕΩΣΗ ΑΝΑ ΗΜΕΡΑ"],
+     DayRateslabel:["Day","Ημέρα"],
+     DayByDaySubTotal:["Sub Total","Μερικό Σύνολο"],
+     extrasRates:["EXTRAS RATES","ΕΞΤΡΑ ΧΡΕΩΣΕΙΣ"],
+     reservationsTotals:["RESERVATION TOTALS","ΣΥΝΟΛΟ ΚΡΑΤΗΣΗΣ"],
+     grandTotals:["Grand Total","Γενικό Σύνολο"],
+     paymentDeposit:["PAYMENT DEPOSIT","ΠΡΟΚΑΤΑΒΟΛΗ"],
+     depositTotal:["Deposit Total","Σύνολο Προκαταβολής"],
+  label_10 : ['Theft  coverage ','Ασφάλεια Κλοπής '],
+  label_12 : ['Drop off charge 10€ ','Χρέωση Παράδοσης 10€'],
+  label_13 : ['Drop off charge 15€ ','Χρέωση Παράδοσης 15€'],
+  description_2 : ["10€ charges for  Pick up locations of ATH - International Airport, Rafina Port, Piraeus Port.","Χρέωση 10€ για παραλαβή από το Αεροδρόμιο, Το Λιμάνι της Ραφίνας και το Λιμάνι του Πειραιά"],
+  description_3 : ["Extra car driver which will be charged daily but with maximum charge of 7 days","Έξτρα οδηγός για όλη την διάρκεια της ενοικίασης με μέγιστη χρέωση 7 ημερών."],
+  description_4 : ["Portable GPS device which will be charged by daily with maximum charge of 7 days","Φορτή συσκευή Πλοήγησης με χρέωση ανά ημέρα μέγιστη χρέωση 7 ημέρες."],
+  description_5 : ["15€ charges for  Pick up  locations over 15Km. Away from our central agency location. ","Χρέωση 15€ για σημείο παραλαβής σε ακτίνα 15 χιλιομέτρων από τα κεντρικά μας γραφεία."],
+  description_6 : ['Baby Seat for ages from 2 to 4 which will be charged daily but with maximum 7 days charge.','Παιδικό κάθισμα η χρέωση είναι ανά ημέρα με μέγιστη χρέωση 7 ημερών'],
+  description_7 : ["Car snow chains for snow expeditions which will be charged by daily with maximum charge of 7 days","Αλυσίδες χιονιού για κάθε τύπο αυτοκινήτου με χρέωση ανά ημέρα μέγιστη χρέωση 7 ημέρες."],
+  description_8 : ['Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily','Ολοκληρωμένη Ασφάλεια αυτοκινήτου  με απαλλαγή 750€. Η χρέωση είναι ανά ημέρα ενοικίασης'],
+  description_9 : ['Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.','Ολοκληρωμένη Ασφάλεια αυτοκινήτου  με απαλλαγή 350€. Η χρέωση είναι ανά ημέρα ενοικίασης'],
+  description_10 : ['Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.','Έχτρα Ασφάλεια αυτοκιήτου για  ολική Απώλεια ή μερική Κλοπή εξοπλισμού. Ηχρέωσης είναι ανά ημέρα ενοικίασης'],
+  description_12 : ["10€ charges for  drop off locations for ATH - International Airport, Rafina Port, Piraeus Port.","Χρέωση 10€ για παραδοση από το Αεροδρόμιο, Το Λιμάνι της Ραφίνας και το Λιμάνι του Πειραιά"],
+  description_13 : ["15€ charges for drop off locations over 15Km radius around our central agency location. ","Χρέωση 15€ για σημείο παραδοσης και για ακτίνα 15 χιλιομέτρων από τα κεντρικά μας γραφεία."],
 
 
 
@@ -565,7 +474,7 @@ const languages = {
           <div class="card-body">
                   You can cancel your reservation up to 1 day before the time of pickup of the car you have stated in your reservation. For prepaid reservations, if you cancel your reservation up to 48 hours before the start of the rental, the full amount of the reservation will be refunded to your card. Otherwise, the amount of the booking will be refunded to you on the card less when you charge a late € 30 plus VAT refund within two (2) business days. If you make a prepaid reservation within 48 hours from the start of the rental, and then canceled, then the amount of the booking will be refunded on the card, less the late € 30 plus VAT.                    <br><br>
                   In bookings where payment is made upon receipt of the car, cancellation is allowed until the start of rental without any charge.<br>
-                  In the event that you do not appear for the receipt of the rented vehicle on the day and time you stated on your reservation without prior notice, Breeze Car rental reserves the right to cancel your reservation after 29 minutes without prior written notice.
+                  In the event that you do not appear for the receipt of the rented vehicle on the day and time you stated on your reservation without prior notice, Hertz reserves the right to cancel your reservation after 29 minutes without prior written notice.
                   <br><br>
                   For prepaid reservations, you will be refunded on the card the amount of the booking less the no-show charge, which is € 40 plus VAT. For bookings where payment is made upon receipt of the car, the no-show charge is € 30 plus VAT.
                   
@@ -1132,370 +1041,7 @@ const languages = {
       </div>
     </div>
 
-     <!--Footer ends-->`,`
-     <footer id="site-footer" class="padding_half"> 
-     <div class="container"> 
-         <div class="row"> 
-             <div class="col-md-12 col-sm-12 text-center"> 
-                 <ul class="social-icons bottom25 wow fadeInUp" data-wow-delay="300ms" style="visibility: hidden; animation-delay: 300ms; animation-name: none;"> 
-                     <li>
-                         <a href="javascript:void(0)"><i class="fab fa-facebook"></i> </a> 
-                     </li>                     
-                 
-                     <li>
-                         <a href="javascript:void(0)"><i class="fab fa-google-plus"></i> </a> 
-                     </li>                     
-                      
-                     <li>
-                         <a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> 
-                     </li>                     
-                     <li>
-                         <a href="javascript:void(0)"><i class="fa fa-at"></i> </a> 
-                     </li>                     
-                 </ul>                 
-                 <p class="copyrights wow fadeInUp" data-wow-delay="400ms" style="visibility: hidden; animation-delay: 400ms; animation-name: none;"> 
-                   © 2019 Breeze Car rentals </p> 
-                  
-   
-             </div>             
-         </div>         
-     </div>  
-     <div class="container">
-         <div class="row">
-                 <div class="col-md-12 col-sm-12 text-center consentLinks"> 
-                     <a href="#" data-toggle="modal" data-target="#siteTerms" data-text="AGB">AGB</a>&nbsp;&nbsp;
-                     <a href="#" data-toggle="modal" data-target="#faq" data-text="Häufig gestellte Fragen">Häufig gestellte Fragen</a>&nbsp;&nbsp;
-                     <a href="#" data-toggle="modal" data-target="#consent" data-text="Cookies-Richtlinie">Cookies-Richtlinie</a>&nbsp;&nbsp;
-                     <a href="#" data-toggle="modal" data-target="#privacyPolicy" data-text="Datenschutzrichtlinie">Datenschutzrichtlinie</a>&nbsp;&nbsp;
-                 </div>
-         </div>
-     </div>   
-   </footer> 
-   
-   <!-- The Modal -->
-   <div class="modal fade" id="consent">
-         <div class="modal-dialog">
-           <div class="modal-content">
-           
-             <!-- Modal Header -->
-             <div class="modal-header" style="color:#000;">
-               <h4>Datenschutzrichtlinie - Breeze Rentals</h4>
-               <button type="button" class="close" data-dismiss="modal">&times;</button>
-             </div>
-             
-             <!-- Modal body -->
-             <div class="modal-body">
-                     <script id="CookieDeclaration" src="https://consent.cookiebot.com/1fa8f132-2ca9-4840-870d-37bba76aad48/cd.js" type="text/javascript" async></script>
-             </div>
-             
-             <!-- Modal footer -->
-             <div class="modal-footer">
-               <button type="button" class="btn btn-large btn-success" data-dismiss="modal">Close</button>
-             </div>
-             
-           </div>
-         </div>
-       </div>
-   <div class="modal fade" id="faq">
-         <div class="modal-dialog">
-           <div class="modal-content">
-           
-             <!-- Modal Header -->
-             <div class="modal-header text-center" style="color:#000;">
-               <h4>Häufig gestellte Fragen- Breeze Rentals</h4>
-               <button type="button" class="close" data-dismiss="modal">&times;</button>
-             </div>
-             
-             <!-- Modal body -->
-             <div class="modal-body">
-                     <!--Accordion wrapper-->
-   <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-   
-         <!-- Accordion card -->
-         <div class="card">
-       
-           <!-- Card header -->
-           <div class="card-header py-0 my-0" role="tab" id="headingOne1">
-             <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
-               aria-controls="collapseOne1">
-               <h5 class="py-1 mt-1">
-               Wie lange kann ich (min/max) ein Auto mieten?
-               </h5>
-             </a>
-           </div>
-       
-           <!-- Card body -->
-           <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-             <div class="card-body">
-             Die Mindestdauer ist 1 Tag und die Maxdauer ist 30 Tage.
-             </div>
-           </div>
-       
-         </div>
-         <!-- Accordion card -->
-       
-         <!-- Accordion card -->
-         <div class="card">
-       
-           <!-- Card header -->
-           <div class="card-header py-0 my-0" role="tab" id="headingTwo2">
-             <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
-               aria-expanded="false" aria-controls="collapseTwo2">
-               <h5  class="py-1 mt-1">
-               Was heisst "Vorauszahlung online" und "Zahlung bei Lieferung"?
-               </h5>
-             </a>
-           </div>
-       
-           <!-- Card body -->
-           <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-             <div class="card-body">
-             ie können den Mietbetrag mit einer Kredit- oder Debitkarte bezahlen, indem Sie "Vorauszahlung online" wählen. Wenn Sie Ihre Online-Reservierung mit einer Debitkarte vorab begleichen, mόssen Sie gleichzeitig mit Ihrer Kreditkarte eine Kreditkarte vorlegen, wenn Sie Ihr Fahrzeug erhalten.
-               Alternativ können Sie wählen, ob Sie Ihre Reservierung bezahlen möchten, wenn Sie das Auto von der Servicestelle abholen, die Sie bei der Buchung ausgewählt haben. In diesem Fall müssen Sie Ihre Kredit- / Debitkartendaten eingeben.
-             
-                 </div>
-           </div>
-       
-         </div>
-         <!-- Accordion card -->
-       
-         <!-- Accordion card -->
-         <div class="card">
-       
-           <!-- Card header -->
-           <div class="card-header py-0 my-0" role="tab" id="headingThree3">
-             <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
-               aria-expanded="false" aria-controls="collapseThree3">
-               <h5 class="py-1 mt-1">
-               Werde ich  eine Bestaetigung meiner Reservierung erhalten?
-               </h5>
-             </a>
-           </div>
-       
-           <!-- Card body -->
-           <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
-             <div class="card-body">
-             Nachdem Ihre Reservierung erfolgreich abgeschlossen wurde, wird eine Bestaetigung Ihrer Reservierung an die E-Mail-Adresse gesendet, die Sie bei der Buchung angegeben haben.
-             </div>
-           </div>
-       
-         </div>
-         <!-- Accordion card -->
-         <div class="card">
-       
-           <!-- Card header -->
-           <div class="card-header py-0 my-0" role="tab" id="headingThree4">
-             <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree4"
-               aria-expanded="false" aria-controls="collapseThree4">
-               <h5 class="py-1 mt-1">
-               Was ist, wenn ich meine Buchung storniere?  Gibt es eine Gebuehr?
-               </h5>
-             </a>
-           </div>
-       
-           <!-- Card body -->
-           <div id="collapseThree4" class="collapse" role="tabpanel" aria-labelledby="headingThree4" data-parent="#accordionEx">
-             <div class="card-body">
-             Sie koennen Ihre Reservierung bis zu 1 Tag vor dem Zeitpunkt der Abholung des in der Reservierung angegebenen Fahrzeugs stornieren. Wenn Sie Ihre Reservierung bis zu 48 Stunden vor Mietbeginn stornieren, wird der Gesamtbetrag der Reservierung auf Ihre Karte zurόckerstattet. 
-             Andernfalls wird der Betrag der Buchung auf der Karte abzueglich einer Erstattung von 30 € zuzueglich Mehrwertsteuer innerhalb von zwei (2) Werktagen erstattet. 
-             Wenn Sie innerhalb von 48 Stunden nach Mietbeginn eine Vorauszahlung vornehmen und dann stornieren, wird der Betrag der Buchung auf der Karte erstattet, abzoeglich der verspueteten € 30 zuzoeglich Mehrwertsteuer.
-                     <br><br>
-                     Bei Buchungen, bei denen die Zahlung bei Erhalt des Fahrzeugs erfolgt, ist eine kostenfreie Stornierung bis zum Mietbeginn möglich.<br>
-                     Bei Buchungen, bei denen die Zahlung bei Erhalt des Fahrzeugs erfolgt, ist eine Stornierung bis zum Mietbeginn ohne jegliche Belastung möglich.
-                     <br><br>
-                     Bei vorausbezahlten Buchungen wird Ihnen der Buchungsbetrag abzüglich der Nicht-Lastschrift-Gebühr in Höhe von € 40 zuzüglich Mehrwertsteuer auf der Karte erstattet. Bei Buchungen, bei denen die Zahlung bei Erhalt des Fahrzeugs erfolgt, beträgt die Gebühr für die Nichtanreise 30 € plus Mehrwertsteuer.
-                     
-             </div>
-           </div>
-       
-         </div>
-         <!-- Accordion card -->
-       
-       </div>
-       <!-- Accordion wrapper -->
-             </div>
-             
-             <!-- Modal footer -->
-             <div class="modal-footer">
-               <button type="button" class="btn btn-large btn-success" data-dismiss="modal">Close</button>
-             </div>
-             
-           </div>
-         </div>
-       </div>
-   <div class="modal fade" id="privacyPolicy">
-         <div class="modal-dialog">
-           <div class="modal-content">
-           
-             <!-- Modal Header -->
-             <div class="modal-header" style="color:#000;">
-               <h4>Datenschutzrichtlinie für persönliche Website-Daten - Breeze Rentals</h4>
-               <button type="button" class="close" data-dismiss="modal">&times;</button>
-             </div>
-             
-             <!-- Modal body -->
-             <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h5>Breeze Car Rentals - https://breezerentals.gr Datenschutzrichtlinie für persönliche Website-Daten.</h5>
-                                <p>
-                                Vielen Dank für Ihren Besuch der Website Breeze Car Rentals - https://breezerentals.gr mit Sitz in 72 Agia Triados, Agia Paraskevi Athen (Breezerentals.gr).
-                                Lesen Sie diese Datenschutzbestimmungen sorgfältig durch, bevor Sie unsere Website nutzen.                                
-                                </p>
-                                <h6>Einfuehrung</h6>
-                                <p>
-                                Breezerentals.com als Ihr Datamanager informiert Sie darüber, wie wir Informationen über Sie sammeln und verarbeiten. <br><br>
-                                Persönliche Daten (PD) sind alle Informationen über natürliche Personen, deren Identität bekannt ist oder identifiziert werden kann.<br><br>
-                                Der Schutz Ihrer Persönliche Daten ist für Breezerentals.gr sehr wichtig, die beim Besuch der Website in diese Richtung vorgeht. 
-                                     <br><br>Diese Datenschutzrichtlinie listet die Art von Informationen auf, die wir während Ihres Besuchs auf unserer Website erfassen können, und informiert Sie darüber, wie wir diese Informationen verwenden. Wenn Sie uns freiwillig persönliche Informationen wie Ihren Namen, Ihre Adresse oder E-Mail-Adresse zur Verfügung stellen, behandeln wir diese Informationen absolut vertraulich. Vorbehaltlich spezifischer Bestimmungen dieser Datenschutzrichtlinie werden keine personenbezogenen Daten an andere Unternehmen, Organisationen oder Websites geleast, verkauft, veröffentlicht oder anderweitig veröffentlicht.
-                                     <br><br>Wie in den Nutzungsbedingungen von https://breezerentals.gr und der Cookies-Richtlinie https://breezerentals.gr beschrieben wird , richten sich die über die Website angebotenen Dienste an ein allgemeines Publikum, zielen nicht auf Kinder ab und sammeln nicht wissentlich - persönliche Informationen von Kindern unter 16 Jahren.
-                                     <br><br> Die Datenschutzrichtlinie gilt für alle Benutzer der Website. Diese Richtlinie gilt für die Sammlung und Verwendung Ihrer persönlichen Informationen durch Breezerentals.gr (z. B. Informationen, die eine bestimmte Person definieren, wie z. B. vollständiger Name oder E-Mail-Adresse).
-                                </p>
-                                <h6>Welche Informationen sammeln wir von Ihnen?</h6>
-                                <p>
-                                Wenn Sie die Website https://breezerentals.gr/ besuchen, können wir Daten von Ihnen erfassen. Einige dieser Daten können persönlicher Natur sein. Diese Daten können den Suchverlauf, die IP-Adresse, die Bildschirmauflösung, den von Ihnen verwendeten Browser, das Betriebssystem und die Einstellungen, die Zugriffszeiten und die Referrer-URL enthalten. Wenn Sie ein tragbares Gerät verwenden, erfassen wir möglicherweise auch Daten, die Ihr Gerät, Ihre Einstellungen und Ihren Standort identifizieren.
-                                941. Breezerentals.gr behält sich das Recht vor, nicht persönlich identifizierbare Benutzerinformationen (Browsertyp, Computertyp, Betriebssystem, Internetanbieter usw.) zu sammeln und / oder IP-Adressen (Internetadressen) mit entsprechenden Technologien (Cookies) zu überwachen . Cookies sind kleine Textdateien, die auf der Festplatte jedes Benutzers gespeichert werden, ohne auf Dokumente oder Dateien vom Computer des Benutzers aus zugreifen zu können. Sie dienen dazu, dem Benutzer den Zugang zu bestimmten Diensten und / oder Seiten der Website zu erleichtern sowie zu statistischen Zwecken.Um weitere Informationen zu den von der Website verwendeten Cookies zu erhalten, erlauben Sie den Benutzern den Besuch der Seite Cookies-Richtlinien.
-                                     <br><br> Wenn Sie sich über unser Kontaktformular mit uns in Verbindung setzen möchten, müssen wir Ihren Namen und Ihre E-Mail-Adresse sammeln.
-                                     <br><br>  Wenn Sie sich für den Breezerentals.gr-Newsletter anmelden, erhalten Sie Ihre E-Mail-Adresse.
-                                                                 
-                                </p>
-                                <h6>Wie sammeln wir Ihre persönlichen Daten?</h6>
-                                <p>
-                                Wir erheben Ihre persönlichen Daten direkt von Ihnen. Sie geben Ihre persönlichen Daten an, wenn Sie die Anmelde- / Kommunikationsformulare auf unserer Website (https://breezerentals.gr) ausfüllen. Auch während Ihrer Buchung erfassen wir alle Ihre persönlichen Daten, um die Reservierung auf der Seite abzuschließen (https://breezerentals.gr/bookings.html).
-                                </p>
-                                <h6>Nutzung - Weitergabe persönlichen  Daten</h6>
-                                <p>
-                                Wir verwenden Ihre persönlichen Informationen, um auf Ihre Anfragen zu reagieren, um mit Ihrem Unternehmen zu kommunizieren und Sie über Newsletter über die Aktivitäten des Unternehmens zu informieren.
-                                     <br><br>Ihre persönliche Daten, die wir über die Website erfassen, werden nicht an Dritte weitergegeben und zur weiteren Verarbeitung weitergeleitet.
-                                     
-                                </p>
-                                <h6>Speicherung - Schutz persönlichen Daten.</h6>
-                                <p>
-                                Das Rechenzentrum, in dem Ihre persönlichen Daten gespeichert sind, befindet sich in Deutschland und die Sicherungen werden lokal in den Geschäftsräumen aufbewahrt.
-                                </p>
-                                <h6>Zeitpunkt der Aufbewahrung- Persönliche Daten.</h6>
-                                <p>
-                                Die Aufbewahrungszeit Ihrer persönlichen Daten wird wie folgt definiert:<br>
-                                     <br>1.	Wenn Sie das Kontaktformular ausfüllen, bleiben Ihre persönliche Daten 24 Monate lang gespeichert..
-                                     <br> 2.Wenn Sie den Newsletter-Service abonnieren, werden Ihre personenbezogenen Daten 3 Jahre lang gespeichert. Natürlich können Sie uns jederzeit mitteilen, dass Sie keinen Newsletter mehr senden möchten, indem Sie eine E-Mail an info@breezerentals.gr senden, damit Ihre Daten gelöscht werden.
-                                                                        
-                                </p>
-                                <h6>Ihre Rechte bei der Verarbeitung Ihrer persönlichen Daten</h6>
-                                <p>Sie haben das Recht, jederzeit Informationen über Ihre personenbezogenen Daten, die wir gespeichert haben, gemäß geltendem Recht und kostenlos zu erhalten. Wir können einen Identitätsnachweis verlangen, bevor wir Ihnen diese Daten geben. In einigen Fällen können wir möglicherweise keinen Zugriff auf bestimmte personenbezogene Daten zulassen. Zum Beispiel, wenn sich Ihre persönlichen Daten auf die persönlichen Daten einer anderen Person beziehen oder aus rechtlichen Gründen aufbewahrt werden. In diesen Fällen erklären wir, warum Sie diese Daten nicht erhalten können.
-                                     <br><br>Sie haben das Recht, eine Korrektur anzufordern - um Ihre Informationen zu aktualisieren, wird Breezerentals.gr diese sofort korrigieren.
-                                     <br><br> Sie haben das Recht, die Löschung Ihrer personenbezogenen Daten zu verlangen, und Breezerentals.gr wird diese sofort löschen. In einigen Fällen, in denen bestehende rechtliche und steuerliche Verpflichtungen eine zwingende Aufbewahrung erfordern, kann es jedoch verboten sein, die Daten zu löschen. In diesen Fällen erklären wir, warum und wie lange Ihre personenbezogenen Daten nicht gelöscht werden können.
-                                     <br><br>   Dies ist der Ort, an dem Sie die gewünschten Informationen finden können, und Sie werden die Person finden, nach der Sie suchen. Breeze Car Rentals - https://breezerentals.gr. Wenn das nicht möglich ist, erklären wir Ihnen wie so die Verarbeitung Ihrer PDs  wir nicht stoppen können.
-                                     <br><br>   Sie haben das Recht zu verlangen, dass Sie die Verarbeitung Ihrer persönlichen Daten von Breezerentals.gr einschränken und dass Breeze Car Rentals - https://breezerentals.gr die Verarbeitung dieser Daten umgehend einschränkt. Wenn dies nicht möglich ist, erklären wir, warum wir die Verarbeitung Ihrer PDs nicht einschränken können.
-                                     <br><br>   Sie haben das Recht, die Übertragung Ihrer personenbezogenen Daten an eine andere Organisation / Organisation anzufordern, und Breeze Car Rentals - https://breezerentals.gr wird diese Daten unverzüglich übermitteln. Aufgrund der dokumentierten Verpflichtungen von Breeze Car Rentals (https://breezerentals.gr) kann Ihre Anfrage jedoch möglicherweise nicht angenommen werden.
-                                     <br><br>   Sollte sich herausgestellt haben, dass Ihre Breeze Car Rentals - https://breezerentals.gr durchgesickert wurde und Sie dadurch einen erheblichen Verlust erlitten haben, haben Sie ein Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde (Personaldatenschutzbehörde).
-                                     <br><br>  Wenden Sie sich an das Datenschutz-Team unter info@breezerentals.gr. Wenn Sie Fragen zu Ihrer Datenschutzerklärung haben  wenden Sie sich an, um diese Rechte geltend zu machen,  oder wenn Sie Hilfe bei der Ausübung oder zum Verständnis der Datenschutzoptionen, wenden Sie sich an das Datenschutz-Team unter info@breezerentals.gr. Sie erreichen auch das Team schriftlich über folgender Adresse: Agias Triados 72, Agia Paraskevi ,153 43,  Athen (Änderungen in der Datenschutzerklärung).
-                                     
-                                     <br><br>  Breeze Car Rentals - https://breezerentals.gr kann diese Datenschutzerklärung ändern. Bitte überprüfen Sie das Datum der Antragstellung zu Beginn dieser Richtlinie, um zu sehen, wann diese Richtlinie zuletzt überprüft wurde. Jede Überarbeitung wird umgesetzt, sobald wir die überarbeitete Richtlinie überprüfen.
-                                     Wenn wir wesentliche Änderungen an dieser Richtlinie vornehmen, die unsere Rechte zur Verwendung persönlicher Daten, die wir bereits von Ihnen erfasst haben, erweitern, werden wir Sie darüber informieren und Ihnen die Möglichkeit geben, diese Daten zukünftig zu verwenden.
-                                     </p>
-                            </div>
-                        </div>
-                    </div>
-             </div>
-             
-             <!-- Modal footer -->
-             <div class="modal-footer">
-               <button type="button" class="btn btn-large btn-success" data-dismiss="modal">Close</button>
-             </div>
-             
-           </div>
-         </div>
-       </div>
-   
-   <div class="modal fade" id="siteTerms">
-         <div class="modal-dialog">
-           <div class="modal-content">
-           
-             <!-- Modal Header -->
-             <div class="modal-header" style="color:#000;">
-               <h4>Terms of Use - Breeze Rentals</h4>
-               <button type="button" class="close" data-dismiss="modal">&times;</button>
-             </div>
-             
-             <!-- Modal body -->
-             <div class="modal-body">
-                     <div class="container">
-                         <div class="row">
-                             <div class="col-md-12">
-                                 <h6>AGB https://breezerentals.gr</h6>
-                                 <p>
-                                        •	Bitte lesen Sie die Nutzungsbedingungen unserer Website. Diese Bedingungen regeln Ihren Zugang und die Nutzung der Website. 
-                                     </p><p>    •	Die Webseite ist für Ihren Zugang zur Verfügung und nur wenn Sie mit den AGB einverstanden sind. 
-                                         </p><p>      •	Falls Sie mit den AGB nicht einverstanden sind, Zugang und Nutzung der Website sind nicht gestattet. 
-                                             </p><p>    •	Durch den Zugriff und die Nutzung der Website akzeptieren Sie unsere AGB. 
-                                       </p>  
-                                 
-                                 <h6>1. WEB SEITE BENUETZER</h6>
-                                 <p>
-                                 Die Web-Seite wird von Pappas E. Nikolaos Autovermietungen  an die sowohl juristischen Personen als auch natürlichen Personen über 16 Jahren und rechtsverbindliche Vereinbarungen gemäß den geltenden Rechtsvorschriften treffen können, zur Verfügung gestellt. Wenn Sie die Voraussetzungen nicht erfüllen, dürfen Sie die WebSeite nicht verwenden.
-                                 </p>
-                                 <h6>2. Änderung der Nützungsbedingungen</h6>
-                                 <p>
-                                 Pappas Ele. Nikolaos Autovermietungen hat das Recht, diese Nutzungsbedingungen jederzeit zu überarbeiten und zu aktualisieren. Ihre fortgesetzte Nutzung der Website, nachdem Sie Änderungen an diesen Nutzungsbedingungen vorgenommen haben, bedeutet, dass Sie diese Änderungen akzeptieren. Jedes Element der Website kann nach eigenem Ermessen von Pappas Ele ohne Ankündigung geändert, ausgefüllt, gelöscht oder aktualisiert werden, im absoluten Urteil von Pappas Ele. Nikolaos Autovermietungen.
-                                 </p>
-                                  <h6>3. Lizenz - Webseite Eigentümer</h6>
-                                 <p>
-                                 Der gesamte Inhalt der Website, einschließlich, jedoch nicht beschränkt auf Texte, Nachrichten, Grafiken, Fotos, Grafiken, Bilder, Dienstleistungen und im Allgemeinen alle Arten von Archiven, ist geistiges Eigentum und unterliegt nationalen, europäischen und internationalen Bestimmungen zum Schutz geistigen Eigentums.
-                                 Daher ist die Vervielfältigung, Wiederveröffentlichung, das Kopieren, die Speicherung, der Verkauf, die Übermittlung, die Veröffentlichung, die Ausführung, das Herunterladen, die Übersetzung und die Änderung jeglicher Teile der Website ausdrücklich untersagt und in keiner Weise ohne die ausdrückliche schriftliche Zustimmung von Pappas Ele. Nikolaos »Autovermietungen, eingetragene Marken und Namen auf dieser Website sind Marken und unterliegen den oben genannten Gesetzen zum Schutz geistigen Eigentums.
-                                 Ausnahmsweise können einzelne Teile des Inhalts der Website ausschließlich für den persönlichen Gebrauch auf einem einfachen Personalcomputer gespeichert oder kopiert werden, ohne dass eine kommerzielle Nutzung beabsichtigt wird. Im Falle der Speicherung oder des Kopierens von Inhalten von der Website sollte dies als Ursprungsquelle bezeichnet werden, obwohl dies in keiner Weise die Erteilung von Rechten an geistigem Eigentum impliziert. Einige auf der Website enthaltene Informationen, die von anderen Unternehmen stammen, sind geistiges Eigentum der Urheber.
-                                 </p>
-                                 <h6>4. Inschränkungen der Nutzung der Website</h6>
-                                 <p>
-                                       Neben den anderen in diesen Nutzungsbedingungen festgelegten Einschränkungen stimmen Sie den folgenden Bedingungen zu:
-                                       <br>  a)	Sie verbergen nicht den Ursprung der über die Website übertragenen Informationen
-                                       <br>  b)	Sie werden keine falschen oder irreführenden Informationen über die Website bereitstellen
-                                       <br>  c)	ΔSie werden sich nicht anmelden und Dienste, Informationen, Anwendungen usw.benützen, die über die Website verfügbar sind, auf eine Art und Weise verwenden, die nicht ausdrücklich von "Pappas El. Nikolaos" erlaubt sind.
-                                       <br>  d)	Sie werden keine Elemente auf der Website importieren / hochladen, die Viren, trojanische Pferde, Würmer, Zeitbomben oder andere Computerprogrammierungsroutinen enthalten, die Schäden, Interferenzen, Abfangen oder Beschlagnahme von Systemen, Websites oder Informationen verursachen oder gegen verstoßen die geistigen Eigentumsrechte anderer verstoßen.
-   
-                                 </p>
-                                 <h6>5. Links zu anderen Webseiten</h6>
-                                 <p>
-                                         a) Externe Verbindungen Die Website kann Links zu Websites und Ressourcen Dritter (verlinkte Websites) enthalten. Diese verbundenen Websites werden nur zu Ihrer Bequemlichkeit zur Verfügung gestellt und nicht als Websites, deren Inhalte von "Pappas El. Nikolaos »Mieten Sie ein Auto« Pappas Ele. Nicholas' Autovermietung gibt keine Zusicherungen oder Garantien bezüglich der Richtigkeit, Genauigkeit, Leistung oder Qualität der Inhalte, Software, Dienste oder Anwendungen ist in verknüpften Seiten. "Pappas Ele. Nikolaos" Autovermietung ist nicht verantwortlich für die Verfügbarkeit der verlinkten Seiten oder deren Inhalte oder Aktivitäten. Wenn Sie sich für die Anmeldung bei verbundenen Websites entscheiden, geschieht dies auf eigenes Risiko und auf eigenes Risiko. Darüber hinaus unterliegt die Nutzung der verlinkten Websites den geltenden Richtlinien und Bedingungen, einschließlich der Datenschutzbestimmungen der verlinkten Website.
-                                        <br> (b) Interne Verbindungen. Der Link zu einer anderen Seite der Site als "Pappas Ele. Nikolaos" Das Mieten eines Autos über einen einfachen Textlink ist strengstens untersagt, es sei denn, mit Pappas El. Nikolaos Autovermietung. Jede Website oder ein anderes Gerät, die einen Link zur https://breezerentals.gr oder einer darin verfügbaren Seite enthält, ist nicht berechtigt, (a) den Inhalt zu reproduzieren, (b) einen Browser oder eine Randumgebung um den Inhalt herum zu verwenden, (c) implizieren in irgendeiner Weise, dass "Pappas Ele. Nicholas »Autovermietung genehmigt,(d) eine Situation falsch zu interpretieren, einschließlich ihrer Beziehung zu Pappas El. Nikolaos Autovermietung, (e) falsche Informationen über die Dienstleistungen von" Pappas El. Nicholas 'Autovermietungen, und (f) verwenden Sie ein Logo oder Abzeichen von "Pappas El. Nikolaos" Autovermietung ohne vorherige ausdrückliche schriftliche Genehmigung von" Pappas Ele. Nikolaos »Mieten Sie ein Auto.
-                                         
-                                 </p>
-                                 <h6>6. Beendigung des Website-Services</h6>
-                                 <p>
-                                 Sie stimmen zu, dass "Pappas Ele. Nikolaos" Autovermietung ist nach eigenem Ermessen jederzeit berechtigt, die Nutzung der Site, ihrer Inhalte und / oder Informationen durch Sie jederzeit und ohne Angabe von Gründen oder ohne Angabe von Gründen zu beenden oder auszusetzen, selbst wenn der Zugriff erfolgt und Verwendung weiterhin für andere erlaubt. Bei einer solchen Aussetzung oder Beendigung der Nutzung müssen Sie (a) die Nutzung der Website und der Dienste unverzüglich einstellen und (b) jegliche Kopie des von Ihnen erstellten Inhalts zerstören. Ihr Zugriff auf die Website, die Informationen oder die Dienste nach der Kündigung, Aussetzung oder Unterbrechung des Vorstehenden ist eine rechtswidrige Eingabe. Darüber hinaus stimmen Sie zu, dass "Pappas Ele. Nikolaos" Autovermietung haftet weder Ihnen noch Dritten für die Kündigung oder Aussetzung Ihres Zugriffs auf die Website, Informationen und / oder Leistungen.
-                                 </p>
-                                 <h6>7. Beschränkte Haftung</h6>
-                                 <p>
-                                 "Pappas Ele. Nikolaos" Autovermietung bemüht sich sehr ernshaft sicherzustellen, dass die Informationen auf der Website und deren Inhalt insgesamt korrekt, klar, gültig, vollständig, richtig und verfügbar sind.
-                                       <br>Für allfällige dadurch entstehende Komplikationen, Systemausfälle und übrigen Schaden , einschließlich Fahrlässigkeit, kann "Pappas el. Nikolaos" Autovermietung  Haftung übernehmen.
-                                         
-                                 </p>
-                                 <h6>8. Pflichten des Nutzers</h6>
-                                 <p>
-                                 Der Besucher von https://breezerentals.gr ist verpflichtet, die einschlägigen Bestimmungen des griechischen, europäischen und internationalen Rechts sowie der einschlägigen Telekommunikationsgesetze einzuhalten. Darüber hinaus muss der Betroffene jegliche illegale und missbräuchliche Verwendung der Netzwerkinhalte unterlassen. Der Besucher übernimmt die Verantwortung für jegliche Form von Schäden, die der Besucher durch unangemessene Handlungen an der Website verursacht hat. Im Falle von Klagen, Ansprüchen, administrativen oder gerichtlichen Klagen gegen die Website, die auf irgendeine Art von Rechtsverletzung beruhen, verpflichtet sich diese, in das entsprechende Gerichtsverfahren einzugreifen und andererseits die Website von der Entschädigung zu befreien, falls sie Schadensersatz oder sonstiges leisten muss.
-                                 </p>
-                                 <h6>9. Geltendes Recht und andere Bedingungen </h6>
-                                 <p>
-                                 Dieser Nutzungsvertrag unterliegt den Bestimmungen des griechischen und des internationalen Rechts sowie den Richtlinien und Verordnungen des Europarechts. Es wird auf der Grundlage von Treu und Glauben und der Geschäftsethik interpretiert. Sollte sich herausstellen, dass eine Bestimmung rechtswidrig und daher nichtig oder nichtig ist, wird sie automatisch ungültig, ohne die Gültigkeit der übrigen Bestimmungen zu beeinträchtigen. Zuständige Gerichte für daraus entstehende Streitigkeiten sind die Gerichte von Athen.
-                                       <br>  Bei Problemen mit dem Inhalt der Website wenden Sie sich bitte an https://breezerentals.gr unter +30 21 0608 0461 oder per E-Mail: info@breezerentals.gr
-                                         
-                                 </p>
-                             </div>
-                         </div>
-                     </div>
-             </div>
-             
-             <!-- Modal footer -->
-             <div class="modal-footer">
-               <button type="button" class="btn btn-large btn-success" data-dismiss="modal">Close</button>
-             </div>
-             
-           </div>
-         </div>
-       </div>
-   
-        <!--Footer ends-->`
-    ]
+     <!--Footer ends-->`]
      
 
 

@@ -56,6 +56,9 @@
                     if(localStorage.language == 'English'){
                         window.location = '/'
                     }
+                    else if(localStorage.language == 'German'){
+                        window.location = '/GE.html'
+                    }
                window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "palette": {
@@ -81,8 +84,6 @@ window.cookieconsent.initialise({
                 <!--GDPR COOKIE CODE END-->  
     </head>     
     <body data-spy="scroll" data-target=".navbar" data-offset="90"> 
-            <script src="api/englishBody.js"></script>
-            <script src="api/greekBody.js"></script>
             <script src="api/indexTranslator.js"></script>
             <script src="api/languages.js"></script>
          
