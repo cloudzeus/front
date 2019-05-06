@@ -34,7 +34,7 @@
                document.querySelector('#contactusURL').setAttribute('href', 'https://breezerentals.gr/index.html#contactus');
                console.log(languageUrl);
             }else if (menuLanguage ==='German'){
-               languageUrl = 'https://breezerentals.gr/German.html';
+               languageUrl = 'https://breezerentals.gr/GE.html';
                console.log(languageUrl);
             }
             console.log('languageURL is '+ languageUrl);
