@@ -176,8 +176,8 @@ const languages = {
   Address:["Address","Διεύ/νση","Adresse"],
   City:["City","Πόλη","Stadt"],
   ZIP:["ZIP","Τ.Κ.","PLZ"],
-  Drivers_License_Num:["Drivers License Num","Αριθμός Διπλώματος","Führerschein Nummer"],
-  Customer_Identity_passport:["Customer Identity/passport","Αριθμός Ταυτότητας ή Διαβατηρίου","Reisepass Nummer"],
+  Drivers_License_Num:["Drivers License Num","Αριθμός Διπλώματος","Führerscheinnummer"],
+  Customer_Identity_passport:["Customer Identity/passport","Αριθμός Ταυτότητας ή Διαβατηρίου","Reisepassnummer"],
   Phone_Number:["Phone Number","Τηλέφωνο","Telefon Nummer"],
   Terms_and_conditions:["Terms and conditions","Όροι και προυποθέσεις","AGB"],
   terms : [`Reservations: All reservations are based on a vehicle category and not a certain car model. In case of no availability for a confirmed reservation, Breeze Rentals reserves the right to offer a vehicle of bigger category to the customer with no extra charge.
@@ -325,7 +325,11 @@ const languages = {
   blog : ["Blog","Blog","Blog"],
   contact : ["Contact","Επικοινωνία","Kontakt"],
   languages : ["Languages - English","Γλώσσα - Ελληνικά","Sprachen - German"],
-  Reservation_Details : ["Reservation Details"],
+  ReservationDetails : ["Reservation Details","Πληροφορίες Κράτησης","Reservierungsdetails"],
+  PaymentType : ["Payment Type","Τρόπος Πληρωμής","Zahlungsweise"],
+  TransactionId : ["Transaction ID","Κωδικός Συναλαγής","Transaktionscode"],
+  ReservationNumber : ["Reservation Number","Αριθμός Κράτησης","Reservierungsnummer"],
+  BookingDate : ["Booking Date","Ημέρα Κράτησης","Tag der Reservierung"],
   
   label_2 : ['Pick up charge 10€ ','Χρέωση Παραλαβής 10€ ','Abholungskosten 10€ '],
   label_3 : ['Extra Driver ','Έπιπλεον οδηγός ','Zusätzlicher Fahrer '],

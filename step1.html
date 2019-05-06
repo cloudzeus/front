@@ -1498,26 +1498,44 @@
                               locales.push('en-US');
                            </script>
                               <div>
-                                 <h3 class="reservationHeader text-center">Reservation Details</h3>
+                                 <h3 class="reservationHeader text-center">
+                                    <script>
+                                       document.write(lib.translator('ReservationDetails'))
+                                    </script>
+                                 </h3>
                               </div>
                               <div class="container">
                                  <div class="row">
                                     <div class="col-md-3 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right border-top">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Payment Type:<span><i id="firstInfo"
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('PaymentType'))
+                                                </script>
+                                          :<span><i id="firstInfo"
                                                 class="fa fa-credit-card headerInfoIcon"></i></span></p>
                                        <p class="stepTwoHeaderPThree headerp">
                                           <script>document.write(userDetails.paymentType)</script>
                                        </p>
                                     </div>
                                     <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Transaction Id: <span><i class="fa fa-money-check headerInfoIcon"></i></span></p>
+                                         
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('TransactionId'))
+                                                </script>
+                                          : <span><i class="fa fa-money-check headerInfoIcon"></i></span></p>
                                        <p class="stepTwoHeaderPThree headerp" style="font-size:.8em;font-weight:bold">
                                              <script>document.write(payment.id)</script>
       
                                        </p>
                                     </div>
                                     <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Reservation Number: <span><i class="fa fa-file-invoice headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('ReservationNumber'))
+                                                </script>
+                                                
+                                                : <span><i class="fa fa-file-invoice headerInfoIcon"></i></span></p>
       
                                        <p class="stepTwoHeaderPThree headerp">
                                              <script>
@@ -1526,7 +1544,11 @@
                                        </p>
                                     </div>
                                     <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Booking Date: <span><i class="fa fa-calendar-alt headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('BookingDate'))
+                                                </script>
+                                          : <span><i class="fa fa-calendar-alt headerInfoIcon"></i></span></p>
       
                                        <p class="stepTwoHeaderPThree headerp mb-2">
                                           <script>
@@ -1537,7 +1559,11 @@
                                  </div>
                                  <div class="row">
                                     <div class="col-md-3 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Name:<span><i id="firstInfo" class="fa fa-user headerInfoIcon"
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('firstName'))
+                                                </script>
+                                          :<span><i id="firstInfo" class="fa fa-user headerInfoIcon"
                                                 data-toggle="popover" data-placement="top" title="Pick Up Details" data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
                                        <p class="stepTwoHeaderPThree headerp">
                                           <script>
@@ -1546,14 +1572,22 @@
                                        </p>
                                     </div>
                                     <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Last Name: <span><i class="fa fa-user headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('Last_Name'))
+                                                </script>
+                                          : <span><i class="fa fa-user headerInfoIcon"></i></span></p>
                                        <p class="stepTwoHeaderPThree headerp">
                                              <script>document.write(userDetails.CustomerLastName) </script>
       
                                        </p>
                                     </div>
                                     <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">E-mail: <span><i class="fa fa-at headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('email'))
+                                                </script>
+                                          : <span><i class="fa fa-at headerInfoIcon"></i></span></p>
       
                                        <small style="font-size:.7em;font-weight:bold" class="stepTwoHeaderPThree headerp">
                                              <script>document.write(userDetails.customeremail) </script>
@@ -1561,7 +1595,11 @@
                                        </small>
                                     </div>
                                     <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Phone Number: <span><i class="fa fa-phone headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('Phone_number'))
+                                                </script>
+                                          : <span><i class="fa fa-phone headerInfoIcon"></i></span></p>
       
                                        <p class="stepTwoHeaderPThree headerp mb-2">
                                              <script>document.write(userDetails.CustomerPhoneNumber) </script>
@@ -1571,21 +1609,34 @@
                                  </div>
                                  <div class="row">
                                     <div class="col-md-4 col-sm-12 stepTwoHeader border-md-down border-md-left border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Address:<span><i id="firstInfo" class="fa fa-map-pin headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('Address'))
+                                                </script>
+                                          
+                                          :<span><i id="firstInfo" class="fa fa-map-pin headerInfoIcon"></i></span></p>
                                        <p class="stepTwoHeaderPThree headerp">
                                              <script>document.write(userDetails.CustomerAddress) </script>
       
                                        </p>
                                     </div>
                                     <div class="col-md-4 col-sm-6 border-md-left border-md-down border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">City: <span><i class="fa fa-map-signs headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('city'))
+                                                </script>
+                                          : <span><i class="fa fa-map-signs headerInfoIcon"></i></span></p>
                                        <p class="stepTwoHeaderPThree headerp">
                                              <script>document.write(userDetails.CustomerCity) </script>
       
                                        </p>
                                     </div>
                                     <div class="col-md-4 col-sm-6 border-md-left border-md-down border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Zip Code: <span><i class="fa fa-compass headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('zip'))
+                                                </script>
+                                          : <span><i class="fa fa-compass headerInfoIcon"></i></span></p>
       
                                        <p class="stepTwoHeaderPThree headerp">
                                              <script>document.write(userDetails.CustomerZipCode) </script>
@@ -1596,7 +1647,11 @@
                                  </div>
                                  <div class="row">
                                     <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Drivers License:<span><i id="firstInfo"
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('Drivers_License'))
+                                                </script>
+                                          :<span><i id="firstInfo"
                                                 class="fa fa-id-badge headerInfoIcon"></i></span></p>
                                        <p class="stepTwoHeaderPThree headerp">
                                              <script>document.write(userDetails.CustomerLicense) </script>
@@ -1604,7 +1659,11 @@
                                        </p>
                                     </div>
                                     <div class="col-md-6 col-sm-6 border-md-left border-md-down border-md-right">
-                                       <p class="stepTwoHeaderPFirst headerp headerTop">Customer Identity/Passport number: <span><i
+                                       <p class="stepTwoHeaderPFirst headerp headerTop">
+                                             <script>
+                                                   document.write(lib.translator('Customer_Identity_passport'))
+                                                </script>
+                                          : <span><i
                                                 class="fa fa-passport headerInfoIcon"></i></span></p>
                                        <p class="stepTwoHeaderPThree headerp">
                                              <script>document.write(userDetails.CustomerIdentityNumber) </script>
