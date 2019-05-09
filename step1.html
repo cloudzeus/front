@@ -277,73 +277,228 @@
                            </form>
                         </div>
                         <div id="step-2" class="tab-pane step-content" data-toggle="snackbar" data-content="Pick up location sis mandatory please fill the pick up location! <a href='#' class='btn btn-danger'>Check it out</a>" data-html-allowed="true" data-timeout="30">
-                              <script>
+                           <script>
 
-                        var {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
-                        var { StartDate,StartTime,EndTime,EndDate} = pickupDetails;
+                     var {pickupDetails,category,make,totalCharge,extras} = JSON.parse(localStorage.selectedCar);
+                     var { StartDate,StartTime,EndTime,EndDate} = pickupDetails;
 
-                        var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
-                        var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
-                        var currentLang = localStorage.language
-                        var _startDate = new Date(StartDate+" "+StartTime)
-                        var _endDate = new Date(EndDate+" "+EndTime)
-                        var dateTimeFormat1 = new Intl.DateTimeFormat('de', dateOptions);
-                        var startDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) :  _startDate.toLocaleDateString(locales,dateOptions)
-                        var  endDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) : _endDate.toLocaleDateString(locales,dateOptions)
+                     var startMinutes = (parseInt(StartTime.split(":")[0]) * 60 ) + parseInt(StartTime.split(":")[1])
+                     var endMinutes = (parseInt(EndTime.split(":")[0]) * 60 ) + parseInt(EndTime.split(":")[1])
+                     var currentLang = localStorage.language
+                     var _startDate = new Date(StartDate+" "+StartTime)
+                     var _endDate = new Date(EndDate+" "+EndTime)
+                     var dateTimeFormat1 = new Intl.DateTimeFormat('de', dateOptions);
+                     var startDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) :  _startDate.toLocaleDateString(locales,dateOptions)
+                     var  endDateString = currentLang == 'German'? dateTimeFormat1.format(_startDate) : _endDate.toLocaleDateString(locales,dateOptions)
 
 
-            
-                                    </script>
-                           <div id="searchResults" class="container" style="margin-top:-20px;">
-                              <div class="row  mb-3">
-                                    <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
-                                          <p class="stepTwoHeaderPFirst headerp headerTop"><script>document.write(lib.translator("PICK_UP"))</script> :<span><i id="firstInfo" class="fa fa-map headerInfoIcon"
-                                                   data-toggle="popover" data-placement="top" title="Pick Up Details"
-                                                   data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
-                                          <p class="stepTwoHeaderPTwo pickupHeader headerp"></p>
-                                          <p class="stepTwoHeaderPThree pickupDate headerp">
-                                             
-                                          </p>
-                                       </div>
-                                       <div class="col-md-6 col-sm-6 border-md-left border-md-down border-md-right">
-                                          <p class="stepTwoHeaderPFirst  headerp headerTop"><script>document.write(lib.translator("DROP_OFF"))</script>: <span><i class="fa fa-map headerInfoIcon"></i></span></p>
-                                          <p class="stepTwoHeaderPTwo dropOffHeader headerp"></p>
-                                          <p class="stepTwoHeaderPThree dropOffDate headerp">
-                                               
-                                          </p>
-                                       </div>
-                                       <div class="col-md-4 col-sm-12 border-md-left border-md-down border-md-right d-md-none">
-                                 </div>
+         
+                                 </script>
+                        <div id="searchResults" class="container" style="margin-top:-20px;">
+                           <div class="row  mb-3">
+                                 <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
+                                       <p class="stepTwoHeaderPFirst headerp headerTop"><script>document.write(lib.translator("PICK_UP"))</script> :<span><i id="firstInfo" class="fa fa-map headerInfoIcon"
+                                                data-toggle="popover" data-placement="top" title="Pick Up Details"
+                                                data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
+                                       <p class="stepTwoHeaderPTwo pickupHeader headerp"></p>
+                                       <p class="stepTwoHeaderPThree pickupDate headerp">
+                                          
+                                       </p>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 border-md-left border-md-down border-md-right">
+                                       <p class="stepTwoHeaderPFirst  headerp headerTop"><script>document.write(lib.translator("DROP_OFF"))</script>: <span><i class="fa fa-map headerInfoIcon"></i></span></p>
+                                       <p class="stepTwoHeaderPTwo dropOffHeader headerp"></p>
+                                       <p class="stepTwoHeaderPThree dropOffDate headerp">
+                                            
+                                       </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12 border-md-left border-md-down border-md-right d-md-none">
                               </div>
-                               <div class="row border-bottom infoBarStepTwo">
-                                 <div class="col-md-12 border-bottom">
-                                     <div class="dropdown">
-                                         <span class="spanFilterLabel"><script>document.write(lib.translator("Showing"))</script>:</span>
-                                         <button class="filter-btn btn-Filter dropdown-toggle" type="button" id="dropdownMenuButton"
-                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                             <script>document.write(lib.translator("All_Car_Categories"))</script>
-                                         </button>
-                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                             <a class="dropdown-item" href="#">Action</a>
-                                             <a class="dropdown-item" href="#">Another action</a>
-                                             <a class="dropdown-item" href="#">Something else here</a>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 </div>
-                                 <!-- Start for every car result-->
+                           </div>
+                            <div class="row border-bottom infoBarStepTwo">
+                              <div class="col-md-12 border-bottom">
+                                  <div class="dropdown">
+                                      <span class="spanFilterLabel"><script>document.write(lib.translator("Showing"))</script>:</span>
+                                      <button class="filter-btn btn-Filter dropdown-toggle" type="button" id="dropdownMenuButton"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <script>document.write(lib.translator("All_Car_Categories"))</script>
+                                      </button>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">Action</a>
+                                          <a class="dropdown-item" href="#">Another action</a>
+                                          <a class="dropdown-item" href="#">Something else here</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                              <!-- Start for every car result-->
 
-                           <div class="row  border-bottom shadow rounded car-90">
+                        <div class="row  border-bottom shadow rounded car-90">
+                           <!-- Car Image-->
+                           <div class="col-sm-12 col-md-12 col-lg-4 wow fadeInUp px-0">
+                              <img src="images/ECONOMY.jpg" class="img-fluid  bg-white rounded" alt="">
+                           </div>
+                           <!-- Car Image-->
+                           <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
+                              <!-- Car Make-->
+                              <p class="mb-0 py-2">
+                                 <span class="makeHeader">VW POLO</span>
+                                 <input type="hidden" name="CarModelId" class="car-model-id" value="149">
+                                 <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
+                              <div class="row">
+                                 <div class="col-6 pl-3">
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left pb-1"><img src="images/taxytites.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts">
+                                                <script>document.write(lib.translator("Transition")); </script>:</span><span class="propertiesSpanFontsLabel"><script>document.write(lib.translator("Manual")) </script></span>
+                                       </div>
+                                    </div>
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left pb-1"><img src="images/carDoor.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Car_Dors")) </script>:</span><span class="propertiesSpanFontsLabel">5</span></div>
+                                    </div>
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left  pb-1"><img src="images/clima.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Clima")); </script>:</span><span class="propertiesSpanFontsLabel"><script>document.write(lib.translator("Air_Condition")) </script></span></div>
+                                    </div>
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left pb-1"><img src="images/People.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Passengers")) </script>:</span><span class="propertiesSpanFontsLabel">5</span></div>
+                                    </div>
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left pb-1 mb-2"><img src="images/lagage.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts">
+                                                <script>document.write(lib.translator("Laggages")) </script>:</span><span class="propertiesSpanFontsLabel">4</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Car Price and select button-->
+
+                                 <div class="col-6">
+                                    <div class="row">
+                                       <div class="col-12 text-center pb-md-2">
+                                          <h6 id="90" class="display-4 pricePerCar total-charge">
+                                             <input type="hidden" value=""/>
+                                             <p style="font-size:2.5rem !important"></p>
+                                          </h6>
+                                       </div>
+                                       <div class="col-12 text-center">
+                                          <button type="button" class="btn btn-myFormPre get-car">
+                                             <input type="hidden" value="90" />
+                                             <script>document.write(lib.translator("GET_THIS_CAR")) </script>
+                                          </button>
+                                       </div>
+                                       <div class="col-12 text-center py-md-1 mb-4">
+                                          <input type="hidden" class="car-cate" value="Economy">
+                                          <p class="mb-1"><span class="propertiesSpanFontsLabel"> <script>document.write(lib.translator("Economy"))</script> </span></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Car Price and select button-->
+                              </div>
+
+                           </div>
+                           <!-- Car extras-->
+
+                           <div class="col-12 pt-2  extrasBackGround">
+                              <div class="row justify-content-md-center">
+                                 <div class="col-6 col-md-6 col-lg-3 ">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">6.20€</span>
+
+                                       <a  class="description_3 btnInfo infoPrice align-middle infoLink" style="z-index:1000;"  href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car driver which will be charged daily but with maximum 5 days charge.">
+                                          <i class="fas fa-info-circle"></i>
+                                          </a>
+                                    <label class="switch" >
+                                       <input type="checkbox" name="label_3"class="default" value="6.20"  >
+                                       <span class="slider round"></span>
+
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">3.70€</span>
+                                    <a  class="description_7 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Car snow chains for snow expeditions which will be charged daily but with maximum 7 days charge.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch ">
+                                       <input type="checkbox" name="label_7" class="default" value="3.70">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_6"))</script> </span><span class="switchPrice">5.00€</span>
+                                    <a  class="description_6 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Baby Seat for ages from 2 to 4 which will be charged daily but with maximum 7 days charge.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch ">
+                                       <input type="checkbox" name="label_6" value="5.00" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">14.90€</span>
+                                    <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch ">
+                                       <input type="checkbox" name="label_9" value="14.90" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+
+                              </div>
+                              <div class="row justify-content-md-center">
+                                 <div class="col-6 col-md-6 col-lg-3 ">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">9.90€</span>
+                                    <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch">
+                                       <input type="checkbox" name="label_8" value="9.90" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">6.20€</span>
+                                    <a  class="description_10 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch ">
+                                       <input type="checkbox" name="label_10" value="6.20" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">9.90€</span>
+                                    <a  class="description_4 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Portable GPS device  which will be charged daily with maximum 6 days of charge.">
+                                          <i class="fas fa-info-circle"></i>
+                                          </a>
+                                    <label class="switch ">
+
+                                       <input type="checkbox" name="label_4" value="9.9" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+                           <!-- Car extras-->
+                        </div>
+                        
+                        <div class="row  border-bottom shadow rounded car-91">
                               <!-- Car Image-->
-                              <div class="col-sm-12 col-md-12 col-lg-4 wow fadeInUp px-0">
-                                 <img src="images/ECONOMY.jpg" class="img-fluid  bg-white rounded" alt="">
+                              <div class="col-sm-12 col-md-12 col-lg-4 pt-2 wow fadeInUp px-0">
+                                 <img src="images/MINIVAN.jpg" class="img-fluid  bg-white rounded" alt="">
                               </div>
                               <!-- Car Image-->
                               <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
                                  <!-- Car Make-->
                                  <p class="mb-0 py-2">
-                                    <span class="makeHeader">VW POLO</span>
-                                    <input type="hidden" name="CarModelId" class="car-model-id" value="149">
+                                    <span class="makeHeader">FIAT</span>
+                                    <input class="car-model-id" type="hidden" name="CarModelId" value="150">
                                     <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
                                  <div class="row">
                                     <div class="col-6 pl-3">
@@ -377,20 +532,20 @@
                                     <div class="col-6">
                                        <div class="row">
                                           <div class="col-12 text-center pb-md-2">
-                                             <h6 id="90" class="display-4 pricePerCar total-charge">
+                                             <h6 id="91" class="display-4 pricePerCar total-charge">
                                                 <input type="hidden" value=""/>
-                                                <p style="font-size:2.5rem !important"></p>
+                                                <p style="font-size: 2.5rem"></p>
                                              </h6>
                                           </div>
                                           <div class="col-12 text-center">
                                              <button type="button" class="btn btn-myFormPre get-car">
-                                                <input type="hidden" value="90" />
+                                                <input type="hidden" value="91" />
                                                 <script>document.write(lib.translator("GET_THIS_CAR")) </script>
                                              </button>
                                           </div>
                                           <div class="col-12 text-center py-md-1 mb-4">
-                                             <input type="hidden" class="car-cate" value="Economy">
-                                             <p class="mb-1"><span class="propertiesSpanFontsLabel"> <script>document.write(lib.translator("Economy"))</script> </span></p>
+                                             <input type="hidden" class="car-cate" value="VAN">
+                                             <p class="mb-1"><span class="propertiesSpanFontsLabel"> <script>document.write(lib.translator("VAN"))</script> </span></p>
                                           </div>
                                        </div>
                                     </div>
@@ -403,24 +558,24 @@
                               <div class="col-12 pt-2  extrasBackGround">
                                  <div class="row justify-content-md-center">
                                     <div class="col-6 col-md-6 col-lg-3 ">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">10.00€</span>
+                                       <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">6.20€</span>
 
                                           <a  class="description_3 btnInfo infoPrice align-middle infoLink" style="z-index:1000;"  href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car driver which will be charged daily but with maximum 5 days charge.">
                                              <i class="fas fa-info-circle"></i>
                                              </a>
                                        <label class="switch" >
-                                          <input type="checkbox" name="label_3"class="default" value="10.00"  >
+                                          <input type="checkbox" name="label_3"class="default" value="6.20"  >
                                           <span class="slider round"></span>
 
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">0.00€</span>
+                                       <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">3.70€</span>
                                        <a  class="description_7 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Car snow chains for snow expeditions which will be charged daily but with maximum 7 days charge.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch ">
-                                          <input type="checkbox" name="label_7" class="default" value="0.00">
+                                          <input type="checkbox" name="label_7" class="default" value="3.70">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -435,12 +590,12 @@
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">12.00€</span>
-                                       <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 14€ deductible for comprehensive and collision which will be charged daily.">
+                                       <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">14.90€</span>
+                                       <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch ">
-                                          <input type="checkbox" name="label_9" value="12.00" class="default">
+                                          <input type="checkbox" name="label_9" value="14.90" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -448,33 +603,33 @@
                                  </div>
                                  <div class="row justify-content-md-center">
                                     <div class="col-6 col-md-6 col-lg-3 ">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">14.00€</span>
-                                       <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 12€ deductible for comprehensive and collision which will be charged daily.">
+                                       <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">9.90€</span>
+                                       <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch">
-                                          <input type="checkbox" name="label_8" value="14.00" class="default">
+                                          <input type="checkbox" name="label_8" value="9.90" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">12.00€</span>
+                                       <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">6.20€</span>
                                        <a  class="description_10 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch ">
-                                          <input type="checkbox" name="label_10" value="12.00" class="default">
+                                          <input type="checkbox" name="label_10" value="6.20" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">4.00€</span>
+                                       <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">9.90€</span>
                                        <a  class="description_4 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Portable GPS device  which will be charged daily with maximum 6 days of charge.">
                                              <i class="fas fa-info-circle"></i>
                                              </a>
                                        <label class="switch ">
 
-                                          <input type="checkbox" name="label_4" value="4.00" class="default">
+                                          <input type="checkbox" name="label_4" value="9.9" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -487,330 +642,21 @@
                               </div>
                               <!-- Car extras-->
                            </div>
-                           
-                           <div class="row  border-bottom shadow rounded car-91">
-                                 <!-- Car Image-->
-                                 <div class="col-sm-12 col-md-12 col-lg-4 pt-2 wow fadeInUp px-0">
-                                    <img src="images/MINIVAN.jpg" class="img-fluid  bg-white rounded" alt="">
-                                 </div>
-                                 <!-- Car Image-->
-                                 <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
-                                    <!-- Car Make-->
-                                    <p class="mb-0 py-2">
-                                       <span class="makeHeader">FIAT</span>
-                                       <input class="car-model-id" type="hidden" name="CarModelId" value="150">
-                                       <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
-                                    <div class="row">
-                                       <div class="col-6 pl-3">
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left pb-1"><img src="images/taxytites.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts">
-                                                      <script>document.write(lib.translator("Transition")); </script>:</span><span class="propertiesSpanFontsLabel"><script>document.write(lib.translator("Manual")) </script></span>
-                                             </div>
-                                          </div>
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left pb-1"><img src="images/carDoor.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Car_Dors")) </script>:</span><span class="propertiesSpanFontsLabel">5</span></div>
-                                          </div>
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left  pb-1"><img src="images/clima.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Clima")); </script>:</span><span class="propertiesSpanFontsLabel"><script>document.write(lib.translator("Air_Condition")) </script></span></div>
-                                          </div>
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left pb-1"><img src="images/People.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Passengers")) </script>:</span><span class="propertiesSpanFontsLabel">5</span></div>
-                                          </div>
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left pb-1 mb-2"><img src="images/lagage.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts">
-                                                      <script>document.write(lib.translator("Laggages")) </script>:</span><span class="propertiesSpanFontsLabel">4</span>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <!-- Car Price and select button-->
-
-                                       <div class="col-6">
-                                          <div class="row">
-                                             <div class="col-12 text-center pb-md-2">
-                                                <h6 id="91" class="display-4 pricePerCar total-charge">
-                                                   <input type="hidden" value=""/>
-                                                   <p style="font-size: 2.5rem"></p>
-                                                </h6>
-                                             </div>
-                                             <div class="col-12 text-center">
-                                                <button type="button" class="btn btn-myFormPre get-car">
-                                                   <input type="hidden" value="91" />
-                                                   <script>document.write(lib.translator("GET_THIS_CAR")) </script>
-                                                </button>
-                                             </div>
-                                             <div class="col-12 text-center py-md-1 mb-4">
-                                                <input type="hidden" class="car-cate" value="VAN">
-                                                <p class="mb-1"><span class="propertiesSpanFontsLabel"> <script>document.write(lib.translator("VAN"))</script> </span></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <!-- Car Price and select button-->
-                                    </div>
-
-                                 </div>
-                                 <!-- Car extras-->
-
-                                 <div class="col-12 pt-2  extrasBackGround">
-                                    <div class="row justify-content-md-center">
-                                       <div class="col-6 col-md-6 col-lg-3 ">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">10.00€</span>
-
-                                             <a  class="description_3 btnInfo infoPrice align-middle infoLink" style="z-index:1000;"  href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car driver which will be charged daily but with maximum 5 days charge.">
-                                                <i class="fas fa-info-circle"></i>
-                                                </a>
-                                          <label class="switch" >
-                                             <input type="checkbox" name="label_3"class="default" value="10.00"  >
-                                             <span class="slider round"></span>
-
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">0.00€</span>
-                                          <a  class="description_7 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Car snow chains for snow expeditions which will be charged daily but with maximum 7 days charge.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch ">
-                                             <input type="checkbox" name="label_7" class="default" value="0.00">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_6"))</script> </span><span class="switchPrice">5.00€</span>
-                                          <a  class="description_6 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Baby Seat for ages from 2 to 4 which will be charged daily but with maximum 7 days charge.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch ">
-                                             <input type="checkbox" name="label_6" value="5.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">12.00€</span>
-                                          <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 14€ deductible for comprehensive and collision which will be charged daily.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch ">
-                                             <input type="checkbox" name="label_9" value="12.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-
-                                    </div>
-                                    <div class="row justify-content-md-center">
-                                       <div class="col-6 col-md-6 col-lg-3 ">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">14.00€</span>
-                                          <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 12€ deductible for comprehensive and collision which will be charged daily.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch">
-                                             <input type="checkbox" name="label_8" value="14.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">12.00€</span>
-                                          <a  class="description_10 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch ">
-                                             <input type="checkbox" name="label_10" value="12.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">4.00€</span>
-                                          <a  class="description_4 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Portable GPS device  which will be charged daily with maximum 6 days of charge.">
-                                                <i class="fas fa-info-circle"></i>
-                                                </a>
-                                          <label class="switch ">
-
-                                             <input type="checkbox" name="label_4" value="4.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                                 <!-- Car extras-->
-                              </div>
 
 
-                              <div class="row  border-bottom shadow rounded">
-                                 <!-- Car Image-->
-                                 <div class="col-sm-12 col-md-12 col-lg-4 pt-2 wow fadeInUp px-0">
-                                    <img src="images/FAMILY.jpg" class="img-fluid  bg-white rounded" alt="">
-                                 </div>
-                                 <!-- Car Image-->
-                                 <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
-                                    <!-- Car Make-->
-                                    <p class="mb-0 py-2">
-                                       <span class="makeHeader">AUDI A3</span>
-                                       <input type="hidden" name="CarModelId" class="car-model-id" value="">
-                                       <small class="pl-1">
-                                          <script>document.write(lib.translator("Or_similar")) </script></small></p>
-                                    <div class="row">
-                                       <div class="col-6 pl-3">
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left pb-1"><img src="images/taxytites.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts">
-                                                      <script>document.write(lib.translator("Transition")); </script>:</span><span class="propertiesSpanFontsLabel"><script>document.write(lib.translator("Manual")) </script></span>
-                                             </div>
-                                          </div>
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left pb-1"><img src="images/carDoor.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Car_Dors")) </script>:</span><span class="propertiesSpanFontsLabel">5</span></div>
-                                          </div>
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left  pb-1"><img src="images/clima.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Clima")); </script>:</span><span class="propertiesSpanFontsLabel"><script>document.write(lib.translator("Air_Condition")) </script></span></div>
-                                          </div>
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left pb-1"><img src="images/People.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Passengers")) </script>:</span><span class="propertiesSpanFontsLabel">5</span></div>
-                                          </div>
-                                          <div class="text-center row">
-                                             <div class="col-12 text-left pb-1 mb-2"><img src="images/lagage.svg" width="16px"
-                                                   alt=""><span class="propertiesSpanFonts">
-                                                      <script>document.write(lib.translator("Laggages")) </script>:</span><span class="propertiesSpanFontsLabel">4</span>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <!-- Car Price and select button-->
-   
-                                       <div class="col-6">
-                                          <div class="row">
-                                             <div class="col-12 text-center pb-md-2">
-                                                <!-- <small class="display-4 ">
-                                                   <span class="badge badge-danger border-rounded ">Not Available</span>
-                                                </small> -->
-                                             </div>
-                                             <div class="col-12 text-center">
-                                                <button type="button" class="btn btn-danger">
-                                                   <input type="hidden" value="" />
-                                                   <script>document.write(lib.translator("notAvailable")) </script>
-                                                </button>
-                                             </div>
-                                             <div class="col-12 text-center py-md-1 mb-4">
-                                                <input type="hidden" class="car-cate" value="Family">
-                                                <p class="mb-1"><span class="propertiesSpanFontsLabel"> <script>document.write(lib.translator("Family"))</script> </span></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <!-- Car Price and select button-->
-                                    </div>
-   
-                                 </div>
-                                 <!-- Car extras-->
-   
-                                 <div class="col-12 pt-2  extrasBackGround">
-                                    <div class="row justify-content-md-center">
-                                       <div class="col-6 col-md-6 col-lg-3 ">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">10.00€</span>
-   
-                                             <a  class="description_3 btnInfo infoPrice align-middle infoLink" style="z-index:1000;"  href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car driver which will be charged daily but with maximum 5 days charge.">
-                                                <i class="fas fa-info-circle"></i>
-                                                </a>
-                                          <label class="switch" >
-                                             <input type="checkbox" name="label_3"class="default" value="10.00"  >
-                                             <span class="slider round"></span>
-   
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">0.00€</span>
-                                          <a  class="description_7 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Car snow chains for snow expeditions which will be charged daily but with maximum 7 days charge.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch ">
-                                             <input type="checkbox" name="label_7" class="default" value="0.00">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_6"))</script> </span><span class="switchPrice">5.00€</span>
-                                          <a  class="description_6 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Baby Seat for ages from 2 to 4 which will be charged daily but with maximum 7 days charge.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch ">
-                                             <input type="checkbox" name="label_6" value="5.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">12.00€</span>
-                                          <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 14€ deductible for comprehensive and collision which will be charged daily.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch ">
-                                             <input type="checkbox" name="label_9" value="12.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-   
-                                    </div>
-                                    <div class="row justify-content-md-center">
-                                       <div class="col-6 col-md-6 col-lg-3 ">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">14.00€</span>
-                                          <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 12€ deductible for comprehensive and collision which will be charged daily.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch">
-                                             <input type="checkbox" name="label_8" value="14.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">12.00€</span>
-                                          <a  class="description_10 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.">
-                                             <i class="fas fa-info-circle"></i>
-                                             </a>
-                                          <label class="switch ">
-                                             <input type="checkbox" name="label_10" value="12.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-                                          <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">4.00€</span>
-                                          <a  class="description_4 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Portable GPS device  which will be charged daily with maximum 6 days of charge.">
-                                                <i class="fas fa-info-circle"></i>
-                                                </a>
-                                          <label class="switch ">
-   
-                                             <input type="checkbox" name="label_4" value="4.00" class="default">
-                                             <span class="slider round"></span>
-                                          </label>
-                                       </div>
-                                       <div class="col-6 col-md-6 col-lg-3">
-   
-                                       </div>
-   
-                                    </div>
-   
-                                 </div>
-                                 <!-- Car extras-->
-                              </div>
-                              
                            <div class="row  border-bottom shadow rounded">
                               <!-- Car Image-->
                               <div class="col-sm-12 col-md-12 col-lg-4 pt-2 wow fadeInUp px-0">
-                                 <img src="images/MINI.jpg" class="img-fluid  bg-white rounded" alt="">
+                                 <img src="images/FAMILY.jpg" class="img-fluid  bg-white rounded" alt="">
                               </div>
                               <!-- Car Image-->
                               <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
                                  <!-- Car Make-->
                                  <p class="mb-0 py-2">
-                                    <span class="makeHeader">VW UP</span>
+                                    <span class="makeHeader">AUDI A3</span>
                                     <input type="hidden" name="CarModelId" class="car-model-id" value="">
-                                    <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
+                                    <small class="pl-1">
+                                       <script>document.write(lib.translator("Or_similar")) </script></small></p>
                                  <div class="row">
                                     <div class="col-6 pl-3">
                                        <div class="text-center row">
@@ -854,8 +700,8 @@
                                              </button>
                                           </div>
                                           <div class="col-12 text-center py-md-1 mb-4">
-                                             <input type="hidden" class="car-cate" value="Mini">
-                                             <p class="mb-1"><span class="propertiesSpanFontsLabel"> <script>document.write(lib.translator("Mini"))</script> </span></p>
+                                             <input type="hidden" class="car-cate" value="Family">
+                                             <p class="mb-1"><span class="propertiesSpanFontsLabel"> <script>document.write(lib.translator("Family"))</script> </span></p>
                                           </div>
                                        </div>
                                     </div>
@@ -868,24 +714,24 @@
                               <div class="col-12 pt-2  extrasBackGround">
                                  <div class="row justify-content-md-center">
                                     <div class="col-6 col-md-6 col-lg-3 ">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">10.00€</span>
+                                       <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">6.20€</span>
 
                                           <a  class="description_3 btnInfo infoPrice align-middle infoLink" style="z-index:1000;"  href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car driver which will be charged daily but with maximum 5 days charge.">
                                              <i class="fas fa-info-circle"></i>
                                              </a>
                                        <label class="switch" >
-                                          <input type="checkbox" name="label_3"class="default" value="10.00"  >
+                                          <input type="checkbox" name="label_3"class="default" value="6.20"  >
                                           <span class="slider round"></span>
 
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">0.00€</span>
+                                       <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">3.70€</span>
                                        <a  class="description_7 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Car snow chains for snow expeditions which will be charged daily but with maximum 7 days charge.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch ">
-                                          <input type="checkbox" name="label_7" class="default" value="0.00">
+                                          <input type="checkbox" name="label_7" class="default" value="3.70">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -900,12 +746,12 @@
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">12.00€</span>
-                                       <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 14€ deductible for comprehensive and collision which will be charged daily.">
+                                       <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">14.90€</span>
+                                       <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch ">
-                                          <input type="checkbox" name="label_9" value="12.00" class="default">
+                                          <input type="checkbox" name="label_9" value="14.90" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -913,33 +759,33 @@
                                  </div>
                                  <div class="row justify-content-md-center">
                                     <div class="col-6 col-md-6 col-lg-3 ">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">14.00€</span>
-                                       <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 12€ deductible for comprehensive and collision which will be charged daily.">
+                                       <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">9.90€</span>
+                                       <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch">
-                                          <input type="checkbox" name="label_8" value="14.00" class="default">
+                                          <input type="checkbox" name="label_8" value="9.90" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">12.00€</span>
+                                       <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">6.20€</span>
                                        <a  class="description_10 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.">
                                           <i class="fas fa-info-circle"></i>
                                           </a>
                                        <label class="switch ">
-                                          <input type="checkbox" name="label_10" value="12.00" class="default">
+                                          <input type="checkbox" name="label_10" value="6.20" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
                                     <div class="col-6 col-md-6 col-lg-3">
-                                       <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">4.00€</span>
+                                       <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">9.90€</span>
                                        <a  class="description_4 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Portable GPS device  which will be charged daily with maximum 6 days of charge.">
                                              <i class="fas fa-info-circle"></i>
                                              </a>
                                        <label class="switch ">
 
-                                          <input type="checkbox" name="label_4" value="4.00" class="default">
+                                          <input type="checkbox" name="label_4" value="9.9" class="default">
                                           <span class="slider round"></span>
                                        </label>
                                     </div>
@@ -952,14 +798,168 @@
                               </div>
                               <!-- Car extras-->
                            </div>
-                           <!-- end for every car result-->
+                           
+                        <div class="row  border-bottom shadow rounded">
+                           <!-- Car Image-->
+                           <div class="col-sm-12 col-md-12 col-lg-4 pt-2 wow fadeInUp px-0">
+                              <img src="images/MINI.jpg" class="img-fluid  bg-white rounded" alt="">
+                           </div>
+                           <!-- Car Image-->
+                           <div class="col-sm-12 col-lg-7 pl-3 ml-lg-5">
+                              <!-- Car Make-->
+                              <p class="mb-0 py-2">
+                                 <span class="makeHeader">VW UP</span>
+                                 <input type="hidden" name="CarModelId" class="car-model-id" value="">
+                                 <small class="pl-1"><script>document.write(lib.translator("Or_similar")) </script></small></p>
+                              <div class="row">
+                                 <div class="col-6 pl-3">
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left pb-1"><img src="images/taxytites.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts">
+                                                <script>document.write(lib.translator("Transition")); </script>:</span><span class="propertiesSpanFontsLabel"><script>document.write(lib.translator("Manual")) </script></span>
+                                       </div>
+                                    </div>
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left pb-1"><img src="images/carDoor.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Car_Dors")) </script>:</span><span class="propertiesSpanFontsLabel">5</span></div>
+                                    </div>
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left  pb-1"><img src="images/clima.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Clima")); </script>:</span><span class="propertiesSpanFontsLabel"><script>document.write(lib.translator("Air_Condition")) </script></span></div>
+                                    </div>
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left pb-1"><img src="images/People.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts"> <script>document.write(lib.translator("Passengers")) </script>:</span><span class="propertiesSpanFontsLabel">5</span></div>
+                                    </div>
+                                    <div class="text-center row">
+                                       <div class="col-12 text-left pb-1 mb-2"><img src="images/lagage.svg" width="16px"
+                                             alt=""><span class="propertiesSpanFonts">
+                                                <script>document.write(lib.translator("Laggages")) </script>:</span><span class="propertiesSpanFontsLabel">4</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Car Price and select button-->
 
-                                <!-- end for every car result-->
-
-
+                                 <div class="col-6">
+                                    <div class="row">
+                                       <div class="col-12 text-center pb-md-2">
+                                          <!-- <small class="display-4 ">
+                                             <span class="badge badge-danger border-rounded ">Not Available</span>
+                                          </small> -->
+                                       </div>
+                                       <div class="col-12 text-center">
+                                          <button type="button" class="btn btn-danger">
+                                             <input type="hidden" value="" />
+                                             <script>document.write(lib.translator("notAvailable")) </script>
+                                          </button>
+                                       </div>
+                                       <div class="col-12 text-center py-md-1 mb-4">
+                                          <input type="hidden" class="car-cate" value="Mini">
+                                          <p class="mb-1"><span class="propertiesSpanFontsLabel"> <script>document.write(lib.translator("Mini"))</script> </span></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Car Price and select button-->
+                              </div>
 
                            </div>
+                           <!-- Car extras-->
+
+                           <div class="col-12 pt-2  extrasBackGround">
+                              <div class="row justify-content-md-center">
+                                 <div class="col-6 col-md-6 col-lg-3 ">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_3"))</script> </span><span class="switchPrice">6.20€</span>
+
+                                       <a  class="description_3 btnInfo infoPrice align-middle infoLink" style="z-index:1000;"  href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car driver which will be charged daily but with maximum 5 days charge.">
+                                          <i class="fas fa-info-circle"></i>
+                                          </a>
+                                    <label class="switch" >
+                                       <input type="checkbox" name="label_3"class="default" value="6.20"  >
+                                       <span class="slider round"></span>
+
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_7"))</script> </span><span class="switchPrice">3.70€</span>
+                                    <a  class="description_7 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Car snow chains for snow expeditions which will be charged daily but with maximum 7 days charge.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch ">
+                                       <input type="checkbox" name="label_7" class="default" value="3.70">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_6"))</script> </span><span class="switchPrice">5.00€</span>
+                                    <a  class="description_6 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Baby Seat for ages from 2 to 4 which will be charged daily but with maximum 7 days charge.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch ">
+                                       <input type="checkbox" name="label_6" value="5.00" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_9"))</script> </span><span class="switchPrice">14.90€</span>
+                                    <a  class="description_9 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 350€ deductible for comprehensive and collision which will be charged daily.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch ">
+                                       <input type="checkbox" name="label_9" value="14.90" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+
+                              </div>
+                              <div class="row justify-content-md-center">
+                                 <div class="col-6 col-md-6 col-lg-3 ">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_8"))</script> </span><span class="switchPrice">9.90€</span>
+                                    <a  class="description_8 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Full car insurance with a 750€ deductible for comprehensive and collision which will be charged daily.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch">
+                                       <input type="checkbox" name="label_8" value="9.90" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_10"))</script> </span><span class="switchPrice">6.20€</span>
+                                    <a  class="description_10 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Extra car insurance that reimburses you in the case of car theft or loss of any Car equiptment which will be charged daily.">
+                                       <i class="fas fa-info-circle"></i>
+                                       </a>
+                                    <label class="switch ">
+                                       <input type="checkbox" name="label_10" value="6.20" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+                                    <span class="switchText"> <script>document.write(lib.translator("label_4"))</script> </span><span class="switchPrice">9.90€</span>
+                                    <a  class="description_4 btnInfo infoPrice align-middle infoLink" style="z-index:1000;" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Portable GPS device  which will be charged daily with maximum 6 days of charge.">
+                                          <i class="fas fa-info-circle"></i>
+                                          </a>
+                                    <label class="switch ">
+
+                                       <input type="checkbox" name="label_4" value="9.9" class="default">
+                                       <span class="slider round"></span>
+                                    </label>
+                                 </div>
+                                 <div class="col-6 col-md-6 col-lg-3">
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+                           <!-- Car extras-->
                         </div>
+                        <!-- end for every car result-->
+
+                             <!-- end for every car result-->
+
+
+
+                        </div>
+                     </div>
                         <!-- this is the drivers info tab-->
                      <div id="step-3" class="tab-pane step-content">
                         <script>
@@ -1236,6 +1236,8 @@
          }).render('#paypal-button-container');
          </script> -->
       </div>
+      <div class="radio pb-4 ml-3">
+           </div>
    </div>
    
    
@@ -1273,14 +1275,17 @@
                      </script>
                         <div>
                            <h3 class="reservationHeader text-center">
-                              <script>document.write(lib.translator('Reservation_Details'))</script>
+                              <script>document.write(lib.translator('ReservationDetails'))</script>
                            </h3>
                         </div>
                         <div class="container">
                            
                            <div class="row">
                               <div class="col-md-3 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right border-top">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Name:<span><i id="firstInfo" class="fa fa-user headerInfoIcon"
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                    
+                                    <script> document.write(lib.translator('firstName')) </script>
+                                    :<span><i id="firstInfo" class="fa fa-user headerInfoIcon"
                                           data-toggle="popover" data-placement="top" title="Pick Up Details" data-content="You have select to pick up your car from Athens International Airoport at Tuesday 24 of February @ 11:00 A.M."></i></span></p>
                                  <p class="stepTwoHeaderPThree headerp">
                                     <script>
@@ -1289,22 +1294,29 @@
                                  </p>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Last Name: <span><i class="fa fa-user headerInfoIcon"></i></span></p>
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                       <script> document.write(lib.translator('lastName')) </script>
+                                    
+                                    : <span><i class="fa fa-user headerInfoIcon"></i></span></p>
                                  <p class="stepTwoHeaderPThree headerp">
                                        <script>document.write(userDetails.CustomerLastName) </script>
 
                                  </p>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">E-mail: <span><i class="fa fa-at headerInfoIcon"></i></span></p>
-
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                       <script> document.write(lib.translator('email')) </script>
+                                    : <span><i class="fa fa-at headerInfoIcon"></i></span></p>
+                                    
                                  <small style="font-size:.7em;" class="stepTwoHeaderPThree headerp border-top">
                                        <script>document.write(userDetails.customeremail) </script>
 
                                  </small>
                               </div>
                               <div class="col-md-3 col-sm-6 border-md-left border-md-down border-md-right border-top">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Phone Number: <span><i class="fa fa-phone headerInfoIcon"></i></span></p>
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                       <script> document.write(lib.translator('phoneNumber')) </script>
+                                    : <span><i class="fa fa-phone headerInfoIcon"></i></span></p>
 
                                  <p class="stepTwoHeaderPThree headerp mb-2">
                                        <script>document.write(userDetails.CustomerPhoneNumber) </script>
@@ -1314,21 +1326,28 @@
                            </div>
                            <div class="row">
                               <div class="col-md-4 col-sm-12 stepTwoHeader border-md-down border-md-left border-md-right">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Address:<span><i id="firstInfo" class="fa fa-map-pin headerInfoIcon"></i></span></p>
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                       <script> document.write(lib.translator('address')) </script>
+                                    :<span><i id="firstInfo" class="fa fa-map-pin headerInfoIcon"></i></span></p>
                                  <p class="stepTwoHeaderPThree headerp">
                                        <script>document.write(userDetails.CustomerAddress) </script>
 
                                  </p>
                               </div>
                               <div class="col-md-4 col-sm-6 border-md-left border-md-down border-md-right">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">City: <span><i class="fa fa-map-signs headerInfoIcon"></i></span></p>
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                    
+                                       <script> document.write(lib.translator('city')) </script>
+                                    : <span><i class="fa fa-map-signs headerInfoIcon"></i></span></p>
                                  <p class="stepTwoHeaderPThree headerp">
                                        <script>document.write(userDetails.CustomerCity) </script>
 
                                  </p>
                               </div>
                               <div class="col-md-4 col-sm-6 border-md-left border-md-down border-md-right">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Zip Code: <span><i class="fa fa-compass headerInfoIcon"></i></span></p>
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                       <script> document.write(lib.translator('zip')) </script>
+                                    : <span><i class="fa fa-compass headerInfoIcon"></i></span></p>
 
                                  <p class="stepTwoHeaderPThree headerp">
                                        <script>document.write(userDetails.CustomerZipCode) </script>
@@ -1339,7 +1358,9 @@
                            </div>
                            <div class="row">
                               <div class="col-md-6 col-sm-6 stepTwoHeader border-md-down border-md-left border-md-right">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Drivers License:<span><i id="firstInfo"
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                       <script> document.write(lib.translator('Drivers_License')) </script>
+                                    :<span><i id="firstInfo"
                                           class="fa fa-id-badge headerInfoIcon"></i></span></p>
                                  <p class="stepTwoHeaderPThree headerp">
                                        <script>document.write(userDetails.CustomerLicense) </script>
@@ -1347,7 +1368,9 @@
                                  </p>
                               </div>
                               <div class="col-md-6 col-sm-6 border-md-left border-md-down border-md-right">
-                                 <p class="stepTwoHeaderPFirst headerp headerTop">Customer Identity/Passport number: <span><i
+                                 <p class="stepTwoHeaderPFirst headerp headerTop">
+                                       <script> document.write(lib.translator('Customer_Identity_passport')) </script>
+                                    : <span><i
                                           class="fa fa-passport headerInfoIcon"></i></span></p>
                                  <p class="stepTwoHeaderPThree headerp">
                                        <script>document.write(userDetails.CustomerIdentityNumber) </script>
@@ -2005,7 +2028,7 @@
          
             const DateStart = formData.StartDate + " " + formData.StartTime;
             const DateEnd = formData.EndDate + " " + formData.EndTime;
-            const { CarModelId, carCategoryId, extras, totalCharge } = selectedCar;
+            const { CarModelId, carCategoryId, extras, totalCharge, make } = selectedCar;
             const Deposit =  (parseFloat(extras.deposit) + parseFloat(extras.total)).toFixed(2);     //selectedCar.totalCharge; //@TODO charge deposit rather
             const DaysRental = parseInt(JSON.parse(localStorage.rentalPeriod))
             const ReservationDate = new Date(Date.now()).toLocaleString()
@@ -2028,6 +2051,7 @@
                 ToBranchStoreId : 6, //@TODO if the "To" word
                 CarCategoryId : parseInt(carCategoryId),
                 CarModelId : parseInt(CarModelId),
+                CarMake : make,
                 DateStart,
                 DateEnd,
                 DaysRental,

@@ -1,7 +1,6 @@
 
            //Menu actions to specific sections
-           
-           var menuLanguage = localStorage.language;
+            var menuLanguage = localStorage.language;
             var languageUrl;
             if(menuLanguage ==='Greek'){
                languageUrl = 'https://breezerentals.gr/GR.html';
