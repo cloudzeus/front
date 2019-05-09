@@ -2,12 +2,12 @@ const endpoints = {
     getPricelist : 'https://ersPappas.intellisoft.gr/api/Availability/GetPriceLists',
     getCategories : 'https://ersPappas.intellisoft.gr/api/Availability/CheckVehicleAvailability',
     newBooking : 'https://erspappas.intellisoft.gr/api/Bookings/AddNewBooking',
-    newReservation:"http://localhost:7000/api/reservations/create", //@TODO change in production
-    makePayment:"http://localhost:7000/api/reservations/pay", //@TODO change in production
-    completeBookingDetails : "http://localhost:7000/api/reservation/",
-    loginForm : "http://localhost:7000/api/accounts/login",
-    signUpForm : "http://localhost:7000/api/accounts/create/customer",
-    newToken : "http://localhost:7000/api/accounts/renew/token",
-    customerDetails : "http://localhost:7000/api/accounts/me/",
-    customerBookings : "http://localhost:7000/api/reservations/mine/",
+    newReservation:"https://backend.breezerentals.gr/api/reservations/create", //@TODO change in production
+    makePayment:"https://backend.breezerentals.gr/api/reservations/pay", //@TODO change in production
+    completeBookingDetails : "https://backend.breezerentals.gr/api/reservation/",
+    loginForm : "https://backend.breezerentals.gr/api/accounts/login",
+    signUpForm : "https://backend.breezerentals.gr/api/accounts/create/customer",
+    newToken : "https://backend.breezerentals.gr/api/accounts/renew/token",
+    customerDetails : "https://backend.breezerentals.gr/api/accounts/me/",
+    customerBookings : "https://backend.breezerentals.gr/api/reservations/mine/",
 }
