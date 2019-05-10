@@ -95,3 +95,20 @@ function makeId() {
  }
 
 
+ function printVoucher(divName) {
+     var printBtn = document.querySelector('#printVoucher');
+     if(!printBtn) return;
+     printBtn.addEventListener('click', e => {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+     })
+    
+}
+
+printVoucher('step-5');
