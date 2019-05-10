@@ -111,4 +111,8 @@ function makeId() {
     
 }
 
-printVoucher('step-5');
+function downloadVoucher(){
+    var downloadBtn = document.querySelector('#downloadVoucher');
+    if(!downloadBtn) return;
+    downloadBtn.href += localStorage.bookingToken ? localStorage.bookingToken  : '';
+}
