@@ -111,8 +111,8 @@ function makeId() {
     
 }
 
-function downloadVoucher(){
+function downloadVoucher(url){
     var downloadBtn = document.querySelector('#downloadVoucher');
     if(!downloadBtn) return;
-    downloadBtn.href = endpoints.downloadVoucher + localStorage.bookingToken;
+    downloadBtn.href = url + localStorage.bookingToken;
 }
