@@ -10,4 +10,5 @@ const endpoints = {
     newToken : "https://backend.breezerentals.gr/api/accounts/renew/token",
     customerDetails : "https://backend.breezerentals.gr/api/accounts/me/",
     customerBookings : "https://backend.breezerentals.gr/api/reservations/mine/",
+    downloadVoucher : "https://backend.breezerentals.gr/api/voucher/download/",
 }

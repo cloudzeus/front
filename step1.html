@@ -1761,18 +1761,21 @@
       
                                           <div class=" col-6 col-md-6 col-sm-6 border-md-left ">
                                              <p class="stepTwoHeaderPFirst headerp headerTop">Download Pdf: <span><i class="fas fa-file-pdf headerInfoIcon"></i></span></p>
-      
-                                             <p class="stepTwoHeaderPThree headerp mb-2 pt-2"><button onclick="generate()" class="btn btn-myFormPre btn-sm">Download
-                                                   pdf</button></p>
+                                             <p class="stepTwoHeaderPThree headerp mb-2 pt-2"><a id="downloadVoucher" href="" class="btn btn-myFormPre btn-sm" >
+                                                Download  pdf</a></p>
                                           </div>
                                        </div>
+                                       <script>
+                                          downloadVoucher();
+                                       </script>
+
                                        <div class="row  border-bottom  shadow rounded">
                                           <!-- Car Image-->
                                           <div class="col-12 col-md-4  pt-2 " style=" animation-name: none;">
                                              <p class="mb-0 py-2"><span class="makeHeader">Pick Up Location Details</span><br><small
                                                    class="pl-1">
                                                 <script>
-                                                   // document.write()
+                                                   document.write(lib.translator(pickupDetails.pickUpLocation.split(" ").join("_")))
                                                 </script>
                                                 </small></p>
                                              <div class="row">
