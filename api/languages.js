@@ -18,7 +18,7 @@ const languages = {
   priceLists :["pricelists","Τιμοκατάλογοι","Preislisten"],
   name : ["name","Όνομα","Name"],
   email : ["email"," ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ","Email"],
-  messageSent : ["Message sent successfully"],
+  messageSent : ["Message sent successfully","Το email στάλθηκε με επιτυχία Ευχαριστούμε πολύ!"],
   address : ["address","Διεύθυνση","Adresse"],
   zip : ["zip","T.K.","PLZ"],
   phone : ["phone","Τηλέφωνο","Telefon"],
@@ -363,7 +363,7 @@ const languages = {
   description_10 : ['Extra car insurance that reimburses you in the case of car theft or loss of any of the Car equipment which will be charged daily.','Έπιπλεον Ασφάλεια αυτοκιήτου για  ολική Απώλεια ή μερική Κλοπή εξοπλισμού. Η χρέωσης είναι ανά ημέρα ενοικίασης','Extra Autoversicherung für Totalschaden oder Teilausrüstungsdiebstahl, wird pro Tag verrechent'],
   description_12 : ["10€ charges for  drop off locations for ATH - International Airport, Rafina Port, Piraeus Port.","Χρέωση 10€ για παραδοση από το Αεροδρόμιο, Το Λιμάνι της Ραφίνας και το Λιμάνι του Πειραιά","Standortzuschlag 10€ für Abholung von ATH Flughafen, Rafina und Piraeus Hafen"],
   description_13 : ["15€ charges for drop off locations over 15Km radius around our central agency location. ","Χρέωση 15€ για σημείο παραδοσης και για ακτίνα 15 χιλιομέτρων από τα κεντρικά μας γραφεία.","Standortzuschlag 15€ für Rückgabe 15km von der Zentrale"],
-  requireField : ['*is a required Field'],
+  requireField : ['*is a required Field', '* Το πεδίο αυτό είναι υποχρεωτικό παρακαλώ συμπληρώστε το!','*is a required Field'],
 
 
   bookingFooter : [`<footer id="site-footer" class="padding_half"> 
