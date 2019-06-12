@@ -633,37 +633,53 @@ window.cookieconsent.initialise({
                 
                 </div>                 
             </div>             
-            <div class="col-md-6 col-sm-12 margin_bottom"> 
-                <form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;"> 
+            <div class="col-md-6 col-sm-12 margin_bottom">
+                    <div id="smartLoader" class="ml-auto mr-auto text-center" style="display:none">
+                    <!--PreLoader-->
+                    <img class="img-responsive" src="images/loaders/loader.gif" alt="loading">
+                    <h5 class="text-center text-muted">sending message...</h5>
+                    <!--PreLoader Ends-->
+                    </div> 
+                    <div id="formError" class="col-sm-12 text-center" style="display: none"></div>
+                <form id="support-email" class="getin_form wow fadeInUp" data-wow-delay="400ms" style='display:block' > 
                     <div class="row"> 
-                        <div class="col-sm-12" id="result"></div>                         
+                        <div class="col-sm-12" id="result" style="display:none"></div>                         
                         <div class="col-md-6 col-sm-6"> 
                             <div class="form-group bottom35"> 
-                                <input class="form-control" type="text" placeholder="Όνομα:" required id="first_name" name="first_name"> 
+                                <input name="firstName" class="form-control" type="text" placeholder="Name:" required id="firstName" name="first_name">
+                                <small class="text-danger" id="firstNameError" style="display: none"></small> 
                             </div>                             
                         </div>                         
                         <div class="col-md-6 col-sm-6"> 
                             <div class="form-group bottom35"> 
-                                <input class="form-control" type="text" placeholder="Επίθετο:" required id="last_name" name="last_name"> 
+                                <input name="lastName" class="form-control" type="text" placeholder="Last Name:" required id="lastName" name="last_name"> 
+                                <small class="text-danger" id="lastNameError" style="display: none"></small> 
+
                             </div>                             
                         </div>                         
                         <div class="col-md-6 col-sm-6"> 
                             <div class="form-group bottom35"> 
-                                <input class="form-control" type="email" placeholder="Email:" required id="email" name="email"> 
+                                <input name="email" class="form-control" type="email" placeholder="Email:" required id="email" name="email"> 
+                                <small class="text-danger" id="emailError" style="display: none"></small> 
+
                             </div>                             
                         </div>                         
                         <div class="col-md-6 col-sm-6"> 
                             <div class="form-group bottom35"> 
-                                <input class="form-control" type="tel" placeholder="Τηλεφωνο:" id="phone" name="phone"> 
+                                <input name="phone" class="form-control" type="tel" placeholder="Phone:" id="phone" name="phone">
+                                <small class="text-danger" id="phoneError" style="display: none"></small> 
+
                             </div>                             
                         </div>                         
                         <div class="col-md-12 col-sm-12"> 
                             <div class="form-group bottom35"> 
-                                <textarea class="form-control" placeholder="Μήνυμα" id="message" name="message"></textarea>                                 
+                                <textarea name="message" class="form-control" placeholder="Message" id="message" name="message"></textarea>
+                                <small class="text-danger" id="messageError" style="display: none"></small> 
+
                             </div>                             
                         </div>                         
                         <div class="col-sm-12"> 
-                            <button type="submit" class="button btnprimary" id="submit_btn">Απόστολή</button>                             
+                            <button type="submit" class="button btnprimary" id="">Send Now</button>                             
                         </div>                         
                     </div>                     
                 </form>                 
@@ -1083,6 +1099,10 @@ window.cookieconsent.initialise({
 <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 --> 
 <script src="js/jquery.validate.min.js" type="text/javascript"></script> 
 
+<script src="api/util.js"></script>
+<script src="api/translation.js"></script>
+
+<script src="api/supportEmail.js"></script>
 <script>
       $(document).ready(function () {
          $('body').bootstrapMaterialDesign();

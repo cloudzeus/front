@@ -6,7 +6,11 @@ function clientRequest(endpoint,data,method){
         options.headers['Content-Type'] = 'application/json';
         options.method = method.toUpperCase();
 
-        fetch(endpoint,options).then(res => res.json())
+        fetch(endpoint,options).then(res => {
+            if(res.status !== 200) return reject(res.json())
+
+            res.json()
+        })
         .then(data => resolve(data))
         .catch( ex => {
             console.log('Api request Failed: ',ex);
@@ -115,4 +119,5 @@ function downloadVoucher(url){
     var downloadBtn = document.querySelector('#downloadVoucher');
     if(!downloadBtn) return;
     downloadBtn.href = url + localStorage.bookingToken;
+    console.log(downloadBtn)
 }
