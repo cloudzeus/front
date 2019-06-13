@@ -18,7 +18,7 @@ const languages = {
   priceLists :["pricelists","Τιμοκατάλογοι","Preislisten"],
   name : ["name","Όνομα","Name"],
   email : ["email"," ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ","Email"],
-  messageSent : ["Message sent successfully","Το email στάλθηκε με επιτυχία Ευχαριστούμε πολύ!"],
+  messageSent : ["Message sent successfully","Το email στάλθηκε με επιτυχία Ευχαριστούμε πολύ!","erfolgreich gesendet"],
   address : ["address","Διεύθυνση","Adresse"],
   zip : ["zip","T.K.","PLZ"],
   phone : ["phone","Τηλέφωνο","Telefon"],
