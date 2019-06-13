@@ -60,13 +60,13 @@ const lib = {};
 //translation init function
 lib.init = () => {
    // components.formNav();
-   lib.changeLanguage()
+   
    lib.inputValueDisplay()
 }
 
 lib.changeLanguage = () => {
     const button = document.querySelector('#changeLanguage');
-    // console.log(button)
+    console.log(button)
     if(button != null ){
         button.addEventListener('click',e => {
             const lang = e.target.id;

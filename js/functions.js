@@ -125,12 +125,11 @@ $("#submit_btn").click(function() {
    if(window.location.pathname != '/step1.html'){
    $("a.pagescroll, .nav-link").on("click",  function(event){
       console.log(event.target)
-      if(!event.target.classList.contains('outLink')){
-         event.preventDefault();
+      if(event.target.classList.contains('outLink')) return;
          $("html,body").animate({
             scrollTop: $(this.hash).offset().top
          }, 1000);
-      }
+   
    }); 
 }
    
