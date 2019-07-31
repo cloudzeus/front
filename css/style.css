@@ -625,9 +625,9 @@ h5{
 h6{
     font-size: 0.875rem;
 }
-p{
-   font-size: 14px;
-}
+
+
+
 p.title {
    font-size: 1rem;
 }
@@ -4720,13 +4720,23 @@ footer .copyrights > a:focus {
  /*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 768px) {
    html{
-        font-size: 13px;
+        font-size: 14px;
     }
+    p {
+      font-size: 20px;
+      letter-spacing: 0.3rep;
+      line-height: 29px;
+   }
 }
 @media (max-width: 576px) { 
 html{
-        font-size: 12px;
+        font-size: 14px;
     }
+    p {
+      font-size: 20px;
+      letter-spacing: 0.3rep;
+      line-height: 29px;
+   }
 }
 
 /* This is the style to change the color of the selection inside the select box*/
