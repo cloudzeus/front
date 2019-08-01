@@ -4720,7 +4720,7 @@ footer .copyrights > a:focus {
  /*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 768px) {
    html{
-        font-size: 14px;
+        font-size: 18px;
     }
     p {
       font-size: 20px;
@@ -4730,7 +4730,7 @@ footer .copyrights > a:focus {
 }
 @media (max-width: 576px) { 
 html{
-        font-size: 14px;
+        font-size: 18px;
     }
     p {
       font-size: 20px;
